@@ -27,14 +27,6 @@ label start:
 
     show eileen happy
 
-    "here is some test dialogue"
-    p "hello"
-    t "hey!"
-    a "hi"
-    k "sup"
-    i "hi cutie"
-    j "heyyyy"
-
-    # This ends the game.
-
+    "eventually there will be a menu screen for chapter navigation, but for now it's in order of me writing the scenes lol"
+    jump plant_encounter_1
     return
