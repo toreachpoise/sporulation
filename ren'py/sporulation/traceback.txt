@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/ahmed scenes.rpy", line 35, in script
+    if made_ahmed_smile:
+  File "game/ahmed scenes.rpy", line 35, in <module>
+    if made_ahmed_smile:
+NameError: name 'made_ahmed_smile' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/ahmed scenes.rpy", line 35, in script
+    if made_ahmed_smile:
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/ahmed scenes.rpy", line 35, in <module>
+    if made_ahmed_smile:
+NameError: name 'made_ahmed_smile' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.2.3.24061702
+sporulation 0.6.23
+Tue Jun 25 15:14:36 2024

@@ -1,25 +1,37 @@
 label plant_encounter_1:
     # BG WOODS
-    "(start of plant encounter 1)"
     "Parvez hopes he hasn't locked himself out of his car."
-    "When he got to the trail, he'd decided it would be easier to leave his keys in the car than to try and wedge them into his running shorts pocket--"
+    "When he'd got to the trail, he'd decided it would be easier to leave his keys in the car than to try and wedge them into his running shorts pocket--"
     "--seriously, what are those things supposed to hold?--"
     "Now he's starting to worry if he's locked his keys in his car though."
     "He thinks he may have pushed the lock down on the door instinctively on his way out."
     "He can't afford another $200 call to the only locksmith that is both unlikely to murder him and willing to drive up a dirt road to find him."
     "He shakes his head like a tetra pak of soup, as if that will clear it."
     "The violets have started to come up on the side of the trail, little spiral leaves scything out of the ground."
-    "There are bluebells up too. He wonders if he'd know what any of the plants along a trail in Rajasthan were called. Probably not."
+    "There are bluebells up, too. He wonders if he'd know what any of the plants along a trail in Rajasthan were called. Probably not."
     "Parvez stops for a drink of water."
     "The trail slopes down into a swamp. In among the skunk cabbages, there's a plant he's never seen before."
     "He pulls out his vape and takes a hit. The plant looks like a fern--no, like seaweed almost. Slimy and wavy around the edges."
     "The plant is standing in a dry area that Parvez could probably get to from the other side of the swamp."
+    menu:
+        "check out the plant":
+            pass
     "He squelches his way around the harder ground at the edge of the swamp. It's still muddy enough that his feet get stuck in it a couple of times."
     # PLANT CG/SPRITE
     "The plant is bigger than it looked from far away."
     "Up close, Parvez can see it looks more like some kind of succulent; thicker than seaweed."
     "He wishes he had his phone. Too bad it wouldn't fit in his running shorts."
-    "He runs his fingers over the top of one of the fronds. It's squishier than he expected it to be, firm but still soft somehow."
+    menu:
+        "should I touch it?"
+        "touch it":
+            "He runs his fingers over the top of one of the fronds. It's squishier than he expected it to be, firm but still soft somehow."
+            jump plant_touches_you
+        "don't touch it":
+            p "Fuck no I'm not touching that shit."
+            p "What even is this thing?"
+            "Something is really off about this plant ... Parvez isn't superstitious or anything but a really strange energy seems to be radiating off it."
+            jump plant_touches_you
+label plant_touches_you:
     "... Also, some of the fronds on the other side appear to be moving slightly."
     p "Bro what the hell??"
     "He must have smoked too much again."
@@ -31,12 +43,31 @@ label plant_encounter_1:
     "Oddly, he's not panicking."
     "One of the fronds is trailing up his inner thigh, into his shorts."
     p "Back hole only, please."
-    "Now maybe he's panicking. There's no point, though. The thing has him firmly around the shoulders and chest. He can't wriggle out."
+    "Now maybe he's panicking."
+    menu:
+        "struggle":
+            $ struggled = True
+            "Parvez fights against the frond of the plant--"
+            p "--don't say tentacle."
+            "--he's kicking with all his might, even as the plant snakes around his body, squishy but strong."
+            "There's no point in fighting back. The thing has him firmly around the shoulders and chest. He can't wriggle out."
+            jump it_has_you
+        "it won't work":
+            "There's no point in fighting back."
+            "There never is."
+            "Parvez feels a familiar horrible dread. He remembers all the moments his body wasn't his, was something for others to use."
+            "They wash over him all at once, not as images but as a dull sensation of powerlessness."
+            jump it_has_you
+label it_has_you:
     "It's inside his shirt, checking him out with one frond--"
-    p "--don't say tentacle."
-    "It seems to be listening to his request, though. It pokes his clit, cautiously at first but then settling into a rhythm."
+    if struggled:
+        p "Don't say tentacle, don't say tentacle."
+    else:
+        p "--don't say tentacle."
+    "It seems to be listening to his request, though, staying away from his front hole."
+    "It pokes his clit, cautiously at first but then settling into a rhythm."
     "Parvez gasps. It feels ... good?"
-    "He starts to moan, hopes no one can hear him out there in the woods."
+    "He starts to moan, and hopes no one can hear him out there in the woods."
     "One of the fronds is playing around his ass now."
     "He can feel it circling and dipping in. It's big."
     "Parvez is no slouch in the taking-it-up-the-ass department, but this thing is almost three inches thick."
@@ -55,8 +86,9 @@ label plant_encounter_1:
     "Parvez starts to become nervous again. The plant is still holding his legs open, his whole body splayed three feet off the ground."
     p "No, no. Please don't do that! Please don't do that! Please!"
     "Parvez is begging, wiggling as if he could get out of this thing's grasp even though he knows he can't."
-    "A familiar feeling of terrified resignation comes over him."
-    "He's being held down and there's nothing he can do about it."
+    if struggled:
+        "A familiar feeling of terrified resignation comes over him."
+        "He's being held down and there's nothing he can do about it."
     "As soon as the flower touches him, he's engulfed by a strange calm feeling once more."
     "Parvez looks down and sees that it has pushed the flower and part of its long stem deep inside his vagina."
     "It feels like there's a small balloon inflating inside of him."
@@ -79,8 +111,20 @@ label plant_encounter_1:
     p "I dreamt I had sex with this weird plant. It was like, big and fleshy."
     p "It was good at first but then it was kind of rapey ..."
     p "... but I was okay with it? Somehow??"
-    t "Damn sweetie are you okay? Are you sure you don't have a fever or something??"
-    "Terry comes up to Parvez, reaching for his forehead like they're gonna check his temperature. Parvez swats Terry's hand away."
+    t "Damn sweetie, are you okay? Are you sure you don't have a fever or something??"
+    "Terry comes up to Parvez, reaching for his forehead like they're gonna check his temperature."
+    menu:
+        "let them comfort you":
+            "Parvez leans into Terry's hand when they place it on his head. It's cool and soft."
+            t "You don't feel feverish."
+            "They pet Parvez's head for a moment before withdrawing. His hair feels sticky and gross on his head. He needs a shower, bad."
+            jump temp_check
+        "you don't want to be touched right now":
+            "Parvez swats Terry's hand away."
+            "He doesn't know how to say it but the idea of being touched, even by Terry, feels bad right now."
+            "He's disgusting, covered in mud. He doesn't know what just happened, if it even did happen. But either way his whole body feels gross and wrong."
+            jump temp_check
+label temp_check:
     p "I'm fine. It was just a weird dream. I must have gotten too stoned in the woods."
     "Terry rolls his eyes."
     t "You're so weird."
@@ -88,5 +132,5 @@ label plant_encounter_1:
     t "I'm just glad you're okay babe."
     # UNLOCKS TERRY 1
     # UNLOCKS PLANT ENCOUNTER 2
-    jump terry_1
+    jump nav_menu
 

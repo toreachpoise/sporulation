@@ -1,16 +1,18 @@
 label terry_1:
-    "(start of terry 1)"
     t "Uh, Parvez?"
     p "Yeah, love?"
     # CG: terry blowjob--> Parvez
     "Terry looks up from between Parvez's thighs."
     t "I think your plant dream might have been real."
     p "What??"
-    "Terry reaches over to the bedside table and grabs his hand mirror, holding it to Parvez's junk."
+    "Terry reaches over to the bedside table and grabs his hand mirror, holding it up to Parvez's junk."
     p "It looks like something is growing out of your pussy."
     "It really does. In the middle of the cluster of dark purple folds beneath his clit, a fat fingertip of green is poking out."
     "When Terry pokes it, Parvez can feel it."
-    "He reaches down to touch it himself and finds that it has the same texture as the plant in his dream--rubbery but soft."
+    menu:
+        "touch it":
+            pass
+    "Parvez reaches down to touch it himself and finds that it has the same texture as the plant in his dream--rubbery but soft."
     t "I'm gonna lick it."
     p "What! No! What if it's poisonous?"
     t "It's growing out of you. If it were poisonous, you'd be dead."
@@ -33,13 +35,16 @@ label terry_1:
     t "Fuck baby, it feels like it's moving inside me. Like, wriggling."
     "Parvez grinned."
     p "I haven't even started moving yet."
-    "He forced his cock into Terry, pushing a yell out of him."
+    menu:
+        "fuck Terry hard":
+            pass
+    "Parvez forced his cock into Terry, pushing a yell out of him."
     "It felt like Terry's insides were sucking on him, pulling him in deeper. Parvez couldn't help but comply."
     "He didn't last long before his first orgasm, the sensation overwhelming, the heat of Terry's body, their ass pulsing around Parvez, the new sensation completely overwhelmed him."
     "Not to mention the sight of it. It was strange because it still kind of looked like a dildo, with its weird green color."
     "And yet there it was, his cock, pistoning in and out of his lover, making them moan, filling him with more feeling than he'd ever experienced before."
     "Parvez felt engulfed, surrounded. Like his entire consciousness was narrowing down to that one part of his body that was being crushed with heat and warmth and pleasure."
-    "He grabbed a fistful of Terry's long pink cloud of hair to anchor his fucking better. Terry groaned low and guttural."
+    "He grabbed a fistful of Terry's long pink cloud of hair to anchor his fucking better. Terry groaned, low and guttural."
     "When Parvez's orgasm came he felt a wave ripple through his cock but nothing came out. It felt muted, strange, oddly unsatisfying. He kept pounding into Terry."
     t "Shit, did you cum? I think I felt it."
     p "Ah I just, I don't know--I need more--"
@@ -52,12 +57,11 @@ label terry_1:
     p "Thanks pal, I made it just for you."
     "They kissed and fell asleep together, still dirty, half glued together with jizz."
     # UNLOCKS TERRY 2
-    jump terry_2
+    jump nav_menu
 
 label terry_2:
-    "(start of terry 2)"
     # BG terry and parvez apartment
-    "Where before it had been the same thickness the whole way along, today Parvez wakes up with a weird bulb near the end of his cock."
+    "Where before it had been the same thickness the whole way along, today Parvez woke up with a weird bulb near the end of his cock."
     "Terry gave him a blowjob, hoping to see if something would come out when Parvez came. So far nothing had."
     "Terry seemed to think this was all some kind of game, taking everything in stride worryingly well."
     "Parvez still wasn't sure how to feel about the new addition to his body."
@@ -65,9 +69,12 @@ label terry_2:
     "But this thing was ... it felt artificial, sort of."
     "Maybe artificial wasn't the right word. It was natural, somehow--it came from a plant. Or supernatural, maybe."
     "It's just that it looked weirdly like a dildo, with its smooth and rounded shape."
-    "And Parvez could feel sensations through his cock but it still felt apart from him."
+    "And Parvez could feel sensations through his cock, but it still felt apart from him."
     "His orgasms were still weirdly unsatisfying, too. Or it was more like he couldn't cum at all."
     t "Hey, are you paying attention?"
+    menu:
+        "huh??":
+            pass
     # CG terry blowing parvez; maybe same one edited with dick or different one idk
     "Terry was looking up at Parvez from between his legs, a string of spit connecting their lips to his cock."
     "They leaned down and licked the weird bulb that had formed at the end."
@@ -109,11 +116,28 @@ label terry_2:
     p "I'm not sure what happened, dude. It was a crazy dream. For all we know we're just having some kind of shared hallucination."
     "Terry smiles but he's still serious."
     t "But what if it was real?"
+    menu:
+        "it isn't real though":
+            $ doubted = True
+            p "I don't know what's going on with me."
+            p "Honestly I'm starting to get worried about my mental state. Maybe I need to go to a hospital or something."
+            "Terry puts their hand on Parvez's leg."
+            t "Look babe, I get that this must be really scary. But this is real."
+            t "Maybe you did have a dream, or maybe the plant thing did actually happen."
+            "Terry reaches over and gently squeezes Parvez's dick where it's sitting up against his belly."
+            t "But this is real."
+            "Parvez draws a sharp breath. It sure feels real."
+            t "Clearly this happened somehow. It's just a question of what you're going to do with it."
+            jump passing_it_on
+        "that would be kind of cool":
+            pass
+label passing_it_on:
     p "I guess ..."
     p "I guess I would want to see if I could pass that on to other trans people."
     p "Like, it's unbelievable how good it feels. I can't even believe I can fuck you now."
     p "And just seeing it, even though it's green and wavy and weird, makes me feel like I finally look how I want to."
-    p "Like, it's weird. It doesn't feel like part of my body all the way yet. But it's mine."
+    if doubted:
+        p "Like, it's weird. It doesn't feel like part of my body all the way yet. But it's mine."
     t "I mean, I've always thought you were the man of my dreams. But it does suit you."
     "Terry cuddles into Parvez's chest, dropping their batter-covered spoon on the table."
     t "I think you should see if you can spread it to other people."
@@ -130,17 +154,29 @@ label terry_2:
     t "Yeah, you're really popular! Like ten people want to meet you. Look!"
     "The inbox is full of messages, a few hot trans guys. All of them wondering if it's real. If they can see it."
     t "There are a couple of folks who want to meet and seem alright."
-    p "Babe, I can't believe you did this." 
-    p "This is a huge violation of my privacy! What were you thinking??"
-    t "You said you wanted to spread it to other people!"
-    p "I wasn't serious!"
-    t "Why not? Think about it. What if you could give the feeling that you now have to other trans people."
-    t "No surgery, no doctors, no stupid insurance rules and therapist visits."
-    t "Yeah it's kind of wild but isn't it also what all of us have always dreamed of? Isn't it worth a shot just to try?"
-    t "And besides, you get to have sex with cuties! Even if it doesn't work that's a win."
-    p "..."
+    menu:
+        "how could they do this??":
+            p "Babe, I can't believe you did this." 
+            p "This is a huge violation of my privacy! What were you thinking??"
+            t "You said you wanted to spread it to other people!"
+            p "I wasn't serious!"
+            t "Why not? Think about it. What if you could give the feeling that you now have to other trans people."
+            t "No surgery, no doctors, no stupid insurance rules and therapist visits."
+            t "Yeah it's kind of wild but isn't it also what all of us have always dreamed of? Isn't it worth a shot just to try?"
+            t "And besides, you get to have sex with cuties! Even if it doesn't work that's a win."
+            p "..."
+            jump check_it_out
+        "I am curious though":
+            "Terry looks at you and suddenly seems nervous."
+            t "Sorry, I realize this might have been weird to do but I feel like ..."
+            t "You know, it's really amazing that you can do this. I think that you have an incredible power now that you can share with other trans people."
+            "Terry flushes a bit."
+            t "And from the responses I've been getting so far they really want it ..."
+            jump check_it_out
+label check_it_out:
     p "I mean ..."
-    p "... what are you telling people?"
+    p "I mean ... what are you telling people?"
     t "See for yourself."
     # UNLOCKS AHMED 1 AND KAYDEN 1
+    jump nav_menu
 

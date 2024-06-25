@@ -10,23 +10,26 @@ define k = Character("Kayden", color="#cff450")
 define i = Character("Inanna", color="#8f3ce9")
 define j = Character("Javier", color="#cc0000")
 
+## VARIABLES
+$ struggled = False
+$ doubted = False
+
 
 ## GAME START
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    "eventually there will be a menu screen for chapter navigation, but for now it's in order of me writing the scenes lol"
-    jump plant_encounter_1
+    "this is a placeholder for the app navigation screen"
+label nav_menu:
+    menu:
+        "plant_encounter 1":
+            jump plant_encounter_1
+        "terry 1":
+            jump terry_1
+        "terry 2":
+            jump terry_2
+        "ahmed 1":
+            jump ahmed_1
+        "kayden 1":
+            jump kayden_1
     return
