@@ -263,7 +263,7 @@ label end_plant_encounter_2:
     if plantflation:
         "dripping plant cum from his gaped ass and cunt the whole way,"
     "and when he gets there he sits in the driver's seat, still shaky and out of breath,"
-    if plantfication:
+    if plantflation:
         "soaking the seat with the seedy gel."
     p "Well, I guess it really was real."
     "Then he drives home to tell Terry about it."
