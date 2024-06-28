@@ -131,6 +131,140 @@ label temp_check:
     "They lean in to kiss Parvez's cheek."
     t "I'm just glad you're okay babe."
     # UNLOCKS TERRY 1
-    # UNLOCKS PLANT ENCOUNTER 2
+    # UNLOCKS SOLO 1
     jump nav_menu
 
+label plant_encounter_2:
+    $ tried_to_take_plant = False
+    "Even though this whole having a plant dick thing has been cool, it still kind of freaks Parvez out not knowing how it happened."
+    "He just can't shake the feeling that the whole thing was a weird dream, even in the face of the physical evidence."
+    "One morning he wakes up and realizes that the only way to set his doubts to rest is to just go and try to find the plant again."
+    "He gets up early on a Friday morning while the city is still steamy outside."
+    "Terry shuffles blearily out of the bathroom in his bathrobe while Parvez is tying his shoes."
+    t "Where ya going baby?"
+    p "For a run."
+    t "Don't get fucked by any more supernatural entities. Or do, I guess. Whichever you want."
+    "Parvez parks his beat up hatchback down the side of the logging road."
+    "As soon as he steps outside he's assaulted by the forest air, which is hot and steamy like a giant's breath."
+    "He has brought a bag this time, stowing his keys securely and locking his car."
+    "He runs down the same route he took last time, an overgrown deer trail that had newly forked away from his usual track."
+    "The atmosphere is oppressive. His nostrils feel full of air and gnats with each inhalation."
+    "He keeps running though, and sure enough after a couple of kilometers he sees the trail give way down into a swamp."
+    "He realizes he had convinced himself the plant wouldn't still be there when he sees it, oil slick iridescent in the low light of the wetlands."
+    "Now that he's expecting it, it's visibly moving from far away."
+    "He approaches, fear and anticipation building in his gut."
+    "Parvez didn't really have a plan beyond seeing if the plant was still there."
+    "But now that he's here ..."
+    "But now that he's here ... what?"
+    "The plant seems docile today. It's not reacting directly to Parvez's presence."
+    menu:
+        "what should I do?"
+        "taste it":
+            jump plant_blowjob
+        "take a piece with me and go home":
+            $ tried_to_take_plant = True
+            "Parvez comes up near the plant and finds that there are smaller ones growing near it."
+            "He kneels down to take a closer look."
+            "They're like weird tiny succulents. Parvez and Terry had had one kind of similar before, he remembers."
+            "Terry was the main one who was good at houseplants, but for some reason not succulents. It had rotted and died."
+            "Parvez grabs one of the small plants with his palm and twists it clear of the ground, its roots hanging free."
+            "He could swear he saw the main plant recoil when he did that."
+            "He wishes he had something to leave as an offering, but he doesn't."
+            "He stuffs the small plant in his pocket and goes home."
+            "He transplants his cutting into a little cup and puts it on the windowsill, but it withers and dies within two weeks."
+            jump nav_menu
+label plant_blowjob:
+    "He finds himself standing right beside it, reaching out a finger to touch a pulsing arm of the plant."
+    "It's slick, a clear film coats his hand."
+    "He rubs his fingers together, and then, unthinkingly, puts them to his lips."
+    "It tastes good. A little sweet and just ... fresh, vegetal."
+    "He leans forward and kisses one of the fronds of the plant, sticking his tongue out to taste it directly."
+    "He kisses along the length of it as it wiggles. Then he kisses the tip."
+    "The tentacle--he's willing to call it that now--presses against his mouth."
+    p "Fuck it."
+    "Parvez parts his lips."
+    "The tentacle enters his mouth, feeling around cautiously at first."
+    "It flicks the sides of his cheeks exploratorily, then wraps around his tongue and squeezes, pulling a couple of times."
+    p "W-ghugh--"
+    "It feels kind of good, tugging firmly but not too hard on his tongue. Parvez feels his dick getting hard, pressing against the waistband of his shorts."
+    "Then the plant seemingly loses interest in his tongue, delving deep into the back of his mouth."
+    "Parvez chokes. His hands go to the tentacle, trying to pull it out,"
+    "but by now it's fully awake, grasping him by the shoulders and the back of his head and forcing the tentacle in."
+    if struggled:
+        "Parvez tries to fight against the tentacles holding him off the ground, in part by the one down his throat."
+        "He chokes and sputters, tears coming to his eyes, snot pouring from his nose."
+    "He's gasping, he can't breathe, gagging continually on the tentacle as it fucks his throat."
+    menu:
+        "I've got to get out of here!":
+            $ struggled_again = True
+            "Parvez keeps fighting, sweating and choking."
+            "He's starting to get lightheaded. Black spots flutter at the edges of his vision."
+            "The more he wriggles the more the plant's grip tightens on him."
+            "One of the tentacles is around his throat."
+            "He can feel the delicate skin and blood vessels of his neck being squeezed between the tentacle inside his throat and the one around it."
+            "His eyes roll back in his head."
+            "The black spots fill Parvez's vision until he can't see or feel anything any more."
+            "................."
+            "Parvez wakes up to a squelching noise."
+            "He looks down and it's him, both his holes being spread open by the plant."
+            jump gag_and_pass_out
+        "stop fighting":
+            pass
+    "He gives up and tries to let his throat go slack."
+    "He swallows around the tentacle, trying to time his breaths with when it pulls out,"
+    "breathing steadily through his nose and getting the air rhythmically punched out by the long tentacle."
+    "His cock is rock hard, and he can feel himself dripping around the base of it where it joins his pussy."
+    "He can also feel two more tentacles circling his two holes."
+    "One plays around where the fluid is coming out of his cunt, around back of where his cock comes out."
+    "Parvez didn't even know that he could still put things in there, not that he had wanted to before."
+    "Now it seemed he had no choice but to learn."
+    "The tentacle pressed into his pussy, bulging it around the two objects shoved inside."
+    "Parvez had hardly ever had anything put in there before--and never consensually--and here this plant was fucking him again. And he liked it."
+    "As soon as the thought came to him the plant pulled out, leaving him oddly empty feeling."
+    "His disappointment had barely registered before the plant, slick with his cunt juice, dove into his ass, another tentacle coming to his cunt again to replace it."
+    p "Sh--shit, wait--"
+    p "I don't know if I can handle--three--"
+    "He didn't have a choice."
+label gag_and_pass_out:
+    "The two tentacles inside his cunt and ass were punishing the membrane between them."
+    if struggled_again:
+        "The sight paired with the sound of his gooshy holes getting stretched open brings Parvez fully to consciousness."
+    "The pounding is overwhelming. Parvez wails. It hurts but he can't stop cumming, this strange pulsing overwhelming feeling that's still unsatisfying."
+    "His cock throbs with pleasure, unable to shoot and tortured by it."
+    "The plant fucks him relentlessly for what feels like hours. His holes are raw."
+    "Riding the wave of his orgasm for all this time has made Parvez lose his mind."
+    "All he knows is the rhythm of the two tentacles pressing together inside him."
+    menu:
+        "should I let the plant cum inside me?"
+        "yes (cumflation)":
+            $ plantflation = True
+            "After millenia, after an eternity, Parvez feels the tentacles bulge and get even fuller inside him."
+            "His holes are being stretched to their absolute limit. It feels like his ass might rip."
+            "Then the tentacles begin to throb."
+            "Parvez feels them pulsing and shooting inside him."
+            "The juice is oddly cool, he feels it coating the inside of the holes."
+            "And it keeps coming, the tentacles pumping him."
+            "He can feel its cum filling his womb, gushing further and further into his ass."
+            "He looks down to find his belly swollen and distended."
+            "It keeps growing. It feels so tight, painful even, but the plant keeps squishing more cum into him."
+            "It's pushing into his holes even deeper, squeezing more into him."
+            "Just when he feels like his belly is about to burst, the tentacles withdraw."
+            "Clear, seedy goo gushes out of his holes."
+            jump end_plant_encounter_2
+        "no thanks":
+            jump end_plant_encounter_2
+label end_plant_encounter_2:
+    "The plant is no longer restraining him."
+    "Parvez gets down shakily, his legs barely able to support him."
+    if plantflation:
+        "Plant goop oozes down his legs as he struggles to pull his shorts back on."
+        "The seat quickly becomes wet as it keeps squishing out of him."
+    "He has to find a walking stick to help him get back to his car,"
+    if plantflation:
+        "dripping plant cum from his gaped ass and cunt the whole way,"
+    "and when he gets there he sits in the driver's seat, still shaky and out of breath,"
+    if plantfication:
+        "soaking the seat with the seedy gel."
+    p "Well, I guess it really was real."
+    "Then he drives home to tell Terry about it."
+    jump nav_menu

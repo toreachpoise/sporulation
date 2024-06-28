@@ -13,6 +13,8 @@ define j = Character("Javier", color="#cc0000")
 ## VARIABLES
 $ struggled = False
 $ doubted = False
+$ struggled_again = False
+$ plantflation = False
 
 
 ## GAME START
@@ -22,7 +24,7 @@ label start:
     "this is a placeholder for the app navigation screen"
 label nav_menu:
     menu:
-        "plant_encounter 1":
+        "plant encounter 1":
             jump plant_encounter_1
         "terry 1":
             jump terry_1
@@ -32,4 +34,6 @@ label nav_menu:
             jump ahmed_1
         "kayden 1":
             jump kayden_1
+        "plant encounter 2":
+            jump plant_encounter_2
     return
