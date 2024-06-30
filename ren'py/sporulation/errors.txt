@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/ahmed scenes.rpy", line 112: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    if bullied_ahmed:
-    ^
+File "game/kayden scenes.rpy", line 38: choice menuitem expects a non-empty block.
+    "something is off about this person ...":
+                                             ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jun 25 15:11:13 2024
+Sat Jun 29 19:29:50 2024

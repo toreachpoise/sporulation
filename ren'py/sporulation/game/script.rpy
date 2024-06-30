@@ -10,11 +10,16 @@ define k = Character("Kayden", color="#cff450")
 define i = Character("Inanna", color="#8f3ce9")
 define j = Character("Javier", color="#cc0000")
 
+define npc = Character("NEON PUNK CUNTBOY", color="#cff450")
+define pdm = Character("PLANT DICK MAN", color="#b07030")
+
 ## VARIABLES
 $ struggled = False
 $ doubted = False
 $ struggled_again = False
 $ plantflation = False
+$ met_kayden = False
+$ tried_to_leave = False
 
 
 ## GAME START
