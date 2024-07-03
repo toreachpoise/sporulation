@@ -6,6 +6,20 @@ init offset = -1
 
 
 ################################################################################
+## Custom Character Positions
+################################################################################
+transform midleft:
+    xalign .33 yalign 1.0
+transform midright:
+    xalign .67 yalign 1.0
+transform center:
+    xalign .5 yalign .5
+transform farleft:
+    xalign .20 yalign 1.0
+transform farright:
+    xalign .80 yalign 1.0
+
+################################################################################
 ## Styles
 ################################################################################
 

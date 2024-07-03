@@ -1,6 +1,10 @@
 label terry_1:
     t "Uh, Parvez?"
     p "Yeah, love?"
+    scene bed
+    show terry at center:
+        zoom 2.5
+        yalign 0
     # CG: terry blowjob--> Parvez
     "Terry looks up from between Parvez's thighs."
     t "I think your plant dream might have been real."
@@ -60,7 +64,8 @@ label terry_1:
     jump nav_menu
 
 label terry_2:
-    # BG terry and parvez apartment
+    $ doubted = False
+    scene bed
     "Where before it had been the same thickness the whole way along, today Parvez woke up with a weird bulb near the end of his cock."
     "Terry gave him a blowjob, hoping to see if something would come out when Parvez came. So far nothing had."
     "Terry seemed to think this was all some kind of game, taking everything in stride worryingly well."
@@ -76,6 +81,9 @@ label terry_2:
         "huh??":
             pass
     # CG terry blowing parvez; maybe same one edited with dick or different one idk
+    show terry at midleft:
+        zoom 2.5
+        yalign 0
     "Terry was looking up at Parvez from between his legs, a string of spit connecting their lips to his cock."
     "They leaned down and licked the weird bulb that had formed at the end."
     t "You know, I don't have to do this if you're not into it."
@@ -88,7 +96,12 @@ label terry_2:
     "This time when Parvez came, the tip of the bulb shot out sticky yellow goo with seeds suspended in it."
     # new cg??
     "The seeds were small and grayish. Terry said the goo tasted like aloe vera."
+    scene couch
+    show parvez at midright
     "A few hours later, Parvez was laying on the couch scrolling on his phone. Some anime was on the TV but he wasn't watching it."
+    show terry at left:
+        zoom 1.5
+        yalign 0
     "Terry walked into the living room, spatula in hand."
     t "Hey, so in your plant dream what happened exactly?"
     "Parvez kept looking at his phone as he spoke:"
@@ -96,6 +109,9 @@ label terry_2:
     p "When I touched it, it grabbed me back, and then like started to fuck me."
     "He sat up and looked at Terry."
     p "At first it felt good, but then it had this weird flower thing, and it was going for ... y'know, front-hole."
+    hide terry
+    hide parvez
+    show parvez n terry at midright
     "Terry came and sat on the couch next to him."
     p "Yeah so then it puts its weird stamen thing inside me, and after a while I felt it ... well, cum, I guess?"
     p "I don't know, like, there was a weird bulb on it when it went in, and then it was deflated when it came out."
@@ -142,6 +158,8 @@ label passing_it_on:
     "Terry cuddles into Parvez's chest, dropping their batter-covered spoon on the table."
     t "I think you should see if you can spread it to other people."
     p "You wouldn't be jealous of me fucking other boys?"
+    scene kitchen
+    show terry at left
     "A couple of days later, Terry comes to the breakfast table, phone in hand."
     t "Man, you are really popular."
     "Parvez looks up blearily from his cereal."
