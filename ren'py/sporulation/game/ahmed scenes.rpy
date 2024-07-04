@@ -2,12 +2,12 @@ label ahmed_1:
     $ made_ahmed_smile = False
     $ bullied_ahmed = False
     # needs coffeeshop bg
-    show ahmed at midleft
+    show ahmed at midleft with dissolve
     "They meet Ahmed a month later to the day."
     "He's short, almost as short as Parvez, with a scraggly little beard."
     "His hair stands out at odd angles, kinky in places and lanky in others."
     "He looks rumpled, but it's kind of cute. Like a mad scientist or a writer who scarcely gets up from his desk."
-    show parvez n terry at midright
+    show parvez n terry at midright with moveinright
     "Terry pushes Parvez when they walk into the coffee shop."
     t "See? I told you he'd be cute!"
     "Ahmed half-stands when they get to the table, shakes both their hands awkwardly."
@@ -55,7 +55,7 @@ label ahmed_conversation:
         "If Parvez looked like Ahmed, his life would be so much easier."
         "But his sadness is kind of humanizing. It makes Parvez really like him."
         "Ahmed is a bit like a stray puppy. Parvez just wants to make him feel good."
-    hide ahmed
+    hide ahmed with moveoutleft
     "Ahmed excuses himself to go to the bathroom. Terry turns to face Parvez immediately."
     if bullied_ahmed:
         t "Dude, what are you up to?"
@@ -92,7 +92,7 @@ label ahmed_conversation:
                         t "Okay baby. Say no more. I'll still suck your weird cock tonight."
                         jump no_ahmed_fuck
 label no_ahmed_fuck:
-    show ahmed at midleft
+    show ahmed at midleft with moveinleft
     "When Ahmed comes back from the bathroom, Terry tells him you have to go take care of something family related."
     "Ahmed seems a bit sad to hear this but not surprised."
     if bullied_ahmed:
@@ -102,7 +102,7 @@ label no_ahmed_fuck:
     "You all pay your bills and leave pretty quickly after that."
     jump nav_menu
 label fuck_ahmed:
-    scene cardboard
+    scene black with dissolve
     # are we gonna be fancy and have a subway bg
     "Parvez and Terry ride the subway back to their apartment on either side of Ahmed,"
     if bullied_ahmed:
@@ -113,6 +113,7 @@ label fuck_ahmed:
     scene bed
     show ahmed at midleft
     show parvez n terry at midright
+    with dissolve
     "In the bedroom he doesn't want to take his shirt off."
     "He had walked in, taken his pants off, sat down on the bed, and then waited in awkward silence."
     p "Are you sure you want to do this?"
@@ -228,7 +229,7 @@ label keep_fucking_ahmed:
     "They lay in a sticky pile for a few seconds until Ahmed asks if he could take a shower."
     "Terry points him to the bathroom."
     "Parvez is half asleep already. His belly is covered in sticky seed goo and the bulb on his dick is deflated."
-    hide ahmed
+    hide ahmed with Fade(0.5,0.3,0.5)
     "When Parvez and Terry wake up, Ahmed is gone."
     "A week later, Ahmed texts Terry a picture of his pussy. 'It's growing.'"
     "Sure enough, in the center of his purple-brown labia, there is a pearl of green."

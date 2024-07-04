@@ -1,48 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/terry scenes.rpy:113
-  File "game/terry scenes.rpy", line 112, in script
-    show terry at center:
-  File "game/terry scenes.rpy", line 113, in <module>
-    clear
-NameError: name 'clear' is not defined
+While running game code:
+  File "game/solo scenes.rpy", line 73, in script
+    show terry and parvez
+Exception: Image 'terry' does not accept attributes 'and parvez'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/terry scenes.rpy", line 112, in script
-    show terry at center:
+  File "game/solo scenes.rpy", line 73, in script
+    show terry and parvez
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1076, in show_imspec
     renpy.config.show(name,
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 765, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\scenelists.py", line 474, in add
-    thing.visit_all(lambda d : None)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 421, in visit_all
-    for d in self.visit():
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\atl.py", line 764, in visit
-    block = self.compile()
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\atl.py", line 671, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\atl.py", line 873, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\atl.py", line 873, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\atl.py", line 1179, in compile
-    child = ctx.eval(expr)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\atl.py", line 392, in eval
-    return renpy.python.py_eval(expr, locals=self.context)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/terry scenes.rpy", line 113, in <module>
-    clear
-NameError: name 'clear' is not defined
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 739, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 246, in _duplicate
+    args.extraneous()
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'terry' does not accept attributes 'and parvez'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.6.29
-Tue Jul  2 20:34:34 2024
+sporulation 0.7.2
+Thu Jul  4 19:18:24 2024

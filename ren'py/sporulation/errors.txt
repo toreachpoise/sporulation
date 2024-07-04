@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/terry scenes.rpy", line 5: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    t "Uh, Parvez?"
-                   ^
+File "game/solo scenes.rpy", line 54: choice menuitem expects a non-empty block.
+    "dude, why not?":
+                     ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jul  2 20:26:53 2024
+Thu Jul  4 18:45:40 2024

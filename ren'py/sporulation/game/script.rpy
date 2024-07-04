@@ -51,10 +51,11 @@ image plant_encounter_1_cg1 = "/cgs/plants concept.png"
 ## GAME START / NAVIGATION MENU
 
 label start:
-    show cardboard
+    $ strokerattempt = 1
+    $ strokerused = False
     "this is a placeholder for the app navigation screen"
 label nav_menu:
-    scene cardboard
+    scene cardboard with fade
     menu:
         "plant encounter 1":
             jump plant_encounter_1
@@ -68,4 +69,6 @@ label nav_menu:
             jump kayden_1
         "plant encounter 2":
             jump plant_encounter_2
+        "solo 1" if strokerused == False:
+            jump solo_1
     return

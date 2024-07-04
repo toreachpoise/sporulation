@@ -1,6 +1,6 @@
 label plant_encounter_1:
     $ struggled = False
-    scene plant far
+    scene plant far with fade
     "Parvez hopes he hasn't locked himself out of his car."
     "When he'd got to the trail, he'd decided it would be easier to leave his keys in the car than to try and wedge them into his running shorts pocket--"
     "--seriously, what are those things supposed to hold?--"
@@ -18,7 +18,7 @@ label plant_encounter_1:
         "check out the plant":
             pass
     "He squelches his way around the harder ground at the edge of the swamp. It's still muddy enough that his feet get stuck in it a couple of times."
-    scene plant closeup
+    scene plant closeup with wipeleft
     "The plant is bigger than it looked from far away."
     "Up close, Parvez can see it looks more like some kind of succulent; thicker than seaweed."
     "He wishes he had his phone. Too bad it wouldn't fit in his running shorts."
@@ -39,9 +39,11 @@ label plant_touches_you:
     "Actually, no, this thing is definitely moving. A couple of the fronds brush his legs, then his arms, like it's testing him out."
     "Then it starts to slither around his arms, around his ankles."
     "At this point it's too late, of course. Parvez is trapped."
-    scene plant_encounter_1_cg1:
+    scene black
+    show plant_encounter_1_cg1:
         yalign 0.0
         xalign 0.5
+    with Dissolve(2)
     p "This is some sick hentai shit."
     "Oddly, he's not panicking."
     "One of the fronds is trailing up his inner thigh, into his shorts."
@@ -98,19 +100,21 @@ label it_has_you:
     "It doesn't hurt, he's not actually feeling any discomfort, but it doesn't feel good either."
     "After a few moments the balloon inside him seems to burst. The flower pulls out, with a deflated bulb near the bottom."
     "This is the last thing Parvez registers before he passes out."
+    scene black with dissolve
     ".........."
-    scene plant closeup
     "When he wakes up it's almost dark. He's wet, freezing, and covered in mud."
+    scene plant closeup with dissolve
     "He gets to his shaky feet and starts to walk back to his car."
-    scene plant far
     "The moon is already high in the gray late afternoon sky."
+    scene plant far with wipeleft
     "Even though Parvez felt cold the entire way, when he arrives at his car he is drenched in sweat."
     "He downs the rest of his water. His car, mercifully, is unlocked."
-    scene couch
+    scene couch with fade
     "Terry is waiting for him on the couch with a glass of wine."
     show terry at center:
         zoom 1.5
         yalign 0
+    with dissolve
     t "Where were you? I was really worried."
     p "I think my vape oil is laced or something."
     p "I passed out in the mud and had a really weird nightmare."
@@ -122,6 +126,7 @@ label it_has_you:
     show terry at center:
         zoom 2.0
         yalign 0
+    with dissolve
     "Terry comes up to Parvez, reaching for his forehead like they're gonna check his temperature."
     menu:
         "let them comfort you":
@@ -129,6 +134,7 @@ label it_has_you:
             show parvez n terry at center:
                 zoom 2.0
                 yalign 0
+            with dissolve
             "Parvez leans into Terry's hand when they place it on his head. It's cool and soft."
             t "You don't feel feverish."
             "They pet Parvez's head for a moment before withdrawing. His hair feels sticky and gross on his head. He needs a shower, bad."
@@ -137,6 +143,7 @@ label it_has_you:
             show terry at center:
                 zoom 1.5
                 yalign 0
+            with dissolve
             "Parvez swats Terry's hand away."
             "He doesn't know how to say it but the idea of being touched, even by Terry, feels bad right now."
             "He's disgusting, covered in mud. He doesn't know what just happened, if it even did happen. But either way his whole body feels gross and wrong."
@@ -155,7 +162,7 @@ label plant_encounter_2:
     $ tried_to_take_plant = False
     $ struggled_again = False
     $ plantflation = False
-    scene kitchen
+    scene kitchen with fade
     "Even though this whole having a plant dick thing has been cool, it still kind of freaks Parvez out not knowing how it happened."
     "He just can't shake the feeling that the whole thing was a weird dream, even in the face of the physical evidence."
     "One morning he wakes up and realizes that the only way to set his doubts to rest is to just go and try to find the plant again."
@@ -164,14 +171,14 @@ label plant_encounter_2:
     t "Where ya going baby?"
     p "For a run."
     t "Don't get fucked by any more supernatural entities. Or do, I guess. Whichever you want."
+    scene plant far with wipeleft
     "Parvez parks his beat up hatchback down the side of the logging road."
-    scene plant far
     "As soon as he steps outside he's assaulted by the forest air, which is hot and steamy like a giant's breath."
     "He has brought a bag this time, stowing his keys securely and locking his car."
     "He runs down the same route he took last time, an overgrown deer trail that had newly forked away from his usual track."
     "The atmosphere is oppressive. His nostrils feel full of air and gnats with each inhalation."
     "He keeps running though, and sure enough after a couple of kilometers he sees the trail give way down into a swamp."
-    scene plant midway
+    scene plant midway with wipeleft
     "He realizes he had convinced himself the plant wouldn't still be there when he sees it, oil slick iridescent in the low light of the wetlands."
     "Now that he's expecting it, it's visibly moving from far away."
     "He approaches, fear and anticipation building in his gut."
@@ -193,11 +200,11 @@ label plant_encounter_2:
             "He could swear he saw the main plant recoil when he did that."
             "He wishes he had something to leave as an offering, but he doesn't."
             "He stuffs the small plant in his pocket and goes home."
-            scene kitchen
+            scene kitchen with Dissolve(1)
             "He transplants his cutting into a little cup and puts it on the windowsill, but it withers and dies within two weeks."
             jump nav_menu
 label plant_blowjob:
-    scene plant closeup
+    scene plant closeup with wipeleft
     "He finds himself standing right beside it, reaching out a finger to touch a pulsing arm of the plant."
     "It's slick, a clear film coats his hand."
     "He rubs his fingers together, and then, unthinkingly, puts them to his lips."
@@ -206,6 +213,7 @@ label plant_blowjob:
     "He kisses along the length of it as it wiggles. Then he kisses the tip."
     "The tentacle--he's willing to call it that now--presses against his mouth."
     # BLOWBJOB CG
+    show parvez with dissolve
     p "Fuck it."
     "Parvez parts his lips."
     "The tentacle enters his mouth, feeling around cautiously at first."
@@ -229,8 +237,12 @@ label plant_blowjob:
             "He can feel the delicate skin and blood vessels of his neck being squeezed between the tentacle inside his throat and the one around it."
             "His eyes roll back in his head."
             "The black spots fill Parvez's vision until he can't see or feel anything any more."
+            scene black with dissolve
             "................."
             "Parvez wakes up to a squelching noise."
+            show plant closeup
+            show parvez
+            with dissolve
             "He looks down and it's him, both his holes being spread open by the plant."
             jump gag_and_pass_out
         "stop fighting":
@@ -269,6 +281,7 @@ label gag_and_pass_out:
             "Parvez feels them pulsing and shooting inside him."
             "The juice is oddly cool, he feels it coating the inside of the holes."
             "And it keeps coming, the tentacles pumping him."
+            # new cg
             "He can feel its cum filling his womb, gushing further and further into his ass."
             "He looks down to find his belly swollen and distended."
             "It keeps growing. It feels so tight, painful even, but the plant keeps squishing more cum into him."
@@ -281,7 +294,7 @@ label gag_and_pass_out:
 label end_plant_encounter_2:
     "The plant is no longer restraining him."
     "Parvez gets down shakily, his legs barely able to support him."
-    scene plant midway
+    show plant midway with dissolve
     if plantflation:
         "Plant goop oozes down his legs as he struggles to pull his shorts back on."
         "The seat quickly becomes wet as it keeps squishing out of him."

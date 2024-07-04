@@ -2,7 +2,7 @@ label kayden_1:
     #(unlocked by terry 2)
     $ met_kayden = False
     $ tried_to_leave = False
-    scene couch
+    scene couch with fade
     "Parvez has been messaging with this person on the hook up app for a while."
     "Looking back through the messages since Terry started the account, this person was one of the first to talk to Parvez."
     "Their profile is wild. NEON PUNK CUNTBOY it reads. SPIT IN MY FACE AND MAKE ME CALL YOU DADDY."
@@ -77,7 +77,7 @@ label kayden_1:
 label meet_kayden:
     $ met_kayden = True
     pdm "okay, where do you want to meet?"
-    scene skatepark ramps
+    scene skatepark ramps with wipeleft
     "As soon as Parvez shows up to the location that NEON PUNK CUNTBOY had chosen, he regrets his decision to come."
     "It's a grimy and badly maintained skate park under the old highway at the edge of town."
     "The orange of the setting sun picks out all the rust in the steel girders and the rebar hanging out from under the road."
@@ -92,7 +92,7 @@ label meet_kayden:
             "Parvez decides to wait a bit longer."
             "It's kind of beautiful down here in a strange way."
             "Beyond the highway there isn't much, and the green kudzu vines that blanket all the scrublands around here have started to creep in."
-            scene skatepark hill
+            scene skatepark hill with Dissolve(1)
             "The ramps toward the back are all partly covered in a growing mass of green."
             "Parvez goes over and sits on one of the thickly foliated concrete ramps."
             "The leaves are squishy, cushioning him. He could easily sleep on this thick mat of vines."
@@ -106,15 +106,16 @@ label meet_kayden:
             "Parvez feels a hand on his shoulder just as he's turning to go."
             pass
 label kayden_arrives:
-    show kayden at center
+    show kayden
     k "Sorry I'm late. I'm Kayden."
     if tried_to_leave:
         "Parvez shrugs their hand off his shoulder instinctively, annoyance bubbling up in him."
     p "Dude, what is this place?"
     "Kayden leads Parvez to a section of the skatepark near the side of the underpass."
-    scene skatepark interior
+    scene skatepark interior with dissolve
     show kayden at midleft
     show parvez at midright
+    with moveinleft
     k "This is my sanctuary."
     "Kayden looks around like he's seeing the space for the first time."
     k "I've been coming here since I was a kid."
@@ -129,10 +130,12 @@ label kayden_arrives:
     k "I'm sorry, have I offended the good gentleman?"
     "They advance toward him. Parvez is slightly frightened."
     show kayden at center
+    with move
     k "Please sir, insert thine member into my nubile pussy."
     k "I am but a fair maiden, good sir, please ... deflower me gently."
     show kayden at midright
     show parvez at farright
+    with MoveTransition(0.2)
     "They have Parvez pressed up against a wall."
     "They grab his hand and press it under their skirt."
     "Their tights are already torn, the hole sopping wet around his cunt."
@@ -152,23 +155,30 @@ label kayden_arrives:
             p "Holy fuck what is wrong with you??"
             "Parvez shoves them with the point of his shoulder in their chest, as hard as he can."
             "They keep their grip on his hand and they both fall over, unbalanced."
+            show kayden at center:
+                zoom 0.75
+                yalign 0.75
+            with move
             "This shakes them enough for Parvez to break free and start moving away."
             k "You're just a cunt like me. You could never be a real man."
             "Parvez starts running out of there."
-            hide kayden
+            hide kayden with moveoutleft
             "They start laughing, not even trying to follow. Their last words follow Parvez out."
             k "I hope a real man comes and rapes your bitch hole and shows you what you truly are."
+            scene black with pushleft
             "Parvez drives home, shaking all the way, covered in cold sweat."
             "He's angry with himself for going, and for being so unsettled."
             scene couch
             show terry at center:
                 zoom 1.5
                 yalign 0
+            with dissolve
             "He finds Terry on the couch watching a cooking anime."
             hide terry
             show parvez n terry at center:
                 zoom 1.5
                 yalign 0
+            with dissolve
             "He snuggles himself under Terry's arm, saying nothing, just burrowing toward the warmth of Terry's body."
             t "Bad date, huh?"
             "Parvez grumbles into the meat of Terry's armpit, not even coherent words."
@@ -182,6 +192,7 @@ label fuck_kayden:
     "Parvez grabs their shoulders, catching them off guard and turning them around."
     show kayden at right
     show parvez at farright
+    with move
     "He has them boxed in to the wall now. Even though they are taller than him, they shrink in front of him."
     "Their gaze is still sharp though: defying, taunting, evaluating."
     "Parvez drops his pants. They had arranged for it to be 'his time of the month,' as Terry calls it."
@@ -201,7 +212,7 @@ label fuck_kayden:
     "They reach inside themself and scoop some to their lips, before kneeling to suck the rest of it off Parvez's cock."
     "He shoves himself into their mouth unceremoniously a few times to finish pumping the goo down their throat. Then he withdraws."
     "He leaves them on their knees in the nasty old underpass, spiky hair bent out of shape and black eyeliner running down their face."
-    hide kayden
+    hide kayden with moveoutleft
     "When he gets home he isn't able to find Kayden on the app again."
     p "Weird, they must have blocked me ..."
     jump nav_menu

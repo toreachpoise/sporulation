@@ -1,10 +1,12 @@
 label terry_1:
+    scene black with dissolve
     t "Uh, Parvez?"
     p "Yeah, love?"
     scene bed
     show terry at center:
         zoom 2.5
         yalign 0
+    with dissolve
     # CG: terry blowjob--> Parvez
     "Terry looks up from between Parvez's thighs."
     t "I think your plant dream might have been real."
@@ -25,12 +27,17 @@ label terry_1:
     p "Yeah."
     t "Does it feel good?"
     p "Fuck yeah."
-    # fade to black
+    scene black with dissolve
     "......."
     "A month after Parvez's dream in the woods, his new cock is fully grown."
     "It's the same dark green as the plant had been, a smooth cylinder. Soft, it stands up, curving against his pubis and lower belly."
     "Terry joked that it looked like he always had a little boner tucked into his belt."
     # CG: fucking terry
+    scene bed
+    show terry at center:
+        zoom 2.5
+        yalign 0
+    with dissolve
     "Parvez will never forget the feeling of pressing into Terry for the first time."
     "He had resigned himself to never knowing what it would feel like to be inside his partners with the most sensitive part of his body."
     "He had gotten used to using his fingers, or toys, projecting his experience and sensations into a hunk of silicone. It was good in its own way but this, this was totally different."
@@ -61,11 +68,12 @@ label terry_1:
     p "Thanks pal, I made it just for you."
     "They kissed and fell asleep together, still dirty, half glued together with jizz."
     # UNLOCKS TERRY 2
+    scene black with dissolve
     jump nav_menu
 
 label terry_2:
     $ doubted = False
-    scene bed
+    scene bed with fade
     "Where before it had been the same thickness the whole way along, today Parvez woke up with a weird bulb near the end of his cock."
     "Terry gave him a blowjob, hoping to see if something would come out when Parvez came. So far nothing had."
     "Terry seemed to think this was all some kind of game, taking everything in stride worryingly well."
@@ -81,6 +89,7 @@ label terry_2:
         "huh??":
             pass
     # CG terry blowing parvez; maybe same one edited with dick or different one idk
+    scene bed with Fade(0.05,0.2,0)
     show terry at midleft:
         zoom 2.5
         yalign 0
@@ -94,14 +103,15 @@ label terry_2:
     t "You know, it is pretty weird. But I think if there's one thing I've learned in life, it's not to look a gift blowjob in the mouth."
     "With that Terry took Parvez's cock all the way down his throat and Parvez allowed his thoughts to be banished by the sensation of Terry's throat."
     "This time when Parvez came, the tip of the bulb shot out sticky yellow goo with seeds suspended in it."
-    # new cg??
     "The seeds were small and grayish. Terry said the goo tasted like aloe vera."
     scene couch
     show parvez at midright
+    with fade
     "A few hours later, Parvez was laying on the couch scrolling on his phone. Some anime was on the TV but he wasn't watching it."
     show terry at left:
         zoom 1.5
         yalign 0
+    with moveinleft
     "Terry walked into the living room, spatula in hand."
     t "Hey, so in your plant dream what happened exactly?"
     "Parvez kept looking at his phone as he spoke:"
@@ -112,6 +122,7 @@ label terry_2:
     hide terry
     hide parvez
     show parvez n terry at midright
+    with dissolve
     "Terry came and sat on the couch next to him."
     p "Yeah so then it puts its weird stamen thing inside me, and after a while I felt it ... well, cum, I guess?"
     p "I don't know, like, there was a weird bulb on it when it went in, and then it was deflated when it came out."
@@ -158,8 +169,11 @@ label passing_it_on:
     "Terry cuddles into Parvez's chest, dropping their batter-covered spoon on the table."
     t "I think you should see if you can spread it to other people."
     p "You wouldn't be jealous of me fucking other boys?"
-    scene kitchen
-    show terry at left
+    scene kitchen with fade
+    show terry at left:
+        zoom 1.5
+        yalign 0
+    with moveinleft
     "A couple of days later, Terry comes to the breakfast table, phone in hand."
     t "Man, you are really popular."
     "Parvez looks up blearily from his cereal."
