@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/solo scenes.rpy", line 54: choice menuitem expects a non-empty block.
-    "dude, why not?":
-                     ^
+File "game/script.rpy", line 47: expected '=' not found.
+    image judys with kayden = "/character sprites/judys with kayden.png"
+                ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Jul  4 18:45:40 2024
+Fri Jul  5 18:30:04 2024

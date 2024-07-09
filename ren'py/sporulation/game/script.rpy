@@ -10,8 +10,9 @@ define k = Character("Kayden", color="#617b0a")
 define i = Character("Inanna", color="#8f3ce9")
 define j = Character("Javier", color="#cc0000")
 
-define npc = Character("cuntboi", color="#617b0a")
-define pdm = Character("plantman", color="#b07030")
+define npc = Character("neonpunkcuntboi", color="#617b0a")
+define pdm = Character("plantdickman", color="#b07030")
+define lj = Character("snakewoman", color="#8f3ce9")
 
 ## BGS
 # these are just placeholder thumbnails for now
@@ -35,12 +36,52 @@ image plant closeup = "/bgs/woods-1.png"
 # these are just placeholder sprites for now, they need expressions
 
 image ahmed = "/character sprites/ahmed.png"
-image inanna = "/character sprites/inanna n javier.png"
-image javier = "/character sprites/inanna n javier.png"
+image ahmed bottomy = "/character sprites/ahmed bottomy.png"
+image ahmed crying = "/character sprites/ahmed crying.png"
+image ahmed overwhelmed = "/character sprites/ahmed overwhelmed.png"
+image ahmed speaking = "/character sprites/ahmed speaking.png"
+
+image inanna = "/character sprites/inanna.png"
+image inanna even more toppy = "/character sprites/inanna even more toppy.png"
+image inanna excited = "/character sprites/inanna excited.png"
+image inanna frightened = "/character sprites/inanna frightened.png"
+image inanna happy = "/character sprites/inanna happy.png"
+image inanna toppy = "/character sprites/inanna toppy.png"
+image inanna worried = "/character sprites/inanna worried.png"
+
+image javier = "/character sprites/javier.png"
+image javier crying = "/character sprites/javier crying.png"
+image javier happy = "/character sprites/javier happy.png"
+image javier worried = "/character sprites/javier worried.png"
+
+image inanna n javier = "/character sprites/inanna n javier.png"
+
 image kayden = "character sprites/kayden.png"
+image kayden bottomy = "character sprites/kayden bottomy.png"
+image kayden threatening = "character sprites/kayden threatening.png"
+
 image parvez = "/character sprites/parvez.png"
+image parvez bottomy = "/character sprites/parvez bottomy.png"
+image parvez crying = "/character sprites/parvez crying.png"
+image parvez happy = "/character sprites/parvez happy.png"
+image parvez toppy = "/character sprites/parvez toppy.png"
+image parvez worried = "/character sprites/parvez worried.png"
+
 image terry = "/character sprites/terry.png"
+image terry angry = "/character sprites/terry angry.png"
+image terry embarrassed = "/character sprites/terry embarrassed.png"
+image terry toppy = "/character sprites/terry toppy.png"
+image terry worried = "/character sprites/terry worried.png"
+
 image parvez n terry = "/character sprites/parvez n terry.png"
+
+image judys = "/character sprites/judys without kayden.png"
+
+image judys n kayden = "/character sprites/judys with kayden.png"
+
+image chud = "/character sprites/chud.png"
+
+image judys n chud = "/character sprites/judys n chud.png"
 
 ## CGs
 # these will be artworks depicting certain scenes, we'll see how many of them get made lol
@@ -54,21 +95,5 @@ label start:
     $ strokerattempt = 1
     $ strokerused = False
     "this is a placeholder for the app navigation screen"
-label nav_menu:
-    scene cardboard with fade
-    menu:
-        "plant encounter 1":
-            jump plant_encounter_1
-        "terry 1":
-            jump terry_1
-        "terry 2":
-            jump terry_2
-        "ahmed 1":
-            jump ahmed_1
-        "kayden 1":
-            jump kayden_1
-        "plant encounter 2":
-            jump plant_encounter_2
-        "solo 1" if strokerused == False:
-            jump solo_1
+    jump nav_menu
     return

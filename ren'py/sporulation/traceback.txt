@@ -1,30 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/solo scenes.rpy", line 73, in script
-    show terry and parvez
-Exception: Image 'terry' does not accept attributes 'and parvez'.
+  File "game/plant encounters.rpy", line 232, in script
+    if struggled:
+  File "game/plant encounters.rpy", line 232, in <module>
+    if struggled:
+NameError: name 'struggled' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/solo scenes.rpy", line 73, in script
-    show terry and parvez
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1113, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1076, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 739, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 246, in _duplicate
-    args.extraneous()
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 109, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'terry' does not accept attributes 'and parvez'.
+  File "game/plant encounters.rpy", line 232, in script
+    if struggled:
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/plant encounters.rpy", line 232, in <module>
+    if struggled:
+NameError: name 'struggled' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.7.2
-Thu Jul  4 19:18:24 2024
+sporulation 0.7.4
+Mon Jul  8 21:03:57 2024

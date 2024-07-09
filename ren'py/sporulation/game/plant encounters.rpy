@@ -111,7 +111,7 @@ label it_has_you:
     "He downs the rest of his water. His car, mercifully, is unlocked."
     scene couch with fade
     "Terry is waiting for him on the couch with a glass of wine."
-    show terry at center:
+    show terry worried at center:
         zoom 1.5
         yalign 0
     with dissolve
@@ -123,7 +123,7 @@ label it_has_you:
     p "It was good at first but then it was kind of rapey ..."
     p "... but I was okay with it? Somehow??"
     t "Damn sweetie, are you okay? Are you sure you don't have a fever or something??"
-    show terry at center:
+    show terry worried at center:
         zoom 2.0
         yalign 0
     with dissolve
@@ -140,7 +140,7 @@ label it_has_you:
             "They pet Parvez's head for a moment before withdrawing. His hair feels sticky and gross on his head. He needs a shower, bad."
             jump temp_check
         "you don't want to be touched right now":
-            show terry at center:
+            show terry worried at center:
                 zoom 1.5
                 yalign 0
             with dissolve
@@ -167,6 +167,8 @@ label plant_encounter_2:
     "He just can't shake the feeling that the whole thing was a weird dream, even in the face of the physical evidence."
     "One morning he wakes up and realizes that the only way to set his doubts to rest is to just go and try to find the plant again."
     "He gets up early on a Friday morning while the city is still steamy outside."
+    show terry worried at midleft
+    with moveinleft
     "Terry shuffles blearily out of the bathroom in his bathrobe while Parvez is tying his shoes."
     t "Where ya going baby?"
     p "For a run."
@@ -183,8 +185,7 @@ label plant_encounter_2:
     "Now that he's expecting it, it's visibly moving from far away."
     "He approaches, fear and anticipation building in his gut."
     "Parvez didn't really have a plan beyond seeing if the plant was still there."
-    "But now that he's here ..."
-    "But now that he's here ... what?"
+    "But now that he's here ...{w} what?"
     "The plant seems docile today. It's not reacting directly to Parvez's presence."
     menu:
         "what should I do?"
@@ -204,7 +205,11 @@ label plant_encounter_2:
             "He transplants his cutting into a little cup and puts it on the windowsill, but it withers and dies within two weeks."
             jump nav_menu
 label plant_blowjob:
-    scene plant closeup with wipeleft
+    scene plant closeup
+    show parvez toppy at midright:
+        zoom 1.25
+        yalign 1
+    with wipeleft
     "He finds himself standing right beside it, reaching out a finger to touch a pulsing arm of the plant."
     "It's slick, a clear film coats his hand."
     "He rubs his fingers together, and then, unthinkingly, puts them to his lips."
@@ -213,7 +218,7 @@ label plant_blowjob:
     "He kisses along the length of it as it wiggles. Then he kisses the tip."
     "The tentacle--he's willing to call it that now--presses against his mouth."
     # BLOWBJOB CG
-    show parvez with dissolve
+    show parvez bottomy with dissolve
     p "Fuck it."
     "Parvez parts his lips."
     "The tentacle enters his mouth, feeling around cautiously at first."
@@ -221,6 +226,7 @@ label plant_blowjob:
     p "W-ghugh--"
     "It feels kind of good, tugging firmly but not too hard on his tongue. Parvez feels his dick getting hard, pressing against the waistband of his shorts."
     "Then the plant seemingly loses interest in his tongue, delving deep into the back of his mouth."
+    show parvez crying with dissolve
     "Parvez chokes. His hands go to the tentacle, trying to pull it out,"
     "but by now it's fully awake, grasping him by the shoulders and the back of his head and forcing the tentacle in."
     if struggled:
@@ -236,17 +242,17 @@ label plant_blowjob:
             "One of the tentacles is around his throat."
             "He can feel the delicate skin and blood vessels of his neck being squeezed between the tentacle inside his throat and the one around it."
             "His eyes roll back in his head."
-            "The black spots fill Parvez's vision until he can't see or feel anything any more."
             scene black with dissolve
+            "The black spots fill Parvez's vision until he can't see or feel anything any more."
             "................."
             "Parvez wakes up to a squelching noise."
             show plant closeup
-            show parvez
+            show parvez bottomy
             with dissolve
             "He looks down and it's him, both his holes being spread open by the plant."
             jump gag_and_pass_out
         "stop fighting":
-            pass
+            show parvez bottomy with dissolve
     "He gives up and tries to let his throat go slack."
     "He swallows around the tentacle, trying to time his breaths with when it pulls out,"
     "breathing steadily through his nose and getting the air rhythmically punched out by the long tentacle."

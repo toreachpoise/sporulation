@@ -7,10 +7,11 @@ label ahmed_1:
     "He's short, almost as short as Parvez, with a scraggly little beard."
     "His hair stands out at odd angles, kinky in places and lanky in others."
     "He looks rumpled, but it's kind of cute. Like a mad scientist or a writer who scarcely gets up from his desk."
-    show parvez n terry at midright with moveinright
+    show parvez n terry at right with moveinright
     "Terry pushes Parvez when they walk into the coffee shop."
     t "See? I told you he'd be cute!"
     "Ahmed half-stands when they get to the table, shakes both their hands awkwardly."
+    show ahmed speaking with dissolve
     a "Hey, I'm, um, well, you know, I guess."
     menu:
         "try to make him smile":
@@ -34,15 +35,18 @@ label ahmed_conversation:
     "He's an office worker, engineering of course."
     if bullied_ahmed:
         p "Does that mean you're good at erecting things?"
+        show ahmed bottomy with dissolve
         "Terry looks at him and raises an eyebrow. Ahmed flushes. This will be very easy."
     if made_ahmed_smile:
         "Ahmed has big hands and soft-fringed eyes. He seems sad."
+    show ahmed with dissolve
     "He tells them how this is his first time on a date from the app."
     "He'd only just come out as trans to his parents a few months ago, after years of secretly taking testosterone."
     "He lives in a basement suite with three girls."
     if bullied_ahmed:
         "It's kind of pathetic. This guy is kind of pathetic. It's kinda hot though."
         "Parvez scoots his foot toward Ahmed's along the ground, nudging it."
+        show ahmed bottomy with dissolve
         "Ahmed moves his foot away."
         "Parvez maintains his pursuit, placing his foot direcly next to Ahmed's as soon as he puts it down."
         "Ahmed can't seem to focus on his conversation with Terry."
@@ -111,8 +115,8 @@ label fuck_ahmed:
         "resting their cheeks on his shoulders."
     "Ahmed is beet red, sweating in the cramped subway car."
     scene bed
-    show ahmed at midleft
-    show parvez n terry at midright
+    show ahmed bottomy at midleft
+    show parvez n terry at right
     with dissolve
     "In the bedroom he doesn't want to take his shirt off."
     "He had walked in, taken his pants off, sat down on the bed, and then waited in awkward silence."
@@ -156,6 +160,7 @@ label fuck_ahmed:
     "Ahmed nods again."
     if made_ahmed_smile:
         label nicer_ahmed_scene:
+        show ahmed bottomy with dissolve
         "Terry moves down to nuzzle Ahmed's clit."
         t "Your bush is so soft!"
         "Parvez turns Ahmed's face toward him again, kissing him deeply."
@@ -183,6 +188,7 @@ label fuck_ahmed:
                 jump keep_fucking_ahmed
     if bullied_ahmed:
         p "I bet you've always wanted it, though."
+        show ahmed overwhelmed with dissolve
         "Ahmed goes dead still and colors further. Parvez leans in to whisper in his ear."
         p "I bet you've touched yourself thinking about it. How it would feel to get your insides messed up by a big cock."
         "Parvez makes Ahmed kneel on the floor in front of Terry and gets down beside him."

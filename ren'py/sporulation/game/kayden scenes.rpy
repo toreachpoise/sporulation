@@ -124,17 +124,21 @@ label kayden_arrives:
     "Their voice sounds wistful for a moment before they continue."
     "Turning their feral gaze on Parvez they say:"
     k "That makes it perfect for grimy nasty fucking out in the open."
+    show parvez worried with dissolve
     "Parvez feels his face color."
     p "Jeez, dude."
     "They grin, openmouthed, tongue pressed to one of their unusually sharp teeth. They continue in a girlish high voice."
     k "I'm sorry, have I offended the good gentleman?"
-    "They advance toward him. Parvez is slightly frightened."
-    show kayden at center
+    show kayden threatening at center
+    show parvez worried:
+        xalign 0.75
     with move
+    "They advance toward him. Parvez is slightly frightened."
     k "Please sir, insert thine member into my nubile pussy."
     k "I am but a fair maiden, good sir, please ... deflower me gently."
-    show kayden at midright
-    show parvez at farright
+    show kayden threatening at midright
+    show parvez worried:
+        xalign 0.9
     with MoveTransition(0.2)
     "They have Parvez pressed up against a wall."
     "They grab his hand and press it under their skirt."
@@ -150,12 +154,13 @@ label kayden_arrives:
             k "What, gonna pussy out?"
             "Their face is too close, their eyes wild, their breath hot and acrid."
             "Their voice drops to a growl, too loud and too close."
+            show parvez crying with dissolve
             k "You're a little bitch man, you're not strong enough to admit this is what you want."
             "They force Parvez's fingertips into their wet pussy, clenching down on him."
             p "Holy fuck what is wrong with you??"
             "Parvez shoves them with the point of his shoulder in their chest, as hard as he can."
             "They keep their grip on his hand and they both fall over, unbalanced."
-            show kayden at center:
+            show kayden threatening at center:
                 zoom 0.75
                 yalign 0.75
             with move
@@ -172,7 +177,7 @@ label kayden_arrives:
             show terry at center:
                 zoom 1.5
                 yalign 0
-            with dissolve
+            with wipeleft
             "He finds Terry on the couch watching a cooking anime."
             hide terry
             show parvez n terry at center:
@@ -187,11 +192,13 @@ label kayden_arrives:
 label fuck_kayden:
     "Parvez shoves his fingers up inside them."
     "He draws them out again before forcing them back in, rough, uncareful."
+    show kayden bottomy with dissolve
     "Kayden has their arms around him, hanging off his body, whining into his ear."
     k "Yes, Daddy ... {w} fuck me up."
     "Parvez grabs their shoulders, catching them off guard and turning them around."
-    show kayden at right
-    show parvez at farright
+    # needs flip lmao
+    show kayden bottomy at right
+    show parvez toppy at farright
     with move
     "He has them boxed in to the wall now. Even though they are taller than him, they shrink in front of him."
     "Their gaze is still sharp though: defying, taunting, evaluating."
@@ -212,7 +219,7 @@ label fuck_kayden:
     "They reach inside themself and scoop some to their lips, before kneeling to suck the rest of it off Parvez's cock."
     "He shoves himself into their mouth unceremoniously a few times to finish pumping the goo down their throat. Then he withdraws."
     "He leaves them on their knees in the nasty old underpass, spiky hair bent out of shape and black eyeliner running down their face."
-    hide kayden with moveoutleft
+    scene kitchen with wipeleft
     "When he gets home he isn't able to find Kayden on the app again."
     p "Weird, they must have blocked me ..."
     jump nav_menu

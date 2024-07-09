@@ -1,5 +1,7 @@
+# would like parvez sleepy expression
+
 label solo_1:
-    #(unlocked by terry 1) ((unlike other ones this one is not self-removing when attempted and can be tried again))
+    #(unlocked by terry 1) ((unlike other ones this one is not self-removing if you don't fuck the stroker and can be tried again))
     if strokerattempt == 2:
         jump try_2
     $ wondered = False
@@ -94,8 +96,9 @@ label try_2:
     "Parvez scowls and tries to bat Terry's hand away but Terry grabs him and kisses him, which leads to a ticklefight."
 label use_stroker:
     scene bed
-    show parvez at center:
+    show parvez toppy at center:
         zoom 1.5
+        yalign 0
     with fade
     "Parvez sits on the bed and holds the toy in one hand, looking down at his dick."
     "He feels weird doing this. It seems like crossing a strange threshold to use Terry's toy, to use a toy like this at all for the first time."
@@ -105,6 +108,7 @@ label use_stroker:
     "The rubbery texture of it and the rubbery texture of his cock make a squeaking sound together. The image of fucking a pooltoy pops into his mind unbidden."
     "It's so weird to see his cockhead squeezing into the hole though. The sight transfixes him."
     "He squeezes it further down, watching each little nub and bump be moved aside by his entrance."
+    show parvez bottomy with dissolve
     #cg jerkin it
     "Inside, the toy is so much more uniformly tight than a body or his hand."
     "The texture of the nubs is so soft he can only feel them when he moves it. The main sensation is of total envelopment."

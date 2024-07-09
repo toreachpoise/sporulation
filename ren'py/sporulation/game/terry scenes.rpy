@@ -1,9 +1,11 @@
+# terry expressions wishlist--sleepy, bottomy
+
 label terry_1:
     scene black with dissolve
     t "Uh, Parvez?"
     p "Yeah, love?"
     scene bed
-    show terry at center:
+    show terry toppy at center:
         zoom 2.5
         yalign 0
     with dissolve
@@ -12,7 +14,7 @@ label terry_1:
     t "I think your plant dream might have been real."
     p "What??"
     "Terry reaches over to the bedside table and grabs his hand mirror, holding it up to Parvez's junk."
-    p "It looks like something is growing out of your pussy."
+    t "It looks like something is growing out of your pussy."
     "It really does. In the middle of the cluster of dark purple folds beneath his clit, a fat fingertip of green is poking out."
     "When Terry pokes it, Parvez can feel it."
     menu:
@@ -34,7 +36,7 @@ label terry_1:
     "Terry joked that it looked like he always had a little boner tucked into his belt."
     # CG: fucking terry
     scene bed
-    show terry at center:
+    show terry toppy at center:
         zoom 2.5
         yalign 0
     with dissolve
@@ -48,7 +50,7 @@ label terry_1:
     p "I haven't even started moving yet."
     menu:
         "fuck Terry hard":
-            pass
+            show terry embarrassed with dissolve
     "Parvez forced his cock into Terry, pushing a yell out of him."
     "It felt like Terry's insides were sucking on him, pulling him in deeper. Parvez couldn't help but comply."
     "He didn't last long before his first orgasm, the sensation overwhelming, the heat of Terry's body, their ass pulsing around Parvez, the new sensation completely overwhelmed him."
@@ -63,6 +65,7 @@ label terry_1:
     "Terry came but Parvez kept going, possessed. He rutted into him like an animal, pressing Terry into the sheets soaked with their cum."
     "Surely their neighbors could hear the slap of their bodies meeting, the way Terry was howling with Parvez's fingers dug into his ass, driving himself in and in and in."
     "Eventually, after Terry had cum three times, they had to stop."
+    show terry with dissolve
     "They lay together, hot and sticky and sweaty, in a room that smelled like cum and dirty bodies."
     t "Hey, nice cock buddy."
     p "Thanks pal, I made it just for you."
@@ -90,7 +93,7 @@ label terry_2:
             pass
     # CG terry blowing parvez; maybe same one edited with dick or different one idk
     scene bed with Fade(0.05,0.2,0)
-    show terry at midleft:
+    show terry embarrassed at midleft:
         zoom 2.5
         yalign 0
     "Terry was looking up at Parvez from between his legs, a string of spit connecting their lips to his cock."
@@ -99,6 +102,7 @@ label terry_2:
     t "Your cock is delicious, but I think it works best if we're both enjoying ourselves."
     p "Sorry babe I just. This has been kind of a weird experience."
     p "I'm glad you're not freaked out by it but every once in a while I still kind of am."
+    show terry toppy with dissolve
     "Terry suckled on the underside of Parvez's cock thoughtfully, where the glans would be if Parvez had a normal dick."
     t "You know, it is pretty weird. But I think if there's one thing I've learned in life, it's not to look a gift blowjob in the mouth."
     "With that Terry took Parvez's cock all the way down his throat and Parvez allowed his thoughts to be banished by the sensation of Terry's throat."
@@ -108,15 +112,18 @@ label terry_2:
     show parvez at midright
     with fade
     "A few hours later, Parvez was laying on the couch scrolling on his phone. Some anime was on the TV but he wasn't watching it."
-    show terry at left:
+    show terry worried:
         zoom 1.5
         yalign 0
+        xalign -0.75
     with moveinleft
     "Terry walked into the living room, spatula in hand."
     t "Hey, so in your plant dream what happened exactly?"
     "Parvez kept looking at his phone as he spoke:"
     p "So, like, I was running, and then I saw the plant."
+    show parvez bottomy with dissolve
     p "When I touched it, it grabbed me back, and then like started to fuck me."
+    show parvez worried with dissolve
     "He sat up and looked at Terry."
     p "At first it felt good, but then it had this weird flower thing, and it was going for ... y'know, front-hole."
     hide terry
@@ -195,19 +202,21 @@ label passing_it_on:
             t "Why not? Think about it. What if you could give the feeling that you now have to other trans people."
             t "No surgery, no doctors, no stupid insurance rules and therapist visits."
             t "Yeah it's kind of wild but isn't it also what all of us have always dreamed of? Isn't it worth a shot just to try?"
+            show terry toppy with dissolve
             t "And besides, you get to have sex with cuties! Even if it doesn't work that's a win."
             p "..."
             jump check_it_out
         "I am curious though":
+            show terry embarrassed with dissolve
             "Terry looks at you and suddenly seems nervous."
             t "Sorry, I realize this might have been weird to do but I feel like ..."
             t "You know, it's really amazing that you can do this. I think that you have an incredible power now that you can share with other trans people."
+            show terry toppy with dissolve
             "Terry flushes a bit."
             t "And from the responses I've been getting so far they really want it ..."
             jump check_it_out
 label check_it_out:
-    p "I mean ..."
-    p "I mean ... what are you telling people?"
+    p "I mean ...{w} what are you telling people?"
     t "See for yourself."
     # UNLOCKS AHMED 1 AND KAYDEN 1
     jump nav_menu
