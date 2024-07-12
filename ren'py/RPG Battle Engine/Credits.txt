@@ -1,0 +1,10 @@
+Credit:
+Sprites are from Tokudaya
+
+Credit for the code:
+To credit my battle system:
+Link to the lemmasoft link that I used to distribute the code and either under
+Angela Rose or demonangelz 
+
+The code is yours to modify and change. If you have any questions or found any bugs/etc,
+post a comment on the forums and I'll try my best to help =)

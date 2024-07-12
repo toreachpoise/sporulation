@@ -175,5 +175,16 @@ label judys_fight_1:
     "Marianne" "Oh honey, I don't know what sick things this monster has done to you to make you like this, but you belong with us. With other real women."
     "Parvez shoved her, his fear evaporating into anger."
     p "Fuck you, you don't know what I am."
-    "FIGHT SCENE ENSUES LOL"
+    scene black with fade
+    "It's time to fight for your right to be who you are!!"
+label inanna_1_battle:
+    call battle_def from _call_battle_def
+    scene cardboard with dissolve
+    "Transsexual battle mode activate"
+    call battle_presetup from _call_battle_presetup
+    call battle from _call_battle
+label battle_end:
+    "You defeated the Judys!!"
+    "Oh got there's a chud, run!"
+    "Sex Scene!!!"
     jump nav_menu

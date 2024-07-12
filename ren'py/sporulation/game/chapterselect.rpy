@@ -17,3 +17,5 @@ label nav_menu:
             jump solo_1
         "inanna 1":
             jump inanna_1
+        "inanna 1 battle":
+            jump inanna_1_battle

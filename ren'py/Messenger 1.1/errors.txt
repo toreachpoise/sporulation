@@ -1,0 +1,26 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/messenger.rpy", line 293: keyword argument 'xanchor' is incompatible with 'align'.
+    text "{k=1.5}%s{/k}"%(message.audio.duration) style 'txt_base' align .26,.9 xanchor 0.0 size 22 color style_gray
+                                                                                       ^
+
+File "game/messenger.rpy", line 339: keyword argument 'xanchor' is incompatible with 'xalign'.
+    text "%s"%(interlocutor) style 'txt_base' size 32 xalign 0.25 xanchor 0.0 yalign 0.025
+                                                                         ^
+
+File "game/messenger.rpy", line 340: keyword argument 'xanchor' is incompatible with 'align'.
+    add status align 0.25, 0.065 xanchor 0.0
+                                        ^
+
+File "game/messenger.rpy", line 352: keyword argument 'xanchor' is incompatible with 'align'.
+    input changed find_change_func length 14 align .12,.99 xanchor 0 color style_green
+                                                                  ^
+
+File "game/screens.rpy", line 181: keyword argument 'xpos' is incompatible with 'xalign'.
+    xpos gui.dialogue_xpos
+        ^
+
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Thu Jul 11 20:24:53 2024

@@ -83,6 +83,8 @@ image chud = "/character sprites/chud.png"
 
 image judys n chud = "/character sprites/judys n chud.png"
 
+image bs = im.FactorScale("battle/battlescene.png", 1.5)
+
 ## CGs
 # these will be artworks depicting certain scenes, we'll see how many of them get made lol
 

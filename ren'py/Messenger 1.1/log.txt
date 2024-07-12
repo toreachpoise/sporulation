@@ -1,0 +1,133 @@
+2024-07-12 00:24:52 UTC
+Windows-10-10.0.19045
+Ren'Py 8.2.3.24061702
+
+Early init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.32s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+
+File "game/messenger.rpy", line 293: keyword argument 'xanchor' is incompatible with 'align'.
+    text "{k=1.5}%s{/k}"%(message.audio.duration) style 'txt_base' align .26,.9 xanchor 0.0 size 22 color style_gray
+                                                                                       ^
+
+File "game/messenger.rpy", line 339: keyword argument 'xanchor' is incompatible with 'xalign'.
+    text "%s"%(interlocutor) style 'txt_base' size 32 xalign 0.25 xanchor 0.0 yalign 0.025
+                                                                         ^
+
+File "game/messenger.rpy", line 340: keyword argument 'xanchor' is incompatible with 'align'.
+    add status align 0.25, 0.065 xanchor 0.0
+                                        ^
+
+File "game/messenger.rpy", line 352: keyword argument 'xanchor' is incompatible with 'align'.
+    input changed find_change_func length 14 align .12,.99 xanchor 0 color style_green
+                                                                  ^
+
+File "game/screens.rpy", line 181: keyword argument 'xpos' is incompatible with 'xalign'.
+    xpos gui.dialogue_xpos
+        ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.50s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) HD Graphics 520'
+Version: b'4.5.0 - Build 24.20.100.6293'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2898, 1630) drawable=(2898, 1630)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1496, 1860) drawable=(1496, 1860)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 157.09s
+Loading error handling took 0.03s
+Loading script took 0.37s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Set script version to: (7, 1, 3)
+Running init code took 0.13s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.02s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) HD Graphics 520'
+Version: b'4.5.0 - Build 24.20.100.6293'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3000, 1875) drawable=(3000, 1875)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096

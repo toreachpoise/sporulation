@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/plant encounters.rpy", line 232, in script
-    if struggled:
-  File "game/plant encounters.rpy", line 232, in <module>
-    if struggled:
-NameError: name 'struggled' is not defined
+  File "game/inanna scenes.rpy", line 184, in script call
+    call battle_presetup
+  File "game/inanna1 battle.rpy", line 102, in script
+    $ player1_hp = player1_hp_max
+  File "game/inanna1 battle.rpy", line 102, in <module>
+    $ player1_hp = player1_hp_max
+NameError: name 'player1_hp_max' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/plant encounters.rpy", line 232, in script
-    if struggled:
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/plant encounters.rpy", line 232, in <module>
-    if struggled:
-NameError: name 'struggled' is not defined
+  File "game/inanna scenes.rpy", line 184, in script call
+    call battle_presetup
+  File "game/inanna1 battle.rpy", line 102, in script
+    $ player1_hp = player1_hp_max
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/inanna1 battle.rpy", line 102, in <module>
+    $ player1_hp = player1_hp_max
+NameError: name 'player1_hp_max' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.7.4
-Mon Jul  8 21:03:57 2024
+sporulation 0.7.8
+Fri Jul 12 10:40:59 2024

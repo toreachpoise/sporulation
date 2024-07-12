@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 19, in script call
+    call battle
+  File "game/battle.rpy", line 163, in script call
+    call player_turn
+  File "game/battle.rpy", line 205, in script call
+    call monster_dead_check
+  File "game/battle.rpy", line 494, in script
+    if marianne_dead == sarah_dead == True: # chud_dead == True:
+  File "game/battle.rpy", line 494, in <module>
+    if marianne_dead == sarah_dead == True: # chud_dead == True:
+NameError: name 'marianne_dead' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 19, in script call
+    call battle
+  File "game/battle.rpy", line 163, in script call
+    call player_turn
+  File "game/battle.rpy", line 205, in script call
+    call monster_dead_check
+  File "game/battle.rpy", line 494, in script
+    if marianne_dead == sarah_dead == True: # chud_dead == True:
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/battle.rpy", line 494, in <module>
+    if marianne_dead == sarah_dead == True: # chud_dead == True:
+NameError: name 'marianne_dead' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.2.3.24061702
+RPG Battle Engine 0.0
+Fri Jul 12 00:02:40 2024
