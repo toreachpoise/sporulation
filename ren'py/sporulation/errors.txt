@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/inanna1 battle.rpy", line 36: Line is indented, but the preceding image statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    $ player1_hp_max = 400
-    ^
+File "game/ahmed scenes.rpy", line 309: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Ahmed ..."
+               ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Fri Jul 12 10:55:37 2024
+Mon Jul 15 15:24:38 2024

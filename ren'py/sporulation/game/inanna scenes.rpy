@@ -31,7 +31,7 @@ label inanna_1:
             jump nav_menu
 label meet_inanna:
     #needs bg (maybe same as ahmed coffee shop lol)
-    show inanna at midleft
+    show inanna excited at midleft
     show parvez at midright
     with dissolve
     "Inanna gets Parvez to meet her at a big queer bookstore downtown."
@@ -55,8 +55,8 @@ label meet_inanna:
     "She pushes his knee gently under the wobbly little table with hers."
     i "I kind of like that."
     # new bg--outside
-    show parvez at left
-    show inanna at midleft
+    show parvez happy at left
+    show inanna happy at midleft
     with fade
     "Parvez found himself actually smiling as they stepped out of the book store into the late afternoon sunshine."
     "As soon as they do so, however, Inanna's expression turns into a frown."
@@ -116,7 +116,11 @@ label judys_conversation_with_inanna:
             "She keeps walking right toward Parvez and Inanna, her gaze fixed on them."
             "The shorter woman is trailing behind her, looking a bit nervous."
             show judys at center
-            with move
+            show inanna worried:
+                xalign 0.2
+            show parvez worried:
+                xalign -0.2
+            with hpunch
             "The tall woman gets right in Inanna's face and puffs out her chest."
             "JUDY" "What did you say to me, transvestite?"
             "Inanna doesn't look phased, looking serenely down at the woman."
@@ -139,19 +143,19 @@ label judys_conversation_with_inanna:
                         hide parvez with moveoutleft
                         # new bg or something
                         scene cardboard
-                        show inanna at center
+                        show inanna frightened at center
                         with wipeleft
-                        show parvez at right with moveinright
+                        show parvez worried at right with moveinright
                         p "Inanna!"
                         "She rounded on him."
-                        show inanna at midright
+                        show inanna even more toppy at midright
                         with hpunch
                         i "What?"
                         i "You wanna lecture me more about how to lick boots?"
                         i "I thought you were cool under your lil tuff guy grumpyboy exterior."
                         i "But you ain't shit."
                         i "I don't care if your little plant dick is real. Cuz it's clear you don't have any balls."
-                        show inanna at center
+                        show inanna worried at center
                         with move
                         "She turned away from him."
                         i "Don't follow me this time."
@@ -159,14 +163,16 @@ label judys_conversation_with_inanna:
                         jump nav_menu
                     "nah, fuck them":
                         "Parvez realized in a flash that Inanna was right."
-                        "These people hated them, but in a cool way."
+                        "These people hated them, but in a quiet way, a way that was designed to frame them as innocent even though they were the aggressors."
                         "The woman came over to Inanna, she could have ignored her."
                         pass
 label judys_fight_1:
     "Marianne" "You freaks are just jealous. You use your size and natural masculinity to intimidate real women because you know you'll never become like us."
     i "Who the fuck would want to be like--{nw}"
-    show parvez at midleft
-    show inanna at left
+    show parvez:
+        xalign 0.15
+    show inanna happy:
+        xalign -0.2
     with move
     "Parvez stepped in front of Inanna, getting between her and the woman even though he was shorter than both of them."
     "He tried to steady his shaking voice as he spoke."
@@ -184,7 +190,172 @@ label inanna_1_battle:
     call battle_presetup from _call_battle_presetup
     call battle from _call_battle
 label battle_end:
-    "You defeated the Judys!!"
-    "Oh got there's a chud, run!"
-    "Sex Scene!!!"
+    scene cardboard
+    show judys at center
+    show inanna toppy:
+        xalign 0.2
+    show parvez toppy:
+        xalign -0.2
+    with dissolve
+    "Parvez and Inanna defeated the Judys!!"
+    "The two women run off, abandoning all their shitty signs on the ground."
+    hide judys with moveoutright
+    show inanna at center
+    with move
+    "Inanna begins to gather them and throw them away."
+    i "Hey, good job kid."
+    i "For a second I wasn't sure if you had it in you."
+    "Parvez bends down to help her."
+    p "I've never really done anything like that before ..."
+    menu:
+        "it was scary":
+            pass
+        "it felt good":
+            pass
+    "Inanna chuckles."
+    i "Yeah, it's scary, and it kind of does feel good."
+    show inanna toppy with dissolve
+    i "Speaking of things that feel good, did you wanna go back to my place?"
+    menu:
+        "fuck yeah":
+            jump fuck_inanna
+        "actually no thanks":
+            show parvez worried with dissolve
+            p "I feel a bit shaken up after all that, honestly."
+            show inanna worried with dissolve
+            i "Hey man, that's fair, totally understandable."
+            i "I still had a really great time with you today."
+            i "If you ever wanted to hook up, I think my partner would probably be into it. You seem like a great guy."
+            p "Thanks ...{w} I had a really nice time with you too."
+            i "Are you gonna be okay getting home?"
+            p "Yeah, thanks. I'll see you around, Inanna."
+            # still unlocks i&j 1
+            jump nav_menu
+label fuck_inanna:
+    scene ahmed balcony
+    show inanna excited at midright
+    show parvez at midleft
+    with fade
+    "Inanna's house is as beautiful and put together as she is."
+    "There's actually framed art on the walls, prints and even a few original canvas paintings--"
+    i "--all by local queer artists, of course."
+    "She offers Parvez tea, grown by a comrade from a land defense camp, sits him down on her balcony, and immediately starts asking him about his dick."
+    "Their conversation at the book store was pretty chill and nonsexual but she's clearly super interested in him."
+    "Parvez isn't sure if it's from a scientific or sexual standpoint just yet."
+    i "So it just?? Grew out of you? Wild!"
+    "As soon as Parvez is done drinking his tea, she gets up and goes into the bedroom."
+    "Parvez follows her, not sure what to do."
+    scene inannabed
+    show inanna toppy at right
+    show parvez at midleft
+    with move
+    i "The fuck you waiting for, boy? Take your pants off."
+    i "I wanna see that weird green thing."
+    show parvez bottomy at center
+    with move
+    "Parvez has no choice but to comply. He drops his shorts and reveals his hard dick."
+    "Inanna immediately drops to her knees, poking at the place where it comes out of him. Parvez is wet there."
+    i "Holy shit, huh. It really is coming out of there."
+    "She looks up at him."
+    i "Wait, is this okay?"
+    p "Y-yeah."
+    "She closes her hand around his dick."
+    i "Can I pull on it?"
+    p "Yeah."
+    "When she gives it a tug, Parvez can feel how deeply rooted it is inside him."
+    "For a second he has to marvel again about how weird this whole situation is."
+    "Inanna is staring at him like he's a specimen on a microscope slide--but not in a creepy or objectifying way.{w} It's kind of hot actually."
+    "She's pulling on his cock with an intent look on her face."
+    i "So you can feel this??"
+    p "Ah! mm-hmm"
+    i "Fascinating. And this top part here--"
+    "She squeezes the bulb at the end of his cock, making Parvez gasp."
+    p "Ah!!"
+    "Inanna acts as if she didn't notice his reaction, continuing on."
+    i "This is where the seeds come out of, you say?"
+    "She leans forward and licks his slit, where a little juice is coming out."
+    i "Weird ... vegetal."
+    "Parvez kind of expects her to suck on it more, but she gets up and pulls him to his feet, before shoving him onto the bed."
+    # CG GOES HERE
+    show inanna even more toppy at center
+    show parvez bottomy at midleft
+    with hpunch
+    "Inanna sheds her leotard and climbs on top of Parvez."
+    "She's so beautiful, the mass of her on him kind of overwhelming."
+    "Her thighs are huge, spanning his torso easily."
+    "Her breasts wiggle as she leans back on him, revealing her hard cock."
+    i "I don't usually need a lot of prep and can take way bigger than you so we might as well go for it."
+    "She reaches to the bedside drawer and pulls out a bottle of lube, slathering it (cold!!) all over Parvez's cock."
+    p "(squeak!)"
+    i "Oh don't whine little guy."
+    i "It'll be warm in just a second."
+    "With that she lifted herself, lined his cock up, and slid down, almost halfway on the first try."
+    p "H--ghhrk!!"
+    i "Oh my! That certainly is a unique texture."
+    "She lifted herself back up, squeezing tightly on him as she did so."
+    p "Ah-hahh"
+    "She dropped herself down with full force, beginning to pound down on him mercilessly."
+    i "Is that too much for you, little boy?"
+    i "I kinda thought you were a little bitch."
+    menu:
+        "n-no, I--":
+            pass
+    i "Shh, it's okay."
+    i "Let mommy rock you to sleep."
+    "She drives herself onto him with a punishing rhythm. It's all Parvez can do to cling to her legs as they flex and stretch above him."
+    "She's bouncing on him so lightly and effortlessly, a grin fixed on her face, teasing him without breaking a sweat."
+    i "You think you're a man now just cuz you got this little thing?"
+    "She squeezed down on him to punctuate her sentence."
+    i "I've had one of these since before you were born, and let me tell you baby."
+    i "I'm 100 percent woman and I'm still more of a man than you'll ever be."
+    menu:
+        "wait, this is too much actually":
+            show parvez worried with dissolve
+            i "Oh jeez I'm sorry."
+            "Inanna gets up immediately, with a wet plop."
+            show inanna worried at midright
+            with move
+            i "I should have asked, I thought we had a vibe going."
+            i "My bad."
+            "Parvez gets up too and awkwardly starts pulling his pants up."
+            p "N-no, it's okay, I just --"
+            "He's too embarrassed to finish."
+            "She offers him tea again but he just excuses himself and leaves."
+            jump nav_menu
+        "ahh ... yes mommy":
+            pass
+    i "That's right, baby boy, I am your mommy."
+    i "Now are you gonna show me that you wanna grow up to be a big man?"
+    "Parvez grabs her by the hips and starts fucking up into her in earnest."
+    i "Ahh! Yes! That's good baby.{w} Give it to me."
+    i "Show mommy how much of a big boy you are."
+    "It's actually pretty difficult. She's bigger than Parvez and heavy on top of him."
+    "Even when he matches her pace, the force of her down thrusts drives him into the mattress each time."
+    "Within a few minutes Parvez is drenched in sweat, her legs sliding along his sides with every push."
+    "He reaches for her cock to hasten her orgasm, but she bats him away."
+    i "Don't worry about me, baby. Mama can take care of herself."
+    i "Just keep giving it to me good."
+    "Parvez isn't sure if he can do that, his legs are burning, his head is starting to spin."
+    "He feels like he's losing consciousness, focusing on nothing but the next time she's going to crush him into the bedding, trying to spring back in time."
+    "Again, and again."
+    "He feels like she's pounding the air out of him."
+    "Like he's a piece of raw metal and she's a blacksmith, forging him, shaping him into something useful."
+    "Even though he's inside her she's the one fucking him."
+    "As soon as this thought hits him so does the orgasm he didn't realize he'd been building up to."
+    "He feels the gush come from deep in his belly, a huge volume of gel coursing through his cock and up into Inanna's ass."
+    i "Ahhhhh!"
+    i "Shit, that's the good stuff."
+    "She keeps riding him, slower but just as hard, squeezing him for every drop, palming her own cock."
+    "Parvez is gasping and twitching, overstimulated by the tightness inside her and the gloopy feeling of the seeds."
+    "She's so hot riding against herself, making slick noises on his softening cock."
+    "The sensation and the sight together become overwhelming for Parvez as her ass tightens more and more on him."
+    "Just in time, she cums, not really shooting much, but Parvez can feel her cum through her ass, the rhythmic twitching of it pushing his now fully soft cock out."
+    "She pushes off his chest and slides down onto the bed."
+    i "Shit, that was wild."
+    "She's barely out of breath."
+    "She reaches back behind her to gather some of his goopy and seedy cum from her hole."
+    "She looks at it in her hand."
+    i "Very interesting, young man."
+    "She winks."
+    i "I'll have to collect more samples from you again sometime."
     jump nav_menu

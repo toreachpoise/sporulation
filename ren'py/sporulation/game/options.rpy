@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.7.12"
+define config.version = "0.7.15"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -31,6 +31,11 @@ define config.version = "0.7.12"
 
 define gui.about = _p("""
 A weird hentai game about trans guys getting fucked by plants.
+
+Mostly made by Aaron El Sabrout https://toreachpoise.itch.io
+
+Battle engine based on "RPG Battle Engine" posted to Lemmasoft forums by Angela Rose/demonangelz (https://lemmasoft.renai.us/forums/viewtopic.php?f=51&t=30095#p354087)
+
 """)
 
 

@@ -110,7 +110,7 @@ label battle_presetup:
     $ sarah_hp = sarah_hp_max
     #$ chud_hp = chud_hp_max
     $ marianne_attack_min = 10
-    $ marianne_attack_max = 30
+    $ marianne_attack_max = 50
     $ sarah_attack_min = 15
     $ sarah_attack_max = 25
     #$ chud_attack_min = 5
@@ -325,28 +325,28 @@ label player2_skills:
 #    show screen battle_overlay_players
 #    return
 screen parvez_skills:
-    add "battle/battlebox2.png" xalign 0.2 yalign .95
+    add "battle/battlebox2.png" xalign 0.375 yalign .95
     if player1_mp > 25:
-        textbutton "Tboy Swag" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.15 yalign 0.87 action Return("Tboy Swag")  
+        textbutton "Tboy Swag" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.3 yalign 0.855 action Return("Tboy Swag")  
     if player1_mp > 50:
-        textbutton "Plantboy Dickslap" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.35 yalign 0.87 action Return("Plantboy Dickslap") 
+        textbutton "Plantboy Dickslap" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.525 yalign 0.855 action Return("Plantboy Dickslap") 
     if player1_mp > 33:
-        textbutton "Panic Attack" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.15 yalign 0.92 action Return("Panic Attack") 
+        textbutton "Panic Attack" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.3 yalign 0.92 action Return("Panic Attack") 
 screen inanna_skills:
-    add "battle/battlebox2.png" xalign 0.2 yalign .99
+    add "battle/battlebox2.png" xalign 0.375 yalign .95
     if player2_mp > 33:
-        textbutton "Rigorous Discourse" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.15 yalign 0.87 action Return("Rigorous Discourse")  
+        textbutton "Rigorous Discourse" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.3 yalign 0.855 action Return("Rigorous Discourse")  
     if player2_mp > 45:
-        textbutton "Mommy Smack" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.35 yalign 0.87 action Return("Mommy Smack") 
+        textbutton "Double Mommy Smack" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.525 yalign 0.855 action Return("Double Mommy Smack") 
     if player2_mp > 66:
-        textbutton "Righteous Smiting" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.15 yalign 0.92 action Return("Righteous Smiting") 
+        textbutton "Righteous Smiting" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.3 yalign 0.92 action Return("Righteous Smiting") 
 #screen javier_skills:
-#    add "battle/battlebox2.png" xalign 0.2 yalign .99
+#    add "battle/battlebox2.png" xalign 0.375 yalign .95
 #    textbutton "Bow Attack 1" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.1 yalign 0.8 action Return("Bow Attack 1")  
 #    textbutton "Bow Attack 2" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.7 yalign 0.8 action Return("Bow Attack 2") 
 #    textbutton "Bow Attack 3" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.1 yalign 0.85 action Return("Bow Attack 3") 
 #screen terry_skills:
-#    add "battle/battlebox2.png" xalign 0.2 yalign .99
+#    add "battle/battlebox2.png" xalign 0.375 yalign .95
 #    textbutton "Magic Attack 1" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.1 yalign 0.8 action Return("Magic Attack 1")  
 #    textbutton "Magic Attack 2" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.7 yalign 0.8 action Return("Magic Attack 2") 
 #    textbutton "Magic Attack 3" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.1 yalign 0.85 action Return("Magic Attack 3") 
@@ -450,9 +450,11 @@ label monster_dead_check:
     return 
 
 label player_dead_check:
-    if player1_hp <= 0 or player2_hp <= 0: # or player3_hp <= 0 or player4_hp <= 0:
-        "One of the players died"
-        $ renpy.full_restart() # returns to main menu, game over 
+    if player1_hp <= 0 and player2_hp <= 0: # or player3_hp <= 0 or player4_hp <= 0:
+        "You got bashed!"
+        "Inanna and Parvez were barely able to escape to safety."
+        jump nav_menu
+        #$ renpy.full_restart() # returns to main menu, game over 
     else:
         return
 screen battle_overlay_players:
@@ -484,7 +486,7 @@ screen battle_overlay_players:
         
         if turn == 2:
             add player2_image_selected xalign 0.4 yalign .93     # player icon in hp area
-            add player2_image_selected xalign 0.2 yalign 0.5     # player chara above   
+            add player2_image_selected xalign 0.2 yalign 0.66     # player chara above   
         else:
             add player2_image_default xalign 0.4 yalign .93
             add player2_image_default xalign 0.2 yalign 0.66
@@ -607,7 +609,7 @@ screen player_actions: #returns for player action
 
 screen player_target: #returns monster player wants to attack
     if target == "all":
-        textbutton "All Enemies" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.75 yalign 0.4 action Return("all")
+        textbutton "All Enemies" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.675 yalign 0.48 action Return("all")
     else:
         if marianne != "none":
             textbutton "[marianne]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.8 yalign 0.23 action Return("marianne") 

@@ -13,18 +13,19 @@ define j = Character("Javier", color="#cc0000")
 define npc = Character("neonpunkcuntboi", color="#617b0a")
 define pdm = Character("plantdickman", color="#b07030")
 define lj = Character("snakewoman", color="#8f3ce9")
+define mm = Character("mathlord", color="#258654")
 
 ## BGS
 # these are just placeholder thumbnails for now
 
 image ahmed balcony = "/bgs/ahmed-balcony.png"
-image ahmed bed = "/bgs/ahmed-bed.png"
-image ahmed shelves = "/bgs/ahmed-shelves.png"
+image ahmedbed = "/bgs/ahmed-bed.png"
+image ahmedshelves = "/bgs/ahmed-shelves.png"
 image cardboard = "/bgs/cardboard.png"
 image couch = "/bgs/couch.png"
 image bed = "/bgs/p&t-bed.png"
 image kitchen = "/bgs/kitchen.png"
-image inanna bed = "/bgs/i&j-bed.png"
+image inannabed = "/bgs/i&j-bed.png"
 image skatepark interior = "/bgs/skatepark-int.png"
 image skatepark ramps = "/bgs/skatepark-ramps.png"
 image skatepark hill = "/bgs/skatepark-up-high.png"
