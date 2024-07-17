@@ -13,6 +13,8 @@ label nav_menu:
             jump solo_encounter_list
         "inanna encounters":
             jump inanna_encounter_list
+        "inanna and javier encounters":
+            jump inanna_n_javier_encounter_list
         "battles":
             jump battles_list
 
@@ -53,6 +55,9 @@ label inanna_encounter_list:
             jump inanna_1
 
 label inanna_n_javier_encounter_list:
+    menu:
+        "inanna and javier 1":
+            jump inanna_n_javier_1
 
 label javier_encounter_list:
 

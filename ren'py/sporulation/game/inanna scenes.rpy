@@ -232,7 +232,7 @@ label battle_end:
             # still unlocks i&j 1
             jump nav_menu
 label fuck_inanna:
-    scene ahmed balcony
+    scene balcony
     show inanna excited at midright
     show parvez at midleft
     with fade
@@ -245,10 +245,10 @@ label fuck_inanna:
     i "So it just?? Grew out of you? Wild!"
     "As soon as Parvez is done drinking his tea, she gets up and goes into the bedroom."
     "Parvez follows her, not sure what to do."
-    scene inannabed
+    scene inannabed with dissolve
     show inanna toppy at right
     show parvez at midleft
-    with move
+    with moveinleft
     i "The fuck you waiting for, boy? Take your pants off."
     i "I wanna see that weird green thing."
     show parvez bottomy at center

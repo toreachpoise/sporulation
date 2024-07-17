@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/ahmed scenes.rpy", line 309: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Ahmed ..."
-               ^
+File "game/inanna n javier scenes.rpy", line 146: end of line expected.
+    show inanna at left, yalign 0.0
+                                ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Mon Jul 15 15:24:38 2024
+Wed Jul 17 12:50:40 2024

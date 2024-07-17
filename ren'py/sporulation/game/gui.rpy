@@ -432,7 +432,7 @@ init python:
     def small():
 
         ## Font sizes.
-        gui.text_size = 45
+        gui.text_size = 48
         gui.name_text_size = 54
         gui.notify_text_size = 38
         gui.interface_text_size = 45

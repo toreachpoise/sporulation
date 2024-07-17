@@ -18,13 +18,13 @@ define mm = Character("mathlord", color="#258654")
 ## BGS
 # these are just placeholder thumbnails for now
 
-image ahmed balcony = "/bgs/ahmed-balcony.png"
 image ahmedbed = "/bgs/ahmed-bed.png"
 image ahmedshelves = "/bgs/ahmed-shelves.png"
 image cardboard = "/bgs/cardboard.png"
 image couch = "/bgs/couch.png"
 image bed = "/bgs/p&t-bed.png"
 image kitchen = "/bgs/kitchen.png"
+image balcony = "/bgs/ahmed-balcony.png"
 image inannabed = "/bgs/i&j-bed.png"
 image skatepark interior = "/bgs/skatepark-int.png"
 image skatepark ramps = "/bgs/skatepark-ramps.png"
@@ -32,6 +32,23 @@ image skatepark hill = "/bgs/skatepark-up-high.png"
 image plant far = "/bgs/woods-2.png"
 image plant midway = "/bgs/woods-3.png"
 image plant closeup = "/bgs/woods-1.png"
+image spiral:
+    "/bgs/spiral/00001.png"
+    pause 0.1
+    "/bgs/spiral/00002.png"
+    pause 0.1
+    "/bgs/spiral/00003.png"
+    pause 0.1
+    "/bgs/spiral/00004.png"
+    pause 0.1
+    "/bgs/spiral/00005.png"
+    pause 0.1
+    "/bgs/spiral/00006.png"
+    pause 0.1
+    "/bgs/spiral/00007.png"
+    pause 0.1
+    "/bgs/spiral/00008.png"
+    repeat #In case you want it looping, might want to add another pause
 
 ## CHARACTER SPRITES
 # these are just placeholder sprites for now, they need expressions
