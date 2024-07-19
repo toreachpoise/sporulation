@@ -114,6 +114,12 @@ image plant_encounter_1_cg1 = "/cgs/plants concept.png"
 label start:
     $ strokerattempt = 1
     $ strokerused = False
+    $ met_kayden = False
+    $ tried_to_leave = False
+    $ plantasy = False
+    $ battle_1_win = False
+    $ battle_2_ran = False
+    $ battle_2_win = False
     "this is a placeholder for the app navigation screen"
     jump nav_menu
     return

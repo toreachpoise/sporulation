@@ -397,9 +397,9 @@ label monster_dealt_damage:
     if monster_turn == "marianne":
         $ m_damage = renpy.random.randint(marianne_attack_min,marianne_attack_max)
     elif monster_turn == "sarah":
-        $ m_damage = renpy.random.randint(marianne_attack_min,marianne_attack_max)
+        $ m_damage = renpy.random.randint(sarah_attack_min,sarah_attack_max)
 #    elif monster_turn == "chud":
-#        $ m_damage = renpy.random.randint(marianne_attack_min,marianne_attack_max)
+#        $ m_damage = renpy.random.randint(chud_attack_min,chud_attack_max)
     $ monster_target = renpy.random.randint(1,player_numbers)
     if monster_target == 1:
         if player1_defend:
@@ -432,12 +432,6 @@ label monster_dealt_damage:
     return
     
 label monster_dead_check:
-    if marianne_dead == sarah_dead == True: # chud_dead == True:
-        $ check_win = True
-        $ marianne = "none"
-        $ sarah = "none"
-#        $ chud = "none"
-        return 
     if marianne_hp <=0:
         $ marianne_dead = True
         $ marianne = "none"
@@ -446,6 +440,11 @@ label monster_dead_check:
         $ sarah = "none"
 #    if chud_hp <=0:
 #        $ chud_dead = True
+#        $ chud = "none"
+    if marianne_dead == sarah_dead == True: # chud_dead == True:
+        $ check_win = True
+        $ marianne = "none"
+        $ sarah = "none"
 #        $ chud = "none"
     return 
 

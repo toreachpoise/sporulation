@@ -18,6 +18,10 @@ transform farleft:
     xalign .20 yalign 1.0
 transform farright:
     xalign .80 yalign 1.0
+transform furthestleft:
+    xalign -0.2 yalign 1.0
+transform furthestright:
+    xalign 1.2 yalign 1.0
 
 ################################################################################
 ## Styles

@@ -58,6 +58,8 @@ label inanna_n_javier_encounter_list:
     menu:
         "inanna and javier 1":
             jump inanna_n_javier_1
+        "inanna and javier 2":
+            jump inanna_n_javier_2
 
 label javier_encounter_list:
 
@@ -65,3 +67,5 @@ label battles_list:
     menu:
         "inanna 1 battle":
             jump inanna_1_battle
+        "inanna n javier 2 battle":
+            jump inanna_n_javier_2_battle

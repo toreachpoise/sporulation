@@ -190,6 +190,7 @@ label inanna_1_battle:
     call battle_presetup from _call_battle_presetup
     call battle from _call_battle
 label battle_end:
+    $ battle_1_win = True
     scene cardboard
     show judys at center
     show inanna toppy:

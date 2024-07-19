@@ -1,7 +1,5 @@
 label kayden_1:
     #(unlocked by terry 2)
-    $ met_kayden = False
-    $ tried_to_leave = False
     scene couch with fade
     "Parvez has been messaging with this person on the hook up app for a while."
     "Looking back through the messages since Terry started the account, this person was one of the first to talk to Parvez."
@@ -89,6 +87,7 @@ label meet_kayden:
     "He's starting to consider leaving ..."
     menu:
         "wait five more minutes":
+            $ plantasy = True
             "Parvez decides to wait a bit longer."
             "It's kind of beautiful down here in a strange way."
             "Beyond the highway there isn't much, and the green kudzu vines that blanket all the scrublands around here have started to creep in."

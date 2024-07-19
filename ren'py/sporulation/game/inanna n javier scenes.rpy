@@ -524,4 +524,326 @@ label hypno:
     i "Nah, come on, you want to, don't you Parvez?"
     p "Yeah, alright."
     jump nav_menu
-    pass
+
+label inanna_n_javier_2:
+    ## starting this sequence removes kayden 1 and locks the kayden storyline
+    scene couch
+    show parvez at right
+    with dissolve
+    "Parvez has decided to turn over a new leaf and become a person who goes out and does things in the world."
+    "His experience with Javier and Inanna showed him that meeting people wasn't as scary as he previously thought."
+    "And now he's starting to wonder if he could maybe start organizing things and making a community of his own."
+    if met_kayden == True:
+        "He doesn't really know where to start, but he can't stop thinking about that abandoned skatepark where he met Kayden."
+        "He just felt really drawn back to the space."
+        "Kayden said it was their secret place, but they seemed to have vanished, so it couldn't hurt to go there again, right?"
+    else:
+        "He found himself one night browsing the messageboard for #WeirdThingsYouSeeInBlinkwood and happened upon photos of this abandoned industrial skatepark."
+        "It was on the outskirts of town. Based on the photos Parvez thought it looked like it was under the old highway."
+        "It was so strange, though. Looking at the photos he could see the skate ramps covered in graffiti underneath the crumbling concrete of the underpass."
+        "At the edges there were mats of greenery climbing over the cement, eroding the harsh lines and carpeting them."
+    "The weird mixture of abandoned industrial architecture, graffiti, and overgrowth makes him feel strangely hopeful. Like a vision of a world after the capitalist hellhole it is now."
+    "He doesn't know why but he wants to tell Inanna about it."
+    pdm "hey you know how you were saying that like"
+    pdm "the judys keep invading our spaces and we don't really have that many"
+    pdm "there's this weird place in town im kinda obsessed with"
+    pdm "this abandoned skatepark"
+    pdm "and i can't get out of my head like"
+    pdm "weird gay skatepark garden????"
+    pdm "do u wanna come check it out w me??"
+    lj "bro i have no idea what you're talking about"
+    lj "but i'm game"
+    lj "..."
+    lj "can i bring javi??"
+    pdm "yeah of course"
+    lj "hell yea sounds gay, i'll pack a picnic"
+    scene skatepark ramps
+    show inanna at left
+    show javier at midleft
+    show parvez at right
+    with fade
+    "Inanna's idea of a small picnic turned out to be a massive feast."
+    "They brought an actual picnic basket stuffed with summer rolls, a homegrown sprout salad, and herbal iced tea."
+    j "Fae woke me up way too early to roll these today."
+    "Parvez brought cookies, without having to be reminded by Terry this time, but he still felt his contribution was a little inadequate."
+    p "Yeah, so ... this is the place ..."
+    p "... Sorry, it was probably dumb and weird to bring you here, it's kinda grimy."
+    i "No way babe!"
+    j "It's actually kinda sick here."
+    "Javier produces a fancy looking DSLR camera from xer bag and starts taking pictures."
+    show javier at right
+    show parvez at farleft
+    with move
+    j "I would love to do a photoshoot out here all dragged up."
+    "Xe turns the monitor around and starts attempting to take a selfie with a tag that said HOMOS GO HOMo, the last letter having obviously been added by someone else at a later time."
+    i "Babe, do you want me to take your picture?"
+    "Javier looks embarrassed."
+    j "Yes please ..."
+    show inanna happy at center
+    with move
+    i "I knew you did"
+    "Javier begins to pose in front of various bits of interesting graffiti, broken down concrete columns, and greenery."
+    i "So, like, what were you thinking about for this place, Parvez?"
+    p "I don't really know, honestly."
+    p "I'm not good at like. Making space or organizing or whatever."
+    p "I just saw that it was a cool empty place. That's about as far as I got."
+    i "That's super fair, it is a cool place."
+    "They are interrupted by Javier's stomach growling."
+    j "Y'all, let's eat lunch."
+    scene skatepark hill
+    show parvez at center
+    show inanna at farright
+    show javier at right
+    with wiperight
+    "They climb up one of the skate ramps to an area that is covered in green vines."
+    if plantasy:
+        "Parvez realizes it's the same ramp he had hung out on waiting for Kayden."
+    i "Babe did you remember to bring a picnic blanket?"
+    j "Of course not you know I don't remember that kind of shit."
+    "Inanna sighs."
+    "She takes off her beautiful jacket and lays it on the ground, perching on top of the mess of vines."
+    "Parvez does the same with his jacket, regretting that he didn't think to bring a blanket either."
+    "Javier sits right down and kind of sinks into the greenery."
+    if plantasy:
+        "Parvez strokes the kudzu with his hand idly as he sits down. It's soft. He remembers his fantasy of being tangled up in it before returning his attention to Inanna and Javier."
+    j "Time to eat!! Time to eat!!"
+    i "Okay, okay, settle down cranky kitty."
+    j "Nuuuuu, feed meeeeeeee"
+    "Inanna hands xem a summer roll and xe immediately starts monching on it without realizing that there is plastic wrap on it."
+    j "Blehhhhhhh"
+    "Xe spits the plastic out onto the ground."
+    i "Gross, babe."
+    j "The plastic was yuckyyy"
+    "Inanna shakes her head and laughs, handing Parvez a summer roll as well."
+    p "Damn, these are really good."
+    i "Thanks! It's my auntie's recipe."
+    "Javier is already done eating, wiping xer hands on the kudzu vines."
+    "Xe gets up."
+    j "Time to explore !!"
+    "Parvez isn't even halfway through his roll, and Inanna is in the midst of pouring herself some homegrown pansy tea."
+    i "Why don't you go explore on your own kitty? We're not done here."
+    j "Nyehhh"
+    "Xe sticks xer tongue out at them and scampers off."
+    hide javier with moveoutleft
+    show inanna happy with dissolve
+    i "Xe is cute but xe's kinda annoying sometimes."
+    "Her expression betrays her affection for them. Parvez laughs."
+    p "I mean, I admire the energy haha"
+    p "Though if I ate that fast and then got up right away like that it would probably make my stomach hurt."
+    i "It makes my stomach hurt just to watch xem sometimes."
+    "Javier is only gone a couple of minutes before returning."
+    show javier happy at right
+    with moveinleft
+    j "Yo!! You guys gotta come see this!!"
+    scene skatepark interior
+    show inanna at center
+    show javier happy at midright
+    show parvez at farleft
+    with wipeleft
+    "Xe leads them to an area of the skatepark that was fenced off with chain link. Beyond, there was a dilapidated playground set, complete with rusty slide and a swing set where one of the swings was missing altogether and another's chain was broken."
+    i "And you brought us here because ... ?"
+    "Javier is worming xer way through a gap in the fence."
+    "Xe turns to look at them."
+    j "This old playground is sick!!"
+    j "Can you imagine throwing a party in here?"
+    show javier happy at farright
+    show inanna at midright
+    with MoveTransition(3)
+    i "Babe this place is grimy (derogatory). Stay away from the slide or you'll get tetanus or some shit."
+    j "Oh whatever."
+    "Xe laughs."
+    j "I'm vaccinated."
+    j "Come on picture it! We could have a runway and performances down here--"
+    "Xe gestures down a long straightaway between the skate ramps and where they are standing."
+    j "-- we can have a DJ booth on top of the slide, and hang lights from all the playground stuff. It would be so sick!!"
+    "Xe turns to Parvez."
+    j "Maybe it can be a fundraiser to turn this place into like, something actually cool."
+    show parvez:
+        xalign 1.2
+    with move
+    p "Yeah, I don't know what I was planning on but like ..."
+    p "I just love the greenery here."
+    p "It feels kind of post apocalyptic ...{w} but in a good way?"
+    p "Like what if we had a garden here? What if it was just a gay and weird place to be with plants."
+    "Javier waggled xer eyebrows."
+    j "Yeah bro we know you love to be with plants."
+    show parvez worried with dissolve
+    p "That wasn't what I meant!"
+    j "Suuuure man, whatever you say."
+    show parvez
+    show inanna happy
+    with dissolve
+    i "Okay but like, why not?"
+    i "All of the queer spaces we have in town are either centered around substance use and transphobic cis gays ... or like super sanitised."
+    i "The judys and their allies are all constantly accusing us of being too sexual in public but like, we don't actually have a place to do that."
+    i "Especially a space that is safe and beautiful, right??"
+    p "I don't know I mean that sounds kind of--{nw}"
+    show judys n kayden at furthestleft
+    with moveinleft
+    j "Bro who the fuck is that."
+    "Parvez turns around to see the two judys he and Inanna had encountered at the bookstore, as well as a third one."
+    i "Oh fuck, it's the judys."
+    show inanna frightened:
+        xalign 1.0
+    with move
+    show parvez worried
+    show javier worried
+    with dissolve
+    "The judys hadn't seen them yet. Parvez watched them for a minute."
+    "They were all wearing the same outfit but in different colors, like a cursed magical girl team."
+    "The tallest one, Marianne, was talking to the others, and even though they were far away her voice echoed toward them along the concrete walls."
+    "Marianne" "... certainly a safety hazard. We should let the counselor know immediately."
+    "Marianne" "It's on county land as well, so I'm sure he'll be more than willing to donate it to the new police training and sex offender treatment facility."
+    "Marianne turns to the new judy, who is dressed in pink."
+    "Marianne" "How did you say you found out about this place, Kayla?"
+    if met_kayden:
+        "With a horrible start, Parvez realizes that it's Kayden."
+        "They're not wearing a binder, and their face is washed clean of makeup."
+        "They've dyed their hair blond again, and without its spikes it hangs almost down to their shoulders."
+    else:
+        "There's something off about the new judy ..."
+        "She stands stiffly, apart from the rest of the group."
+        "When she answers Marianne her voice is gravelly, too deep."
+    "Kaye" "It's just Kaye, not Kayla."
+    "Marianne" "Nonsense dear, we agreed that you were reclaiming your birth name, as God and your parents intended."
+    "Marianne" "You {i}do{/i} want do get better, don't you?"
+    "Kaye" "Yes, ma'am."
+    "Marianne" "Good girl."
+    show judys n chud:
+        xalign 0.0
+    with move
+    "They move toward Parvez and he sees that they have a monstrous looking man with them, at the same time that the man sees him."
+    "The man points them out to Marianne and her gaze snaps to them."
+    j "Shit, what do we do?"
+    j "We can't fight a chud. And there are four of them."
+    if met_kayden:
+        p "I think I know one of them ..."
+        i "What??"
+        p "The pink one ... I ... they used to be trans. We hooked up."
+        p "They're the one who told me about this place."
+        i "They used to be trans?? Jeez."
+    j "We gotta run."
+    i "I mean, if we want to make something of this place, we have to be willing to defend it ..."
+    i "... but I've never seen anyone fight a chud and win ..."
+    menu:
+        "fight":
+            show parvez with dissolve
+            "Parvez steels himself."
+            p "We have to stand our ground."
+            p "If we show them that they can run us off just by bringing a scary dude around, they'll always be able to beat us."
+            j "But he really is scary ..."
+            show inanna worried with dissolve
+            i "He's right. We had to stand up to them sometime."
+            j "But Inanna--{nw}"
+            i "It's okay babe, we can do this."
+            show judys n chud at farleft
+            with move
+            "The judys are right in front of them now."
+            if met_kayden:
+                "Parvez can see clearly that the pink one is Kayden now."
+                "He can't resist yelling at them."
+                p "Hey what's wrong with you? You used to be one of us."
+                "Kaye tries to speak but Marianne cuts them off--"
+                "Marianne" "She is healed now from the depravity and violence that you people inflicted upon her."
+                "Marianne" "Though her body bears indelible scars, she will be made whole again by the light of the Lord."
+            else:
+                "Marianne" "What are you freaks doing here?"
+                "She turns toward Sarah and Kaye."
+                "Marianne" "See, all the more reason why this place needs to be razed to the ground."
+                "Marianne" "These fallen children need a place to be removed from soci--I mean healed."
+                "She turns and addresses herself to Parvez and Inanna."
+            "Marianne" "Prepare to be cleansed by the light of all that is natural and pure!"
+            label inanna_n_javier_2_battle:
+                call battle_2_def from _call_battle_def_2
+                scene cardboard with dissolve
+                "Transsexual battle mode activate"
+                call battle_2_presetup from _call_battle_presetup_2
+                call battle_2 from _call_battle_2
+            label battle_2_end:
+                $ battle_2_win = True
+                "You won!!"
+                scene skatepark interior
+                show inanna excited at farright
+                show javier happy at midright
+                show parvez toppy at right
+                show judys n chud:
+                    xalign 0.0
+                with irisin
+                "Somehow Parvez and Javier and Inanna are able to defeat the judys and the chud!"
+                "Their enemies stagger away miserably."
+                show judys n chud at furthestleft
+                with move
+                p "This is our turf! You'd better stay away!"
+                if met_kayden:
+                    p "Great job picking the losing and miserable side, Kayden!"
+                "Marianne turns to glare at them, and the chud growls. He is much less frightening with a kicked dog expression and a limp."
+                hide judys n chud with moveoutleft
+                show parvez toppy at left
+                show javier happy at midright
+                show inanna excited at center
+                with move
+                j "Holy shit we did it. I can't believe it."
+                "Javi is shaking slightly."
+                i "Honestly P I didn't think you had it in you. I'm really impressed."
+                p "I didn't know if I had it in myself."
+                if battle_1_win:
+                    p "but after the last time you and I fought them, Inanna, I learned that I'm stronger than I think."
+                    p "Now we know our enemies can always be beaten, no matter how frightened we are."
+                else:
+                    p "But honestly, being with you folks gave me courage."
+                j "Damn that's kinda gay haha."
+                i "It sure is."
+                show inanna toppy at left
+                with move
+                "Inanna grabs Parvez by the shoulders and kisses him firmly."
+                show inanna toppy at farright
+                show javier happy at furthestright
+                with move
+                i "Alright cutie, unfortunately we have to run, but let's talk more about getting this place set up another time."
+                p "Aww, we can't celebrate?"
+                i "Sorry babe, we'll see you another time."
+                hide inanna
+                hide javier
+                with easeoutright
+                "Javier gives Parvez's butt a pinch as they leave."
+                scene skatepark ramps
+                with wipeleft
+                "Parvez takes a moment to look around the park before going home."
+                "He's proud of himself, which is kind of a strange feeling."
+                "He's used to always thinking of himself as a loser, but maybe he could be a leader. Maybe he could be someone who does things in his community."
+                if battle_1_win:
+                    "After all, he has now defended himself and defeated the judys twice! Once with an honest to god monster with them!"
+                else:
+                    "Even though he didn't fight the judys last time, he found the courage and was able to defeat them this time."
+                    "And even that weird man monster--what even was that??"
+                "After completing his victory lap, Parvez decides to go leave."
+                "He gets in his car with adrenaline still coursing through his veins, feeling thrilled and wound up."
+                "Maybe Terry would be up for messing around when he gets back ..."
+                jump nav_menu
+        "run":
+            $ battle_2_ran = True
+            "Parvez starts to panic."
+            p "I don't think we can do this."
+            p "W-we have to go."
+            "Inanna looks at him for a moment, before glancing back at the chud and judys who are rapidly approaching."
+            i "Okay, let's go."
+            hide inanna
+            hide parvez
+            hide javier
+            with moveoutright
+            scene black with pushright
+            "They get out of there as fast as they can, piling into Parvez's tiny car."
+            "He drops Inanna and Javier off at their place. Inanna insists on him taking the remaining tea and summer rolls home."
+            "Terry finds him a few hours later on the couch, baked out of his mind watching children's cartoons and surrounded by their plastic wrappings."
+            scene couch
+            show parvez bottomy at right
+            with dissolve
+            show terry worried at midleft
+            with moveinleft
+            t "Damn, it's a self-pity Parvez day. What happened? I thought you were going on a date?"
+            show parvez worried at center
+            with move
+            "Parvez rushes over to Terry and buries his head in their belly. Terry smooths his hair."
+            t "That bad, huh?"
+            p "Mrghh ..."
+            jump nav_menu

@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/inanna n javier scenes.rpy", line 146: end of line expected.
-    show inanna at left, yalign 0.0
-                                ^
+File "game/inanna n javier 1 battle.rpy", line 346: expected statement.
+    player1_hp += 20
+               ^
+
+File "game/inanna n javier 1 battle.rpy", line 350: expected statement.
+    player2_hp += 20
+               ^
+
+File "game/inanna n javier 1 battle.rpy", line 354: expected statement.
+    player3_hp += 20
+               ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Jul 17 12:50:40 2024
+Fri Jul 19 12:51:48 2024
