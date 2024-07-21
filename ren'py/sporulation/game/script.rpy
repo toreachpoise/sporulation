@@ -120,6 +120,8 @@ label start:
     $ battle_1_win = False
     $ battle_2_ran = False
     $ battle_2_win = False
+    $ made_ahmed_smile = False
+    $ bullied_ahmed = False
     "this is a placeholder for the app navigation screen"
     jump nav_menu
     return

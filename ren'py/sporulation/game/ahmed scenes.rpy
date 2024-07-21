@@ -1,6 +1,4 @@
 label ahmed_1:
-    $ made_ahmed_smile = False
-    $ bullied_ahmed = False
     # needs coffeeshop bg
     show ahmed at midleft with dissolve
     "They meet Ahmed a month later to the day."
@@ -481,6 +479,17 @@ label ahmed_2_ending:
     a "Sh-shut up, I know okay."
     "Parvez pulls Ahmed up to his feet, kissing him."
     p "I know, bud."
+    scene ahmedshelves
+    show ahmed bottomy at midright
+    show parvez happy at midleft
+    with fade
+    "Before he goes, Ahmed presses a small plant into his hand. It looks like a tiny aloe vera plant, a little rosette of green fingers."
+    a "This is one of mine ..."
+    a "Maybe when you see it in your place ... it'll make you think of me ..."
+    "Parvez grinned."
+    show parvez toppy with dissolve
+    p "I'll think of you alright."
+    hide parvez with moveoutleft
     "Parvez leaves Ahmed's place with the taste of himself on his lips, green and clean and vegetal."
     "He feels refreshed as he rides the train back to his own place."
     jump nav_menu

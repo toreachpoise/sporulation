@@ -1,36 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/inanna n javier scenes.rpy", line 761, in script call
-    call battle_2 from _call_battle_2
-  File "game/inanna n javier 1 battle.rpy", line 163, in script call
-    call player_turn_2 from _call_player_turn_2
-  File "game/inanna n javier scenes.rpy", line 814, in script
-    if battle_1_win:
-  File "game/inanna n javier scenes.rpy", line 814, in <module>
-    if battle_1_win:
-NameError: name 'battle_1_win' is not defined
+  File "game/ahmed scenes.rpy", line 285, in script
+    if bullied_ahmed:
+  File "game/ahmed scenes.rpy", line 285, in <module>
+    if bullied_ahmed:
+NameError: name 'bullied_ahmed' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/inanna n javier scenes.rpy", line 761, in script call
-    call battle_2 from _call_battle_2
-  File "game/inanna n javier 1 battle.rpy", line 163, in script call
-    call player_turn_2 from _call_player_turn_2
-  File "game/inanna n javier scenes.rpy", line 814, in script
-    if battle_1_win:
+  File "game/ahmed scenes.rpy", line 285, in script
+    if bullied_ahmed:
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
     if renpy.python.py_eval(condition):
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/inanna n javier scenes.rpy", line 814, in <module>
-    if battle_1_win:
-NameError: name 'battle_1_win' is not defined
+  File "game/ahmed scenes.rpy", line 285, in <module>
+    if bullied_ahmed:
+NameError: name 'bullied_ahmed' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.7.17
-Fri Jul 19 16:21:28 2024
+sporulation 0.7.19
+Sat Jul 20 13:30:16 2024

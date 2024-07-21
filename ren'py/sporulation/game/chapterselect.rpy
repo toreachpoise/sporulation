@@ -31,6 +31,8 @@ label terry_encounter_list:
             jump terry_1
         "terry 2":
             jump terry_2
+        "terry 3":
+            jump terry_3
 
 label ahmed_encounter_list:
     menu:
@@ -48,6 +50,8 @@ label solo_encounter_list:
     menu:
         "solo 1": ##if strokerused == False
             jump solo_1
+        "solo 2":
+            jump solo_2
 
 label inanna_encounter_list:
     menu:
