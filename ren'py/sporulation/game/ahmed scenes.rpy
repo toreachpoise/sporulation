@@ -104,7 +104,7 @@ label no_ahmed_fuck:
     if made_ahmed_smile:
         "It makes you feel even more bad for him."
     "You all pay your bills and leave pretty quickly after that."
-    jump nav_menu
+    call screen chapterselect
 label fuck_ahmed:
     scene black with dissolve
     # are we gonna be fancy and have a subway bg
@@ -241,7 +241,8 @@ label keep_fucking_ahmed:
     "When Parvez and Terry wake up, Ahmed is gone."
     "A week later, Ahmed texts Terry a picture of his pussy. 'It's growing.'"
     "Sure enough, in the center of his purple-brown labia, there is a pearl of green."
-    jump nav_menu
+    $ ahmed_1_complete = True
+    call screen chapterselect
 
 label ahmed_2:
     "Parvez arrives at Ahmed's place a bit sweaty."
@@ -387,7 +388,7 @@ label ahmed_2:
                 # cg
                 "Afterwards he asks Terry to help him collect the sample, which they're happy to do."
                 "He drops the jar of cum off at Ahmed's place the next day, but he isn't home."
-                jump nav_menu
+                call screen chapterselect
         label ahmed_2_nicer_scene:
             $ made_ahmed_smile = True
             scene ahmedbed #actually needs shower bg lol
@@ -492,6 +493,7 @@ label ahmed_2_ending:
     hide parvez with moveoutleft
     "Parvez leaves Ahmed's place with the taste of himself on his lips, green and clean and vegetal."
     "He feels refreshed as he rides the train back to his own place."
-    jump nav_menu
+    $ ahmed_2_complete = True
+    call screen chapterselect
 
             

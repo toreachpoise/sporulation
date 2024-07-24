@@ -72,7 +72,8 @@ label terry_1:
     "They kissed and fell asleep together, still dirty, half glued together with jizz."
     # UNLOCKS TERRY 2
     scene black with dissolve
-    jump nav_menu
+    $ terry_1_complete = True
+    call screen chapterselect
 
 label terry_2:
     $ doubted = False
@@ -219,7 +220,8 @@ label check_it_out:
     p "I mean ...{w} what are you telling people?"
     t "See for yourself."
     # UNLOCKS AHMED 1 AND KAYDEN 1
-    jump nav_menu
+    $ terry_2_complete = True
+    call screen chapterselect
 
 label terry_3:
     scene couch
@@ -298,4 +300,5 @@ label terry_3:
     "They each feel each other's sensation, one orgasm like an eruption, bursting out and releasing pent up energy. Another a deep-inside pulsing, a throbbing wave rising and then ebbing away, folding back into the water."
     "They wipe each other off with one of their shirts. One of them kisses the other's cock as they do so."
     "They fall asleep on the couch together, with some old man talking about optimal compost green and brown ratios in the background."
-    jump nav_menu
+    $ terry_3_complete = True
+    call screen chapterselect

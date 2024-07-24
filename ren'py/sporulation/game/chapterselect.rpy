@@ -1,71 +1,79 @@
-label nav_menu:
-    scene cardboard with fade
-    menu:
-        "plant encounters":
-            jump plant_encounter_list
-        "terry encounters":
-            jump terry_encounter_list
-        "ahmed encounters":
-            jump ahmed_encounter_list
-        "kayden encounters":
-            jump kayden_encounter_list
-        "solo scenes":
-            jump solo_encounter_list
-        "inanna encounters":
-            jump inanna_encounter_list
-        "inanna and javier encounters":
-            jump inanna_n_javier_encounter_list
-        "battles":
-            jump battles_list
+screen chapterselect():
+    add "/bgs/cardboard.png"
+    imagemap:
+        ground "/gui/chapter_select_ground.png"
+        idle "/gui/chapter_select_idle.png"
+        hover "/gui/chapter_select_hover.png"
+        xalign 0.5
+
+        hotspot (0, 217, 242, 238) action Call("plant_encounter_list")
+        if plant_encounter_1_complete == True:
+            hotspot (241, 217, 239, 240) action Call("terry_encounter_list")
+        if terry_1_complete == True:
+            hotspot (482, 218, 238, 241) action Call("solo_encounter_list")
+        if terry_2_complete == True:
+            hotspot (0, 457, 239, 236) action Call("ahmed_encounter_list")
+            hotspot (239, 458, 241, 237) action Call("kayden_encounter_list")
+        if (ahmed_1_complete == True) or (kayden_1_complete == True):  
+            hotspot (477, 458, 244, 238) action Call("inanna_encounter_list")
+        if inanna_1_complete == True:
+            hotspot (0, 693, 242, 239) action Call("inanna_n_javier_encounter_list")
+        if inanna_n_javier_1_complete == True:
+            hotspot (242, 693, 240, 239) action Call("javier_encounter_list")
+        if inanna_n_javier_2_complete == True:
+            hotspot (482, 695, 239, 236) action Call("chud_encounter_list")
+        
 
 label plant_encounter_list:
     menu:
-        "plant encounter 1":
+        "plant encounter 1" if (plant_encounter_1_complete == False):
             jump plant_encounter_1
-        "plant encounter 2":
+        "plant encounter 2" if (terry_1_complete == True) and (plant_encounter_2_complete == False):
             jump plant_encounter_2
 
 label terry_encounter_list:
     menu:
-        "terry 1":
+        "terry 1" if (plant_encounter_1_complete == True) and (terry_1_complete == False):
             jump terry_1
-        "terry 2":
+        "terry 2" if (terry_1_complete == True) and (terry_2_complete == False):
             jump terry_2
-        "terry 3":
+        "terry 3" if (terry_2_complete == True) and (terry_3_complete == False):
             jump terry_3
 
 label ahmed_encounter_list:
     menu:
-        "ahmed 1":
+        "ahmed 1" if (terry_2_complete == True) and (ahmed_1_complete == False):
             jump ahmed_1
-        "ahmed 2":
+        "ahmed 2" if (ahmed_1_complete == True) and (ahmed_2_complete == False):
             jump ahmed_2
 
 label kayden_encounter_list:
     menu:
-        "kayden 1":
+        "kayden 1" if (terry_1_complete == True) and (kayden_1_complete == False):
             jump kayden_1
 
 label solo_encounter_list:
     menu:
-        "solo 1": ##if strokerused == False
+        "solo 1" if (terry_1_complete == True) and (strokerused == False): ##if strokerused == False
             jump solo_1
-        "solo 2":
+        "solo 2" if (ahmed_2_complete == True) and (solo_2_complete == False):
             jump solo_2
 
 label inanna_encounter_list:
     menu:
-        "inanna 1":
+        "inanna 1" if ((ahmed_1_complete == True) or (kayden_1_complete == True)) and (inanna_1_complete == False):
             jump inanna_1
 
 label inanna_n_javier_encounter_list:
     menu:
-        "inanna and javier 1":
+        "inanna and javier 1" if (inanna_1_complete == True) and (inanna_n_javier_1_complete == False):
             jump inanna_n_javier_1
-        "inanna and javier 2":
+        "inanna and javier 2" if (inanna_n_javier_1_complete == True) and (inanna_n_javier_2_complete == False):
             jump inanna_n_javier_2
 
 label javier_encounter_list:
+
+label chud_encounter_list:
 
 label battles_list:
     menu:

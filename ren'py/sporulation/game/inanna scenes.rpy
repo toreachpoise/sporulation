@@ -28,7 +28,7 @@ label inanna_1:
         "nah actually, sorry":
             "Parvez isn't actually that into Inanna sexually, is the thing."
             "Maybe he's not really into women after all ..."
-            jump nav_menu
+            call screen chapterselect
 label meet_inanna:
     #needs bg (maybe same as ahmed coffee shop lol)
     show inanna excited at midleft
@@ -160,7 +160,7 @@ label judys_conversation_with_inanna:
                         "She turned away from him."
                         i "Don't follow me this time."
                         hide inanna with moveoutleft
-                        jump nav_menu
+                        call screen chapterselect
                     "nah, fuck them":
                         "Parvez realized in a flash that Inanna was right."
                         "These people hated them, but in a quiet way, a way that was designed to frame them as innocent even though they were the aggressors."
@@ -231,7 +231,7 @@ label battle_end:
             i "Are you gonna be okay getting home?"
             p "Yeah, thanks. I'll see you around, Inanna."
             # still unlocks i&j 1
-            jump nav_menu
+            call screen chapterselect
 label fuck_inanna:
     scene balcony
     show inanna excited at midright
@@ -322,7 +322,7 @@ label fuck_inanna:
             p "N-no, it's okay, I just --"
             "He's too embarrassed to finish."
             "She offers him tea again but he just excuses himself and leaves."
-            jump nav_menu
+            call screen chapterselect
         "ahh ... yes mommy":
             pass
     i "That's right, baby boy, I am your mommy."
@@ -359,4 +359,5 @@ label fuck_inanna:
     i "Very interesting, young man."
     "She winks."
     i "I'll have to collect more samples from you again sometime."
-    jump nav_menu
+    $ inanna_1_complete = True
+    call screen chapterselect

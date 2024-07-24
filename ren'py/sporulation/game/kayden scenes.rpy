@@ -71,7 +71,7 @@ label kayden_1:
     "Parvez watches them all but he forces himself not to respond. In some of the videos they seem out of it, inebriated."
     "When he doesn't respond for a couple of weeks, they eventually give up."
     "After that, he keeps seeing them on the app for a few months before they disappear."
-    jump nav_menu
+    call screen chapterselect
 label meet_kayden:
     $ met_kayden = True
     pdm "okay, where do you want to meet?"
@@ -187,7 +187,7 @@ label kayden_arrives:
             t "Bad date, huh?"
             "Parvez grumbles into the meat of Terry's armpit, not even coherent words."
             "Terry rubs his back as the sweat all over his body dries until he finally feels warm and safe."
-            jump nav_menu
+            call screen chapterselect
 label fuck_kayden:
     "Parvez shoves his fingers up inside them."
     "He draws them out again before forcing them back in, rough, uncareful."
@@ -221,4 +221,5 @@ label fuck_kayden:
     scene kitchen with wipeleft
     "When he gets home he isn't able to find Kayden on the app again."
     p "Weird, they must have blocked me ..."
-    jump nav_menu
+    $ kayden_1_complete = True
+    call screen chapterselect

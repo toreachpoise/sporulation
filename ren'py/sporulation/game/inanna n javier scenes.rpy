@@ -36,7 +36,7 @@ label inanna_n_javier_1:
             pdm "in the meantime can we just ... do stuff alone for now ?"
             lj "sure baby"
             # if havent completed inanna 2 jumps to inanna 2, otherwise jsut skips
-            jump nav_menu
+            call screen chapterselect
         "let's do it":
             pass
     "Parvez grins alone at his kitchen table."
@@ -187,7 +187,7 @@ label inanna_n_javier_1:
                     i "It's okay babe, you didn't ruin anything."
                     i "I'm sorry you got freaked out."
                     "Parvez rises to his feet awkwardly and makes his exit."
-                    jump nav_menu
+                    call screen chapterselect
         "how do you use a retro board game to fuck??":
             jump horny_boardgame
 label chaste_boardgame:
@@ -249,7 +249,7 @@ label chaste_boardgame:
                 "I'd like that":
                     pass
             j "Okay, bye bro."
-            jump nav_menu
+            call screen chapterselect
 label horny_boardgame:
     "Javier rolls xer eyes."
     j "You'll see."
@@ -338,7 +338,7 @@ label horny_boardgame:
                 i "W-wait, Parvez--{nw}"
                 p "Nope sorry I gotta go."
                 hide parvez with moveoutleft
-                jump nav_menu
+                call screen chapterselect
         "d) try to dominate her instead":
             show parvez toppy with dissolve
             p "I bet she's not even that powerful."
@@ -523,7 +523,8 @@ label hypno:
     "She grins brightly."
     i "Nah, come on, you want to, don't you Parvez?"
     p "Yeah, alright."
-    jump nav_menu
+    $ inanna_n_javier_1_complete = True
+    call screen chapterselect
 
 label inanna_n_javier_2:
     ## starting this sequence removes kayden 1 and locks the kayden storyline
@@ -819,7 +820,7 @@ label inanna_n_javier_2:
                 "After completing his victory lap, Parvez decides to go leave."
                 "He gets in his car with adrenaline still coursing through his veins, feeling thrilled and wound up."
                 "Maybe Terry would be up for messing around when he gets back ..."
-                jump nav_menu
+                call screen chapterselect
         "run":
             $ battle_2_ran = True
             "Parvez starts to panic."
@@ -846,4 +847,5 @@ label inanna_n_javier_2:
             "Parvez rushes over to Terry and buries his head in their belly. Terry smooths his hair."
             t "That bad, huh?"
             p "Mrghh ..."
-            jump nav_menu
+            $ inanna_n_javier_2_complete = True
+            call screen chapterselect

@@ -122,6 +122,38 @@ label start:
     $ battle_2_win = False
     $ made_ahmed_smile = False
     $ bullied_ahmed = False
+
+    $ plant_encounter_1_complete = False
+    $ plant_encounter_2_complete = False
+    # plant encounter 3--extra skatepark scene
+
+    $ terry_1_complete = False
+    $ terry_2_complete = False
+    $ terry_3_complete = False
+    # terry 4
+
+    $ ahmed_1_complete = False
+    $ ahmed_2_complete = False
+
+    $ kayden_1_complete = False
+    # kayden 2
+
+    $ solo_1_complete = False
+    $ solo_2_complete = False
+
+    $ inanna_1_complete = False
+   # inanna 2
+
+    $ inanna_n_javier_1_complete = False
+    $ inanna_n_javier_2_complete = False
+    # inanna n javier 3
+
+    # javi 1
+
+    # chud 1
+    # chud 2
+
+
     "this is a placeholder for the app navigation screen"
-    jump nav_menu
+    call screen chapterselect
     return

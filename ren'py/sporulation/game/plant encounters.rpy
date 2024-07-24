@@ -154,9 +154,8 @@ label temp_check:
     t "You're so weird."
     "They lean in to kiss Parvez's cheek."
     t "I'm just glad you're okay babe."
-    # UNLOCKS TERRY 1
-    # UNLOCKS SOLO 1
-    jump nav_menu
+    $ plant_encounter_1_complete = True
+    call screen chapterselect
 
 label plant_encounter_2:
     $ tried_to_take_plant = False
@@ -203,7 +202,7 @@ label plant_encounter_2:
             "He stuffs the small plant in his pocket and goes home."
             scene kitchen with Dissolve(1)
             "He transplants his cutting into a little cup and puts it on the windowsill, but it withers and dies within two weeks."
-            jump nav_menu
+            call screen chapterselect
 label plant_blowjob:
     scene plant closeup
     show parvez toppy at midright:
@@ -312,4 +311,5 @@ label end_plant_encounter_2:
         "soaking the seat with the seedy gel."
     p "Well, I guess it really was real."
     "Then he drives home to tell Terry about it."
-    jump nav_menu
+    $ plant_encounter_2_complete = True
+    call screen chapterselect
