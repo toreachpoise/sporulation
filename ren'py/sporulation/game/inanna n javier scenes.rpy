@@ -36,6 +36,7 @@ label inanna_n_javier_1:
             pdm "in the meantime can we just ... do stuff alone for now ?"
             lj "sure baby"
             # if havent completed inanna 2 jumps to inanna 2, otherwise jsut skips
+            scene cardboard with fade
             call screen chapterselect
         "let's do it":
             pass
@@ -187,6 +188,7 @@ label inanna_n_javier_1:
                     i "It's okay babe, you didn't ruin anything."
                     i "I'm sorry you got freaked out."
                     "Parvez rises to his feet awkwardly and makes his exit."
+                    scene cardboard with fade
                     call screen chapterselect
         "how do you use a retro board game to fuck??":
             jump horny_boardgame
@@ -249,6 +251,8 @@ label chaste_boardgame:
                 "I'd like that":
                     pass
             j "Okay, bye bro."
+            $ inanna_and_javier_1_complete = True
+            scene cardboard with fade
             call screen chapterselect
 label horny_boardgame:
     "Javier rolls xer eyes."
@@ -338,6 +342,7 @@ label horny_boardgame:
                 i "W-wait, Parvez--{nw}"
                 p "Nope sorry I gotta go."
                 hide parvez with moveoutleft
+                scene cardboard with fade
                 call screen chapterselect
         "d) try to dominate her instead":
             show parvez toppy with dissolve
@@ -469,7 +474,7 @@ label hypno:
     show parvez bottomy at midright
     show javier happy at midleft
     with wipeleft
-    "Inanna leads them into the room and ordered Parvez to strip."
+    "Inanna leads them into the room and orders Parvez to strip."
     i "Good boy, lay on the bed."
     i "Get on top of him kitty."
     show javier happy at center
@@ -524,6 +529,7 @@ label hypno:
     i "Nah, come on, you want to, don't you Parvez?"
     p "Yeah, alright."
     $ inanna_n_javier_1_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
 label inanna_n_javier_2:
@@ -820,6 +826,8 @@ label inanna_n_javier_2:
                 "After completing his victory lap, Parvez decides to go leave."
                 "He gets in his car with adrenaline still coursing through his veins, feeling thrilled and wound up."
                 "Maybe Terry would be up for messing around when he gets back ..."
+                $ inanna_n_javier_2_complete = True
+                scene cardboard with fade
                 call screen chapterselect
         "run":
             $ battle_2_ran = True
@@ -848,4 +856,5 @@ label inanna_n_javier_2:
             t "That bad, huh?"
             p "Mrghh ..."
             $ inanna_n_javier_2_complete = True
+            scene cardboard with fade
             call screen chapterselect

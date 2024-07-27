@@ -104,6 +104,7 @@ label no_ahmed_fuck:
     if made_ahmed_smile:
         "It makes you feel even more bad for him."
     "You all pay your bills and leave pretty quickly after that."
+    scene cardboard with fade
     call screen chapterselect
 label fuck_ahmed:
     scene black with dissolve
@@ -242,6 +243,7 @@ label keep_fucking_ahmed:
     "A week later, Ahmed texts Terry a picture of his pussy. 'It's growing.'"
     "Sure enough, in the center of his purple-brown labia, there is a pearl of green."
     $ ahmed_1_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
 label ahmed_2:
@@ -388,6 +390,7 @@ label ahmed_2:
                 # cg
                 "Afterwards he asks Terry to help him collect the sample, which they're happy to do."
                 "He drops the jar of cum off at Ahmed's place the next day, but he isn't home."
+                scene cardboard with fade
                 call screen chapterselect
         label ahmed_2_nicer_scene:
             $ made_ahmed_smile = True
@@ -494,6 +497,7 @@ label ahmed_2_ending:
     "Parvez leaves Ahmed's place with the taste of himself on his lips, green and clean and vegetal."
     "He feels refreshed as he rides the train back to his own place."
     $ ahmed_2_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
             

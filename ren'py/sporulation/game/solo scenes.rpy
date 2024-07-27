@@ -54,6 +54,7 @@ label solo_1:
             "He needed to use this time to work on his projects instead of sitting around and jerking off all day."
             "America's first great transsexual immigrant novelist wasn't going to get to the best seller lists by touching himself, after all."
             $ strokerattempt = 2
+            scene cardboard with fade
             call screen chapterselect
         "dude, why not?":
             jump use_stroker
@@ -127,6 +128,7 @@ label use_stroker:
     "He lays down in a pool of his own sweat, toy still in his hand, and falls asleep."
     "Terry finds him laying in the same position a few hours later."
     $ solo_1_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
 label solo_2:
@@ -199,4 +201,5 @@ label solo_2:
     "He sends the picture that he snapped while it was inside him to Ahmed."
     pdm "See? I told you I would think of you ;)"
     $ solo_2_complete = True
+    scene cardboard with fade
     call screen chapterselect

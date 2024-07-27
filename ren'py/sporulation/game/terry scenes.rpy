@@ -73,6 +73,7 @@ label terry_1:
     # UNLOCKS TERRY 2
     scene black with dissolve
     $ terry_1_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
 label terry_2:
@@ -221,6 +222,7 @@ label check_it_out:
     t "See for yourself."
     # UNLOCKS AHMED 1 AND KAYDEN 1
     $ terry_2_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
 label terry_3:
@@ -301,4 +303,5 @@ label terry_3:
     "They wipe each other off with one of their shirts. One of them kisses the other's cock as they do so."
     "They fall asleep on the couch together, with some old man talking about optimal compost green and brown ratios in the background."
     $ terry_3_complete = True
+    scene cardboard with fade
     call screen chapterselect

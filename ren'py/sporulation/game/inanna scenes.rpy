@@ -28,6 +28,7 @@ label inanna_1:
         "nah actually, sorry":
             "Parvez isn't actually that into Inanna sexually, is the thing."
             "Maybe he's not really into women after all ..."
+            scene cardboard with fade
             call screen chapterselect
 label meet_inanna:
     #needs bg (maybe same as ahmed coffee shop lol)
@@ -160,6 +161,7 @@ label judys_conversation_with_inanna:
                         "She turned away from him."
                         i "Don't follow me this time."
                         hide inanna with moveoutleft
+                        scene cardboard with fade
                         call screen chapterselect
                     "nah, fuck them":
                         "Parvez realized in a flash that Inanna was right."
@@ -230,7 +232,8 @@ label battle_end:
             p "Thanks ...{w} I had a really nice time with you too."
             i "Are you gonna be okay getting home?"
             p "Yeah, thanks. I'll see you around, Inanna."
-            # still unlocks i&j 1
+            $ inanna_1_complete = True
+            scene cardboard with fade
             call screen chapterselect
 label fuck_inanna:
     scene balcony
@@ -322,6 +325,7 @@ label fuck_inanna:
             p "N-no, it's okay, I just --"
             "He's too embarrassed to finish."
             "She offers him tea again but he just excuses himself and leaves."
+            scene cardboard with fade
             call screen chapterselect
         "ahh ... yes mommy":
             pass
@@ -360,4 +364,5 @@ label fuck_inanna:
     "She winks."
     i "I'll have to collect more samples from you again sometime."
     $ inanna_1_complete = True
+    scene cardboard with fade
     call screen chapterselect

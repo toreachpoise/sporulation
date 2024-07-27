@@ -155,6 +155,7 @@ label temp_check:
     "They lean in to kiss Parvez's cheek."
     t "I'm just glad you're okay babe."
     $ plant_encounter_1_complete = True
+    scene cardboard with fade
     call screen chapterselect
 
 label plant_encounter_2:
@@ -202,6 +203,8 @@ label plant_encounter_2:
             "He stuffs the small plant in his pocket and goes home."
             scene kitchen with Dissolve(1)
             "He transplants his cutting into a little cup and puts it on the windowsill, but it withers and dies within two weeks."
+            $ plant_encounter_2_complete = True
+            scene cardboard with fade
             call screen chapterselect
 label plant_blowjob:
     scene plant closeup
@@ -312,4 +315,5 @@ label end_plant_encounter_2:
     p "Well, I guess it really was real."
     "Then he drives home to tell Terry about it."
     $ plant_encounter_2_complete = True
+    scene cardboard with fade
     call screen chapterselect

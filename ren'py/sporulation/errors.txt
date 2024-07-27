@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/chapterselect.rpy", line 2: 'show' is not a keyword argument or valid child of the screen statement.
-    show cardboard
-        ^
+The label _call_player_dead_check_3 is defined twice, at File "game/chud 1 battle.rpy", line 242:
+                call player_dead_check_3 from _call_player_dead_check_3
+and File "game/inanna n javier 1 battle.rpy", line 406:
+                call player_dead_check_2 from _call_player_dead_check_3
+
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jul 23 23:04:24 2024
+Thu Jul 25 00:21:49 2024

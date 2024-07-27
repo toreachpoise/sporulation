@@ -14,6 +14,7 @@ define npc = Character("neonpunkcuntboi", color="#617b0a")
 define pdm = Character("plantdickman", color="#b07030")
 define lj = Character("snakewoman", color="#8f3ce9")
 define mm = Character("mathlord", color="#258654")
+define cg = Character("clowngender", color="#cc0000")
 
 ## BGS
 # these are just placeholder thumbnails for now
@@ -150,10 +151,8 @@ label start:
 
     # javi 1
 
-    # chud 1
+    $ chud_1_complete = False
     # chud 2
 
-
-    "this is a placeholder for the app navigation screen"
     call screen chapterselect
     return

@@ -115,7 +115,7 @@ label battle_2_presetup:
     $ marianne_hp_max = 100
     $ sarah_hp_max = 100
     $ kaye_hp_max = 100
-    $ chud_hp_max = 200
+    $ chud_hp_max = 400
     $ marianne_hp = marianne_hp_max
     $ sarah_hp = sarah_hp_max
     $ kaye_hp = kaye_hp_max
@@ -510,7 +510,7 @@ label player_dead_check_2:
     if player1_hp <= 0 and player2_hp <= 0 and player3_hp <= 0: # or player3_hp <= 0 or player4_hp <= 0:
         "You got bashed!"
         "The crew were barely able to escape to safety."
-        jump nav_menu
+        call screen chapterselect
         #$ renpy.full_restart() # returns to main menu, game over 
     else:
         return

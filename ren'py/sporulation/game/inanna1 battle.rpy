@@ -452,7 +452,7 @@ label player_dead_check:
     if player1_hp <= 0 and player2_hp <= 0: # or player3_hp <= 0 or player4_hp <= 0:
         "You got bashed!"
         "Inanna and Parvez were barely able to escape to safety."
-        jump nav_menu
+        call screen chapterselect
         #$ renpy.full_restart() # returns to main menu, game over 
     else:
         return

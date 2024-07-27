@@ -30,6 +30,8 @@ label plant_encounter_list:
             jump plant_encounter_1
         "plant encounter 2" if (terry_1_complete == True) and (plant_encounter_2_complete == False):
             jump plant_encounter_2
+        "return":
+            call screen chapterselect
 
 label terry_encounter_list:
     menu:
@@ -39,6 +41,8 @@ label terry_encounter_list:
             jump terry_2
         "terry 3" if (terry_2_complete == True) and (terry_3_complete == False):
             jump terry_3
+        "return":
+            call screen chapterselect
 
 label ahmed_encounter_list:
     menu:
@@ -46,11 +50,15 @@ label ahmed_encounter_list:
             jump ahmed_1
         "ahmed 2" if (ahmed_1_complete == True) and (ahmed_2_complete == False):
             jump ahmed_2
+        "return":
+            call screen chapterselect
 
 label kayden_encounter_list:
     menu:
         "kayden 1" if (terry_1_complete == True) and (kayden_1_complete == False):
             jump kayden_1
+        "return":
+            call screen chapterselect
 
 label solo_encounter_list:
     menu:
@@ -58,11 +66,15 @@ label solo_encounter_list:
             jump solo_1
         "solo 2" if (ahmed_2_complete == True) and (solo_2_complete == False):
             jump solo_2
+        "return":
+            call screen chapterselect
 
 label inanna_encounter_list:
     menu:
         "inanna 1" if ((ahmed_1_complete == True) or (kayden_1_complete == True)) and (inanna_1_complete == False):
             jump inanna_1
+        "return":
+            call screen chapterselect
 
 label inanna_n_javier_encounter_list:
     menu:
@@ -70,14 +82,20 @@ label inanna_n_javier_encounter_list:
             jump inanna_n_javier_1
         "inanna and javier 2" if (inanna_n_javier_1_complete == True) and (inanna_n_javier_2_complete == False):
             jump inanna_n_javier_2
+        "return":
+            call screen chapterselect
 
 label javier_encounter_list:
+    menu:
+        "javier 1" if (inanna_n_javier_1_complete == True) and (ahmed_2_complete == True) and (javier_1_complete == False):
+            jump javier_1
+        "return":
+            call screen chapterselect
 
 label chud_encounter_list:
-
-label battles_list:
     menu:
-        "inanna 1 battle":
-            jump inanna_1_battle
-        "inanna n javier 2 battle":
-            jump inanna_n_javier_2_battle
+        "cw: sexual assault and severe transphobia for all chud scenes"
+        "chud 1" if (inanna_n_javier_2_complete == True) and (chud_1_complete == False):
+            jump chud_1
+        "return":
+            call screen chapterselect
