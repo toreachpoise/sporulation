@@ -366,3 +366,10 @@ label fuck_inanna:
     $ inanna_1_complete = True
     scene cardboard with fade
     call screen chapterselect
+
+label inanna_2:
+    "idk I'll come back to this one i guess ..."
+    # inanna spanks you and fingers your butt
+    $ inanna_2_complete = True
+    scene cardboard with fade
+    call screen chapterselect

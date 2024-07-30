@@ -34,7 +34,7 @@ label battle_3_def:#you usually call this in the very beginning of your game, it
     #warrior type class
     $ player1_hp_max = 300
     $ player1_mp_max = 100    
-    $ player1_attack = 12
+    $ player1_attack = 25
     $ player1_defense = 20
 
 
@@ -173,11 +173,15 @@ label player_dealt_damage_3:
     if player_turn == player1:
         if p_action == "attack":
             $ damage = player1_attack
+            if player1_mp < 90:
+                $ player1_mp += 10
         elif p_action == "skills":
             call player1_skills_3 from _call_player1_skills_3
         elif p_action == "defend":
             $ damage = -1
             $ player1_defend = True
+            if player1_mp < 95:
+                $ player1_mp += 5
 
     if damage < 0:
         return
@@ -219,6 +223,7 @@ label player1_skills_3:
         $ damage = player1_attack * 0.75
         $ target = "all"
         $ player1_mp -= 33
+        $ player1_hp += 10
     show screen battle_3_overlay_players
 
     return

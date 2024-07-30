@@ -34,14 +34,14 @@ label battle_def:#you usually call this in the very beginning of your game, it w
     #warrior type class
     $ player1_hp_max = 300
     $ player1_mp_max = 100    
-    $ player1_attack = 12
+    $ player1_attack = 25
     $ player1_defense = 20
 
 
     #thief type class
     $ player2_hp_max = 400
     $ player2_mp_max = 70    
-    $ player2_attack = 17
+    $ player2_attack = 35
     $ player2_defense = 15
 
     $ stun_dmg = False
@@ -173,10 +173,10 @@ label player_turn:
     if check_win:
         jump battle_win
     while player_numbers >= turn:
-        if turn == 1:
+        if turn == 1 and player1_hp > 0:
             $ message = "player1_turn"
             $ player_turn = player1
-        elif turn == 2:
+        elif turn == 2 and player2_hp > 0:
             $ message = "player2_turn"
             $ player_turn = player2
         #elif turn == 3:
@@ -200,36 +200,48 @@ label player_dealt_damage:
     if player_turn == player1:
         if p_action == "attack":
             $ damage = player1_attack
+            if player1_mp < 90:
+                $ player1_mp += 10
         elif p_action == "skills":
             call player1_skills from _call_player1_skills
         elif p_action == "defend":
             $ damage = -1
             $ player1_defend = True
+            if player1_mp <95:
+                $ player1_mp += 5
         
     elif player_turn == player2:
         if p_action == "attack":
             $ damage = player2_attack
+            if player2_mp <90:
+                $ player2_mp += 10
         elif p_action == "skills":
             call player2_skills from _call_player2_skills
         elif p_action == "defend":
             $ damage = -1
             $ player2_defend = True
+            if player2_mp < 95:
+                $ player2_mp += 5
 #    elif player_turn == player3:
 #        if p_action == "attack":
 #            $ damage = player3_attack
+#            $ player3_mp += 10
 #        elif p_action == "skills":
 #            call player3_skills 
 #        elif p_action == "defend":
 #            $ damage = -1
 #            $ player3_defend = True
+#            $ player3_mp += 5
 #    elif player_turn == player4:
 #        if p_action == "attack":
 #            $ damage = player4_attack
+#            $ player4_mp += 10
 #        elif p_action == "skills":
 #            call player4_skills
 #        elif p_action == "defend":
 #            $ damage = -1
 #            $ player4_defend = True
+#            $ player4_mp += 5
     if damage < 0:
         return
     else:
@@ -281,6 +293,7 @@ label player1_skills:
         $ damage = player1_attack * 0.75
         $ target = "all"
         $ player1_mp -= 33
+        $ player1_hp += 10
     show screen battle_overlay_players
 
     return

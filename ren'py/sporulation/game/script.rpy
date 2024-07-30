@@ -99,6 +99,7 @@ image judys = "/character sprites/judys without kayden.png"
 image judys n kayden = "/character sprites/judys with kayden.png"
 
 image chud = "/character sprites/chud.png"
+image chud2 = "/character sprites/chud.png"
 
 image judys n chud = "/character sprites/judys n chud.png"
 
@@ -131,25 +132,25 @@ label start:
     $ terry_1_complete = False
     $ terry_2_complete = False
     $ terry_3_complete = False
-    # terry 4
+    $ terry_4_complete = False
 
     $ ahmed_1_complete = False
     $ ahmed_2_complete = False
 
     $ kayden_1_complete = False
-    # kayden 2
+    $ kayden_2_complete = False
 
     $ solo_1_complete = False
     $ solo_2_complete = False
 
     $ inanna_1_complete = False
-   # inanna 2
+    $ inanna_2_complete = False
 
     $ inanna_n_javier_1_complete = False
     $ inanna_n_javier_2_complete = False
     # inanna n javier 3
 
-    # javi 1
+    $ javier_1_complete = False
 
     $ chud_1_complete = False
     # chud 2

@@ -2,11 +2,11 @@
 errors listed below, and try again.
 
 
-The label _call_player_dead_check_3 is defined twice, at File "game/chud 1 battle.rpy", line 242:
-                call player_dead_check_3 from _call_player_dead_check_3
-and File "game/inanna n javier 1 battle.rpy", line 406:
-                call player_dead_check_2 from _call_player_dead_check_3
+The label _call_battle_presetup_2 is defined twice, at File "game/inanna n javier scenes.rpy", line 767:
+                call battle_2_presetup from _call_battle_presetup_2
+and File "game/kayden scenes.rpy", line 399:
+            call battle_4_presetup from _call_battle_presetup_2
 
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Jul 25 00:21:49 2024
+Mon Jul 29 19:19:06 2024

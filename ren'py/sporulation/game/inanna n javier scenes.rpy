@@ -374,7 +374,12 @@ label horny_boardgame:
             i "Don't you, slut?"
             menu:
                 "y-yes mommy":
-                    jump surrender
+                    i "Look me in the eyes and tell me what you want me to do to you."
+                    "Parvez struggles to meet her gaze."
+                    p "I ... ah ..."
+                    p "I want you to take control of me."
+                    i "Good boy."
+                    jump hypno
                 "fuck no":
                     scene couch
                     show parvez worried at left
