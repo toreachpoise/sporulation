@@ -67,9 +67,10 @@ label javier_1:
     "Parvez gathers himself, seeing that Javier looks a bit embarrassed now."
     p "Sorry, I just ... I used to think you were really intimidating."
     p "Now that I know you, you're kind of a dork.{w} A really cute one, though."
-    #cg
     show javier happy with dissolve
     j "I just wanted to show you this--"
+    scene cg J1A with dissolve
+    pause
     "They sit up on the bedside table and spread their labia."
     "Their pussy looks delicious, hair neatly trimmed, tight and squeezable butt."
     j "Look, isn't it weird?"
@@ -91,9 +92,10 @@ label javier_1:
     "When xe spreads xer fingers again, something green is in there."
     "Xe keeps stroking inside xemself, like xer coaxing something out."
     j "There they are!"
-    #cg2
     "Sure enough, xer cock emerges slowly from inside xer pussy, first little, then getting bigger."
-    "Javier's cock is smaller than Parvez's, bright green and a little pointy, sort of cone shaped."
+    scene cg J1B
+    pause
+    "Javier's cock is thinner than Parvez's, long and bright green and a little pointy."
     "Xe grins at him brightly."
     j "Isn't that weird !!"
     "Parvez gets up and goes to xem, wanting immediately to touch it."
@@ -109,6 +111,8 @@ label javier_1:
     p "Hey can I still fuck you?"
     j "Y-yeah."
     "Parvez presses his cock against Javier's slit, right below the place where Javier's own shaft emerges."
+    scene cg J1C with dissolve
+    pause
     "Javier pushes down against him, levering xemself off the bedside table with xer arms."
     "They bounce on his cock, surprisingly strong."
     "Xer pussy is incredibly tight, squeezing Parvez almost to the point of pain."
@@ -123,6 +127,11 @@ label javier_1:
     "They fuck hard, and then slow, and then hard again."
     "Parvez' legs go numb and they swap places, Javier riding him on the bed, then fucking him against the table, then back to their original position."
     "Eventually they get too sweaty, and worn out, legs twitching and asses cramped."
+    scene inannabed
+    show parvez happy:
+        xalign 0.07
+    show javier happy at midleft
+    with dissolve
     "They collapse together on the bed and smoke more weed, languidly making out, and then stroking each other again."
     "At some point they fall asleep. Parvez wakes up in the middle of the night with a tarot card stuck to his cheek--the star."
     "The illustration is of a woman in a bra and a labcoat, with a pot of clear liquid on a hot plate in front of her."

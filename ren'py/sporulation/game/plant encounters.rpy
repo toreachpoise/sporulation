@@ -40,9 +40,7 @@ label plant_touches_you:
     "Then it starts to slither around his arms, around his ankles."
     "At this point it's too late, of course. Parvez is trapped."
     scene black
-    show plant_encounter_1_cg1:
-        yalign 0.0
-        xalign 0.5
+    show cg PE1
     with Dissolve(2)
     p "This is some sick hentai shit."
     "Oddly, he's not panicking."
@@ -219,7 +217,6 @@ label plant_blowjob:
     "He leans forward and kisses one of the fronds of the plant, sticking his tongue out to taste it directly."
     "He kisses along the length of it as it wiggles. Then he kisses the tip."
     "The tentacle--he's willing to call it that now--presses against his mouth."
-    # BLOWBJOB CG
     show parvez bottomy with dissolve
     p "Fuck it."
     "Parvez parts his lips."
@@ -248,13 +245,12 @@ label plant_blowjob:
             "The black spots fill Parvez's vision until he can't see or feel anything any more."
             "................."
             "Parvez wakes up to a squelching noise."
-            show plant closeup
-            show parvez bottomy
-            with dissolve
+            scene cg PE2 with dissolve
             "He looks down and it's him, both his holes being spread open by the plant."
             jump gag_and_pass_out
         "stop fighting":
-            show parvez bottomy with dissolve
+            scene cg PE2 with dissolve
+            pause
     "He gives up and tries to let his throat go slack."
     "He swallows around the tentacle, trying to time his breaths with when it pulls out,"
     "breathing steadily through his nose and getting the air rhythmically punched out by the long tentacle."
@@ -302,7 +298,7 @@ label gag_and_pass_out:
 label end_plant_encounter_2:
     "The plant is no longer restraining him."
     "Parvez gets down shakily, his legs barely able to support him."
-    show plant midway with dissolve
+    scene plant midway with dissolve
     if plantflation:
         "Plant goop oozes down his legs as he struggles to pull his shorts back on."
         "The seat quickly becomes wet as it keeps squishing out of him."

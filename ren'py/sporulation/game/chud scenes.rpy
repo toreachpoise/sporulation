@@ -122,11 +122,10 @@ label confront_chud:
     "Terry is out of town visiting their sick aunt."
     "Parvez thinks about telling them, but decides not to. They already have a lot to worry about."
     "He's shaken, but he's sure nothing will come of it."
-    scene cardboard
+    scene alley
     show parvez at right
     show chud at furthestleft
     with fade
-    #need coffeeshop or sth
     "Parvez sees the man outside the grocery store two days later."
     "As soon as he sees him he knows who it is. It's one of the chuds like he encountered with the judys.{w} He's not sure if it's the same one; they all kind of look alike."
     "The man also recognizes him immediately. Maybe he was even waiting for Parvez."
@@ -134,10 +133,9 @@ label confront_chud:
     "The man could have tracked him by his location--the app always shares that way too closely."
     show chud at center with move
     "{nw}It doesn't matter. He's coming toward Parvez now."
-    scene cardboard with wiperight
+    scene alley with wipeleft
     show parvez at center
     with moveinright
-    ## replace with laundromat bg or sth
     "Parvez turns and runs, but the chud is right behind him."
     show chud at right
     with moveinright
@@ -158,6 +156,9 @@ label chud_1_battle:
 label battle_3_end:
     $ battle_3_win = True
     "You won!!"
+    scene alley
+    show chud at center
+    with irisin
     "Parvez was somehow able to defeat the man, despite impossible odds."
     "He stands, shaking, above the chud, who is laying on the ground with a broken leg."
     p "Don't ever come near me again."
@@ -179,8 +180,11 @@ label chud_1_end:
     scene cardboard with fade
     call screen chapterselect
 label chud_1_rape:
-    scene cardboard with fade
-    #cg 1
+    scene cg C1A with fade:
+        yalign 0.0
+        linear 2.0 yalign 1.0
+        linear 1.0 yalign 0.5
+    pause
     "Parvez didn't stand a chance."
     "The chud was so much bigger than him. As a group, they could maybe take on a monster like that, but alone Parvez was helpless."
     "He grabs Parvez by the shoulders and shoves him against the alley wall."
@@ -193,6 +197,8 @@ label chud_1_rape:
     "Chud" "Check out this wet cunt, god."
     "Chud" "A hole like this was meant to be bred by a man like me."
     "He turns Parvez around, pulling his shorts down, ramming his face against the brick wall. Parvez feels the skin of his cheek split."
+    scene cg C1B with hpunch
+    pause
     "The chud's hand is so big it can hold both of Parvez's wrists in one."
     "Parvez gasps involuntarily when he feels the chud's huge cock slap down on his ass."
     "The chud lets out a horrible chuckle."
@@ -222,6 +228,7 @@ label chud_1_rape:
     "He's been there before, in the few other moments that felt like this--too painful to be inside of."
     "No one comes to Parvez's rescue."
     "True to his word, the chud fills him with his cum, several times over."
+    scene black with dissolve
     "He leaves Parvez's body in the alleyway, face bleeding and hole oozing, sore and throbbing all over."
     "His consciousness comes back a while later."
     jump chud_1_end

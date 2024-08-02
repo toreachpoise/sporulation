@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label _call_battle_presetup_2 is defined twice, at File "game/inanna n javier scenes.rpy", line 767:
-                call battle_2_presetup from _call_battle_presetup_2
-and File "game/kayden scenes.rpy", line 399:
-            call battle_4_presetup from _call_battle_presetup_2
-
+File "game/terry scenes.rpy", line 465: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom 1.5
+    ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Mon Jul 29 19:19:06 2024
+Thu Aug  1 23:04:48 2024

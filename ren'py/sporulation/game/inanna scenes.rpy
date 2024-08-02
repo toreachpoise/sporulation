@@ -31,7 +31,7 @@ label inanna_1:
             scene cardboard with fade
             call screen chapterselect
 label meet_inanna:
-    #needs bg (maybe same as ahmed coffee shop lol)
+    scene coffeeshop2
     show inanna excited at midleft
     show parvez at midright
     with dissolve
@@ -55,14 +55,14 @@ label meet_inanna:
     p "It's okay, I was just being a brat."
     "She pushes his knee gently under the wobbly little table with hers."
     i "I kind of like that."
-    # new bg--outside
+    scene alley
     show parvez happy at left
     show inanna happy at midleft
     with fade
     "Parvez found himself actually smiling as they stepped out of the book store into the late afternoon sunshine."
     "As soon as they do so, however, Inanna's expression turns into a frown."
     i "Shit, what are they doing here?"
-    show judys at right
+    show judys flip at right
     with moveinright
     "There is  a group of women standing across the street from the bookstore."
     "They look like strange nurses, like someone from the 1950s' idea of what a nurse would look like in the year 2000."
@@ -111,12 +111,13 @@ label judys_conversation_with_inanna:
                     jump judys_conversation_with_inanna
         "what should we do?" if asked_about_judys > 1:
             "The tall woman is striding toward them across the street, heedless of an oncoming car that screeches to stop before hitting her."
-            show judys at midright
+            show judys flip at midright
             with move
             "JUDY" "Watch where you're going!"
             "She keeps walking right toward Parvez and Inanna, her gaze fixed on them."
             "The shorter woman is trailing behind her, looking a bit nervous."
-            show judys at center
+            show judys flip at center
+            hide inanna
             show inanna worried:
                 xalign 0.2
             show parvez worried:
@@ -142,8 +143,7 @@ label judys_conversation_with_inanna:
                         hide inanna with moveoutleft
                         "Parvez ran to follow her, the two women speaking in agitated tones behind him."
                         hide parvez with moveoutleft
-                        # new bg or something
-                        scene cardboard
+                        scene alley
                         show inanna frightened at center
                         with wipeleft
                         show parvez worried at right with moveinright
@@ -171,6 +171,7 @@ label judys_conversation_with_inanna:
 label judys_fight_1:
     "Marianne" "You freaks are just jealous. You use your size and natural masculinity to intimidate real women because you know you'll never become like us."
     i "Who the fuck would want to be like--{nw}"
+    hide parvez
     show parvez:
         xalign 0.15
     show inanna happy:
@@ -193,13 +194,13 @@ label inanna_1_battle:
     call battle from _call_battle
 label battle_end:
     $ battle_1_win = True
-    scene cardboard
-    show judys at center
+    scene alley
+    show judys flip at center
     show inanna toppy:
         xalign 0.2
     show parvez toppy:
         xalign -0.2
-    with dissolve
+    with irisin
     "Parvez and Inanna defeated the Judys!!"
     "The two women run off, abandoning all their shitty signs on the ground."
     hide judys with moveoutright
@@ -251,11 +252,11 @@ label fuck_inanna:
     "Parvez follows her, not sure what to do."
     scene inannabed with dissolve
     show inanna toppy at right
-    show parvez at midleft
+    show parvez flip at midleft
     with moveinleft
     i "The fuck you waiting for, boy? Take your pants off."
     i "I wanna see that weird green thing."
-    show parvez bottomy at center
+    show parvez flip bottomy at center
     with move
     "Parvez has no choice but to comply. He drops his shorts and reveals his hard dick."
     "Inanna immediately drops to her knees, poking at the place where it comes out of him. Parvez is wet there."
@@ -280,10 +281,8 @@ label fuck_inanna:
     "She leans forward and licks his slit, where a little juice is coming out."
     i "Weird ... vegetal."
     "Parvez kind of expects her to suck on it more, but she gets up and pulls him to his feet, before shoving him onto the bed."
-    # CG GOES HERE
-    show inanna even more toppy at center
-    show parvez bottomy at midleft
-    with hpunch
+    scene cg I1 with hpunch
+    pause
     "Inanna sheds her leotard and climbs on top of Parvez."
     "She's so beautiful, the mass of her on him kind of overwhelming."
     "Her thighs are huge, spanning his torso easily."
@@ -314,7 +313,9 @@ label fuck_inanna:
     i "I'm 100 percent woman and I'm still more of a man than you'll ever be."
     menu:
         "wait, this is too much actually":
-            show parvez worried with dissolve
+            scene inannabed
+            show parvez flip worried
+            with dissolve
             i "Oh jeez I'm sorry."
             "Inanna gets up immediately, with a wet plop."
             show inanna worried at midright

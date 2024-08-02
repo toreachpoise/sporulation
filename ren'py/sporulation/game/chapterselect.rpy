@@ -70,12 +70,7 @@ label kayden_encounter_list:
         "kayden 1" if (terry_1_complete == True) and (kayden_1_complete == False):
             jump kayden_1
         "kayden 2" if (inanna_n_javier_2_complete == True) and (kayden_2_complete == False):
-            menu:
-                "this scene contains transphobia and sexual violence, do you want to proceed?"
-                "no thanks!":
-                    call screen chapterselect
-                "show it to me":
-                    jump kayden_2
+            jump kayden_2
         "return":
             call screen chapterselect
 

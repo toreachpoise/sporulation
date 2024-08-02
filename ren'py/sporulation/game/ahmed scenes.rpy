@@ -1,5 +1,5 @@
 label ahmed_1:
-    # needs coffeeshop bg
+    scene coffeeshop1
     show ahmed at midleft with dissolve
     "They meet Ahmed a month later to the day."
     "He's short, almost as short as Parvez, with a scraggly little beard."
@@ -151,6 +151,8 @@ label fuck_ahmed:
     a "Can you ... feel that?"
     p "Yeah."
     "Ahmed moans and reaches for Parvez."
+    scene cg A1A with dissolve
+    pause
     "With his eyes fixed on Parvez's cock, he starts rubbing him, stroking up and down. Parvez moans again."
     a "H-how?"
     p "We'd like to try it with you, if you're still into that?"
@@ -167,11 +169,14 @@ label fuck_ahmed:
         "Parvez turns Ahmed's face toward him again, kissing him deeply."
         "Ahmed is a nervous kisser but his lips are soft. His hand is still resting on Parvez's cock."
         p "You can stroke it a little, if you want."
+        scene cg A1A with dissolve
         "Ahmed complies, looking a bit stunned down at Parvez's cock and Terry's head bobbing between his legs."
         "He's trying to be quiet, face scrunched together with effort."
         t "Hey, Parvez, do you want a taste down here?"
         menu:
             "yeah":
+                scene cg A1B with dissolve
+                pause
                 "Parvez gets on the ground standing between Ahmed's legs."
                 "Terry reaches around and taps Ahmed's knee."
                 t "Here, move back a bit."
@@ -189,7 +194,6 @@ label fuck_ahmed:
                 jump keep_fucking_ahmed
     if bullied_ahmed:
         p "I bet you've always wanted it, though."
-        show ahmed overwhelmed with dissolve
         "Ahmed goes dead still and colors further. Parvez leans in to whisper in his ear."
         p "I bet you've touched yourself thinking about it. How it would feel to get your insides messed up by a big cock."
         "Parvez makes Ahmed kneel on the floor in front of Terry and gets down beside him."
@@ -225,6 +229,8 @@ label keep_fucking_ahmed:
     p "Are you s--{nw}"
     a "I said 'fuck me'"
     "Parvez groans. He lines himself up and eases into Ahmed's pussy."
+    scene cg A1C with dissolve
+    pause
     "Terry takes their place behind Parvez, pressing into his ass."
     p "Is that okay?"
     a "Yeah. More."
@@ -238,7 +244,7 @@ label keep_fucking_ahmed:
     "They lay in a sticky pile for a few seconds until Ahmed asks if he could take a shower."
     "Terry points him to the bathroom."
     "Parvez is half asleep already. His belly is covered in sticky seed goo and the bulb on his dick is deflated."
-    hide ahmed with Fade(0.75,1.5,0.75)
+    scene bed with fade
     "When Parvez and Terry wake up, Ahmed is gone."
     "A week later, Ahmed texts Terry a picture of his pussy. 'It's growing.'"
     "Sure enough, in the center of his purple-brown labia, there is a pearl of green."
@@ -263,13 +269,13 @@ label ahmed_2:
     "He seems really excited, much more so than Parvez had seen in their first encounter."
     a "Hi!!"
     "He bustles Parvez in without stopping to ask how he is or explaining why he hadn't messaged for so long,{nw}"
-    show ahmed speaking at right
-    show parvez at midright
+    show ahmed flip speaking at right
+    show parvez flip at midright
     with move
     "He bustles Parvez in without stopping to ask how he is or explaining why he hadn't messaged for so long,{fast} showing him the corner of his tiny apartment near the only large window, positively bursting with plants."
     a "So, last month after the weird bulb thingy happened to me I saved some of the seeds, and I tried sprouting them, and look!!"
-    show ahmed speaking:
-        xalign 0.8
+    show ahmed flip speaking:
+        xalign 0.9
     with hpunch
     "Ahmed brandishes a plant at Parvez, way too close to his face."
     "It's a tiny succulent, little more than a green bead on top of the soil."
@@ -277,31 +283,33 @@ label ahmed_2:
     a "It's the same plant as the one you found in the woods! Pretty amazing, right?"
     p "But how did you ..."
     a "The cum is seeds! I already kind of thought it was when you did it inside me, but then when I got some of my own ..."
-    show ahmed bottomy with dissolve
-    show ahmed speaking with dissolve
+    show ahmed flip bottomy with dissolve
+    show ahmed flip speaking with dissolve
     a "... I tried sprouting them and they totally grew!"
     a "I figured based on the location you described finding them in that it was some kind of peat bog, probably acidic and somewhat poor soil."
     a "I still tried a couple of other kinds, a free draining cactus soil was my second idea because of how succulenty the plant is, but it liked the acidic soil better."
     p "Wow you're ...{nw}"
     if bullied_ahmed:
         p "Wow you're ...{fast} such a fucking nerd."
-        show ahmed with dissolve
+        show ahmed flip with dissolve
         a "H...hey ..."
-        show parvez toppy:
+        show parvez flip toppy:
             xalign 0.72
         with move
         p "I mean, it's kind of cute."
         p "You're such a little weirdo, you hardly talk at all at first, and then you're so obsessed with my cum."
-        show ahmed bottomy:
+        show ahmed flip bottomy:
             xalign 0.85
         with dissolve
         a "Ah, I ..."
-        show parvez toppy:
+        show parvez flip toppy:
             xalign 0.75
         p "That's what you want, right? More of my cum."
         a "W... well, yeah..."
         p "Then go ahead and help me make some, you little freak."
-        # cg
+        show ahmed flip bottomy:
+            yalign 2.0
+        with hpunch
         "Parvez grabs Ahmed by the shoulders and shoves him to his knees."
         a "Wah!"
         "Parvez unbuckles his pants and takes his sweaty dick out, poking Ahmed in the cheek with it."
@@ -313,17 +321,18 @@ label ahmed_2:
             "opens his mouth":
                 jump ahmed_2_rough_scene
             "refuses":
-                show ahmed overwhelmed with dissolve
+                show ahmed flip overwhelmed with dissolve
                 a "No! You have to wash it, it's gross."
                 p "Damn, you're right, I was kind of being a dick."
-                show ahmed speaking with dissolve
+                show ahmed flip speaking with dissolve
                 "Ahmed smiles kind of mischieviously, his tongue poking out the corner of his mouth."
                 a "Plus, y'know, I need a sterile sample."
                 "Parvez rolls his eyes at him."
                 p "You're such a dork."
                 jump ahmed_2_nicer_scene
         label ahmed_2_rough_scene:
-            #cg
+            scene cg A2A with dissolve
+            pause
             "Parvez shoves his dick down Ahmed's throat, making him release a strangled 'weghgh!'"
             "Ahmed's choking a bit, his eyes start to well up with tears, but he doesn't push Parvez away."
             "His fingers are clenched into Parvez's ass, pulling him in fervently even as he gags."
@@ -346,23 +355,23 @@ label ahmed_2:
             "Ahmed yelps and dives back down onto Parvez's cock, making sure to catch the precious seeds."
             jump ahmed_2_ending
     if made_ahmed_smile:
-        show parvez happy with dissolve
+        show parvez flip happy with dissolve
         p "Wow you're ...{fast} so knowledgeable about this stuff. It's amazing!"
-        show ahmed bottomy with dissolve
+        show ahmed flip bottomy with dissolve
         a "Th-thanks!"
         "He gets flustered and then tries to refocus himself."
-        show ahmed with dissolve
+        show ahmed flip with dissolve
         a "Anyway um, since the sample needs to be sterile and all ... u hh ..."
-        show ahmed bottomy with dissolve
+        show ahmed flip bottomy with dissolve
         a "d-do you want to take a shower with me?"
         menu:
             "yeah":
-                show parvez happy with dissolve
+                show parvez flip happy with dissolve
                 p "That sounds really nice!"
                 jump ahmed_2_nicer_scene
             "no thanks":
                 p "Actually if you don't mind, I can just make the sample for you on my own."
-                show ahmed with dissolve
+                show ahmed flip with dissolve
                 a "Oh ... um ... okay, yeah. The bathroom is over there ..."
                 "He hands Parvez a clean jar and points to the only door in the apartment, kind of unnecessarily."
                 scene black with pushleft
@@ -378,7 +387,7 @@ label ahmed_2:
                 "Parvez scrunches his eyes closed and squeezes his dick, trying desperately to get hard so he can cum."
                 "After a few minutes of him rubbing his dick raw under the water, Parvez gets uncomfortable and decides to just go."
                 scene ahmedshelves
-                show ahmed at center
+                show ahmed flip at center
                 with wipeleft
                 p "Sorry man, I'm just not into it today."
                 "Ahmed looks disappointed."
@@ -387,7 +396,7 @@ label ahmed_2:
                 "Parvez leaves, feeling sweaty and uncomfortable all over again."
                 scene bed with pushleft
                 "He takes a really hot shower when he gets home, feeling gross about himself."
-                # cg
+                scene cg T2 with dissolve
                 "Afterwards he asks Terry to help him collect the sample, which they're happy to do."
                 "He drops the jar of cum off at Ahmed's place the next day, but he isn't home."
                 scene cardboard with fade
@@ -455,8 +464,9 @@ label ahmed_2:
             "Ahmed dilligently scrubs his back and his arms, lifting them gently and rubbing Parvez all over."
             "He turns Parvez around with a gentle tug on his shoulder and Parvez does so with his eyes still closed."
             "He loses himself for a moment in the sensation of the soft cloth scrubbing his chest and legs, before he feels Ahmed's warm breath on his cock."
-            #cg
             "Parvez's eyes snap open. Ahmed is on his knees in front of him, with his lips parted."
+            scene cg A2A with dissolve
+            pause
             p "Whoa."
             "Ahmed grins toothily."
             a "I think you're clean enough now."
@@ -474,7 +484,8 @@ label ahmed_2:
             "It doesn't take long for Parvez to cum, filling Ahmed's mouth."
             jump ahmed_2_ending
 label ahmed_2_ending:
-    #cg
+    scene cg A2B with dissolve
+    pause
     "Ahmed opens his lips to reveal a mouthful of glistening goo."
     "The seeds are suspended in the gel like passionfruit, oozing out of Ahmed's mouth as he struggles to contain it."
     "He gets up in a hurry and rushes to spit them out into a little jar."
@@ -484,14 +495,14 @@ label ahmed_2_ending:
     "Parvez pulls Ahmed up to his feet, kissing him."
     p "I know, bud."
     scene ahmedshelves
-    show ahmed bottomy at midright
-    show parvez happy at midleft
+    show ahmed flip bottomy at midright
+    show parvez flip happy at midleft
     with fade
     "Before he goes, Ahmed presses a small plant into his hand. It looks like a tiny aloe vera plant, a little rosette of green fingers."
     a "This is one of mine ..."
     a "Maybe when you see it in your place ... it'll make you think of me ..."
     "Parvez grinned."
-    show parvez toppy with dissolve
+    show parvez flip toppy with dissolve
     p "I'll think of you alright."
     hide parvez with moveoutleft
     "Parvez leaves Ahmed's place with the taste of himself on his lips, green and clean and vegetal."

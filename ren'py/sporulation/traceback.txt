@@ -1,112 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 158, in script call
+  File "game/script.rpy", line 216, in script call
     call screen chapterselect
-  File "game/plant encounters.rpy", line 159, in script call
+  File "game/plant encounters.rpy", line 157, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 77, in script call
+  File "game/terry scenes.rpy", line 71, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 226, in script call
+  File "game/terry scenes.rpy", line 215, in script call
     call screen chapterselect
-  File "game/chapterselect.rpy", line 69, in script call
+  File "game/ahmed scenes.rpy", line 253, in script call
     call screen chapterselect
-  File "game/kayden scenes.rpy", line 196, in script call
-    call screen chapterselect
-  File "game/inanna scenes.rpy", line 193, in script call
-    call battle from _call_battle
-  File "game/inanna1 battle.rpy", line 149, in script call
-    call player_turn from _call_player_turn
-  File "game/inanna scenes.rpy", line 368, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 538, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 87, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 773, in script call
-    call battle_2 from _call_battle_2
-  File "game/inanna n javier 2 battle.rpy", line 163, in script call
-    call player_turn_2 from _call_player_turn_2
-  File "game/inanna n javier scenes.rpy", line 836, in script call
-    call screen chapterselect
-  File "game/chud scenes.rpy", line 157, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 139, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 243, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 157, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 139, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 243, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 180, in script call
-    call screen chapterselect
-  File "game/kayden scenes.rpy", line 286, in script
-    if battle_2_ran == True:
-  File "game/kayden scenes.rpy", line 289, in <module>
-    elif battle_2_won == True:
-NameError: name 'battle_2_won' is not defined
+  File "game/ahmed scenes.rpy", line 487, in script
+    scene cg A2B with zoom
+  File "game/ahmed scenes.rpy", line 487, in <module>
+    scene cg A2B with zoom
+NameError: name 'zoom' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 158, in script call
+  File "game/script.rpy", line 216, in script call
     call screen chapterselect
-  File "game/plant encounters.rpy", line 159, in script call
+  File "game/plant encounters.rpy", line 157, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 77, in script call
+  File "game/terry scenes.rpy", line 71, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 226, in script call
+  File "game/terry scenes.rpy", line 215, in script call
     call screen chapterselect
-  File "game/chapterselect.rpy", line 69, in script call
+  File "game/ahmed scenes.rpy", line 253, in script call
     call screen chapterselect
-  File "game/kayden scenes.rpy", line 196, in script call
-    call screen chapterselect
-  File "game/inanna scenes.rpy", line 193, in script call
-    call battle from _call_battle
-  File "game/inanna1 battle.rpy", line 149, in script call
-    call player_turn from _call_player_turn
-  File "game/inanna scenes.rpy", line 368, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 538, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 87, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 773, in script call
-    call battle_2 from _call_battle_2
-  File "game/inanna n javier 2 battle.rpy", line 163, in script call
-    call player_turn_2 from _call_player_turn_2
-  File "game/inanna n javier scenes.rpy", line 836, in script call
-    call screen chapterselect
-  File "game/chud scenes.rpy", line 157, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 139, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 243, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 157, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 139, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 243, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 180, in script call
-    call screen chapterselect
-  File "game/kayden scenes.rpy", line 286, in script
-    if battle_2_ran == True:
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
-    if renpy.python.py_eval(condition):
+  File "game/ahmed scenes.rpy", line 487, in script
+    scene cg A2B with zoom
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1359, in execute
+    paired = renpy.python.py_eval(self.paired)
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/kayden scenes.rpy", line 289, in <module>
-    elif battle_2_won == True:
-NameError: name 'battle_2_won' is not defined
+  File "game/ahmed scenes.rpy", line 487, in <module>
+    scene cg A2B with zoom
+NameError: name 'zoom' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.7.26
-Mon Jul 29 20:37:23 2024
+sporulation 0.7.29
+Thu Aug  1 17:42:07 2024

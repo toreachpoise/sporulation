@@ -4,12 +4,8 @@ label terry_1:
     scene black with dissolve
     t "Uh, Parvez?"
     p "Yeah, love?"
-    scene bed
-    show terry toppy at center:
-        zoom 2.5
-        yalign 0
-    with dissolve
-    # CG: terry blowjob--> Parvez
+    scene cg T1A with dissolve
+    pause
     "Terry looks up from between Parvez's thighs."
     t "I think your plant dream might have been real."
     p "What??"
@@ -34,12 +30,8 @@ label terry_1:
     "A month after Parvez's dream in the woods, his new cock is fully grown."
     "It's the same dark green as the plant had been, a smooth cylinder. Soft, it stands up, curving against his pubis and lower belly."
     "Terry joked that it looked like he always had a little boner tucked into his belt."
-    # CG: fucking terry
-    scene bed
-    show terry toppy at center:
-        zoom 2.5
-        yalign 0
-    with dissolve
+    scene cg T1B with dissolve
+    pause
     "Parvez will never forget the feeling of pressing into Terry for the first time."
     "He had resigned himself to never knowing what it would feel like to be inside his partners with the most sensitive part of his body."
     "He had gotten used to using his fingers, or toys, projecting his experience and sensations into a hunk of silicone. It was good in its own way but this, this was totally different."
@@ -50,7 +42,7 @@ label terry_1:
     p "I haven't even started moving yet."
     menu:
         "fuck Terry hard":
-            show terry embarrassed with dissolve
+            pass
     "Parvez forced his cock into Terry, pushing a yell out of him."
     "It felt like Terry's insides were sucking on him, pulling him in deeper. Parvez couldn't help but comply."
     "He didn't last long before his first orgasm, the sensation overwhelming, the heat of Terry's body, their ass pulsing around Parvez, the new sensation completely overwhelmed him."
@@ -65,7 +57,9 @@ label terry_1:
     "Terry came but Parvez kept going, possessed. He rutted into him like an animal, pressing Terry into the sheets soaked with their cum."
     "Surely their neighbors could hear the slap of their bodies meeting, the way Terry was howling with Parvez's fingers dug into his ass, driving himself in and in and in."
     "Eventually, after Terry had cum three times, they had to stop."
-    show terry with dissolve
+    scene bed
+    show terry
+    with dissolve
     "They lay together, hot and sticky and sweaty, in a room that smelled like cum and dirty bodies."
     t "Hey, nice cock buddy."
     p "Thanks pal, I made it just for you."
@@ -93,18 +87,13 @@ label terry_2:
     menu:
         "huh??":
             pass
-    # CG terry blowing parvez; maybe same one edited with dick or different one idk
-    scene bed with Fade(0.05,0.2,0)
-    show terry embarrassed at midleft:
-        zoom 2.5
-        yalign 0
+    scene cg T2 with Fade(0.05,0.2,0)
     "Terry was looking up at Parvez from between his legs, a string of spit connecting their lips to his cock."
     "They leaned down and licked the weird bulb that had formed at the end."
     t "You know, I don't have to do this if you're not into it."
     t "Your cock is delicious, but I think it works best if we're both enjoying ourselves."
     p "Sorry babe I just. This has been kind of a weird experience."
     p "I'm glad you're not freaked out by it but every once in a while I still kind of am."
-    show terry toppy with dissolve
     "Terry suckled on the underside of Parvez's cock thoughtfully, where the glans would be if Parvez had a normal dick."
     t "You know, it is pretty weird. But I think if there's one thing I've learned in life, it's not to look a gift blowjob in the mouth."
     "With that Terry took Parvez's cock all the way down his throat and Parvez allowed his thoughts to be banished by the sensation of Terry's throat."
@@ -289,7 +278,8 @@ label terry_3:
     "The old British man is still talking about coreopsis or rudbeckias in the background, but neither of them is listening."
     "Parvez takes Terry as deep into his mouth as he can, working the rest of the shaft with his hand."
     t "Here, come up baby, I want to kiss you."
-    # cg
+    scene cg T3 with dissolve
+    pause
     "Terry pulls Parvez up to sit beside them. Their mouth is warm and tastes like gum, sweet and minty."
     "Parvez licks deep into their mouth, desperate to climb inside."
     "Terry reaches for Parvez' dick, which is also hard by now."
@@ -323,18 +313,19 @@ label terry_4:
     "Parvez sort of wishes he would, because his care and concern is becoming stifling."
     "But Parvez doesn't say anything to Terry about it, he hardly says anything at all."
     scene couch
-    show parvez at midright
+    show parvez at furthestright
     with dissolve
-    show terry at midleft
+    show terry worried at midleft
     with moveinleft
     t "Babe, can we talk?"
     p "No."
     t "Parvez."
     "Parvez imitates Terry's voice back at them, sing-songy and mocking."
     p "Terry."
-    show terry worried with dissolve
+    show terry angry with dissolve
     t "Look babe, I can't imagine what's been going on with you--{nw}"
     p "So don't try."
+    show terry worried with dissolve
     t "I just want to help you Parvez. I know I can't fix everything but I'm trying and I don't know what to do."
     p "Then stop."
     t "I get it, you're hurting a lot. You think that by being this impenetrable wall that you can just shut everything out. But the hurt is already in here--"
@@ -365,7 +356,7 @@ label terry_4:
     p "You think you're a fucking angel, don't you?"
     p "Like you're god's fucking gift to all the queers."
     p "You're just some asshole all full of yourself who thinks he knows better than everyone else, just like every other man."
-    show terry angry at midleft
+    show terry worried at furthestleft
     with move
     "Terry stands up. Their voice is shaking but still impossibly calm."
     t "Parvez. I love you, and I'll always love you. But I'm not going to sit here and let you treat me like this."
@@ -387,6 +378,9 @@ label terry_4:
     "As each of these scenarios passes through Parvez's mind, he watches them dispassionately, like they're something happening to someone else."
     "None of them motivate him to pick up his phone and call Terry, to apologize."
     "He just lays and keeps wallowing, smoking and staring at the television, eating cereal and being alone."
+    scene couch
+    show parvez worried at midright
+    with fade
     "On the fourth day, Inanna calls him."
     i "Dude, you have to talk to Terry."
     i "They're fucking upset."
@@ -405,24 +399,25 @@ label terry_4:
     "Parvez goes to the bedroom and pulls on a shirt, then washes his face in the bathroom."
     "He looks at himself in the mirror--huge mistake."
     "His hair is greasy and lank, his whole face is greasy in fact."
-    "He hasn't showered since the night he was attacked."
-    "The idea of being naked would just remind him of it."
-    "Even after the goop stopped coming out of him and his body returned to how it had been before all this had begun, he couldn't bear to look at his body."
+    if badend_skipped == False:
+        "He hasn't showered since the night he was attacked."
+        "The idea of being naked would just remind him of it."
+        "Even after the goop stopped coming out of him and his body returned to how it had been before all this had begun, he couldn't bear to look at his body."
     "He shakes his head like a dog trying to clear water out of his ears."
     "He pulls his shoes on and leaves the house before he ends up sitting back on the couch smoking again."
     scene balcony
-    show parvez worried at left
-    show inanna worried at center
+    show parvez worried at right
+    show inanna worried at midleft
     with wipeleft
     "Inanna looks relieved to see him."
     i "Honestly I wasn't sure if you were actually going to come."
     i "You look like absolute shit."
     p "Thanks Inanna."
     i "Just being honest, hon."
-    hide inanna with moveoutright
+    hide inanna with moveoutleft
     "She leaves to get Terry."
-    show terry embarrassed at center
-    with moveinright
+    show terry embarrassed at midleft
+    with moveinleft
     t "Hi babe."
     p "Hi."
     t "Look, I just--{nw}"
@@ -431,22 +426,22 @@ label terry_4:
     p "I'm a fuckup, and I have been for a long time, and I've just been relying on your kindness and the fact that you'd always be there for me."
     p "But it turns out I'm a fucking mess, and an even worse mess when you're not around."
     p "I love you, okay? I'm just--I'm just really shit at showing it sometimes."
-    show terry with dissolve
+    show terry worried with dissolve
     t "You're not a fuckup--{nw}"
     p "No I really am though."
     p "I hurt you because I felt powerless. I lashed out at you and I said things I didn't mean and that I shouldn't have."
     p "And I just--"
     show parvez crying with dissolve
     p "I love you so much and I don't know what's going on with me and I can't--I can't---I--"
-    show terry worried at midleft
+    show terry worried at midright
     with move
     "Terry comes over and hugs him."
     "Parvez tenses up initially but he lets himself be held, softening into Terry's grip."
     "He snakes his arms around Terry's soft middle, the feeling of them so comfortable and familiar to Parvez it makes him start sobbing."
     "Terry holds him like that for a while in Inanna's doorway, until Parvez stops crying and his breath softens into gasping little hiccups."
     t "Why don't we go home sweetheart?"
-    show inanna at furthestright
-    with moveinright
+    show inanna at furthestleft
+    with moveinleft
     i "Please get the fuck out of my house. Your vibes are absolutely abysmal."
     p "Fuck you Inanna."
     i "Yeah, yeah, maybe when your dick grows back you little brat."
@@ -463,10 +458,11 @@ label terry_4:
     hide parvez n terry with fade
     "He must doze off, because he wakes up and it's morning, and Terry is no longer in the bed."
     scene kitchen with wipeleft
-    show parvez worried at furthestleft
-    show terry at midright
+    show terry at midleft
+    show parvez at furthestright
     with dissolve
     "He stumbles to the kitchen, where Terry is cheerfully making pancakes."
+    window show
     t "Hi baby!"
     p "Jeez, you're way too fucking chipper."
     show terry worried with dissolve
@@ -480,7 +476,12 @@ label terry_4:
     "Parvez says nothing. The silence stretches awkwardly between them."
     "Terry keeps making the pancakes, whistling a tune Parvez doesn't recognize."
     "When they're finished they come and sit beside him at the table."
-    show terry at midleft
+    show terry at furthestleft:
+        zoom 1.5
+        yalign 0.0
+    show parvez at furthestright:
+        zoom 1.5
+        yalign 0.0
     with move
     t "Look, I'm just giving you a hard time, okay?"
     t "I actually don't really want to talk about this any more."
@@ -499,8 +500,9 @@ label terry_4:
     p "Yeah babe, I'm sorry."
     "He makes a show of starting to eat, even though he really doesn't have much appetite. Terry seems mollified."
     t "So I was talking to Inanna and fae and I both think that you could probably use the plant to grow your dick back--"
-    show terry worried with dissolve
+    show parvez worried with dissolve
     "Parvez looks at them and they look a bit hesitant for a moment."
+    show terry worried with dissolve
     t "--y'know, if you want, of course."
     "Parvez stops eating."
     p "I--I'm not sure. I don't know right now."
@@ -572,11 +574,12 @@ label terry_4_continue:
     show terry toppy with dissolve
     "A grin cracks Terry's face wide open."
     t "Of course, baby."
+    window hide
     scene bed with wipeleft
     "The house plant that Ahmed had given them was in flower for the first time, those big, showy, speculum-like bird of paradise style flowers."
     "Parvez remembers how frightened he was of it when he first saw it, all those months ago."
     "Even more now after everything that's happened, that encounter feels like a dream, like something from a fairy tale."
-    #cg 1
+    scene cg T4A with fade
     "Terry lays Parvez down on the bed on his back."
     "They strip his clothes off tenderly, kissing all over his legs and arms as they do so."
     "Parvez lays there, feeling a bit nervous all of a sudden."
@@ -605,8 +608,8 @@ label terry_4_continue:
             t "I mean, you don't have to if you don't want to."
             p "No, it's okay ... just ... do it."
 label terry_uses_the_flower:
-    #cg2
     "Terry holds the flower wand against the entrance of Parvez's pussy."
+    scene cg T4B with dissolve
     "Like on the plant, the flower has a strange swollen bulb at the base, sort of like a baby squash."
     "After Terry's previous attentions, Parvez is pretty wet."
     "He can feel the flower pressing against the slickness coming out of him."

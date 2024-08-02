@@ -103,12 +103,10 @@ label inanna_n_javier_1:
             "Maybe they're filming this and they're going to expose him as a fake not good enough queer."
             "And his family and all the people he grew up with will see it. And they'll know he's not only a freak but not even a cool freak, a brave freak."
             "He realizes dimly that he's hyperventilating. The room is kind of swimming, too."
-            scene spiral:
-                zoom 3.0
-                yalign 0.5
+            scene couch
             show inanna happy:
                 zoom 2.0
-            with fade
+            with dissolve
             "Inanna comes over and puts her hand on his shoulder."
             i "Are you okay hon? What's wrong?"
             p "I just, it's just. I just."
@@ -123,6 +121,12 @@ label inanna_n_javier_1:
             i "You're here. You're safe. We're here with you."
             i "You don't have to do anything you don't want to do. We can just hang out."
             i "Just keep your eyes on me."
+            scene spiral:
+                zoom 3.0
+                yalign 0.5
+            show inanna happy:
+                zoom 2.0
+            with dissolve
             i "Good job baby."
             i "Now, keeping your focus on me, count down from 100."
             "Parvez starts counting in his head."
@@ -427,12 +431,15 @@ label hypno:
     p "Yes mommy."
     i "Good boy, now open your eyes."
     "Parvez hadn't realized he had them closed, he had been so focused on Inanna's voice, her consciousness taking over his completely."
-    #cg 1
+    scene cg InJ1A with dissolve
     "He opens his eyes to see Javier kneeling between Inanna's legs, licking up and down her cock like a kitten."
     i "Well, aren't you going to join xem?"
     "Parvez hesitates for a moment."
     i "That's an order, boy."
     "He feels himself being drawn in."
+    window hide
+    pause
+    window show
     "Javier's hand cups his face and they kiss, Javier tonguing and licking all over his mouth. It's sloppy and messy but cute."
     "Even partway down, Parvez admires Javier's unselfconsciousness. He still has enough awareness to feel a bit embarrassed."
     "He wants to be like Javier, hollowed out by a benevolent force of love, made empty and perfectly able to receive."
@@ -489,7 +496,9 @@ label hypno:
     with move
     "Inanna gets on the bed behind Javier, grabbing xem by the hips. She leans in to whisper in xer ear."
     i "Take him in all the way."
-    #cg
+    window hide
+    scene cg InJ1B with dissolve
+    pause
     j "Nya! Ahhh"
     "Xer pussy is so wet, Parvez feels totally engulfed."
     "He wants to fuck up into xem but he knows he isn't supposed to do anything without being told."
@@ -522,10 +531,14 @@ label hypno:
     "Seedy goo oozes out of their open pussy, their ass gaping slightly."
     "Inanna kisses xer neck."
     i "Good kitty."
-    # end of cg
+    scene inannabed
+    show inanna toppy at left
+    show parvez bottomy at midright
+    show javier happy at midleft
+    with fade
     "She reaches to grab Parvez's foot."
     i "You did a great job too, boy."
-    "Parvez is full of a warm glow and couldn't speak."
+    "Parvez is full of a warm glow and can't speak."
     "He lays on their bed for a while before Inanna gets up."
     i "Want some hot chocolate and to finish the game?"
     "Javier groans."

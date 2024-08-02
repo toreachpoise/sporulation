@@ -109,8 +109,8 @@ label use_stroker:
     "The rubbery texture of it and the rubbery texture of his cock make a squeaking sound together. The image of fucking a pooltoy pops into his mind unbidden."
     "It's so weird to see his cockhead squeezing into the hole though. The sight transfixes him."
     "He squeezes it further down, watching each little nub and bump be moved aside by his entrance."
-    show parvez bottomy with dissolve
-    #cg jerkin it
+    scene cg S1 with dissolve
+    pause
     "Inside, the toy is so much more uniformly tight than a body or his hand."
     "The texture of the nubs is so soft he can only feel them when he moves it. The main sensation is of total envelopment."
     "He pulls all the way out and shoves in with a squeak."
@@ -126,6 +126,7 @@ label use_stroker:
     "He keeps fucking the toy for as long as he has energy, sweaty and panting in the overheated room."
     "He won't cum no matter how long he does it for, though, and he eventually gets tired."
     "He lays down in a pool of his own sweat, toy still in his hand, and falls asleep."
+    scene black with dissolve
     "Terry finds him laying in the same position a few hours later."
     $ solo_1_complete = True
     scene cardboard with fade
@@ -150,34 +151,41 @@ label solo_2:
     "The wind makes it feel cooler outside than in the stuffy house."
     "He's been writing a story about a guy who decides to bear a pregnancy for a group of aliens."
     "Now that he's reflecting on it, it's kind of obvious where the inspiration for this had come from."
-    #cgs??
+    scene cg S2A1 with dissolve
     "In the story, the man is out running in a field, when a UFO comes down and abducts him along with a couple of cows."
+    scene cg S2A2 with dissolve
     "The aliens are able to connect with his consciousness directly, read his mind, and they are able to abandon language and really communicate with each other."
+    scene cg S2A3 with dissolve
     "They are from a species, the Limonians, whose home planet had become desolate and unliveable after aggressive industrialization and resource extraction."
     "Their people began traveling their solar system, in the Lemon Slice nebula, extracting resources from their local planets, and then spreading further and further out."
     "Unheeding of the destruction they were causing, they kept seeking out new planets to strip mine and abandon. Over time their species spread far apart across many galaxies."
-    "After many centuries of wandering space, the Limonians had become sterile. Their species is propagated by cloning, but their genetic stock was weakening."
+    scene cg S2A4 with dissolve
+    "After many centuries of wandering space, the Limonians had become sterile. Their species was propagated by cloning, but their genetic stock is weakening."
     "This band of aliens had split off almost 200 years ago and traveled many light years further away than any Limonian had gone before."
     "They were considered freaks and heretics by the others, abandoning their sterile and comfortable world in search of another species to increase their genetic diversity ... to breed, and maybe even find love."
+    scene cg S2A5 with dissolve
     "Our human man, Tiresias, upon being abducted by the Limonians and experiencing this story broadcast directly into his mind, breaks down in tears."
     "The depth of the Limonians' yearning for connection to other species, and to raise young of their own, stuns him."
     "In the end before they even directly ask he volunteers to carry a baby for them."
+    # cg 6
     "The aliens share their genetic material through their long fingers. Over a dozen of them take turns penetrating Tiresias, filling him with their seed."
     "When they are inside him the neural connection is even deeper, he can feel them feeling him, their wonder at his warm, moving body surrounding them."
     "The feeling of their fingers in his cunt, the feeling of his cunt around their fingers, the awe of their alien minds touching a being so earthly and pulsing, alive, overwhelmed his senses."
     "The aliens fucked him for what felt like days, until they were sure that he was successfully impregnated."
+    # cg 7
     "Then they left him alone in a room on their ship. He had everything he could want, replicated food, human television from every era, before and after his time, and yet he was alone."
     "The Limonians had injected him with hormones that would speed up the gestational process. After only a week he was showing the pregnancy, but he was desperately lonely."
     "Even though he couldn't see them alone in his room, he reached out through the neural connection to see if he could speak to someone."
     "A voice returned to him, undescipherable."
     "Tiresias reached out again."
+    scene cg S2A8 with dissolve
     "A young alien came to see him, slimmer and smaller than the rest. Tiresias can't tell its gender, when he asks the Limonians don't understand what he's asking about. They all appear the same."
     "He and the new alien become companions over the weeks when Tiresias' belly swells."
     "They become lovers, of a kind, touching each other's bodies and exploring the link that grows between them through their neural connection."
     "Tiresias has never experienced a being that can feel him, whose connection with him is so seamless and intimate, and he knows he will never experience it again."
-    # end cgs??
     "Parvez can't decide how the story will end. Whether Tiresias will safely lay dozens of alien eggs, or whether the alien babies will burst through his belly, killing him. In that case maybe the Limonians' avoiding Tiresias was to protect him from that knowledge."
     "There's something appealing to Parvez about the idea of being a blessed sacrifice, fattened up for slaughter."
+    scene balcony with dissolve
     "Parvez's joint is burning down, the cherry of it almost to his fingertips."
     "He stubs it out against the doorframe of the balcony and goes back inside."
     "He looks at his laptop and then glances away, at the plant Ahmed had given him."
@@ -194,7 +202,7 @@ label solo_2:
     "It twines its leaves around his dick, poking and exploring it, as if the plant knows that they are the same."
     "His dick, between its monthly emissions, is solid and feels swollen."
     "The plant twining around it is both of it and apart from it. It gets frustrated, jabbing at his cock like it's waiting for it to react."
-    #cg
+    scene cg S2B with dissolve
     "Then the plant seemingly loses interest and moves toward his ass."
     "When it's done fucking him, the plant seemingly goes dormant."
     "Parvez lays on his bedroom floor with a sense of emptiness where it had been filling him."

@@ -114,7 +114,7 @@ label kayden_arrives:
         "Parvez shrugs their hand off his shoulder instinctively, annoyance bubbling up in him."
     p "Dude, what is this place?"
     "Kayden leads Parvez to a section of the skatepark near the side of the underpass."
-    scene skatepark interior with dissolve
+    scene skatepark bonus with dissolve
     show kayden at midleft
     show parvez at midright
     with moveinleft
@@ -144,7 +144,9 @@ label kayden_arrives:
     with MoveTransition(0.2)
     "They have Parvez pressed up against a wall."
     "They grab his hand and press it under their skirt."
-    "Their tights are already torn, the hole sopping wet around his cunt."
+    scene cg K1 with dissolve
+    pause
+    "Their tights are already torn, the hole sopping wet around his fingers."
     "Their clitoris and labia are swollen, bright pink and slick. They've clearly been touching themself already."
     "They lean in and speak the next words directly into Parvez's ear, their breath tickling his neck."
     k "So are you just a little pansy bitch, or are you going to fuck me?"
@@ -157,16 +159,16 @@ label kayden_arrives:
             k "What, gonna pussy out?"
             "Their face is too close, their eyes wild, their breath hot and acrid."
             "Their voice drops to a growl, too loud and too close."
-            show parvez crying with dissolve
             k "You're a little bitch man, you're not strong enough to admit this is what you want."
             "They force Parvez's fingertips into their wet pussy, clenching down on him."
             p "Holy fuck what is wrong with you??"
             "Parvez shoves them with the point of his shoulder in their chest, as hard as he can."
             "They keep their grip on his hand and they both fall over, unbalanced."
+            scene skatepark bonus with dissolve
             show kayden threatening at center:
                 zoom 0.75
                 yalign 0.75
-            with move
+            with hpunch
             "This shakes them enough for Parvez to break free and start moving away."
             k "You're just a cunt like me. You could never be a real man."
             "Parvez starts running out of there."
@@ -197,14 +199,9 @@ label kayden_arrives:
 label fuck_kayden:
     "Parvez shoves his fingers up inside them."
     "He draws them out again before forcing them back in, rough, uncareful."
-    show kayden bottomy with dissolve
     "Kayden has their arms around him, hanging off his body, whining into his ear."
     k "Yes, Daddy ... {w} fuck me up."
     "Parvez grabs their shoulders, catching them off guard and turning them around."
-    # needs flip lmao
-    show kayden bottomy at right
-    show parvez toppy at farright
-    with move
     "He has them boxed in to the wall now. Even though they are taller than him, they shrink in front of him."
     "Their gaze is still sharp though: defying, taunting, evaluating."
     "Parvez drops his pants. They had arranged for it to be 'his time of the month,' as Terry calls it."
@@ -234,6 +231,7 @@ label fuck_kayden:
 label kayden_2:
     $ it_was_kayden = False
     $ kayden_2_badend = False
+    $ badend_skipped = False
     scene bed
     show parvez worried at center
     with dissolve
@@ -334,8 +332,7 @@ label check_out_kaydens_pf:
             call screen chapterselect
 label confront_kayden:
     "Parvez feels like he might regret this, but he has to know what has gone wrong with Kayden."
-    scene cardboard with pushleft
-    #replace with laundromat bg
+    scene chudhideout with pushleft
     show parvez at midright
     with moveinright
     "The place where they want to meet him this time is even sketchier than last time."
@@ -361,11 +358,13 @@ label confront_kayden:
     if didnt_fuck_kayden == False:
         k "Even though you planted the seeds of vileness inside me, I have been restored."
         "They lift their skirt. They're still not wearing any panties, just like before, and this gives Parvez a moment of brief relief before he sees what's underneath."
-        #cg
+        scene cg K2A with dissolve
+        pause
         "Their pussy lips are spread wide open, but no dick emerges from it. Instead there is a circular, glassy surface."
         "Or, more like gooey, actually. Like a leaf of aloe vera chopped in half."
         "The cut looks scabbed around the edges, but still fresh in the middle. Something clear oozes from it. Parvez feels sick."
         p "Holy shit."
+        scene chudhideout with none
         show parvez worried at furthestright
         with move
         "Parvez backpedals away from them."
@@ -385,14 +384,16 @@ label confront_kayden:
         k "We must restore your body to its proper state so you can be healed."
         p "Damn bitch you really are crazy."
         p "Get the fuck away from me!"
-    show chud at furthestleft
+    show chud flip at furthestleft
     show chud2 at farleft
     with moveinleft
     "Two chuds appear in the shadows behind Kaye."
     p "Oh fuck."
-    show chud at farleft
-    show chud2 at midleft
-    "They close in quickly on Parvez."
+    show chud flip at farleft
+    show chud2 at center
+    show kayden threatening at midleft
+    with move
+    "They close in quickly on Parvez.{nw}"
 label kayden_2_battle:
             call battle_4_def from _call_battle_def_4
             scene cardboard with dissolve
@@ -401,8 +402,20 @@ label kayden_2_battle:
             call battle_4 from _call_battle_4
 label kayden_2_badend:
     $ kayden_2_badend = True
-    show chud at farleft
-    show chud2 at midleft
+    menu:
+        "the following scene contains sexual assault, would you like to read it?"
+        "show it to me":
+            jump badend_keepgoing
+        "I'd rather not":
+            $ badend_skipped = True
+            scene black with dissolve
+            "(ok so TL;DR they chop your dick off and then more bad stuff happens)"
+            "............."
+            "Parvez's head is ringing."
+            jump badend_skip
+label badend_keepgoing:
+    show chud at farright
+    show chud2 at farleft
     show kayden threatening at center
     with irisin
     "Parvez is no match for Kaye and two chuds."
@@ -412,7 +425,8 @@ label kayden_2_badend:
     "Chud 2" "Damn, look at this bitch's weird fake dick."
     "Chud 1" "Shit's freaky, huh?"
     "Kaye" "Don't worry, it won't be there for long."
-    # cg2
+    scene cg K2B with hpunch
+    pause
     "Kaye produces a heavy cleaver."
     "Kaye" "Hold her steady."
     p "No, no wait, no. Don't do this."
@@ -440,7 +454,11 @@ label kayden_2_badend:
     "Parvez feels himself being hauled up by the two arms pinned behind his back."
     "He's not sure what's about to happen until the burning where his cock used to be is replaced with a brutal, stabbing pain."
     "He looks down."
-    # cg3
+    scene cg K2C with dissolve:
+        yalign 0.0
+        linear 2.0 yalign 1.0
+        linear 1.0 yalign 0.55
+    pause
     "The chud's huge cock is inside him."
     "Parvez can feel it churning around in his pussy, pulverizing what remains of his cock."
     "He's biting his lip to stifle the groans of agony that the chud is pounding out of him."
@@ -466,6 +484,7 @@ label kayden_2_badend:
     scene black with dissolve
     "He wakes up cold and in pain all over. Most intensely, his pussy throbs, the remnants of his cock screaming in pain all the way up into his womb."
     "His head is still ringing from the concussion he must have sustained during the battle, too."
+label badend_skip:
     "He pulls out his phone and calls Inanna, his eyes burning from the brightness."
     p "Inanna I ... something bad happened ... I need help."
     "She comes to get him."
@@ -479,25 +498,28 @@ label kayden_2_badend:
     t "Where have you been babe?? I've been so worried."
     "Parvez doesn't say anything."
     i "He was attacked."
-    show terry worried at farleft
-    show inanna worried at center
+    show terry worried flip at farleft
+    show inanna worried at midright
     with move
     "Terry pushes in front of her to see Parvez."
     t "Holy fuck, baby, what happened???"
     p "Terry ... please ... I can't ..."
-    "Inanna had dressed him again, but Parvez is oozing through his shorts, the whole bottom of them wet, his own dick remains running down his leg, mixed with fascist jizz."
+    if badend_skipped == False:
+        "Inanna had dressed him again, but Parvez is oozing through his shorts, the whole bottom of them wet, his own dick remains running down his leg, mixed with fascist jizz."
     "Parvez starts crying at the worried look on Terry's face."
     "Terry embraces him."
     t "Shh, it's okay baby. It's okay."
     "Terry takes him to the bathroom and undresses him."
-    "Parvez moves to cover himself but Terry sees, with a horrified gasp."
-    t "Baby ... what?"
-    p "Please ... I don't ..."
+    if badend_skipped == False:
+        "Parvez moves to cover himself but Terry sees, with a horrified gasp."
+        t "Baby ... what?"
+        p "Please ... I don't ..."
     "Parvez is sobbing."
     t "Shh ... it's okay, you're okay."
     "They don't look like they believe that. Parvez certainly doesn't."
-    "They wash him with a tenderness that hurts almost as much as being raped by the chuds."
-    "Then they put him to bed."
+    if badend_skipped == False:
+        "They wash him with a tenderness that hurts almost as much as being raped by the chuds."
+        "Then they put him to bed."
     scene bed with wipeleft
     "Parvez doesn't sleep, but his head is still ringing and he's grateful to at least be somewhere still and dark."
     "He can hear Terry and Inanna arguing in the kitchen."
@@ -515,9 +537,10 @@ label kayden_2_badend:
     "Inanna leaves a while later and Terry comes to bed."
     "Parvez pretends to be asleep."
     "He can hear them crying beside him. He feels like he should comfort them, but he doesn't have the energy, or even know how."
-    "Over the next few days, the rest of Parvez's cock falls out in green slimy chunks."
-    "In a perverse way, it reminds him of having a period: the stabbing pain in his belly, the soreness, the messy underwear."
-    "This doesn't bring him any humor, though."
+    if badend_skipped == False:
+        "Over the next few days, the rest of Parvez's cock falls out in green slimy chunks."
+        "In a perverse way, it reminds him of having a period: the stabbing pain in his belly, the soreness, the messy underwear."
+        "This doesn't bring him any humor, though."
     "Mostly Parvez feels empty."
     "He feels like whatever was growing inside him has been replaced by a nothingness, a black hole that sucks all feeling into it."
     "Terry tries to touch him, to comfort him and cheer him up, but he wants nothing to do with them."
@@ -527,6 +550,7 @@ label kayden_2_badend:
     call screen chapterselect
 label kayden_2_goodend:
     "Parvez can't believe he's actually defeated Kaye and the two chuds."
+    "Some might have said it was impossible."
     "He runs home as fast as he can, calling Inanna on the way to report what had happened."
     i "Damn, you're amazing, I can't believe you got away."
     i "We can't let anything like that happen again, though."
