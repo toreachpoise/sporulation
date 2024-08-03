@@ -23,6 +23,19 @@ transform furthestleft:
 transform furthestright:
     xalign 1.2 yalign 1.0
 
+transform sizeup:
+    zoom 2.0
+    xalign 0.5
+    yalign 0.5
+transform sizedown:
+    zoom 0.4
+    xalign 0.75
+    yalign 0.66
+
+## custom music channel for fight music (i think this doesn't work lol)
+# allows you to play music from before fight sequence at same position easily lol
+#$ renpy.music.register_channel("fight_song")
+
 ################################################################################
 ## Styles
 ################################################################################

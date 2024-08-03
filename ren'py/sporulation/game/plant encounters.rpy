@@ -1,4 +1,5 @@
 label plant_encounter_1:
+    play music forest if_changed
     $ struggled = False
     scene plant far with fade
     "Parvez hopes he hasn't locked himself out of his car."
@@ -107,6 +108,7 @@ label it_has_you:
     scene plant far with wipeleft
     "Even though Parvez felt cold the entire way, when he arrives at his car he is drenched in sweat."
     "He downs the rest of his water. His car, mercifully, is unlocked."
+    play music planty
     scene couch with fade
     "Terry is waiting for him on the couch with a glass of wine."
     show terry worried at center:
@@ -161,6 +163,7 @@ label plant_encounter_2:
     $ struggled_again = False
     $ plantflation = False
     scene kitchen with fade
+    play music planty if_changed
     "Even though this whole having a plant dick thing has been cool, it still kind of freaks Parvez out not knowing how it happened."
     "He just can't shake the feeling that the whole thing was a weird dream, even in the face of the physical evidence."
     "One morning he wakes up and realizes that the only way to set his doubts to rest is to just go and try to find the plant again."
@@ -179,6 +182,7 @@ label plant_encounter_2:
     "The atmosphere is oppressive. His nostrils feel full of air and gnats with each inhalation."
     "He keeps running though, and sure enough after a couple of kilometers he sees the trail give way down into a swamp."
     scene plant midway with wipeleft
+    play music forest
     "He realizes he had convinced himself the plant wouldn't still be there when he sees it, oil slick iridescent in the low light of the wetlands."
     "Now that he's expecting it, it's visibly moving from far away."
     "He approaches, fear and anticipation building in his gut."

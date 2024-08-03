@@ -1,4 +1,5 @@
 label javier_1:
+    play music friendcore if_changed
     scene couch
     show parvez happy at midleft
     with fade
@@ -70,6 +71,7 @@ label javier_1:
     show javier happy with dissolve
     j "I just wanted to show you this--"
     scene cg J1A with dissolve
+    play music maintheme
     pause
     "They sit up on the bedside table and spread their labia."
     "Their pussy looks delicious, hair neatly trimmed, tight and squeezable butt."

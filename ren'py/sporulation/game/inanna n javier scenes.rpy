@@ -1,4 +1,5 @@
 label inanna_n_javier_1:
+    play music planty if_changed
     scene kitchen
     show parvez at midleft
     with dissolve
@@ -35,7 +36,8 @@ label inanna_n_javier_1:
             lj "sure i can give you their contact info if you wanna chat first"
             pdm "in the meantime can we just ... do stuff alone for now ?"
             lj "sure baby"
-            # if havent completed inanna 2 jumps to inanna 2, otherwise jsut skips
+            if inanna_2_complete == False:
+                jump inanna_2
             scene cardboard with fade
             call screen chapterselect
         "let's do it":
@@ -124,6 +126,7 @@ label inanna_n_javier_1:
             scene spiral:
                 zoom 3.0
                 yalign 0.5
+            play music "<from 21>/sounds/game draft again.mp3" #forest music
             show inanna happy:
                 zoom 2.0
             with dissolve
@@ -197,6 +200,7 @@ label inanna_n_javier_1:
         "how do you use a retro board game to fuck??":
             jump horny_boardgame
 label chaste_boardgame:
+    play music planty if_changed
     "Inanna takes out the board and starts laying out the game pieces."
     "It's a weird get to know you game from the 80s that they had found in a thrift store."
     "It asks you questions about morality, pop culture, and relationships. They're all kind of awkward and outdated."
@@ -403,6 +407,7 @@ label hypno:
     show inanna toppy:
         zoom 2.0
     with dissolve
+    play music "<from 21>/sounds/game draft again.mp3" if_changed #forest music
     i "That's right. Now look into my eyes."
     i "Focus on just my voice."
     i "Breathe deeply."
@@ -551,7 +556,7 @@ label hypno:
     call screen chapterselect
 
 label inanna_n_javier_2:
-    ## starting this sequence removes kayden 1 and locks the kayden storyline
+    play music planty if_changed
     scene couch
     show parvez at right
     with dissolve
@@ -582,6 +587,7 @@ label inanna_n_javier_2:
     lj "can i bring javi??"
     pdm "yeah of course"
     lj "hell yea sounds gay, i'll pack a picnic"
+    # skatepark music??
     scene skatepark ramps
     show inanna at left
     show javier at midleft
@@ -781,10 +787,14 @@ label inanna_n_javier_2:
             label inanna_n_javier_2_battle:
                 call battle_2_def from _call_battle_def_2
                 scene cardboard with dissolve
+                $ renpy.music.set_pause(True, channel='music')
+                play sound fightmusic loop
                 "Transsexual battle mode activate"
                 call battle_2_presetup from _call_battle_presetup_2
                 call battle_2 from _call_battle_2
             label battle_2_end:
+                stop sound
+                $ renpy.music.set_pause(False, channel='music')
                 $ battle_2_win = True
                 "You won!!"
                 scene skatepark interior

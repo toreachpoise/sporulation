@@ -164,6 +164,7 @@ image cg S2A5 = "/cgs/S2A/5 cry.png"
 # 6 forthcoming tentacles
 # 7 forthcoming preg
 image cg S2A8 = "/cgs/S2A/8 alien.png"
+# 9 ???
 image cg S2B = "/cgs/S2B.png"
 image cg T1A = "/cgs/T1A.png"
 image cg T1B = "/cgs/T1B.png"
@@ -171,6 +172,83 @@ image cg T2 = "/cgs/T2.png"
 image cg T3 = "/cgs/T3.png"
 image cg T4A = "/cgs/T4A.png"
 image cg T4B = "/cgs/T4B.png"
+
+image purple = "/bgs/purple.png"
+image splash:
+    "/splashscreen/0.png"
+    pause 0.2
+    "/splashscreen/1.png"
+    pause 0.2
+    "/splashscreen/2.png"
+    pause 0.2
+    "/splashscreen/3.png"
+    pause 0.2
+    "/splashscreen/4.png"
+    pause 0.2
+    "/splashscreen/5.png"
+    pause 0.2
+    "/splashscreen/6.png"
+    pause 0.2
+    "/splashscreen/7.png"
+    pause 0.2
+    "/splashscreen/8.png"
+    pause 0.2
+    "/splashscreen/9.png"
+    pause 0.2
+    "/splashscreen/10.png"
+    pause 0.2
+    "/splashscreen/11.png"
+    pause 0.2
+    "/splashscreen/12.png"
+    pause 0.2
+    "/splashscreen/13.png"
+    pause 0.2
+    "/splashscreen/14.png"
+    pause 0.2
+    "/splashscreen/15.png"
+    pause 0.2
+    "/splashscreen/16.png"
+    pause 0.2
+    "/splashscreen/17.png"
+    pause 0.2
+    "/splashscreen/18.png"
+    pause 0.2
+    repeat
+image cover img = "cover img.png"
+image barrowboy = "/splashscreen/barrow boy.png"
+image titletext = ParameterizedText(xalign=0.25, yalign=0.5, size=72)
+
+# music
+define audio.maintheme = "/sounds/game theme draft.mp3" ## close, atmospheric, rhythmic
+define audio.forest = "/sounds/game draft again.mp3" ##creepy, eerie, kinda sanctified vibes, also rain/wet noises lol
+define audio.friendcore = "/sounds/Friendcore.wav" # fun n cute
+define audio.fightmusic = "/sounds/Sporulation Fight.wav" # action babeyy
+define audio.planty = "/sounds/planty ambient.mp3" ## upbeat, creepy but in a fun way
+
+
+
+
+## LOADING/SPLASHSCREEN
+label splashscreen:
+    play music forest
+    scene black
+    pause 1
+    show barrowboy at sizedown
+    with dissolve
+    show titletext "Toreachpoise presents ...":
+        yalign 0.2
+    pause 3
+    scene purple with None
+    show splash at sizeup
+    with dissolve
+    pause 10
+    hide splash
+    show cover img
+    with dissolve
+    pause 5
+    scene black with dissolve
+    return
+
 
 ## GAME START / NAVIGATION MENU
 

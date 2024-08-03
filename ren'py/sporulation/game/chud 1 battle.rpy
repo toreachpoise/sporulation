@@ -131,6 +131,7 @@ label battle_3: # the battle screen uses this general set up
     with blinds
     jump battling_3
 label battling_3:
+    #queue audio fightmusic
     call player_turn_3 from _call_player_turn_3
     $ turn = 0 #this is so that player 1 is not 'selected', that wouldn't make sense when it's not their turn
 #    jump monster_dead_check

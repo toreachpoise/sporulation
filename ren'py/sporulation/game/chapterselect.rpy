@@ -1,5 +1,5 @@
 screen chapterselect():
-    add "/bgs/cardboard.png"
+    add "/bgs/purple.png"
     imagemap:
         ground "/gui/chapter_select_ground.png"
         idle "/gui/chapter_select_idle.png"

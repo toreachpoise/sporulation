@@ -1,6 +1,7 @@
 # would like parvez sleepy expression
 
 label solo_1:
+    play music friendcore if_changed
     #(unlocked by terry 1) ((unlike other ones this one is not self-removing if you don't fuck the stroker and can be tried again))
     if strokerattempt == 2:
         jump try_2
@@ -133,6 +134,7 @@ label use_stroker:
     call screen chapterselect
 
 label solo_2:
+    play music maintheme if_changed
     scene kitchen with fade
     #plant sprite?? lol
     "The plant that Ahmed had given Parvez sits on the kitchen counter while he writes on his laptop at the table."

@@ -1,5 +1,7 @@
 label inanna_1:
     #unlocked by ahmed 1 or kayden 1
+    scene bed with fade
+    play music planty if_changed
     $ inanna_points = 5
     $ asked_about_judys = 0
     "Even though the app is mostly dudes, every once in a while a woman will show up."
@@ -59,6 +61,7 @@ label meet_inanna:
     show parvez happy at left
     show inanna happy at midleft
     with fade
+    play music maintheme
     "Parvez found himself actually smiling as they stepped out of the book store into the late afternoon sunshine."
     "As soon as they do so, however, Inanna's expression turns into a frown."
     i "Shit, what are they doing here?"
@@ -188,11 +191,15 @@ label judys_fight_1:
     "It's time to fight for your right to be who you are!!"
 label inanna_1_battle:
     call battle_def from _call_battle_def
+    $ renpy.music.set_pause(True, channel='music')
+    play audio fightmusic loop
     scene cardboard with dissolve
     "Transsexual battle mode activate"
     call battle_presetup from _call_battle_presetup
     call battle from _call_battle
 label battle_end:
+    stop audio
+    $ renpy.music.set_pause(False, channel='music')
     $ battle_1_win = True
     scene alley
     show judys flip at center
@@ -313,6 +320,7 @@ label fuck_inanna:
     i "I'm 100 percent woman and I'm still more of a man than you'll ever be."
     menu:
         "wait, this is too much actually":
+            stop music
             scene inannabed
             show parvez flip worried
             with dissolve

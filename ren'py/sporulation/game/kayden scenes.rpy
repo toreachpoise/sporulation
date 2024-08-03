@@ -2,6 +2,7 @@ label kayden_1:
     #(unlocked by terry 2)
     $ didnt_fuck_kayden = False
     scene couch with fade
+    play music maintheme if_changed
     "Parvez has been messaging with this person on the hook up app for a while."
     "Looking back through the messages since Terry started the account, this person was one of the first to talk to Parvez."
     "Their profile is wild. NEON PUNK CUNTBOY it reads. SPIT IN MY FACE AND MAKE ME CALL YOU DADDY."
@@ -76,6 +77,7 @@ label kayden_1:
     scene cardboard with fade
     call screen chapterselect
 label meet_kayden:
+    # need skatepark/bad vibes music
     $ met_kayden = True
     pdm "okay, where do you want to meet?"
     scene skatepark ramps with wipeleft
@@ -235,6 +237,7 @@ label kayden_2:
     scene bed
     show parvez worried at center
     with dissolve
+    play music maintheme if_changed
     "NEONPUNKCUNTBOI has reappeared on the app."
     "It's Kayden's same profile, still, same pictures, same description:{w} 'nonbinary trans dude looking to get their holes stuffed'."
     "Parvez wonders what all that is about."
@@ -398,9 +401,13 @@ label kayden_2_battle:
             call battle_4_def from _call_battle_def_4
             scene cardboard with dissolve
             "Transsexual battle mode activate"
+            $ renpy.music.set_pause(True, channel='music')
+            play sound fightmusic loop
             call battle_4_presetup from _call_battle_presetup_4
             call battle_4 from _call_battle_4
 label kayden_2_badend:
+    stop sound
+    $ renpy.music.set_pause(False, channel='music')
     $ kayden_2_badend = True
     menu:
         "the following scene contains sexual assault, would you like to read it?"
@@ -414,6 +421,7 @@ label kayden_2_badend:
             "Parvez's head is ringing."
             jump badend_skip
 label badend_keepgoing:
+    # need badend music
     show chud at farright
     show chud2 at farleft
     show kayden threatening at center
@@ -482,9 +490,11 @@ label badend_keepgoing:
     "They don't react, his saliva trickles down their cheek for a moment before they turn and walk away."
     "Parvez blacks out."
     scene black with dissolve
+    play music planty
     "He wakes up cold and in pain all over. Most intensely, his pussy throbs, the remnants of his cock screaming in pain all the way up into his womb."
     "His head is still ringing from the concussion he must have sustained during the battle, too."
 label badend_skip:
+    play music planty if_changed
     "He pulls out his phone and calls Inanna, his eyes burning from the brightness."
     p "Inanna I ... something bad happened ... I need help."
     "She comes to get him."
@@ -549,6 +559,9 @@ label badend_skip:
     scene cardboard with fade
     call screen chapterselect
 label kayden_2_goodend:
+    stop sound
+    $ renpy.music.set_pause(False, channel='music')
+    play music friendcore
     "Parvez can't believe he's actually defeated Kaye and the two chuds."
     "Some might have said it was impossible."
     "He runs home as fast as he can, calling Inanna on the way to report what had happened."

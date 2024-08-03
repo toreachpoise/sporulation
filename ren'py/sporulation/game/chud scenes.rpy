@@ -1,4 +1,5 @@
 label chud_1:
+    # bad vibes music needed
     scene bed with dissolve
     "Parvez keeps getting messages from an anonymous profile on the hookup app."
     "The account always has a new name, and usually doesn't have a picture, but he can tell from how the guy messages that it's always the same guy."
@@ -150,10 +151,15 @@ label confront_chud:
 label chud_1_battle:
             call battle_3_def from _call_battle_def_3
             scene cardboard with dissolve
+            $ renpy.music.set_pause(True, channel='music')
+            play sound fightmusic loop
             "Transsexual battle mode activate"
             call battle_3_presetup from _call_battle_presetup_3
             call battle_3 from _call_battle_3
 label battle_3_end:
+    stop sound
+    $ renpy.music.set_pause(False, channel='music')
+    play music planty
     $ battle_3_win = True
     "You won!!"
     scene alley
@@ -163,6 +169,7 @@ label battle_3_end:
     "He stands, shaking, above the chud, who is laying on the ground with a broken leg."
     p "Don't ever come near me again."
 label chud_1_end:
+    play music planty if_changed
     scene bed with wipeleft
     "Parvez runs home and calls Terry immediately. He tells them everything."
     "Terry comes home the next day and Parvez tells him everything again, crying."
@@ -180,6 +187,8 @@ label chud_1_end:
     scene cardboard with fade
     call screen chapterselect
 label chud_1_rape:
+    stop sound
+    $ renpy.music.set_pause(False, channel='music')
     scene cg C1A with fade:
         yalign 0.0
         linear 2.0 yalign 1.0

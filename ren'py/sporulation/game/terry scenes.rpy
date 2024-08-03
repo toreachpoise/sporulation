@@ -1,6 +1,7 @@
 # terry expressions wishlist--sleepy, bottomy
 
 label terry_1:
+    play music planty if_changed
     scene black with dissolve
     t "Uh, Parvez?"
     p "Yeah, love?"
@@ -71,6 +72,7 @@ label terry_1:
     call screen chapterselect
 
 label terry_2:
+    play music planty if_changed
     $ doubted = False
     scene bed with fade
     "Where before it had been the same thickness the whole way along, today Parvez woke up with a weird bulb near the end of his cock."
@@ -102,6 +104,7 @@ label terry_2:
     scene couch
     show parvez at midright
     with fade
+    play music friendcore
     "A few hours later, Parvez was laying on the couch scrolling on his phone. Some anime was on the TV but he wasn't watching it."
     show terry worried:
         zoom 1.5
@@ -215,6 +218,7 @@ label check_it_out:
     call screen chapterselect
 
 label terry_3:
+    play music friendcore if_changed
     scene couch
     show terry at center
     with fade
@@ -297,6 +301,7 @@ label terry_3:
     call screen chapterselect
 
 label terry_4:
+    play music planty if_changed
     scene bed with fade
     show parvez at center
     "Parvez has been wallowing for weeks now."
@@ -576,6 +581,7 @@ label terry_4_continue:
     t "Of course, baby."
     window hide
     scene bed with wipeleft
+    play music forest
     "The house plant that Ahmed had given them was in flower for the first time, those big, showy, speculum-like bird of paradise style flowers."
     "Parvez remembers how frightened he was of it when he first saw it, all those months ago."
     "Even more now after everything that's happened, that encounter feels like a dream, like something from a fairy tale."

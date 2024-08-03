@@ -1,48 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 216, in script call
+  File "game/script.rpy", line 298, in script call
     call screen chapterselect
-  File "game/plant encounters.rpy", line 157, in script call
+  File "game/inanna scenes.rpy", line 199, in script call
+    call battle from _call_battle
+  File "game/inanna1 battle.rpy", line 149, in script call
+    call player_turn from _call_player_turn
+  File "game/inanna scenes.rpy", line 377, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 71, in script call
+  File "game/inanna n javier scenes.rpy", line 556, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 215, in script call
+  File "game/inanna n javier scenes.rpy", line 794, in script call
+    call battle_2 from _call_battle_2
+  File "game/inanna n javier 2 battle.rpy", line 163, in script call
+    call player_turn_2 from _call_player_turn_2
+  File "game/inanna n javier scenes.rpy", line 859, in script call
     call screen chapterselect
-  File "game/ahmed scenes.rpy", line 253, in script call
-    call screen chapterselect
-  File "game/ahmed scenes.rpy", line 487, in script
-    scene cg A2B with zoom
-  File "game/ahmed scenes.rpy", line 487, in <module>
-    scene cg A2B with zoom
-NameError: name 'zoom' is not defined
+  File "game/kayden scenes.rpy", line 361, in script
+    if didnt_fuck_kayden == False:
+  File "game/kayden scenes.rpy", line 361, in <module>
+    if didnt_fuck_kayden == False:
+NameError: name 'didnt_fuck_kayden' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 216, in script call
+  File "game/script.rpy", line 298, in script call
     call screen chapterselect
-  File "game/plant encounters.rpy", line 157, in script call
+  File "game/inanna scenes.rpy", line 199, in script call
+    call battle from _call_battle
+  File "game/inanna1 battle.rpy", line 149, in script call
+    call player_turn from _call_player_turn
+  File "game/inanna scenes.rpy", line 377, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 71, in script call
+  File "game/inanna n javier scenes.rpy", line 556, in script call
     call screen chapterselect
-  File "game/terry scenes.rpy", line 215, in script call
+  File "game/inanna n javier scenes.rpy", line 794, in script call
+    call battle_2 from _call_battle_2
+  File "game/inanna n javier 2 battle.rpy", line 163, in script call
+    call player_turn_2 from _call_player_turn_2
+  File "game/inanna n javier scenes.rpy", line 859, in script call
     call screen chapterselect
-  File "game/ahmed scenes.rpy", line 253, in script call
-    call screen chapterselect
-  File "game/ahmed scenes.rpy", line 487, in script
-    scene cg A2B with zoom
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1359, in execute
-    paired = renpy.python.py_eval(self.paired)
+  File "game/kayden scenes.rpy", line 361, in script
+    if didnt_fuck_kayden == False:
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
+    if renpy.python.py_eval(condition):
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/ahmed scenes.rpy", line 487, in <module>
-    scene cg A2B with zoom
-NameError: name 'zoom' is not defined
+  File "game/kayden scenes.rpy", line 361, in <module>
+    if didnt_fuck_kayden == False:
+NameError: name 'didnt_fuck_kayden' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.7.29
-Thu Aug  1 17:42:07 2024
+sporulation 0.8.1
+Sat Aug  3 16:43:22 2024

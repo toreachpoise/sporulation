@@ -1,7 +1,9 @@
 label ahmed_1:
     scene coffeeshop1
     show ahmed at midleft with dissolve
-    "They meet Ahmed a month later to the day."
+    play music friendcore if_changed
+    "They meet Ahmed during Parvez's monthly cycle of getting a little bulb at the end of his dick."
+    "Ahmed was very particular that they get the timing right, asking them multiple times to make sure it was exactly a month after the last time."
     "He's short, almost as short as Parvez, with a scraggly little beard."
     "His hair stands out at odd angles, kinky in places and lanky in others."
     "He looks rumpled, but it's kind of cute. Like a mad scientist or a writer who scarcely gets up from his desk."
@@ -108,7 +110,8 @@ label no_ahmed_fuck:
     call screen chapterselect
 label fuck_ahmed:
     scene black with dissolve
-    # are we gonna be fancy and have a subway bg
+    play music maintheme
+    # are we gonna be fancy and have a subway bg (prolly not)
     "Parvez and Terry ride the subway back to their apartment on either side of Ahmed,"
     if bullied_ahmed:
         "rubbing his thighs surreptitiously with the backs of their hands."
@@ -163,13 +166,11 @@ label fuck_ahmed:
     "Ahmed nods again."
     if made_ahmed_smile:
         label nicer_ahmed_scene:
-        show ahmed bottomy with dissolve
         "Terry moves down to nuzzle Ahmed's clit."
         t "Your bush is so soft!"
         "Parvez turns Ahmed's face toward him again, kissing him deeply."
         "Ahmed is a nervous kisser but his lips are soft. His hand is still resting on Parvez's cock."
         p "You can stroke it a little, if you want."
-        scene cg A1A with dissolve
         "Ahmed complies, looking a bit stunned down at Parvez's cock and Terry's head bobbing between his legs."
         "He's trying to be quiet, face scrunched together with effort."
         t "Hey, Parvez, do you want a taste down here?"
@@ -253,6 +254,7 @@ label keep_fucking_ahmed:
     call screen chapterselect
 
 label ahmed_2:
+    play music friendcore if_changed
     "Parvez arrives at Ahmed's place a bit sweaty."
     "It's a hot day and there were too many people on the street car, he feels sticky with all of their presences."
     "Ahmed had texted him a few days before, after not messaging at all in the couple of months that had passed since they had hooked up."
@@ -290,6 +292,7 @@ label ahmed_2:
     a "I still tried a couple of other kinds, a free draining cactus soil was my second idea because of how succulenty the plant is, but it liked the acidic soil better."
     p "Wow you're ...{nw}"
     if bullied_ahmed:
+        play music maintheme
         p "Wow you're ...{fast} such a fucking nerd."
         show ahmed flip with dissolve
         a "H...hey ..."
@@ -402,6 +405,7 @@ label ahmed_2:
                 scene cardboard with fade
                 call screen chapterselect
         label ahmed_2_nicer_scene:
+            play music maintheme if_changed
             $ made_ahmed_smile = True
             scene ahmedbed #actually needs shower bg lol
             show ahmed bottomy at left

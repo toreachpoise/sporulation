@@ -146,6 +146,7 @@ label battle: # the battle screen uses this general set up
     with blinds
     jump battling
 label battling:
+    #queue audio fightmusic
     call player_turn from _call_player_turn
     $ turn = 0 #this is so that player 1 is not 'selected', that wouldn't make sense when it's not their turn
 #    jump monster_dead_check
@@ -463,6 +464,8 @@ label monster_dead_check:
 
 label player_dead_check:
     if player1_hp <= 0 and player2_hp <= 0: # or player3_hp <= 0 or player4_hp <= 0:
+        stop sound
+        $ renpy.music.set_pause(False, channel='music')
         "You got bashed!"
         "Inanna and Parvez were barely able to escape to safety."
         call screen chapterselect
