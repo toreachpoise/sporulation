@@ -239,29 +239,31 @@ label terry_3:
     t "What's going on with your hair right now?"
     t "It looks like you put your finger into an electrical socket."
     "Parvez grumbles against Terry's belly again, enjoying the vibration of it, and the feeling of them pressed against his face."
-    "Sometimes he wishes he could climb inside of Terry, and be surrounded by this feeling of squishy comfort. He had told them this before--"
-    p "What if I sliced you open like the tauntaun from Star Wars and hid out inside of you?"
-    "--but they didn't seem super keen on the idea."
-    t "Maybe at least wait till I'm dead before you use my gutted corpse as a sleeping bag."
-    p "Hrmph."
-    "Today Terry is watching a show about gardening. It's too slow and dull for Parvez to watch with them, but perfect for taking an afternoon nap to."
-    "As the presenter explains how best to fertilize your zinnias, Parvez just breathes in the warm atmosphere inside Terry's shirt."
-    "The smell of Terry's body is one of the most comforting things in the world to Parvez."
-    "He can't describe what their body smells like exactly--cashews was the best way he was able to explain it to Terry, which they were not impressed by."
-    "But nothing instantly relaxes Parvez like pressing his face into Terry's skin and taking a deep whiff."
+    if inanna_sent_me == False:
+        "Sometimes he wishes he could climb inside of Terry, and be surrounded by this feeling of squishy comfort. He had told them this before--"
+        p "What if I sliced you open like the tauntaun from Star Wars and hid out inside of you?"
+        "--but they didn't seem super keen on the idea."
+        t "Maybe at least wait till I'm dead before you use my gutted corpse as a sleeping bag."
+        p "Hrmph."
+        "Today Terry is watching a show about gardening. It's too slow and dull for Parvez to watch with them, but perfect for taking an afternoon nap to."
+        "As the presenter explains how best to fertilize your zinnias, Parvez just breathes in the warm atmosphere inside Terry's shirt."
+        "The smell of Terry's body is one of the most comforting things in the world to Parvez."
+        "He can't describe what their body smells like exactly--cashews was the best way he was able to explain it to Terry, which they were not impressed by."
+        "But nothing instantly relaxes Parvez like pressing his face into Terry's skin and taking a deep whiff."
     "He snuffles his face against Parvez's belly, nosing into their belly button and the crease underneath their belly roll."
     "Terry huffs above him."
     t "Hey, that kinda tickles..."
     "This statement is like blood in the water to Parvez. He begins snoofing them all the more, prodding their belly and hips with his nose."
-    t "Come on babe, I'm trying to watch TV."
-    "This was Terry's sacred nightly ritual."
-    "They worked as a concierge at a fancy hotel downtown during the day, using their bubbly energy to charm grumpy travelers and recommending places to visit to hapless tourists."
-    "Parvez had been to see them at work a couple times, and their On Personality was eerie and uncanny to him."
-    "When they came home they were often tired, drained out."
-    "Every evening they would prepare dinner--usually something they had prepared together over the weekend, or leftovers from the freezer, as Parvez rarely cooked--and then sit down to watch some calming TV."
-    "Most nights Terry fell asleep in front of the couch, softly snoring on Parvez's shoulder or leg."
-    "If Parvez had to work, he would get up around 10 pm and urge Terry to go to bed. Just as often as not they would grumble and then fall back asleep while he dressed and got ready to go."
-    "On nights where Parvez didn't work, he would dig himself out from underneath Terry and switch the TV over to a videogame, or increasingly recently, grab his computer start working on his new story."
+    if inanna_sent_me == False:
+        t "Come on babe, I'm trying to watch TV."
+        "This was Terry's sacred nightly ritual."
+        "They worked as a concierge at a fancy hotel downtown during the day, using their bubbly energy to charm grumpy travelers and recommending places to visit to hapless tourists."
+        "Parvez had been to see them at work a couple times, and their On Personality was eerie and uncanny to him."
+        "When they came home they were often tired, drained out."
+        "Every evening they would prepare dinner--usually something they had prepared together over the weekend, or leftovers from the freezer, as Parvez rarely cooked--and then sit down to watch some calming TV."
+        "Most nights Terry fell asleep in front of the couch, softly snoring on Parvez's shoulder or leg."
+        "If Parvez had to work, he would get up around 10 pm and urge Terry to go to bed. Just as often as not they would grumble and then fall back asleep while he dressed and got ready to go."
+        "On nights where Parvez didn't work, he would dig himself out from underneath Terry and switch the TV over to a videogame, or increasingly recently, grab his computer start working on his new story."
     "Terry is still petting Parvez's hair. He squishes his face back into their belly again, on impulse."
     "He can't help himself, they just feel so good. He dots kisses along their belly."
     "They shift slightly, exposing the area of skin in the corner of their leg and hip, and Parvez dives in."
@@ -297,8 +299,16 @@ label terry_3:
     "They wipe each other off with one of their shirts. One of them kisses the other's cock as they do so."
     "They fall asleep on the couch together, with some old man talking about optimal compost green and brown ratios in the background."
     $ terry_3_complete = True
-    scene cardboard with fade
-    call screen chapterselect
+    if inanna_sent_me == False:
+        scene cardboard with fade
+        call screen chapterselect
+    else:
+        $ obedience_points -= 5
+        "Then a twinge of guilt passes through him."
+        "Inanna had told him not to fuck anyone ... did handjobs count??"
+        "How would she know anyway??"
+        $ inanna_sent_me = False
+        jump obedience_check_3
 
 label terry_4:
     play music planty if_changed
@@ -450,6 +460,10 @@ label terry_4:
     i "Please get the fuck out of my house. Your vibes are absolutely abysmal."
     p "Fuck you Inanna."
     i "Yeah, yeah, maybe when your dick grows back you little brat."
+    if inanna_sent_me == True:
+        i "And don't think I haven't forgotten about our little game."
+        i "You'll have to come and see me and try again if you want sometime later ..."
+        $ inanna_sent_me = False
     "Parvez finds himself smiling even though he's still crying. Terry's hand feels warm on his shoulder."
     t "Let's go home baby."
     scene bed with wipeleft

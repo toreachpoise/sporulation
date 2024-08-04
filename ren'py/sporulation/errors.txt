@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/terry scenes.rpy", line 4: expected statement.
-    music planty if_changed
-                           ^
+File "game/inanna scenes.rpy", line 894: choice menuitem expects a non-empty block.
+    "let's keep going":
+                       ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sat Aug  3 15:16:54 2024
+Sun Aug  4 09:47:22 2024

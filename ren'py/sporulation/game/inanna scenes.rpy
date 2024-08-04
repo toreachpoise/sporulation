@@ -377,8 +377,933 @@ label fuck_inanna:
     call screen chapterselect
 
 label inanna_2:
-    "idk I'll come back to this one i guess ..."
-    # inanna spanks you and fingers your butt
-    $ inanna_2_complete = True
+    scene bed with fade
+    play music maintheme
+    "Parvez has been feeling weird for a while."
+    "He's been through a lot lately."
+    $ fucked_by_a_plant = 0
+    if plant_encounter_1_complete == True:
+        $ fucked_by_a_plant += 1
+    if plant_encounter_2_complete == True:
+        $ fucked_by_a_plant += 1
+    if solo_2_complete == True:
+        $ fucked_by_a_plant += 1
+    if terry_4_complete == True:
+        $ fucked_by_a_plant += 1
+    if fucked_by_a_plant == 1:
+        "He's been fucked by a plant ..."
+    elif fucked_by_a_plant == 2:
+        "He's been fucked by a plant ... twice!"
+    else:
+        "He's been fucked by a plant--{w}[fucked_by_a_plant] times!"
+    if chud_1_complete:
+        "... He's been raped ..."
+    $ passed_on_to = 0
+    if ahmed_1_complete:
+        $ passed_on_to += 1
+    if kayden_1_complete:
+        $ passed_on_to += 1
+    if inanna_n_javier_1_complete:
+        $ passed_on_to += 1
+    if (kayden_2_badend == True):
+        if (badend_skipped == False):
+            "He's grown a plant dick, just to have it chopped off and have to regrow it again."
+            "But he at least managed to pass it on to [passed_on_to] cuties in the process."
+        else:
+            "He's grown a plant dick ... and passed it on to [passed_on_to] cuties!"
+    else:
+        "He's grown a plant dick ... and passed it on to [passed_on_to] cuties!"
+    if didnt_fuck_kayden == False:
+        "... even though one of them was Kayden ..."
+        if inanna_n_javier_2_complete:
+            "... or Kaye or whatever ..."
+    "It's all really started to take a toll on Parvez."
+    "He feels like he needs some motherly love ..."
+    lj "sounds like my boy has been corrupted and filled with sin and needs to be set straight"
+    "That's not what Parvez meant at all."
+    $ obedience_points = 0
+label obedience_check_1:
+    menu:
+        "yes mommy":
+            $ obedience_points += 1
+            lj "good boy"
+            lj "mommy will cleanse you and put you on the path of light again"
+            "Parvez feels a rush of heat down to his cunt."
+            pdm "i think i might need to be punished mommy"
+            lj "i know you do"
+            lj "you've been a nasty boy"
+            jump obedience_check_2
+        "fukc u im not full of sin":
+            $ obedience_points -= 3
+            pdm "wtf"
+            pdm "literally none of this has been my fault"
+            pdm "are you even listening"
+            lj "you ungrateful brat"
+            lj "how dare you defy me"
+            lj "i'm trying to set you on the right path"
+            lj "after you went and degraded yourself"
+            lj "like a nasty little slut"
+            lj "now, as i was saying:"
+            pass
+label obedience_check_2:
+    lj "come and see me on saturday"
+    if obedience_points < 0:
+        menu:
+            "do I even want to see her??"
+            "no, fuck that":
+                stop music
+                pdm "you no what no, fuck you"
+                pdm "you hurt my feelings"
+                pdm "i don't want to see you saturday"
+                lj "shit, fine bro, I was just playing with you"
+                "Parvez is kind of upset by how callous Inanna was.{w} He's moody for the rest of the day."
+                $ inanna_2_complete = True
+                scene cardboard with fade
+                call screen chapterselect
+            "i kinda really do tho ...":
+                pass
+    lj "and don't touch yourself or let anyone make you cum until then"
+    menu:
+        "It's only Monday ... Saturday is four days away ..."
+        "whine about it":
+            $ obedience_points -= 1
+            pdm "but mooom"
+            pdm "saturday is so long from now"
+            pdm "i gotta touch myself like twice a day"
+            pdm "it's like"
+            pdm "biology"
+            pdm "or hormones or something"
+            lj "goddamn you are such a horny little freak ahaha"
+            lj "you really do need to be punished"
+            jump obedience_check_3_preset
+        "yes mommy":
+            $ obedience_points += 1
+            lj "good boy.{w} maybe you can be redeemed afterall"
+label obedience_check_3_preset:
+    lj "and remember ! mommy will know if you touch yourself !"
+    $ obedience_days = 0
+    $ ignored_ahmed = False
+    $ ignored_kayden = False
+    $ ignored_javier = False
+    $ ignored_terry = False
+    $ ignored_chud = False
+    $ controlled_self = False
+label obedience_check_3:
+    if obedience_days < 1:
+        $ obedience_days += 1
+        if ahmed_2_complete == False and ignored_ahmed == False:
+            "Parvez switches over to the other message window ...there's a message from Ahmed on the app ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    jump ahmed_2
+                "ignore it":
+                    $ ignored_ahmed = True
+                    jump obedience_check_3
+        elif ((kayden_1_complete == False) or ((kayden_2_complete == False) and (inanna_n_javier_2_complete == True))) and (ignored_kayden == False):
+            "Parvez switches over to the other message window ...there's a message from Kayden on the app ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    if (kayden_1_complete == False) and (inanna_n_javier_2_complete == False):
+                        jump kayden_1
+                    else:
+                        jump kayden_2
+                "ignore it":
+                    $ ignored_kayden = True
+                    jump obedience_check_3
+        elif javier_1_complete == False and ignored_javier == False:
+            "Parvez switches over to the other message window ...there's a message from Javier on the app ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    $ javier_tells = True
+                    jump javier_1
+                "ignore it":
+                    $ ignored_javier = True
+                    jump obedience_check_3
+        elif terry_3_complete == False and ignored_terry == False:
+            "Terry brushes up against Parvez a couple hours later while they're making lunch together."
+            "Their hands snake around Parvez's waist and dip into his pants, almost surreptitiously except for how they honked his dick with their hand."
+            "Parvez is hard already."
+            menu:
+                "try to fuck terry":
+                    $ inanna_sent_me = True
+                    jump terry_3
+                "control yourself":
+                    $ ignored_terry = True
+                    jump obedience_check_3
+        elif chud_1_complete == False and ignored_chud == False:
+            "Parvez switches over to the other message window ... he has no interesting messages ..."
+            "... he's really scraping the bottom of the barrel here ..."
+            "... some chaser has been messaging him ..."
+            "... maybe he should see what they have to say ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    jump chud_1
+                "ignore it":
+                    $ ignored_chud == True
+                    jump obedience_check_3
+        elif ((solo_1_complete == False) or (solo_2_complete == False)) and controlled_self == False:
+            "Barely a few hours later and Parvez is already so horny he can't take it."
+            "He has no self control."
+            "No one is around for him to fuck, so he supposes he'll just have to take matters into his own hands."
+            menu:
+                "jerk off?"
+                "... yeah ...":
+                    $ inanna_sent_me = True
+                    if solo_1_complete == False:
+                        jump solo_1
+                    else:
+                        jump solo_2
+                "no, goddamn it":
+                    $ controlled_self = True
+                    jump obedience_check_3
+        else:
+            $ obedience_points += 5
+            "Parvez has honestly been so busy these days that he has no one left to fuck and no time to jerk off."
+            "He easily waits the few days until he sees Inanna."
+            jump see_inanna
+    elif obedience_days < 4:
+        $ obedience_days += 1
+        if ahmed_2_complete == False and ignored_ahmed == False:
+            "The next day there's a message from Ahmed on the app ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    jump ahmed_2
+                "ignore it":
+                    $ ignored_ahmed = True
+                    jump obedience_check_3
+        elif ((kayden_1_complete == False) or ((kayden_2_complete == False) and (inanna_n_javier_2_complete == True))) and ignored_kayden == False:
+            "The next day there's a message from Kayden on the app ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    if (kayden_1_complete == False) and (inanna_n_javier_2_complete == False):
+                        jump kayden_1
+                    else:
+                        jump kayden_2
+                "ignore it":
+                    $ ignored_kayden = True
+                    jump obedience_check_3
+        elif javier_1_complete == False and ignored_javier == False:
+            "The next day there's a message from Javier on the app ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    $ javier_tells = True
+                    jump javier_1
+                "ignore it":
+                    $ ignored_javier = True
+                    jump obedience_check_3
+        elif terry_3_complete == False and ignored_terry == False:
+            "Terry brushes up against Parvez the next day while they're making lunch together."
+            "Their hands snake around Parvez's waist and dip into his pants, almost surreptitiously except for how they honked his dick with their hand."
+            "Parvez is hard already."
+            menu:
+                "try to fuck terry":
+                    $ inanna_sent_me = True
+                    jump terry_3
+                "control yourself":
+                    $ ignored_terry = True
+                    jump obedience_check_3
+        elif chud_1_complete == False and ignored_chud == False:
+            "The next day Parvez finds himself scrolling the app ... he has no interesting messages ..."
+            "... he's really scraping the bottom of the barrel here ..."
+            "... some chaser has been messaging him ..."
+            "... maybe he should see what they have to say ..."
+            menu:
+                "read the message":
+                    p "What could it hurt, right?"
+                    $ inanna_sent_me = True
+                    jump chud_1
+                "ignore it":
+                    $ ignored_chud = True
+                    jump obedience_check_3
+        elif ((solo_1_complete == False) or (solo_2_complete == False)) and controlled_self = False:
+            "By the next day, Parvez is so horny he can't take it."
+            "No one is around for him to fuck, so he supposes he'll just have to take matters into his own hands."
+            menu:
+                "jerk off?"
+                "... yeah ...":
+                    $ inanna_sent_me = True
+                    if solo_1_complete == False:
+                        jump solo_1
+                    else:
+                        jump solo_2
+                "no, goddamn it":
+                    $ controlled_self = True
+                    jump obedience_check_3
+        else:
+            if obdience_days < 3:
+                "From that point on in the week, Parvez has no one left to fuck and no time to jerk off."
+                "He's honestly been kind of busy lately, he realizes with a shock."
+                "He easily waits the few remaining days until he sees Inanna."
+                jump see_inanna
+            else:
+                "Finally, on the last day, there's no one left for Parvez to fuck."
+                "He feels like he's attained a glorious kind of clarity."
+                "He's really proud of himself as he goes to Inanna's house the next day."
+                jump see_inanna
+    else:
+        pass
+label see_inanna:
+    play music planty if_changed
+    "Parvez feels nervous as he approaches Inanna's apartment."
+    if obedience_points < 0:
+        "He knows he's been bad ..."
+        if obedience_points < -5:
+            "He'd slipped up and done sexy stuff ..."
+        if obedience_points < -20:
+            "... four times."
+        elif obedience_points < -15:
+            "... three times."
+        elif obedience_points < -10:
+            "... twice."
+        "Inanna was sure to punish him."
+    else:
+        "Even though he'd done his best to be good, Inanna could be unpredictable ..."
+        "... he kind of liked it that way, though."
+        "Why would he be here if he didn't want to be punished, after all?"
+    "He knocks on her door."
+    scene balcony
+    show inanna toppy with hpunch
+    "Inanna pulls the door open."
+    "She's already undressed, wearing only a skimpy bikini top with slatted cutouts, and a thong. with a sheer robe over top."
+    i "I bet you've been a bad boy, haven't you?"
+    menu:
+        "I tried to be good!":
+            $ obedience_points += 1
+            i "uh huh, sure you did son."
+        "how would you even know?":
+            $ obedience_points -= 1
+            "Inanna squints at him."
+            i "I have my ways."
+            i "But a good boy would tell me anyway ..."
+            i "Did you do something bad?"
+            if obedience_points > -5:
+                p "no, I was good!"
+                "She scrutinizes him."
+                i "Alright ... if you say so ..."
+                i "But I'm sure you deserve to be punished nonetheless ..."
+                jump spanking_time
+            else:
+                menu:
+                    "no i didn't":
+                        $ obedience_points -= 3
+                        "Inanna's frown deepens."
+                        i "I don't know if I believe you ..."
+                        menu:
+                            i "Are you sure about that?"
+                            "yeah":
+                                if javier_tells == False:
+                                    $ obedience_points -= 10
+                                    i "Well I happen to know that's a lie, because Javi told me otherwise."
+                                    i "Are you so brazen as to lie to me when you know I know the truth?"
+                                    i "You really are a twisted brat."
+                                    i "I'll leave your ass tanned red for this."
+                                    jump spanking_time
+                                else:
+                                    $ obedience_points -= 3
+                                    i "Hmm ... interesting ... if that's what you're going with."
+                                    i "I suppose I'll have to punish you extra hard ..."
+                                    jump spanking_time
+                            "no, I'm sorry ...":
+                                p "I'm sorry I lied ..."
+                                p "and I fucked up ..."
+                                p "I couldn't help myself."
+                                i "You're such a filthy boy with no self control."
+                                i "I'm going to punish you severely."
+                                i "But I am merciful, and I will always reward honesty."
+                                i "So I won't punish you quite as much as I would have if you had lied to me a second time."
+                                jump spanking_time
+                    "I fucked up":
+                        $ obedience_points += 3
+                        p "I'm sorry mommy ..."
+                        p "I couldn't help myself."
+                        i "You're such a filthy boy with no self control."
+                        i "I'm going to punish you severely."
+                        i "But I am merciful, and I will always reward honesty."
+                        i "So I won't punish you quite as much as I would have if you had lied."
+                        jump spanking_time
+label spanking_time:
+    "Inanna leads Parvez over to the large daybed that functions as their second living room couch."
+    i "Strip."
+    menu:
+        "be a brat":
+            $ obedience_points -= 2
+            p "What if I don't want to?"
+            i "You'll just get punished more."
+            "Parvez takes his pants off nonetheless."
+            jump how_many_spanks
+        "do it":
+            "Parvez strips down immediately."
+            i "There you go, maybe you can be a good boy ..."
+            $ obedience_points += 2
+label how_many_spanks:
+    scene cg I2A with dissolve
+    "Inanna bends Parvez over her knee and raises her hand."
+    $ begged_for_more = False
+    if obedience_points > 0:
+        $ spanks_left = 25 ## up to 50 if you beg for more
+    elif obedience_points == 0:
+        $ spanks_left = 40 ## up to  65 if you beg for more
+    elif obedience_points > -5:
+        $ spanks_left = 50 ## up to 75 if you beg for more
+    elif obedience_points > -10:
+        $ spanks_left = 70
+    elif obedience_points > -15:
+        $ spanks_left = 80
+    elif obedience_points > -20:
+        $ spanks_left = 90
+    else:
+        $ spanks_left = 100
+    if obedience_points <= -4:
+        i "You've been such a bad boy, I'm going to have to spank you so many times."
+        "Parvez feels his cheeks flush in anticipation."
+        p "How many times mommy?"
+        i "I'm going to spank you [spanks_left] times."
+        "Parvez gasps."
+        i "Now be a good brat and count them out loud for mommy."
+        p "Yes mommy."
+        $ spanks_set = spanks_left
+    else:
+        i "You've honestly been a good boy, I don't know if it's even right to punish you."
+        p "Please mommy ... I want to ..."
+        i "Okay fine, I'll spank you [spanks_left] times."
+        menu:
+            "beg for more like a freak":
+                $ begged_for_more = True
+                p "Please mommy I want more."
+                p "I'm so bad, I need to be punished."
+                i "Damn what a pathetic little brat."
+                i "Begging to be punished, like a sick little pervert."
+                i "That deserves to be punished unto itself ..."
+                $ spanks_left += 25
+                i "I'll spank you [spanks_left] times ...{w} try not to enjoy it too much ..."
+                i "And make sure you count them out or I'll start over ..."
+                $ spanks_set = spanks_left
+                jump get_spanked
+            "thank her":
+                p "Thank you mommy for setting me straight."
+                p "I'm a bad boy and I deserve to be punished."
+                i "Ugh, what a pathetic little bootlicking freak."
+                i "And make sure you count them out like a good brat ..."
+                $ spanks_set = spanks_left
+                jump get_spanked
+label get_spanked:
+    $ spank_count = 0
+    "Inanna lifts her hand up and lets it fall on Parvez's ass cheek with a mighty thwack!"
+    $ spank_count += 1
+    $ spanks_left -= 1
+    p "Ah!!"
+    i "You better count, bitch."
+    p "[spank_count]!"
+    i "That's right, keep counting ..."
+    i "If you lose track I'll start over ..."
+label spank_loop:
+    while spanks_left > 0:
+        $ spanks_left = spanks_set - spank_count
+        if spank_count < 5:
+            "Inanna thwacks him four more times in rapid succession."
+            p "Ah ! 2! 3! Ah! 4! 5!"
+            $ spank_count = 5
+        elif spank_count < 10:
+            "His ass is starting to feel warm."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            "Each successive hit feels more painful on his ass cheeks."
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+        elif spanks_set == 25:
+            "Inanna is spreading the hits around Parvez's ass but it still hurts, each whack landing somewhere she's already hit."
+            $ spank_count += 1
+            p "Uuungh ... [spank_count]"
+            i "Oh, quit whining, this is nothing."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Ahh ... hahh ... [spank_count]"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Ah! [spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Hahhhhhh !!"
+            i "See, you got off easy ... there's only a few left so count them out nice and loud."
+            i "And no whining."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Wah!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            jump end_spanking
+        elif spank_count < 25:
+            "Inanna is spreading the hits around Parvez's ass but it still hurts, each whack landing somewhere she's already hit."
+            $ spank_count += 1
+            p "Uuungh ... [spank_count]"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Ahh ... hahh ... [spank_count]"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Hahhhhhh !!"
+            $ spank_count += 1
+            p "Ah! [spank_count]"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+        elif spank_count == 25:
+            "After 25 spanks, Inanna asks if Parvez would like a break"
+            i "We have [spanks_left] more ..."
+            if spank_count < spanks_left:
+                i "You still have a long way to go, you nasty boy."
+            elif spank_count == spanks_left:
+                i "You're halfway there."
+            elif spank_count > spanks_left:
+                i "You're more than halfway there!"
+            $ spank_count += 1
+            menu:
+                "I need a break":
+                    if spank_count > spanks_left:
+                        i "I mean you're almost there, but alright ..."
+                    scene couch
+                    show inanna toppy at center
+                    show parvez bottomy at left
+                    with dissolve
+                    "Inanna helps Parvez up and gives him a glass of water, which he gratefully drinks."
+                    "His ass and his cheeks are both burning."
+                    "Inanna is watching him with focused eyes, despite her flush and wild grin."
+                    "Parvez hands her back the glass of water."
+                    menu:
+                        i "Are you ready to keep going?"
+                        "Yeah":
+                            i "That's a good boy, you're doing so well."
+                            scene cg I2A with dissolve
+                            "She strokes Parvez's arm before bending him back over her lap."
+                            "He can feel that she's hard underneath him, just like he is."
+                            "Then she smacks him hard enough that he doesn't think of anything."
+                            jump spank_loop
+                        "I think I need the bathroom":
+                            i "Okay baby, you know where it is?"
+                            p "Yeah."
+                            show black with moveinleft
+                            "Parvez goes to the bathroom and struggles to pee even though he's rock hard."
+                            hide black with moveoutleft
+                            "He returns to find Inanna sprawled out on the daybed, legs wide open, stroking herself through her skimpy panties."
+                            p "Damn, that's hot."
+                            "She stops touching herself and immediately glares at him."
+                            i "Mind your own business you little squirt."
+                            scene cg I2A with hpunch
+                            "She roughly grabs his arm and bends him back over her lap."
+                            "He can feel that she's hard underneath him, just like he is."
+                            "Then she smacks him hard enough that he doesn't think of anything."
+                            jump spank_loop
+                        "Actually, I kind of want to be done":
+                            show inanna worried
+                            show parvez
+                            with dissolve
+                            "Inanna snaps out of play mode right away."
+                            i "Sure, of course babe."
+                            i "Do you still wanna fuck or should we just chill instead?"
+                            menu:
+                                "fuck":
+                                    p "I still wanna mess around, if you do too."
+                                    i "Yeah baby, definitely."
+                                    jump fingering
+                                "chill":
+                                    p "I think I'm good actually."
+                                    i "Sure babe of course."
+                                    jump aftercare
+                "let's keep going":
+                    i "That's my good boy!"
+                    i "She rubs her hand on Parvez's warm ass cheek, which intensifies the next smack."
+                    jump spank_loop
+        elif spanks_set == 40:
+            p "Uuungh ... [spank_count]"
+            i "Oh, quit whining, this is nothing."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Ahh ... hahh ... [spank_count]"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Ah! [spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Hahhhhhh !!"
+            i "See, you got off easy ... there's only a few left so count them out nice and loud."
+            i "And no whining."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Wah!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            jump end_spanking
+        elif spank_count < 45:
+            i "Remember to keep counting nice and loud for me."
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Wah !! [spank_count]!"
+            $ spank_count += 1
+            "Parvez's ass is burning."
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "Ah! [spank_count]!"
+            $ spank_count += 1
+            p "Ah ! [spank_count]!"
+            $ spank_count += 1
+            "Tears are streaming freely from his eyes."
+            i "Such a good boy for me, crying but still taking his punishment like a champ."
+            "She smacks him extra hard on the next one."
+            p "Ah!! [spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Wah!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            p "Ahh ... hah--hahh."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+        elif spanks_set == 50:
+            i "There's only a few left so count them out nice and loud for me like a good boy."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Wah!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            jump end_spanking
+        elif spank_count < 60:
+            play music forest
+            "After 50 spanks, Parvez starts to lose focus on the proceedings."
+            $ spank_count += 5
+            p "[spank_count]"
+            "He's still counting, but he's not really there. He's somewhere above the scene, watching."
+            $ spank_count += 1
+            p "[spank_count]"
+            $ spank_count += 1
+            p "[spank_count]"
+            "Parvez isn't frightened, though. If anything, he feels warm, safe, and protected."
+            "... Even though he's being hit."
+            $ spank_count += 1
+            p "[spank_count]"
+            $ spank_count += 1
+            p "[spank_count]"
+            $ spank_count += 1
+            p "[spank_count]"
+            "Time starts to speed up."
+            $ spank_count += 2
+            p "[spank_count]"
+            $ spank_count += 3
+            p "Ah! [spank_count]!"
+        elif spanks_set == 65:
+            "Inanna's voice breaks through Parvez's fugue state."
+            i "There's only a few left so count them out nice and loud for me like a good boy."
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            $ spank_count += 1
+            p "[spank_count]! Wah!"
+            $ spank_count += 1
+            p "[spank_count]!"
+            jump end_spanking
+        elif spank_count < 70:
+            $ spank_count += 1
+            p "Wahh! [spank_count]!"
+            $ spank_count += 4
+            p "[spank_count]!"
+            if spanks_set == 70:
+                jump last_few
+            $ spank_count += 3
+            p "[spank_count]"
+            $ spank_count += 1
+            p "Ah! [spank_count]"
+            $ spank_count += 1
+            p "[spank_count] ahh--hahh-hahh--"
+            "Parvez is gasping for breath."
+            if spanks_set == 75:
+                jump last_few
+            elif spanks_set == 80:
+                i "Good boy, come on, you've just got 10 left."
+                $ spank_count += 1
+                p "[spank_count]!"
+                $ spank_count += 1
+                p "[spank_count]!"
+                $ spank_count += 1
+                p "[spank_count]!"
+                $ spank_count += 1
+                p "[spank_count]! Wah!"
+                $ spank_count += 1
+                p "[spank_count]!"
+                i "That's it, last 5 ..."
+                $ spank_count += 1
+                p "Waugh !! [spank_count]!"
+                $ spank_count += 1
+                p "[spank_count]!"
+                $ spank_count += 1
+                p "[spank_count]!"
+                $ spank_count += 1
+                p "[spank_count]! Ahh"
+                $ spank_count += 1
+                p "[spank_count]!"
+                jump end_spanking
+            else:
+                menu:
+                    i "Do you need a break baby?"
+                    "yeah":
+                        i "Alright baby, let's take a sec."
+                        "She blows cool air over Parvez's ass but it just makes it burn more."
+                        jump spank_loop
+                    "no":
+                        "Parvez grits his teeth."
+                        p "Let's just keep going."
+                        i "What a brave boy!"
+                        i "Don't worry sweetie, we're almost there."
+                        jump spank_loop
+        else:
+            i "You're so close now ..."
+            "She smacks him again."
+            $ spank_count += 6
+            p "... [spank_count]"
+            i "What was that? Keep counting loud enough."
+            $ spank_count += 1
+            p "Ah! [spank_count]!"
+            i "Good boy ..."
+            $ spank_count += 5
+            p "[spank_count]"
+            $ spank_count += 1
+            p "[spank_count]"
+            $ spank_count += 1
+            p "[spank_count]"
+            $ spank_count += 1
+            p "[spank_count]"
+            if spanks_set == 90:
+                jump last_few
+            else:
+                i "Come on, last 15, and then you'll be at 100."
+                $ spank_count += 1
+                p "[spank_count]"
+                i "Did you even think you would make it this far?"
+                $ spank_count += 1
+                p "[spank_count]"
+                "She whaps him extra hard."
+                $ spank_count += 1
+                p "Ah ! [spank_count] !"
+                i "Answer me."
+                menu:
+                    "y-yes mommy ...":
+                        pass
+                    "n-no...":
+                        pass
+                i "I knew you could do it."
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "Ah ! [spank_count] !"
+                i "Last 10 ..."
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]!! Aaaagh !!!!"
+                i "Oh, hush. Five more ..."
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                $ spank_count += 1
+                p "[spank_count]"
+                jump end_spanking
+    return
+label last_few:
+    "Inanna's voice breaks through Parvez's fugue state."
+    i "There's only a few left so count them out nice and loud for me like a good boy."
+    $ spank_count += 1
+    p "[spank_count]!"
+    $ spank_count += 1
+    p "[spank_count]!"
+    $ spank_count += 1
+    p "[spank_count]!"
+    $ spank_count += 1
+    p "[spank_count]! Wah!"
+    $ spank_count += 1
+    p "[spank_count]!"
+label end_spanking:
+    i "Good boy!!"
+    "Her voice sounds genuinely pleased. Her hand comes down to rub Parvez's raw ass cheek."
+    i "See, that wasn't so bad, was it?"
+    i "You've been so good for me, look how nice and red your ass is now."
+    "She dips her finger down to feel his pussy."
+    i "And you're so wet ... and hard ..."
+    i "Do you want mommy to help you with that?"
+    menu:
+        "yes please ...":
+            jump fingering
+        "I think I want to be done":
+            p "I don't think I can take any more, I feel like I want to collapse."
+            i "Yeah, baby, you've already been through a lot."
+            i "Let's call that our scene."
+            jump aftercare
+label fingering:
+    scene cg I2B with dissolve
+    "Inanna circles the opening of Parvez's wet pussy, tracing around where his cock comes out."
+    i "You're so tight here."
+    "She dips her finger in, the stretch is intense for Parvez after all he's been feeling."
+    i "Maybe I'll just borrow some lube and visit my other friend."
+    "She scoops out a bit of lube and begins poking his asshole."
+    "The sensation of her arm rubbing against his raw ass is intense, bringing his attention to her every movement."
+    "She pushes her fingertip inside."
+    p "Ahh!!"
+    i "Damn, you screamed louder for that than me beating your ass."
+    "Parvez feels embarrassed."
+    p "It's tight ..."
+    i "Oh don't worry baby, I know."
+    "She works one finger into him and then a second one in quick succession."
+    p "Wahh."
+    i "Such a good boy for me, just let me in."
+    p "Ahhh ..."
+    "She strokes his insides."
+    "Parvez can feel her rubbing in against where his cock is on the other side of his rectum, pressing against where his prostate would be."
+    "It feels so good."
+    p "Shit Inanna, that's amazing."
+    i "I know. I know what I'm doing."
+    p "Mmmmh."
+    "Parvez can't cum right now so he just rides the waves of pulsing sensation from Inanna gently probing him."
+    "Her touch is so much kinder and softer now, her hands that were causing him pain before are filling him with glowy pleasure."
+    p "Shit, please, more ..."
+    i "Damn, alright bro."
+    "She works a third finger in."
+    p "F-fuck!!"
+    "He feels so stretched out, between the cock growing out of his pussy and her three fingers in his ass."
+    "Still, he rides back on it, wanting more."
+    i "Fuck, maybe next time I'll have to try and fist you."
+    "Parvez gasps."
+    p "P-please ..."
+    i "Please what?"
+    menu:
+        "Please, mommy ...":
+            pass
+    i "Good boy ..."
+    "She fucks his ass with her fingers for a while before pulling them out with a slick pop!"
+    "Parvez feels his hole pulsing, with some disappointment."
+    i "Sorry bro, my hand is killing me, we gotta be done."
+    "Parvez sits up."
+    p "Oh, yeah, of course."
+    "He kisses her cheek."
+    p "Thank you mommy."
+    i "You're welcome baby."
+label aftercare:
+    scene couch
+    show inanna happy at midleft
+    show parvez happy at midright
+    with dissolve
+    play music planty
+    "Parvez sits on the day bed beside Inanna."
+    "She snuggles up against him, smooshing him into the pillows."
+    "He feels warm and soft and tingly all over."
+    "Even in his stinging butt--maybe especially so."
+    "After a while Inanna gets up and goes to the kitchen, bringing over a pitcher of iced tea and some cookies."
+    "They munch on the cookies and chat about Inanna's organizing, and Parvez's plans for the plants."
+    "Eventually Terry text Parvez 'wer r u' and Parvez decides to go."
+    "He kisses Inanna on the cheek before he leaves."
+    p "Thanks for a lovely time mama."
+    i "Anytime, baby."
+    #$ inanna_2_complete = True
     scene cardboard with fade
     call screen chapterselect

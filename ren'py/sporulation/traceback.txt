@@ -1,60 +1,170 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 298, in script call
+  File "game/script.rpy", line 301, in script call
+    call screen chapterselect
+  File "game/plant encounters.rpy", line 159, in script call
+    call screen chapterselect
+  File "game/terry scenes.rpy", line 72, in script call
+    call screen chapterselect
+  File "game/terry scenes.rpy", line 218, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 75, in script call
     call screen chapterselect
   File "game/inanna scenes.rpy", line 199, in script call
     call battle from _call_battle
-  File "game/inanna1 battle.rpy", line 149, in script call
+  File "game/inanna1 battle.rpy", line 150, in script call
     call player_turn from _call_player_turn
   File "game/inanna scenes.rpy", line 377, in script call
     call screen chapterselect
   File "game/inanna n javier scenes.rpy", line 556, in script call
     call screen chapterselect
+  File "game/chapterselect.rpy", line 101, in script call
+    call screen chapterselect
   File "game/inanna n javier scenes.rpy", line 794, in script call
     call battle_2 from _call_battle_2
-  File "game/inanna n javier 2 battle.rpy", line 163, in script call
+  File "game/inanna n javier 2 battle.rpy", line 164, in script call
     call player_turn_2 from _call_player_turn_2
   File "game/inanna n javier scenes.rpy", line 859, in script call
     call screen chapterselect
-  File "game/kayden scenes.rpy", line 361, in script
-    if didnt_fuck_kayden == False:
-  File "game/kayden scenes.rpy", line 361, in <module>
-    if didnt_fuck_kayden == False:
-NameError: name 'didnt_fuck_kayden' is not defined
+  File "game/chud scenes.rpy", line 158, in script call
+    call battle_3 from _call_battle_3
+  File "game/chud 1 battle.rpy", line 140, in script call
+    call monster_turn_3 from _call_monster_turn_3
+  File "game/chud 1 battle.rpy", line 245, in script call
+    call player_dead_check_3 from _call_player_dead_check_9
+  File "game/chud scenes.rpy", line 158, in script call
+    call battle_3 from _call_battle_3
+  File "game/chud 1 battle.rpy", line 140, in script call
+    call monster_turn_3 from _call_monster_turn_3
+  File "game/chud 1 battle.rpy", line 245, in script call
+    call player_dead_check_3 from _call_player_dead_check_9
+  File "game/chud scenes.rpy", line 199, in script call
+    call screen chapterselect
+  File "game/kayden scenes.rpy", line 432, in script call
+    call battle_4 from _call_battle_4
+  File "game/kayden 2 battle.rpy", line 132, in script call
+    call monster_turn_4 from _call_monster_turn_4
+  File "game/kayden 2 battle.rpy", line 255, in script call
+    call player_dead_check_4 from _call_player_dead_check_11
+  File "game/kayden scenes.rpy", line 432, in script call
+    call battle_4 from _call_battle_4
+  File "game/kayden 2 battle.rpy", line 132, in script call
+    call monster_turn_4 from _call_monster_turn_4
+  File "game/kayden 2 battle.rpy", line 255, in script call
+    call player_dead_check_4 from _call_player_dead_check_11
+  File "game/kayden scenes.rpy", line 432, in script call
+    call battle_4 from _call_battle_4
+  File "game/kayden 2 battle.rpy", line 132, in script call
+    call monster_turn_4 from _call_monster_turn_4
+  File "game/kayden 2 battle.rpy", line 279, in script call
+    call player_dead_check_4 from _call_player_dead_check_13
+  File "game/kayden scenes.rpy", line 585, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 58, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 93, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 119, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 93, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 80, in script call
+    call screen chapterselect
+  File "game/terry scenes.rpy", line 670, in script call
+    call screen chapterselect
+  File "game/inanna scenes.rpy", line 815, in script
+    $ spanks_left = spanks_set - spank_count
+  File "game/inanna scenes.rpy", line 815, in <module>
+    $ spanks_left = spanks_set - spank_count
+NameError: name 'spanks_set' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 298, in script call
+  File "game/script.rpy", line 301, in script call
+    call screen chapterselect
+  File "game/plant encounters.rpy", line 159, in script call
+    call screen chapterselect
+  File "game/terry scenes.rpy", line 72, in script call
+    call screen chapterselect
+  File "game/terry scenes.rpy", line 218, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 75, in script call
     call screen chapterselect
   File "game/inanna scenes.rpy", line 199, in script call
     call battle from _call_battle
-  File "game/inanna1 battle.rpy", line 149, in script call
+  File "game/inanna1 battle.rpy", line 150, in script call
     call player_turn from _call_player_turn
   File "game/inanna scenes.rpy", line 377, in script call
     call screen chapterselect
   File "game/inanna n javier scenes.rpy", line 556, in script call
     call screen chapterselect
+  File "game/chapterselect.rpy", line 101, in script call
+    call screen chapterselect
   File "game/inanna n javier scenes.rpy", line 794, in script call
     call battle_2 from _call_battle_2
-  File "game/inanna n javier 2 battle.rpy", line 163, in script call
+  File "game/inanna n javier 2 battle.rpy", line 164, in script call
     call player_turn_2 from _call_player_turn_2
   File "game/inanna n javier scenes.rpy", line 859, in script call
     call screen chapterselect
-  File "game/kayden scenes.rpy", line 361, in script
-    if didnt_fuck_kayden == False:
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/kayden scenes.rpy", line 361, in <module>
-    if didnt_fuck_kayden == False:
-NameError: name 'didnt_fuck_kayden' is not defined
+  File "game/chud scenes.rpy", line 158, in script call
+    call battle_3 from _call_battle_3
+  File "game/chud 1 battle.rpy", line 140, in script call
+    call monster_turn_3 from _call_monster_turn_3
+  File "game/chud 1 battle.rpy", line 245, in script call
+    call player_dead_check_3 from _call_player_dead_check_9
+  File "game/chud scenes.rpy", line 158, in script call
+    call battle_3 from _call_battle_3
+  File "game/chud 1 battle.rpy", line 140, in script call
+    call monster_turn_3 from _call_monster_turn_3
+  File "game/chud 1 battle.rpy", line 245, in script call
+    call player_dead_check_3 from _call_player_dead_check_9
+  File "game/chud scenes.rpy", line 199, in script call
+    call screen chapterselect
+  File "game/kayden scenes.rpy", line 432, in script call
+    call battle_4 from _call_battle_4
+  File "game/kayden 2 battle.rpy", line 132, in script call
+    call monster_turn_4 from _call_monster_turn_4
+  File "game/kayden 2 battle.rpy", line 255, in script call
+    call player_dead_check_4 from _call_player_dead_check_11
+  File "game/kayden scenes.rpy", line 432, in script call
+    call battle_4 from _call_battle_4
+  File "game/kayden 2 battle.rpy", line 132, in script call
+    call monster_turn_4 from _call_monster_turn_4
+  File "game/kayden 2 battle.rpy", line 255, in script call
+    call player_dead_check_4 from _call_player_dead_check_11
+  File "game/kayden scenes.rpy", line 432, in script call
+    call battle_4 from _call_battle_4
+  File "game/kayden 2 battle.rpy", line 132, in script call
+    call monster_turn_4 from _call_monster_turn_4
+  File "game/kayden 2 battle.rpy", line 279, in script call
+    call player_dead_check_4 from _call_player_dead_check_13
+  File "game/kayden scenes.rpy", line 585, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 58, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 93, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 119, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 93, in script call
+    call screen chapterselect
+  File "game/chapterselect.rpy", line 80, in script call
+    call screen chapterselect
+  File "game/terry scenes.rpy", line 670, in script call
+    call screen chapterselect
+  File "game/inanna scenes.rpy", line 815, in script
+    $ spanks_left = spanks_set - spank_count
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/inanna scenes.rpy", line 815, in <module>
+    $ spanks_left = spanks_set - spank_count
+NameError: name 'spanks_set' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
 sporulation 0.8.1
-Sat Aug  3 16:43:22 2024
+Sun Aug  4 11:48:12 2024

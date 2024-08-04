@@ -40,6 +40,10 @@ label javier_1:
     "Xe is so much bubblier like this (stoned out of their mind)."
     "Xe offers Parvez a hit from the volcano, and soon his head is spinning too."
     "It feels like they're two kids having a sleepover, sitting together on mom's bed."
+    if inanna_sent_me == True:
+        "It feels extra transgressive to Parvez because not only did she tell him not to fuck anyone, he's going to fuck her partner."
+        "... Parvez supposes he doesn't {i}know{/i} he's gonna fuck Javier ..."
+        "... but he has a feeling ..."
     "Javier pulls out a basket full of tarot decks and offers to read Parvez's fortune.{w} For some reason this involves touching his leg a lot."
     j "The hanged one is like ...{w} Well, it means you were in a transitional period."
     j "You've been made to wait, reflect a while. You weren't able to move forward on your path, and you had to wait a while, and kinda reflect, gestate new ideas."
@@ -144,5 +148,12 @@ label javier_1:
     "He wishes he could ask Javier what the card means, but xe is soundly sleeping."
     "Instead he sticks it to xer forehead as they snore, sprawled out naked on top of the sheets, and heads home."
     $ javier_1_complete = True
-    scene cardboard with fade
-    call screen chapterselect
+    if inanna_sent_me == False:
+        scene cardboard with fade
+        call screen chapterselect
+    else:
+        $ obedience_points -= 5
+        "He's going to get in so much trouble with Inanna ..."
+        "Javier would for sure tell her that they fucked ..."
+        $ inanna_sent_me = False
+        jump obedience_check_3

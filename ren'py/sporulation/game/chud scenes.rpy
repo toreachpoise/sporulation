@@ -184,6 +184,17 @@ label chud_1_end:
     "At this point, Parvez only really wants to talk to the folks that he knows from the app anyway. He's had too many weird experiences."
     "If the man was stalking Parvez, he stops. At any rate, Parvez doesn't see him again."
     $ chud_1_complete = True
+    if inanna_sent_me == True:
+        "Parvez realizes a couple of days later that he was supposed to meet up with Inanna."
+        pdm "hey sorry something uh ..."
+        pdm "something bad happened"
+        pdm "i don't really want to meet up any more"
+        lj "damn babe im sorry :/"
+        lj "do you want to talk about it"
+        pdm "not right now sorry, i'll tell you later"
+        lj "ok cutie"
+        lj "we can still play our game another time ;)"
+        $ inanna_sent_me = False
     scene cardboard with fade
     call screen chapterselect
 label chud_1_rape:

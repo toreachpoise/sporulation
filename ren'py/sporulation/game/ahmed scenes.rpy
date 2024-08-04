@@ -512,7 +512,16 @@ label ahmed_2_ending:
     "Parvez leaves Ahmed's place with the taste of himself on his lips, green and clean and vegetal."
     "He feels refreshed as he rides the train back to his own place."
     $ ahmed_2_complete = True
-    scene cardboard with fade
-    call screen chapterselect
+    if inanna_sent_me == False:
+        scene cardboard with fade
+        call screen chapterselect
+    else:
+        $ obedience_points -= 5
+        "Then a twinge of guilt passes through him."
+        "Inanna had told him not to fuck anyone ... did oral count??"
+        "How would she know anyway??"
+        $ inanna_sent_me = False
+        jump obedience_check_3
+
 
             

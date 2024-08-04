@@ -1,6 +1,5 @@
 label kayden_1:
     #(unlocked by terry 2)
-    $ didnt_fuck_kayden = False
     scene couch with fade
     play music maintheme if_changed
     "Parvez has been messaging with this person on the hook up app for a while."
@@ -74,6 +73,16 @@ label kayden_1:
     "When he doesn't respond for a couple of weeks, they eventually give up."
     "After that, he keeps seeing them on the app for a few months before they disappear."
     $ kayden_1_complete = True
+    if inanna_sent_me == False:
+        scene cardboard with fade
+        call screen chapterselect
+    else:
+        $ obedience_points -= 5
+        "Then a twinge of guilt passes through him."
+        "Inanna had told him not to touch himself ..."
+        "Surely she wouldn't know, right??"
+        $ inanna_sent_me = False
+        jump obedience_check_3
     scene cardboard with fade
     call screen chapterselect
 label meet_kayden:
@@ -196,8 +205,16 @@ label kayden_arrives:
             "Parvez grumbles into the meat of Terry's armpit, not even coherent words."
             "Terry rubs his back as the sweat all over his body dries until he finally feels warm and safe."
             $ kayden_1_complete = True
-            scene cardboard with fade
-            call screen chapterselect
+            if inanna_sent_me == False:
+                scene cardboard with fade
+                call screen chapterselect
+            else:
+                $ obedience_points -= 5
+                "Then a twinge of guilt passes through him."
+                "Inanna had told him not to fuck anyone ..."
+                "He's especially mad at himself that he wasted it on such a weird and gross encounter ..."
+                $ inanna_sent_me = False
+                jump obedience_check_3
 label fuck_kayden:
     "Parvez shoves his fingers up inside them."
     "He draws them out again before forcing them back in, rough, uncareful."
@@ -227,8 +244,16 @@ label fuck_kayden:
     "When he gets home he isn't able to find Kayden on the app again."
     p "Weird, they must have blocked me ..."
     $ kayden_1_complete = True
-    scene cardboard with fade
-    call screen chapterselect
+    if inanna_sent_me == False:
+        scene cardboard with fade
+        call screen chapterselect
+    else:
+        $ obedience_points -= 5
+        "Then a twinge of guilt passes through him."
+        "Inanna had told him not to fuck anyone ..."
+        "He's not even really sure it was a worthwhile fuck to waste his obedience on ..."
+        $ inanna_sent_me = False
+        jump obedience_check_3
 
 label kayden_2:
     $ it_was_kayden = False
@@ -574,5 +599,20 @@ label kayden_2_goodend:
     "He finds himself playing the role of a child, taking a petulant tone."
     p "I knowww ..."
     $ kayden_2_complete = True
-    scene cardboard with fade
-    call screen chapterselect
+    if inanna_sent_me == False:
+        scene cardboard with fade
+        call screen chapterselect
+    else:
+        $ obedience_points -= 5
+        $ inanna_sent_me = False
+        i "And don't think I forgot I told you not to fuck anyone."
+        i "I'm not victim blaming you, but I am very disappointed young man."
+        i "(if you still want to play this game, that is ...)"
+        menu:
+            "yeah I do":
+                jump obedience_check_3
+            "sorry, it's all been a bit much ...":
+                i "That's perfectly understandable babe."
+                i "We can try again when you want to ..."
+                scene cardboard with fade
+                call screen chapterselect

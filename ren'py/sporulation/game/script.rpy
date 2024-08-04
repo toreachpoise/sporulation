@@ -263,7 +263,10 @@ label start:
     $ battle_2_win = False
     $ made_ahmed_smile = False
     $ bullied_ahmed = False
+    $ didnt_fuck_kayden = False
     $ kayden_2_badend = False
+    $ inanna_sent_me = False
+    $ javier_tells = False
 
     $ plant_encounter_1_complete = False
     $ plant_encounter_2_complete = False
