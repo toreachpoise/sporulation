@@ -5,23 +5,23 @@ label inanna_1:
     $ inanna_points = 5
     $ asked_about_judys = 0
     "Even though the app is mostly dudes, every once in a while a woman will show up."
-    "Parvez started talking to Inanna at first because of a picture she had posted of her with her dog."
-    "He was an ugly little pit bull, and Parvez was obsessed with him."
-    "Inanna was really cool, too. She seemed actually smart in a way that Parvez always pretended to be."
-    "She was a PhD student and using her education to actually help people, building a community that was really radical."
-    "Parvez just kind of laid around and jerked off most of the time, after getting half of three degrees."
-    "Inanna was {i}hot{/i}, too."
-    "Parvez wasn't usually into women, but she had this tightly coiled ferocity to her that was mindmelting to have turned on you."
+    "Parvez starts talking to Inanna at first because of a picture she had posted of her with her dog."
+    "He's an ugly little pit bull, and Parvez is obsessed with him."
+    "Inanna is really cool, too. She seems actually smart in a way that Parvez always pretends to be."
+    "She's a PhD student and using her education to actually help people, building a community that is really radical."
+    "Parvez just kind of lays around and jerks off most of the time, after getting half of three degrees."
+    "Inanna is {i}hot{/i}, too."
+    "Parvez isn't usually into women, but she has this tightly coiled ferocity to her that is mindmelting to have turned on you."
     # chat
     lj "... I just couldn't believe they sold out to the gas company, after Ginger got faer arm broken being pulled down from a tree sit by the pigs."
     lj "Sorry, what were we talking about?"
     pdm "I think your tree hugging interlude was a way of telling me how much you want this green dick."
     lj "Hah. As if. If you really did just grow that thing then I'm sure you have no idea how to use it yet."
     lj "You need a lady to show you how."
-    "She had a boyfriend, Javier, who was also trans. She said she had told xem about Parvez's profile."
-    "Javier was skeptical though. Inanna told Parvez xe thought it was fake."
+    "She has a boyfriend, Javier, who is also trans. She says she's told xem about Parvez's profile."
+    "Javier is skeptical though. Inanna tells Parvez xe thinks it's fake."
     pdm "I promise you it's all real."
-    "He sent her a video of him bouncing his cock around."
+    "He sends her a video of him bouncing his cock around."
     lj "I mean shit, I'm definitely intrigued enough to see it in person, even if xe isn't."
     menu:
         "'wanna meet up, cutie?'"
@@ -34,15 +34,17 @@ label inanna_1:
             call screen chapterselect
 label meet_inanna:
     scene coffeeshop2
-    show inanna excited at midleft
-    show parvez at midright
+    show inanna excited:
+        zoom 1.75
+        yalign 0.0
+        xalign 2.0
     with dissolve
     "Inanna gets Parvez to meet her at a big queer bookstore downtown."
     i "It's the oldest still-running queer bookstore in the world."
-    "It had taken Parvez an hour on the train to get there from where he lived, but it was pretty cool."
-    "He wasn't sure if he'd ever been in a specifically queer bookstore before."
-    "The person working the cashier had their hair dyed in trans flag colors."
-    "There was a cafe with coffee and milkshakes as well as alcohol drinks. It was all so ... perfect, and wholesome."
+    "It had taken Parvez an hour on the train to get there from where he lived, but it's pretty cool."
+    "He isn't sure if he's ever been in a specifically queer bookstore before."
+    "The person working the cashier has their hair dyed in trans flag colors."
+    "There's a cafe with coffee and milkshakes as well as alcohol drinks. It's all so ... perfect, and wholesome."
     "Kind of obnoxiously so to Parvez."
     "He slurps his milkshake grumpily."
     i "Bro, why do you look like that? Is it just this much of a struggle for you to go outside?"
@@ -62,12 +64,12 @@ label meet_inanna:
     show inanna happy at midleft
     with fade
     play music maintheme
-    "Parvez found himself actually smiling as they stepped out of the book store into the late afternoon sunshine."
+    "Parvez finds himself actually smiling as they step out of the book store into the late afternoon sunshine."
     "As soon as they do so, however, Inanna's expression turns into a frown."
     i "Shit, what are they doing here?"
     show judys flip at right
     with moveinright
-    "There is  a group of women standing across the street from the bookstore."
+    "There is a group of women standing across the street from the bookstore."
     "They look like strange nurses, like someone from the 1950s' idea of what a nurse would look like in the year 2000."
     "For some reason they seem to be wearing bike helmets with reflective plates on the forehead."
     "They have placards with them that say things like FEMINISM NEEDS WOMEN and SEX IS SCIENCE."
@@ -130,7 +132,7 @@ label judys_conversation_with_inanna:
             "JUDY" "What did you say to me, transvestite?"
             "Inanna doesn't look phased, looking serenely down at the woman."
             i "Damn, bitch. Did you bring your insults with you from the 1950s along with your outfit?"
-            "The woman turns to her recently-arrived companion, speaking to her as if Inanna and Parvez didn't understand."
+            "The woman turns to her recently-arrived companion, speaking to her as if Inanna and Parvez don't understand."
             "JUDY" "You see, Sarah? He called me a bitch right away. The TIM cannot disguise his disgust for women even for a few moments."
             "Sarah" "Yes, Marianne."
             i "It's not women that I hate, lady. It's just your stale bitch ass. I'm not even fully sure you are human. You might be a robot under that weird nun's habit."
@@ -142,16 +144,17 @@ label judys_conversation_with_inanna:
                         "Inanna turns back to the woman, no longer addressing Parvez."
                         i "When are you and your daddies going to learn that you're not welcome here?"
                         i "This is our turf, the place where we get to feel safe."
-                        "Inanna spit on the woman's shoes and strode off."
+                        "Inanna spits on the woman's shoes and strides off."
                         hide inanna with moveoutleft
-                        "Parvez ran to follow her, the two women speaking in agitated tones behind him."
+                        "Parvez runs to follow her, the two women speaking in agitated tones behind him."
                         hide parvez with moveoutleft
+                        play music cutesad volume 2.0
                         scene alley
                         show inanna frightened at center
                         with wipeleft
                         show parvez worried at right with moveinright
                         p "Inanna!"
-                        "She rounded on him."
+                        "She rounds on him."
                         show inanna even more toppy at midright
                         with hpunch
                         i "What?"
@@ -161,44 +164,49 @@ label judys_conversation_with_inanna:
                         i "I don't care if your little plant dick is real. Cuz it's clear you don't have any balls."
                         show inanna worried at center
                         with move
-                        "She turned away from him."
+                        "She turns away from him."
                         i "Don't follow me this time."
                         hide inanna with moveoutleft
                         scene cardboard with fade
                         call screen chapterselect
                     "nah, fuck them":
-                        "Parvez realized in a flash that Inanna was right."
-                        "These people hated them, but in a quiet way, a way that was designed to frame them as innocent even though they were the aggressors."
+                        "Parvez realizes in a flash that Inanna was right."
+                        "These people hate them, but in a quiet way, a way that is designed to frame them as innocent even though they were the aggressors."
                         "The woman came over to Inanna, she could have ignored her."
                         pass
 label judys_fight_1:
     "Marianne" "You freaks are just jealous. You use your size and natural masculinity to intimidate real women because you know you'll never become like us."
     i "Who the fuck would want to be like--{nw}"
     hide parvez
-    show parvez:
+    show parvez flip:
         xalign 0.15
     show inanna happy:
         xalign -0.2
     with move
-    "Parvez stepped in front of Inanna, getting between her and the woman even though he was shorter than both of them."
-    "He tried to steady his shaking voice as he spoke."
+    "Parvez steps in front of Inanna, getting between her and the woman even though he's shorter than both of them."
+    "He tries to steady his shaking voice as he speaks."
     p "You shouldn't be here. Leave us alone."
-    "The woman looked down at Parvez and her voice dripped with condescension."
+    "The woman looks down at Parvez and her voice drips with condescension."
     "Marianne" "Oh honey, I don't know what sick things this monster has done to you to make you like this, but you belong with us. With other real women."
-    "Parvez shoved her, his fear evaporating into anger."
+    show parvez flip:
+        xalign 0.25
+    show judys flip:
+        xalign 0.55
+    with hpunch
+    "Parvez shoves her, his fear evaporating into anger."
     p "Fuck you, you don't know what I am."
     scene black with fade
     "It's time to fight for your right to be who you are!!"
 label inanna_1_battle:
     call battle_def from _call_battle_def
     $ renpy.music.set_pause(True, channel='music')
-    play audio fightmusic loop
+    play audio battlestart
     scene cardboard with dissolve
     "Transsexual battle mode activate"
+    play sound fightmusic loop
     call battle_presetup from _call_battle_presetup
     call battle from _call_battle
 label battle_end:
-    stop audio
     $ renpy.music.set_pause(False, channel='music')
     $ battle_1_win = True
     scene alley
@@ -315,7 +323,7 @@ label fuck_inanna:
     "She drives herself onto him with a punishing rhythm. It's all Parvez can do to cling to her legs as they flex and stretch above him."
     "She's bouncing on him so lightly and effortlessly, a grin fixed on her face, teasing him without breaking a sweat."
     i "You think you're a man now just cuz you got this little thing?"
-    "She squeezed down on him to punctuate her sentence."
+    "She squeezes down on him to punctuate her sentence."
     i "I've had one of these since before you were born, and let me tell you baby."
     i "I'm 100 percent woman and I'm still more of a man than you'll ever be."
     menu:
@@ -373,7 +381,7 @@ label fuck_inanna:
     "She winks."
     i "I'll have to collect more samples from you again sometime."
     $ inanna_1_complete = True
-    scene cardboard with fade
+    scene cardboard with Fade(0.5,1.0,0.5)
     call screen chapterselect
 
 label inanna_2:
@@ -489,6 +497,7 @@ label obedience_check_3_preset:
     $ ignored_chud = False
     $ controlled_self = False
 label obedience_check_3:
+    scene bed
     if obedience_days < 1:
         $ obedience_days += 1
         if ahmed_2_complete == False and ignored_ahmed == False:
@@ -514,7 +523,7 @@ label obedience_check_3:
                 "ignore it":
                     $ ignored_kayden = True
                     jump obedience_check_3
-        elif javier_1_complete == False and ignored_javier == False:
+        elif (inanna_n_javier_1_complete == False) and (javier_1_complete == False) and (ignored_javier == False):
             "Parvez switches over to the other message window ...there's a message from Javier on the app ..."
             menu:
                 "read the message":
@@ -527,7 +536,7 @@ label obedience_check_3:
                     jump obedience_check_3
         elif terry_3_complete == False and ignored_terry == False:
             "Terry brushes up against Parvez a couple hours later while they're making lunch together."
-            "Their hands snake around Parvez's waist and dip into his pants, almost surreptitiously except for how they honked his dick with their hand."
+            "Their hands snake around Parvez's waist and dip into his pants, almost surreptitiously except for how they honk his dick with their hand."
             "Parvez is hard already."
             menu:
                 "try to fuck terry":
@@ -594,7 +603,7 @@ label obedience_check_3:
                 "ignore it":
                     $ ignored_kayden = True
                     jump obedience_check_3
-        elif javier_1_complete == False and ignored_javier == False:
+        elif (inanna_n_javier_1_complete == False) and (javier_1_complete == False) and (ignored_javier == False):
             "The next day there's a message from Javier on the app ..."
             menu:
                 "read the message":
@@ -629,7 +638,7 @@ label obedience_check_3:
                 "ignore it":
                     $ ignored_chud = True
                     jump obedience_check_3
-        elif ((solo_1_complete == False) or (solo_2_complete == False)) and controlled_self = False:
+        elif ((solo_1_complete == False) or (solo_2_complete == False)) and controlled_self == False:
             "By the next day, Parvez is so horny he can't take it."
             "No one is around for him to fuck, so he supposes he'll just have to take matters into his own hands."
             menu:
@@ -659,21 +668,21 @@ label obedience_check_3:
 label see_inanna:
     play music planty if_changed
     "Parvez feels nervous as he approaches Inanna's apartment."
-    if obedience_points < 0:
+    if obedience_points <= 0:
         "He knows he's been bad ..."
-        if obedience_points < -5:
-            "He'd slipped up and done sexy stuff ..."
-        if obedience_points < -20:
+        if obedience_points <= -5:
+            "He's slipped up and done sexy stuff ..."
+        if obedience_points <= -20:
             "... four times."
-        elif obedience_points < -15:
+        elif obedience_points <= -15:
             "... three times."
-        elif obedience_points < -10:
+        elif obedience_points <= -10:
             "... twice."
-        "Inanna was sure to punish him."
+        "Inanna is sure to punish him."
     else:
-        "Even though he'd done his best to be good, Inanna could be unpredictable ..."
+        "Even though he's done his best to be good, Inanna can be unpredictable ..."
         "... he kind of liked it that way, though."
-        "Why would he be here if he didn't want to be punished, after all?"
+        "Why would he be here if he doesn't want to be punished, after all?"
     "He knocks on her door."
     scene balcony
     show inanna toppy with hpunch
@@ -810,6 +819,7 @@ label get_spanked:
     p "[spank_count]!"
     i "That's right, keep counting ..."
     i "If you lose track I'll start over ..."
+# add spank sfx??
 label spank_loop:
     while spanks_left > 0:
         $ spanks_left = spanks_set - spank_count
@@ -913,7 +923,7 @@ label spank_loop:
                     if spank_count > spanks_left:
                         i "I mean you're almost there, but alright ..."
                     scene couch
-                    show inanna toppy at center
+                    show inanna even more toppy at center
                     show parvez bottomy at left
                     with dissolve
                     "Inanna helps Parvez up and gives him a glass of water, which he gratefully drinks."
@@ -933,7 +943,7 @@ label spank_loop:
                             i "Okay baby, you know where it is?"
                             p "Yeah."
                             show black with moveinleft
-                            "Parvez goes to the bathroom and struggles to pee even though he's rock hard."
+                            "Parvez goes to the bathroom and struggles to pee because he's rock hard."
                             hide black with moveoutleft
                             "He returns to find Inanna sprawled out on the daybed, legs wide open, stroking herself through her skimpy panties."
                             p "Damn, that's hot."
@@ -1293,17 +1303,17 @@ label aftercare:
     show inanna happy at midleft
     show parvez happy at midright
     with dissolve
-    play music planty
+    play music cutesad volume 3.0
     "Parvez sits on the day bed beside Inanna."
     "She snuggles up against him, smooshing him into the pillows."
     "He feels warm and soft and tingly all over."
     "Even in his stinging butt--maybe especially so."
     "After a while Inanna gets up and goes to the kitchen, bringing over a pitcher of iced tea and some cookies."
     "They munch on the cookies and chat about Inanna's organizing, and Parvez's plans for the plants."
-    "Eventually Terry text Parvez 'wer r u' and Parvez decides to go."
+    "Eventually Terry texts Parvez 'wer r u' and Parvez decides to go."
     "He kisses Inanna on the cheek before he leaves."
     p "Thanks for a lovely time mama."
     i "Anytime, baby."
-    #$ inanna_2_complete = True
+    $ inanna_2_complete = True
     scene cardboard with fade
     call screen chapterselect

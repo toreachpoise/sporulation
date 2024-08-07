@@ -15,23 +15,23 @@ label kayden_1:
     npc "lay ur plant eggs in me"
     "In spite of himself, Parvez had started to chat with them."
     #cg: pics??
-    "They asked for pictures of Parvez's cock constantly."
+    "They ask for pictures of Parvez's cock constantly."
     "He wasn't really in the practice of taking nudes before, let alone highlighting his new body part."
-    "But no matter what he sent, this person would lose their mind over it."
+    "But no matter what he sends, this person loses their mind over it."
     npc "daddyyyyyy :drool emoji:"
     npc "it's so weird and big"
     npc "please fuck my guts up with that thing"
-    "They sent back tons of videos too, sometimes even several times a day."
+    "They send back tons of videos too, sometimes even several times a day."
     "Them moaning, grinding on toys, sticking their fingers in their sloppy cunt."
-    "They were always so noisy."
-    "Parvez had to go in the bathroom to watch their videos,"
+    "They're always so noisy."
+    "Parvez has to go in the bathroom to watch their videos,"
     "turning the fan on and straining to hear their sticky pussy noises and moans coming out from his tinny phone speaker."
-    "It embarrassed him to say it turned him on."
-    "They also were kind of needy, messaging him lots, sending messages back to back when he didn't respond."
-    "It was hard to pinpoint what made Parvez keep talking to him."
+    "It embarrasses him to admit it turns him on."
+    "They also are kind of needy, messaging him lots, sending messages back to back when he doesn't respond."
+    "It's hard to pinpoint what makes Parvez keep talking to him."
     "No one had ever really wanted Parvez so desperately in that way before...{w} at least not as a top."
     "Plenty of straight men had been gross and pushy toward him before, but their desperation was menacing."
-    "This on the other hand was naked, bratty greed."
+    "This on the other hand is naked, bratty greed."
     npc "come on boss"
     npc "are you gonna mess up my pussy with that freaky plant cock or what"
     menu:
@@ -45,8 +45,8 @@ label kayden_1:
     npc "daddyyyyy {w} i want you to fuck meeeee"
     pdm "sorry dude I actually don't think I want to meet"
     npc "what. {w} what the fuck is wrong with you."
-    "They sent another video, spreading themself and taunting him."
-    "Parvez watched it at his desk while Terry was watching TV in the other room."
+    "They send another video, spreading themself and taunting him."
+    "Parvez watches it at his desk while Terry is watching TV in the other room."
     npc "come on daddy"
     npc "don't you want to feel this boyhole clenching around you"
     npc "do you know how many men this pussy has driven insane"
@@ -86,7 +86,7 @@ label kayden_1:
     scene cardboard with fade
     call screen chapterselect
 label meet_kayden:
-    # need skatepark/bad vibes music
+    play music badvibes
     $ met_kayden = True
     pdm "okay, where do you want to meet?"
     scene skatepark ramps with wipeleft
@@ -183,7 +183,10 @@ label kayden_arrives:
             "This shakes them enough for Parvez to break free and start moving away."
             k "You're just a cunt like me. You could never be a real man."
             "Parvez starts running out of there."
-            hide kayden with moveoutleft
+            show kayden threatening at center:
+                zoom 0.5
+                yalign 0.75
+            with dissolve
             "They start laughing, not even trying to follow. Their last words follow Parvez out."
             k "I hope a real man comes and rapes your bitch hole and shows you what you truly are."
             scene black with pushleft
@@ -194,7 +197,7 @@ label kayden_arrives:
                 zoom 1.5
                 yalign 0
             with wipeleft
-            "He finds Terry on the couch watching a cooking anime."
+            "He finds Terry on the couch watching a cooking show."
             hide terry
             show parvez n terry at center:
                 zoom 1.5
@@ -321,8 +324,8 @@ label check_out_kaydens_pf:
         "Holy shit ... it must really have been Kayden, or Kaye now, whatever they're called."
         "Parvez can't believe it."
     else:
-        "Damn, that slimy weasel. It really was them that jumped ship. Parvez had kind of hoped they hadn't."
-        "Well, there was no point in trying to be subtle any more."
+        "Damn, that slimy weasel. It really is them that jumped ship. Parvez kind of hoped they hadn't."
+        "Well, there's no point in trying to be subtle any more."
     pdm "why would you join them in the first place?"
     pdm "aren't you trans like me?"
     npc "i was sick like you"
@@ -382,6 +385,9 @@ label confront_kayden:
     with move
     k "You want to see what true healing looks like."
     k "Secretly you want to be saved."
+    show parvez worried:
+        xalign 1.0
+    with move
     "Parvez is certain he shouldn't have come here."
     if didnt_fuck_kayden == False:
         k "Even though you planted the seeds of vileness inside me, I have been restored."
@@ -427,11 +433,13 @@ label kayden_2_battle:
             scene cardboard with dissolve
             "Transsexual battle mode activate"
             $ renpy.music.set_pause(True, channel='music')
+            play audio battlestart
             play sound fightmusic loop
             call battle_4_presetup from _call_battle_presetup_4
             call battle_4 from _call_battle_4
 label kayden_2_badend:
     stop sound
+    play audio defeated
     $ renpy.music.set_pause(False, channel='music')
     $ kayden_2_badend = True
     menu:
@@ -446,7 +454,7 @@ label kayden_2_badend:
             "Parvez's head is ringing."
             jump badend_skip
 label badend_keepgoing:
-    # need badend music
+    play music badvibes
     show chud at farright
     show chud2 at farleft
     show kayden threatening at center
@@ -515,11 +523,11 @@ label badend_keepgoing:
     "They don't react, his saliva trickles down their cheek for a moment before they turn and walk away."
     "Parvez blacks out."
     scene black with dissolve
-    play music planty
+    play music floaty
     "He wakes up cold and in pain all over. Most intensely, his pussy throbs, the remnants of his cock screaming in pain all the way up into his womb."
     "His head is still ringing from the concussion he must have sustained during the battle, too."
 label badend_skip:
-    play music planty if_changed
+    play music floaty if_changed
     "He pulls out his phone and calls Inanna, his eyes burning from the brightness."
     p "Inanna I ... something bad happened ... I need help."
     "She comes to get him."
@@ -585,8 +593,9 @@ label badend_skip:
     call screen chapterselect
 label kayden_2_goodend:
     stop sound
+    play audio fanfare
     $ renpy.music.set_pause(False, channel='music')
-    play music friendcore
+    play music friendcore volume 1.5
     "Parvez can't believe he's actually defeated Kaye and the two chuds."
     "Some might have said it was impossible."
     "He runs home as fast as he can, calling Inanna on the way to report what had happened."

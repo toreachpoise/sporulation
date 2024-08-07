@@ -13,15 +13,15 @@ screen chapterselect():
             hotspot (482, 218, 238, 241) action Call("solo_encounter_list")
         if terry_2_complete == True:
             hotspot (0, 457, 239, 236) action Call("ahmed_encounter_list")
-            if (kayden_1_complete == False) or (inanna_n_javier_2_complete == True):
+            if ((kayden_1_complete == False) or (inanna_n_javier_2_complete == True)) and not kayden_2_complete:
                 hotspot (239, 458, 241, 237) action Call("kayden_encounter_list")
         if (ahmed_1_complete == True) or (kayden_1_complete == True):  
             hotspot (477, 458, 244, 238) action Call("inanna_encounter_list")
         if inanna_1_complete == True:
             hotspot (0, 693, 242, 239) action Call("inanna_n_javier_encounter_list")
-        if inanna_n_javier_1_complete == True:
+        if (inanna_n_javier_1_complete == True) and (had_threeway == True):
             hotspot (242, 693, 240, 239) action Call("javier_encounter_list")
-        if inanna_n_javier_2_complete == True:
+        if inanna_n_javier_2_complete == True and not chud_1_complete:
             hotspot (482, 695, 239, 236) action Call("chud_encounter_list")
         
 
@@ -95,7 +95,7 @@ label inanna_encounter_list:
         menu:
             "inanna 1" if ((ahmed_1_complete == True) or (kayden_1_complete == True)) and (inanna_1_complete == False):
                 jump inanna_1
-            "inanna 2" if ((inanna_1_complete == True) and (inanna_2_complete == False)):
+            "inanna 2" if ((inanna_n_javier_1_complete == True) and (inanna_2_complete == False)):
                 jump inanna_2
             "return":
                 call screen chapterselect
@@ -110,6 +110,8 @@ label inanna_n_javier_encounter_list:
                 jump inanna_n_javier_1
             "inanna and javier 2" if (inanna_n_javier_1_complete == True) and (inanna_n_javier_2_complete == False):
                 jump inanna_n_javier_2
+            "inanna and javier 3" if inanna_n_javier_2_complete and not inanna_n_javier_3_complete:
+                jump inanna_n_javier_3
             "return":
                 call screen chapterselect
 

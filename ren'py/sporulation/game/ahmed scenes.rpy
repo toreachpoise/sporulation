@@ -1,12 +1,19 @@
 label ahmed_1:
     scene coffeeshop1
-    show ahmed at midleft with dissolve
-    play music friendcore if_changed
+    show ahmed at midleft:
+        zoom 1.5
+        yalign 0.0
+    with dissolve
+    play music friendcore if_changed volume 1.5
     "They meet Ahmed during Parvez's monthly cycle of getting a little bulb at the end of his dick."
     "Ahmed was very particular that they get the timing right, asking them multiple times to make sure it was exactly a month after the last time."
     "He's short, almost as short as Parvez, with a scraggly little beard."
     "His hair stands out at odd angles, kinky in places and lanky in others."
     "He looks rumpled, but it's kind of cute. Like a mad scientist or a writer who scarcely gets up from his desk."
+    show ahmed:
+        zoom 1.0
+        xpos 0.33
+    with dissolve
     show parvez n terry at right with moveinright
     "Terry pushes Parvez when they walk into the coffee shop."
     t "See? I told you he'd be cute!"
@@ -44,7 +51,7 @@ label ahmed_conversation:
     show ahmed with dissolve
     "He tells them how this is his first time on a date from the app."
     "He'd only just come out as trans to his parents a few months ago, after years of secretly taking testosterone."
-    "He lives in a basement suite with three girls."
+    "He lives in an attic apartment with three girls."
     if bullied_ahmed:
         "It's kind of pathetic. This guy is kind of pathetic. It's kinda hot though."
         "Parvez scoots his foot toward Ahmed's along the ground, nudging it."
@@ -254,7 +261,7 @@ label keep_fucking_ahmed:
     call screen chapterselect
 
 label ahmed_2:
-    play music friendcore if_changed
+    play music friendcore volume 1.5 if_changed
     "Parvez arrives at Ahmed's place a bit sweaty."
     "It's a hot day and there were too many people on the street car, he feels sticky with all of their presences."
     "Ahmed had texted him a few days before, after not messaging at all in the couple of months that had passed since they had hooked up."
@@ -284,8 +291,8 @@ label ahmed_2:
     p "What is{nw}"
     a "It's the same plant as the one you found in the woods! Pretty amazing, right?"
     p "But how did you ..."
-    a "The cum is seeds! I already kind of thought it was when you did it inside me, but then when I got some of my own ..."
     show ahmed flip bottomy with dissolve
+    a "The cum is seeds! I already kind of thought it was when you did it inside me, but then when I got some of my own ..."
     show ahmed flip speaking with dissolve
     a "... I tried sprouting them and they totally grew!"
     a "I figured based on the location you described finding them in that it was some kind of peat bog, probably acidic and somewhat poor soil."
@@ -373,6 +380,7 @@ label ahmed_2:
                 p "That sounds really nice!"
                 jump ahmed_2_nicer_scene
             "no thanks":
+                play music floaty
                 p "Actually if you don't mind, I can just make the sample for you on my own."
                 show ahmed flip with dissolve
                 a "Oh ... um ... okay, yeah. The bathroom is over there ..."
@@ -402,16 +410,23 @@ label ahmed_2:
                 scene cg T2 with dissolve
                 "Afterwards he asks Terry to help him collect the sample, which they're happy to do."
                 "He drops the jar of cum off at Ahmed's place the next day, but he isn't home."
+                $ ahmed_2_complete
                 scene cardboard with fade
                 call screen chapterselect
         label ahmed_2_nicer_scene:
-            play music maintheme if_changed
+            play music cutesad volume 2.0 if_changed
             $ made_ahmed_smile = True
             scene ahmedbed #actually needs shower bg lol
-            show ahmed bottomy at left
-            show parvez toppy at midleft
+            show ahmed bottomy:
+                zoom 1.5
+                yalign 0.0
+                xalign 0.45
+            show parvez toppy:
+                zoom 1.5
+                yalign 0.0
+                xalign 2.0
             with pushright
-            "Ahmed leads Parvez into his bathroom."
+            "Ahmed leads Parvez into his bathroom. It's just a freestanding tub and a sink in the corner of the room, with a toilet in the closet beside it."
             "It's definitely a bachelor's bathroom, with only some men's 5-in-1 soap and shaving supplies in the tub."
             "Ahmed starts stripping down facing away from Parvez, out of shyness or maybe locker room habit."
             "Parvez places a hand on his shoulder and Ahmed jumps."
@@ -505,7 +520,7 @@ label ahmed_2_ending:
     "Before he goes, Ahmed presses a small plant into his hand. It looks like a tiny aloe vera plant, a little rosette of green fingers."
     a "This is one of mine ..."
     a "Maybe when you see it in your place ... it'll make you think of me ..."
-    "Parvez grinned."
+    "Parvez grins."
     show parvez flip toppy with dissolve
     p "I'll think of you alright."
     hide parvez with moveoutleft

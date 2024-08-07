@@ -24,7 +24,6 @@ label plant_encounter_1:
     "Up close, Parvez can see it looks more like some kind of succulent; thicker than seaweed."
     "He wishes he had his phone. Too bad it wouldn't fit in his running shorts."
     menu:
-        "should I touch it?"
         "touch it":
             "He runs his fingers over the top of one of the fronds. It's squishier than he expected it to be, firm but still soft somehow."
             jump plant_touches_you
@@ -108,7 +107,7 @@ label it_has_you:
     scene plant far with wipeleft
     "Even though Parvez felt cold the entire way, when he arrives at his car he is drenched in sweat."
     "He downs the rest of his water. His car, mercifully, is unlocked."
-    play music planty
+    play music cutesad
     scene couch with fade
     "Terry is waiting for him on the couch with a glass of wine."
     show terry worried at center:
@@ -262,16 +261,16 @@ label plant_blowjob:
     "He can also feel two more tentacles circling his two holes."
     "One plays around where the fluid is coming out of his cunt, around back of where his cock comes out."
     "Parvez didn't even know that he could still put things in there, not that he had wanted to before."
-    "Now it seemed he had no choice but to learn."
-    "The tentacle pressed into his pussy, bulging it around the two objects shoved inside."
-    "Parvez had hardly ever had anything put in there before--and never consensually--and here this plant was fucking him again. And he liked it."
-    "As soon as the thought came to him the plant pulled out, leaving him oddly empty feeling."
-    "His disappointment had barely registered before the plant, slick with his cunt juice, dove into his ass, another tentacle coming to his cunt again to replace it."
+    "Now it seems he has no choice but to learn."
+    "The tentacle presses into his pussy, bulging it around the two objects shoved inside."
+    "Parvez has hardly ever had anything put in there before--and never consensually--and here this plant is fucking him again. And he likes it."
+    "As soon as the thought comes to him the plant pulls out, leaving him oddly empty feeling."
+    "His disappointment has barely registered before the plant, slick with his cunt juice, dives into his ass, another tentacle coming to his cunt again to replace it."
     p "Sh--shit, wait--"
     p "I don't know if I can handle--three--"
-    "He didn't have a choice."
+    "He doesn't have a choice."
 label gag_and_pass_out:
-    "The two tentacles inside his cunt and ass were punishing the membrane between them."
+    "The two tentacles inside his cunt and ass are punishing the membrane between them."
     if struggled_again:
         "The sight paired with the sound of his gooshy holes getting stretched open brings Parvez fully to consciousness."
     "The pounding is overwhelming. Parvez wails. It hurts but he can't stop cumming, this strange pulsing overwhelming feeling that's still unsatisfying."

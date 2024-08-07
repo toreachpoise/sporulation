@@ -72,59 +72,59 @@ label terry_1:
     call screen chapterselect
 
 label terry_2:
-    play music planty if_changed
+    play music floaty if_changed
     $ doubted = False
     scene bed with fade
-    "Where before it had been the same thickness the whole way along, today Parvez woke up with a weird bulb near the end of his cock."
-    "Terry gave him a blowjob, hoping to see if something would come out when Parvez came. So far nothing had."
-    "Terry seemed to think this was all some kind of game, taking everything in stride worryingly well."
-    "Parvez still wasn't sure how to feel about the new addition to his body."
+    "Where before it had been the same thickness the whole way along, today Parvez wakes up with a weird bulb near the end of his cock."
+    "Terry gives him a blowjob, hoping to see if something would come out when Parvez came. So far nothing had."
+    "Terry seems to think this is all some kind of game, taking everything in stride worryingly well."
+    "Parvez still isn't sure how to feel about the new addition to his body."
     "On the one hand he had always wanted to have a cock, even if he was never able to admit it to himself."
-    "But this thing was ... it felt artificial, sort of."
-    "Maybe artificial wasn't the right word. It was natural, somehow--it came from a plant. Or supernatural, maybe."
-    "It's just that it looked weirdly like a dildo, with its smooth and rounded shape."
-    "And Parvez could feel sensations through his cock, but it still felt apart from him."
-    "His orgasms were still weirdly unsatisfying, too. Or it was more like he couldn't cum at all."
+    "But this thing is ... it feels ... artificial, sort of."
+    "Maybe artificial isn't the right word. It is natural, somehow--it came from a plant. Or supernatural, maybe."
+    "It's just that it looks weirdly like a dildo, with its smooth and rounded shape."
+    "And Parvez can feel sensations through his cock, but it still feels apart from him."
+    "His orgasms are still weirdly unsatisfying, too. Or it's more like he can't cum at all."
     t "Hey, are you paying attention?"
     menu:
         "huh??":
             pass
     scene cg T2 with Fade(0.05,0.2,0)
-    "Terry was looking up at Parvez from between his legs, a string of spit connecting their lips to his cock."
-    "They leaned down and licked the weird bulb that had formed at the end."
+    "Terry is looking up at Parvez from between his legs, a string of spit connecting their lips to his cock."
+    "They lean down and lick the weird bulb that has formed at the end."
     t "You know, I don't have to do this if you're not into it."
     t "Your cock is delicious, but I think it works best if we're both enjoying ourselves."
     p "Sorry babe I just. This has been kind of a weird experience."
     p "I'm glad you're not freaked out by it but every once in a while I still kind of am."
-    "Terry suckled on the underside of Parvez's cock thoughtfully, where the glans would be if Parvez had a normal dick."
+    "Terry suckles on the underside of Parvez's cock thoughtfully, where the glans would be if Parvez had a normal dick."
     t "You know, it is pretty weird. But I think if there's one thing I've learned in life, it's not to look a gift blowjob in the mouth."
-    "With that Terry took Parvez's cock all the way down his throat and Parvez allowed his thoughts to be banished by the sensation of Terry's throat."
-    "This time when Parvez came, the tip of the bulb shot out sticky yellow goo with seeds suspended in it."
-    "The seeds were small and grayish. Terry said the goo tasted like aloe vera."
+    "With that Terry takes Parvez's cock all the way down his throat and Parvez allows his thoughts to be banished by the sensation of Terry's throat."
+    "This time when Parvez cums, the tip of the bulb shoots out sticky yellow goo with seeds suspended in it."
+    "The seeds are small and grayish. Terry says the goo tastes like aloe vera."
     scene couch
     show parvez at midright
     with fade
-    play music friendcore
-    "A few hours later, Parvez was laying on the couch scrolling on his phone. Some anime was on the TV but he wasn't watching it."
+    play music cutesad volume 2.0
+    "A few hours later, Parvez is laying on the couch scrolling on his phone. Some anime is on the TV but he isn't watching it."
     show terry worried:
         zoom 1.5
         yalign 0
         xalign -0.75
     with moveinleft
-    "Terry walked into the living room, spatula in hand."
+    "Terry walks into the living room, spatula in hand."
     t "Hey, so in your plant dream what happened exactly?"
-    "Parvez kept looking at his phone as he spoke:"
+    "Parvez keeps looking at his phone as he speaks:"
     p "So, like, I was running, and then I saw the plant."
     show parvez bottomy with dissolve
     p "When I touched it, it grabbed me back, and then like started to fuck me."
     show parvez worried with dissolve
-    "He sat up and looked at Terry."
+    "He sits up and looks at Terry."
     p "At first it felt good, but then it had this weird flower thing, and it was going for ... y'know, front-hole."
     hide terry
     hide parvez
     show parvez n terry at midright
     with dissolve
-    "Terry came and sat on the couch next to him."
+    "Terry comes and sits on the couch next to him."
     p "Yeah so then it puts its weird stamen thing inside me, and after a while I felt it ... well, cum, I guess?"
     p "I don't know, like, there was a weird bulb on it when it went in, and then it was deflated when it came out."
     p "It wasn't scary though, somehow. It was okay. I felt calm."
@@ -170,7 +170,7 @@ label passing_it_on:
     "Terry cuddles into Parvez's chest, dropping their batter-covered spoon on the table."
     t "I think you should see if you can spread it to other people."
     p "You wouldn't be jealous of me fucking other boys?"
-    scene kitchen with fade
+    scene kitchen with Fade(0.5,1.0,0.5)
     show terry at left:
         zoom 1.5
         yalign 0
@@ -181,7 +181,7 @@ label passing_it_on:
     p "What are you talking about?"
     "Terry shows him a hookup app profile--Parvez's apparently."
     "There are some photos of him on the profile--discreetly cropped by Terry."
-    "... including a dick pic he'd texted Terry when he'd been visiting his parents a couple of weeks prior."
+    "... including a dick pic he'd texted Terry when they'd been visiting their parents a couple of weeks prior."
     "The description reads 'TRANS GUY HAS A NEW COCK HE'D LIKE TO TRY :eggplant_emoji: TRANS AND GNC FOLKS ONLY!!'"
     p "What the fuck dude!! Did you make this?"
     t "Yeah, you're really popular! Like ten people want to meet you. Look!"
@@ -218,7 +218,7 @@ label check_it_out:
     call screen chapterselect
 
 label terry_3:
-    play music friendcore if_changed
+    play music friendcore volume 1.5 if_changed
     scene couch
     show terry at center
     with fade
@@ -284,7 +284,7 @@ label terry_3:
     "The old British man is still talking about coreopsis or rudbeckias in the background, but neither of them is listening."
     "Parvez takes Terry as deep into his mouth as he can, working the rest of the shaft with his hand."
     t "Here, come up baby, I want to kiss you."
-    scene cg T3 with dissolve
+    scene cg T3 with fade
     pause
     "Terry pulls Parvez up to sit beside them. Their mouth is warm and tastes like gum, sweet and minty."
     "Parvez licks deep into their mouth, desperate to climb inside."
@@ -311,7 +311,7 @@ label terry_3:
         jump obedience_check_3
 
 label terry_4:
-    play music planty if_changed
+    play music floaty if_changed
     scene bed with fade
     show parvez at center
     "Parvez has been wallowing for weeks now."
@@ -349,7 +349,7 @@ label terry_4:
     p "Fuck you, you're not my dad. You don't know what's good for me."
     "Terry looks hurt for a moment, and then just sighs."
     t "I'm not your dad, but sometimes I do feel like you're my kid."
-    show parvez toppy at furthestright
+    show parvez toppy at farright
     with move
     "Parvez gets up from the couch, incandescent with rage."
     p "See that's the fucking problem isn't it?"
@@ -395,7 +395,7 @@ label terry_4:
     "He just lays and keeps wallowing, smoking and staring at the television, eating cereal and being alone."
     scene couch
     show parvez worried at midright
-    with fade
+    with Fade(0.75,1.0,0.5)
     "On the fourth day, Inanna calls him."
     i "Dude, you have to talk to Terry."
     i "They're fucking upset."
@@ -417,7 +417,7 @@ label terry_4:
     if badend_skipped == False:
         "He hasn't showered since the night he was attacked."
         "The idea of being naked would just remind him of it."
-        "Even after the goop stopped coming out of him and his body returned to how it had been before all this had begun, he couldn't bear to look at his body."
+        "Even after the goop stopped coming out of him and his body returned to how it had been before all this had begun, he can't bear to look at himself."
     "He shakes his head like a dog trying to clear water out of his ears."
     "He pulls his shoes on and leaves the house before he ends up sitting back on the couch smoking again."
     scene balcony
@@ -580,6 +580,7 @@ label terry_4_continue:
     "Before he can think about it, he leans in to kiss them."
     p "I love you."
     t "I love you too, baby."
+    window hide
     menu:
         "I think I am ready":
             pass
@@ -593,13 +594,13 @@ label terry_4_continue:
     show terry toppy with dissolve
     "A grin cracks Terry's face wide open."
     t "Of course, baby."
-    window hide
     scene bed with wipeleft
     play music forest
     "The house plant that Ahmed had given them was in flower for the first time, those big, showy, speculum-like bird of paradise style flowers."
     "Parvez remembers how frightened he was of it when he first saw it, all those months ago."
     "Even more now after everything that's happened, that encounter feels like a dream, like something from a fairy tale."
     scene cg T4A with fade
+    pause
     "Terry lays Parvez down on the bed on his back."
     "They strip his clothes off tenderly, kissing all over his legs and arms as they do so."
     "Parvez lays there, feeling a bit nervous all of a sudden."
@@ -630,6 +631,7 @@ label terry_4_continue:
 label terry_uses_the_flower:
     "Terry holds the flower wand against the entrance of Parvez's pussy."
     scene cg T4B with dissolve
+    pause
     "Like on the plant, the flower has a strange swollen bulb at the base, sort of like a baby squash."
     "After Terry's previous attentions, Parvez is pretty wet."
     "He can feel the flower pressing against the slickness coming out of him."

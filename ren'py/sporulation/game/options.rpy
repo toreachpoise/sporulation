@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.8.4"
+define config.version = "1.8.7"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -32,11 +32,17 @@ define config.version = "0.8.4"
 define gui.about = _p("""
 A weird hentai game about trans guys getting fucked by plants.
 
-Mostly made by Aaron El Sabrout https://toreachpoise.itch.io
+Mostly made by Aaron El Sabrout ({a=https://toreachpoise.itch.io}https://toreachpoise.itch.io{/a}).
 
-Battle engine based on "RPG Battle Engine" posted to Lemmasoft forums by Angela Rose/demonangelz (https://lemmasoft.renai.us/forums/viewtopic.php?f=51&t=30095#p354087)
+Music by Cartoon Wetwork ({a=https://on.soundcloud.com/cqTV7}https://on.soundcloud.com/cqTV7{/a}) and Nephenee Rose ({a=https://x.com/nepheneer?lang=en}https://x.com/nepheneer?lang=en{/a}).
 
-Spiral animation stolen from @hypno_bot on mastodon https://stefans-creative-bots.glitch.me/
+Battle sprites made by Galateas Grievance ({a=https://www.tumblr.com/galateasgrievance}https://www.tumblr.com/galateasgrievance{/a}).
+
+Additional art for Solo 2 by Breezy ({a=https://ilovemyzombiegf.itch.io/}https://ilovemyzombiegf.itch.io/{/a}).
+
+Battle engine based on {a=https://lemmasoft.renai.us/forums/viewtopic.php?f=51&t=30095#p354087}"RPG Battle Engine" posted to Lemmasoft forums by Angela Rose/demonangelz{/a}.
+
+Spiral animation stolen from {a=https://stefans-creative-bots.glitch.me/}@hypno_bot on mastodon{/a}.
 
 """)
 
@@ -54,7 +60,7 @@ define build.name = "sporulation"
 ## to the player by default. Setting one of these to False will hide the
 ## appropriate mixer.
 
-define config.has_sound = False
+define config.has_sound = True
 define config.has_music = True
 define config.has_voice = False
 
@@ -62,7 +68,7 @@ define config.has_voice = False
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 
-# define config.sample_sound = "sample-sound.ogg"
+define config.sample_sound = "dazzle.wav"
 # define config.sample_voice = "sample-voice.ogg"
 
 
@@ -92,12 +98,12 @@ define config.intra_transition = dissolve
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = fade
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = fade
 
 
 ## A variable to set the transition used when the game starts does not exist.

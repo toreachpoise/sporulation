@@ -34,7 +34,7 @@ label battle_3_def:#you usually call this in the very beginning of your game, it
     #warrior type class
     $ player1_hp_max = 300
     $ player1_mp_max = 100    
-    $ player1_attack = 25
+    $ player1_attack = 35
     $ player1_defense = 20
 
 
@@ -56,18 +56,6 @@ label battle_3_presetup:
     # right now, it is all in one set up but it can be seperated for more variety of monsters
     # your player names and the image being used for them, please take a look at how images are used in the battle folder so you understand the size of each image should be
     $ player1 = "Parvez" #names, set as none to not display image
-    #$ player2 = "Inanna"
-    #$ player3 = "Javier"
-    #$ player4 = "Terry"
-    $ player1_image_selected = "battle/player1_selected.png" #the images
-    $ player1_image_default = "battle/player1_default.png"
-    #$ player2_image_selected = "battle/player2_selected.png" #the images
-    #$ player2_image_default = "battle/player2_default.png"
-    #$ player3_image_selected = "battle/player3_selected.png" #the images
-    #$ player3_image_default = "battle/player3_default.png"
-    #$ player4_image_selected = "battle/player4_selected.png" #the images
-    #$ player4_image_default = "battle/player4_default.png"
-    # number of players, and the default is turn based so player goes first then monster afterwards and repeat
     $ player_numbers = 1
     $ turn = 1 #turn starts with player 1
     $ m_turn = 1 #starts with Marianne
@@ -78,32 +66,20 @@ label battle_3_presetup:
     # if you want your player is start with full hp each battle, if not, you tinker around with this code
     # so maybe you might comment it out if you want the player's hp to remain what it was
     $ player1_hp = player1_hp_max
-    #$ player2_hp = player2_hp_max
-    #$ player3_hp = player3_hp_max
-    #$ player4_hp = player4_hp_max
+
     $ player1_mp = player1_mp_max
-    #$ player2_mp = player2_mp_max
-    #$ player3_mp = player3_mp_max
-    #$ player4_mp = player4_mp_max
+
     
     #the monster's graphics, hp points max and the range of their attack
     # example: monster 1 is a white sheep using sheep1.png for the image
     # it can attack between 10 to 30 damage on the player and has an hp of 100
     # you can get fancy with this but at the moment, you have a max of 3 monsters that can be on the battle field 
-    #$ marianne = "Marianne"
-    #$ sarah = "Sarah"
+
     $ chud = "Chud"
-    #$ kaye = "Kaye" #if you want only two monsters on the field, replace this with $ monster 3 = "none" and make $ chud_dead = True (see below)
-    #$ marianne_image = "battle/sheep1.png"
-    #$ sarah_image = "battle/sheep2.png"
-    #$ kaye_image = "battle/sheep3.png"
-    $ chud_image = "battle/chest1.png"
-    #$ marianne_hp_max = 100
-    #$ sarah_hp_max = 100
-    #$ kaye_hp_max = 100
-    $ chud_hp_max = 400
+
+    $ chud_hp_max = 350
     $ chud_hp = chud_hp_max
-    $ chud_attack_min = 50
+    $ chud_attack_min = 30
     $ chud_attack_max = 80
     # the number of monsters, if you use less monster then you would need to change this number too
     $ monster_numbers = 1
@@ -119,6 +95,7 @@ label battle_3_presetup:
     $ p_action = "none"
     $ player1_defend = False
     $ target = "none" #marianne,2,3
+    #$ atk_sound = "none"
 
     return
 
@@ -131,12 +108,8 @@ label battle_3: # the battle screen uses this general set up
     with blinds
     jump battling_3
 label battling_3:
-    #queue audio fightmusic
     call player_turn_3 from _call_player_turn_3
     $ turn = 0 #this is so that player 1 is not 'selected', that wouldn't make sense when it's not their turn
-#    jump monster_dead_check
-#    if check_win == True:
-#        jump battle_win
     call monster_turn_3 from _call_monster_turn_3
     $ m_turn = 1
     $ turn = 1
@@ -144,6 +117,8 @@ label battling_3:
     jump battling_3
     
 label battle_3_win: #the aftermath message
+    stop sound
+    play audio fanfare
     "You've won the battle!"
     hide screen battle_3_overlay_players
     hide screen battle_3_overlay_monsters
@@ -162,7 +137,9 @@ label player_turn_3:
         call screen player_actions_3
         $ p_action = _return
         call player_dealt_damage_3 from _call_player_dealt_damage_3
+        #play audio atk_sound
         call monster_dead_check_3 from _call_monster_dead_check_8
+        play audio hit
         if check_win:
             jump battle_3_win
         else:
@@ -176,6 +153,7 @@ label player_dealt_damage_3:
             $ damage = player1_attack
             if player1_mp < 90:
                 $ player1_mp += 10
+            #$ atk_sound = "hit"
         elif p_action == "skills":
             call player1_skills_3 from _call_player1_skills_3
         elif p_action == "defend":
@@ -217,14 +195,17 @@ label player1_skills_3:
     if p_skill == "Tboy Swag":
         $ damage = player1_attack * 2
         $ player1_mp -= 25
+        #$ atk_sound = "dazzle"
     elif p_skill == "Plantboy Dickslap":
         $ damage = player1_attack*3
         $ player1_mp -= 50
+        #$ atk_sound = "hit"
     elif p_skill == "Panic Attack":
         $ damage = player1_attack * 0.75
         $ target = "all"
         $ player1_mp -= 33
         $ player1_hp += 10
+        #$ atk_sound = "beam"
     show screen battle_3_overlay_players
 
     return
@@ -243,7 +224,7 @@ label monster_turn_3:
                 call monster_dealt_damage_3 from _call_monster_dealt_damage_3_1
                 $ message = "chud_attack"
                 call player_dead_check_3 from _call_player_dead_check_9
-        
+
         $ renpy.pause(1.5)
         $ m_turn += 1
     return
@@ -273,7 +254,11 @@ label player_dead_check_3:
         "The chud defeated you."
         menu:
             "try again":
+                scene cardboard with dissolve
                 "Maybe you'll have better luck next time ..."
+                hide screen battle_3_overlay_monsters
+                hide screen battle_3_overlay_players
+                hide screen battle_3_message
                 jump chud_1_battle
             "give up":
                 hide screen battle_3_overlay_players
@@ -288,36 +273,36 @@ screen battle_3_overlay_players:
     add "battle/battlebox1.png" xalign .75 yalign .95
     #player 1 is assume to always exist
     if turn == 1:
-        add player1_image_selected xalign 0.25 yalign .93   # player icon in hp area
-        add player1_image_selected xalign 0.25 yalign 0.5       #player chara above 
+        add "parvez_icon" xalign 0.25 yalign .94   # player icon in hp area
+        add "parvez_sprite" xalign 0.25 yalign 0.5       #player chara above 
     else:
-        add player1_image_default xalign 0.25 yalign .93
-        add player1_image_default xalign 0.25 yalign 0.5
+        add "parvez_icon_idle" xalign 0.25 yalign .94
+        add "parvez_sprite_idle" xalign 0.25 yalign 0.5
     bar:
         xalign .25
-        yalign .84
+        yalign .90
         style "bar_hp"
         value player1_hp xmaximum 181
         range player1_hp_max
     bar:
         xalign .25
-        yalign .88
+        yalign .94
         style "bar_mp"
         value player1_mp xmaximum 181
         range player1_mp_max
-    text"[player1_hp]/[player1_hp_max]" xalign 0.25 yalign 0.844
-    text"[player1_mp]/[player1_mp_max]" xalign 0.25 yalign 0.884
+    text"[player1_hp]/[player1_hp_max]" xalign 0.25 yalign 0.904
+    text"[player1_mp]/[player1_mp_max]" xalign 0.25 yalign 0.944
 
 screen battle_3_overlay_monsters:
     if chud != "none":
-        add chud_image xalign 0.66 yalign 0.46
+        add "chud_sprite" xalign 0.7 yalign 0.46
         bar:
-            xalign .66
-            yalign .4
+            xalign .6
+            yalign .45
             style "bar_hp"
             value chud_hp xmaximum 181
             range chud_hp_max
-        text "[chud_hp]/[chud_hp_max]" xalign 0.66 yalign 0.4
+        text "[chud_hp]/[chud_hp_max]" xalign 0.6 yalign 0.45
 
 
 screen battle_3_message:
@@ -344,4 +329,4 @@ screen player_target_3: #returns monster player wants to attack
         textbutton "All Enemies" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.45 yalign 0.48 action Return("all")
     else:
         if chud != "none":
-            textbutton "[chud]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.66 yalign 0.36 action Return("chud") 
+            textbutton "[chud]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.6 yalign 0.42 action Return("chud") 

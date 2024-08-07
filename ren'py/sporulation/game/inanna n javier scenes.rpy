@@ -9,9 +9,9 @@ label inanna_n_javier_1:
     "They really cared about being normal, seeming like regular Americans."
     "Obviously they couldn't help being brown, Parvez knew that. But maybe they thought that by making themselves smaller they would make it harder to notice and they'd blend in."
     "Parvez thought he wasn't like that, that being trans by definition made him stand out."
-    "But Inanna's constant invitations to show up more, to do more were making him wonder if that was really true."
-    "He stood out with the way he looked, with the way he dressed and presented himself, but it was in a way that didn't directly confront people."
-    "He found it way more scary to actually do stuff, to be part of something."
+    "But Inanna's constant invitations to show up more, to do more are making him wonder if that was really true."
+    "He stands out with the way he looks, with the way he dresses and presents himself, but it's in a way that doesn't directly confront people."
+    "He finds it way more scary to actually do stuff, to be part of something."
     pdm "look i'm sorry i just ..."
     pdm "large groups of people make me nervous ..."
     pdm "... and strangers ..."
@@ -28,16 +28,17 @@ label inanna_n_javier_1:
         "actually i'd rather not":
             "Parvez feels nervous all of a sudden."
             pdm "i think i would wanna message them first before doing any stuff with them"
-            "Inanna had sent him pictures of Javier and they seemed ... intimidatingly hot."
-            "Their fierce glare and sharp makeup marked them to Parvez as one of those queers that was too cool for him."
-            "They were a local drag performer and he had seen clips of them online and it was just ... he was just a loser by comparison."
-            "The more he thought about meeting them, trying to flirt and be cool in front of them, the more a knot formed in Parvez's stomach."
-            "He felt himself breaking out in a cold sweat."
+            "Inanna has sent him pictures of Javier and they seem ... intimidatingly hot."
+            "Their fierce glare and sharp makeup marks them to Parvez as one of those queers that's too cool for him."
+            "They are a local drag performer and he has seen clips of them online and it's just ... he's just a loser by comparison."
+            "The more he thinks about meeting them, trying to flirt and be cool in front of them, the more a knot forms in Parvez's stomach."
+            "He feels himself breaking out in a cold sweat."
             lj "sure i can give you their contact info if you wanna chat first"
             pdm "in the meantime can we just ... do stuff alone for now ?"
             lj "sure baby"
-            if inanna_2_complete == False:
-                jump inanna_2
+            "She never does end up sending Javier's number to Parvez, which kind of sucks."
+            "Maybe they can try and meet up again sometime?"
+            $ inanna_n_javier_1_complete = True
             scene cardboard with fade
             call screen chapterselect
         "let's do it":
@@ -49,8 +50,8 @@ label inanna_n_javier_1:
     scene balcony with Fade(0.5, 1.0, 0.5)
     show inanna n javier at midright
     show parvez at midleft
-    "Terry made Parvez take a bottle of fancy kombucha they had been saving to Inanna's house."
-    "It turns out this was the right choice. Inanna and Javier had laid out a whole table of dumplings, steam buns, scallion pancakes, and garlicky greens."
+    "Terry makes Parvez take a bottle of fancy kombucha they had been saving to Inanna's house."
+    "It turns out this was the right choice. Inanna and Javier have laid out a whole table of dumplings, steam buns, scallion pancakes, and garlicky greens."
     "The steamer basket is five tiers tall, all with homemade dumplings."
     j "One of Inanna's ''community building activities'' is to invite tons of people over to make potstickers and take them home."
     i "We call it pinching dumps!!"
@@ -76,24 +77,23 @@ label inanna_n_javier_1:
     "Javier laughs. Xer genuine smile is really cute."
     i "Why don't y'all come in here."
     j "Okay mami jeez."
-    "Javier clearly meant the nickname as a joke, but the mention of it sends a thrill of arousal through Parvez. Oh right. They were gonna do it."
-    "This realization made him nervous all over again."
-    "Javier turned to look at him in the door, shooting him a real smile."
+    "Javier clearly means the nickname as a joke, but the mention of it sends a thrill of arousal through Parvez. Oh right. They're gonna do it."
+    "This realization makes him nervous all over again."
+    "Javier turns to look at him in the door, shooting him another smile."
     j "You coming?"
     scene couch
     show parvez at left
     show inanna at right
     show javier at center
     with pushleft
-    "Inanna had set out a board game on the coffee table."
-    "The game seemed old, the graphic design was kind of retro and the box was dirty."
-    "There were many piles of cards stacked around the box, with the board itself still folded inside."
+    "Inanna has set out a board game on the coffee table."
+    "The game seems old, the graphic design is kind of retro and the box is dirty."
+    "There are many piles of cards stacked around the box, with the board itself still folded inside."
     i "We don't have to play the actual game, it's kinda old and weird."
     i "But the questions are pretty fun."
-    "Javier leaned in to whisper in Parvez's ear."
+    "Javier leans in to whisper in Parvez's ear."
     j "She just uses this as a way to segue into fucking, it's kinda unnecessary."
     i "Don't be giving away all my secrets!"
-    $ panicked = False
     menu:
         "wait, actually, i think this is too much for me":
             $ panicked = True
@@ -218,8 +218,8 @@ label chaste_boardgame:
     i "Hell yeah I would watch the video of her sucking it if there was one--"
     j "--why couldn't they form a polycule instead?"
     p "I guess if I was a failing professional athlete supporting my dying wife I would have no choice but to take steroids."
-    "Javier kicks both of their asses, though Parvez was still not exactly sure how points were scored. It was partly based on them correctly guessing one another's responses, but there was also a spinning wheel involved."
-    "Halfway through Parvez had gotten all the way back to the start, and from that point on he was struggling to catch up."
+    "Javier kicks both of their asses, though Parvez is still not exactly sure how points are scored. It seems partly based on them correctly guessing one another's responses, but there is also a spinning wheel involved."
+    "Halfway through Parvez gets sent all the way back to the start, and from that point on he struggles to catch up."
     j "You bitches didn't stand a chance."
     i "Yeah, yeah, good game."
     "She turns to look at Parvez."
@@ -400,6 +400,7 @@ label horny_boardgame:
                     "That was freaky, how the fuck did she do that?"
                     jump refuse
 label hypno:
+    $ had_threeway = True
     i "Kneel in front of me."
     scene spiral:
         zoom 3.0
@@ -435,16 +436,20 @@ label hypno:
     i "You just need to do what mommy says, isn't that right?"
     p "Yes mommy."
     i "Good boy, now open your eyes."
-    "Parvez hadn't realized he had them closed, he had been so focused on Inanna's voice, her consciousness taking over his completely."
+    "Parvez didn't realized he had them closed, he has been so focused on Inanna's voice, her consciousness taking over his completely."
     scene cg InJ1A with dissolve
+    pause
     "He opens his eyes to see Javier kneeling between Inanna's legs, licking up and down her cock like a kitten."
     i "Well, aren't you going to join xem?"
     "Parvez hesitates for a moment."
     i "That's an order, boy."
     "He feels himself being drawn in."
-    window hide
+    scene cg InJ1A with dissolve:
+        yalign 0.0
+        xalign 0.4
+        linear 5.0 yalign 1.0 zoom 1.0
+        linear 4.0 yalign 0.55 zoom 0.85
     pause
-    window show
     "Javier's hand cups his face and they kiss, Javier tonguing and licking all over his mouth. It's sloppy and messy but cute."
     "Even partway down, Parvez admires Javier's unselfconsciousness. He still has enough awareness to feel a bit embarrassed."
     "He wants to be like Javier, hollowed out by a benevolent force of love, made empty and perfectly able to receive."
@@ -502,12 +507,12 @@ label hypno:
     "Inanna gets on the bed behind Javier, grabbing xem by the hips. She leans in to whisper in xer ear."
     i "Take him in all the way."
     window hide
-    scene cg InJ1B with dissolve
+    scene cg InJ1B with vpunch
     pause
     j "Nya! Ahhh"
     "Xer pussy is so wet, Parvez feels totally engulfed."
     "He wants to fuck up into xem but he knows he isn't supposed to do anything without being told."
-    "She kisses xer neck."
+    "Inanna kisses xer neck."
     i "Good kitty. Lean forward."
     "Parvez sees Inanna doing something behind Javier."
     j "Wah!! Ahh!! Mommy!!"
@@ -540,7 +545,7 @@ label hypno:
     show inanna toppy at left
     show parvez bottomy at midright
     show javier happy at midleft
-    with fade
+    with Fade(0.75,0.25,0.75)
     "She reaches to grab Parvez's foot."
     i "You did a great job too, boy."
     "Parvez is full of a warm glow and can't speak."
@@ -556,7 +561,7 @@ label hypno:
     call screen chapterselect
 
 label inanna_n_javier_2:
-    play music planty if_changed
+    play music floaty if_changed
     scene couch
     show parvez at right
     with dissolve
@@ -587,7 +592,6 @@ label inanna_n_javier_2:
     lj "can i bring javi??"
     pdm "yeah of course"
     lj "hell yea sounds gay, i'll pack a picnic"
-    # skatepark music??
     scene skatepark ramps
     show inanna at left
     show javier at midleft
@@ -596,7 +600,7 @@ label inanna_n_javier_2:
     "Inanna's idea of a small picnic turned out to be a massive feast."
     "They brought an actual picnic basket stuffed with summer rolls, a homegrown sprout salad, and herbal iced tea."
     j "Fae woke me up way too early to roll these today."
-    "Parvez brought cookies, without having to be reminded by Terry this time, but he still felt his contribution was a little inadequate."
+    "Parvez brought cookies, without having to be reminded by Terry this time, but he still feels like his contribution is a little inadequate."
     p "Yeah, so ... this is the place ..."
     p "... Sorry, it was probably dumb and weird to bring you here, it's kinda grimy."
     i "No way babe!"
@@ -671,7 +675,7 @@ label inanna_n_javier_2:
     show javier happy at midright
     show parvez at farleft
     with wipeleft
-    "Xe leads them to an area of the skatepark that was fenced off with chain link. Beyond, there was a dilapidated playground set, complete with rusty slide and a swing set where one of the swings was missing altogether and another's chain was broken."
+    "Xe leads them to an area of the skatepark that is fenced off with chain link. Beyond, there's a dilapidated playground set, complete with rusty slide and a swing set where one of the swings is missing altogether and another's chain is broken."
     i "And you brought us here because ... ?"
     "Javier is worming xer way through a gap in the fence."
     "Xe turns to look at them."
@@ -679,7 +683,7 @@ label inanna_n_javier_2:
     j "Can you imagine throwing a party in here?"
     show javier happy at farright
     show inanna at midright
-    with MoveTransition(3)
+    with move
     i "Babe this place is grimy (derogatory). Stay away from the slide or you'll get tetanus or some shit."
     j "Oh whatever."
     "Xe laughs."
@@ -691,12 +695,12 @@ label inanna_n_javier_2:
     j "Maybe it can be a fundraiser to turn this place into like, something actually cool."
     show parvez:
         xalign 1.2
-    with move
+    with MoveTransition(3)
     p "Yeah, I don't know what I was planning on but like ..."
     p "I just love the greenery here."
     p "It feels kind of post apocalyptic ...{w} but in a good way?"
     p "Like what if we had a garden here? What if it was just a gay and weird place to be with plants."
-    "Javier waggled xer eyebrows."
+    "Javier waggles xer eyebrows."
     j "Yeah bro we know you love to be with plants."
     show parvez worried with dissolve
     p "That wasn't what I meant!"
@@ -709,6 +713,7 @@ label inanna_n_javier_2:
     i "The judys and their allies are all constantly accusing us of being too sexual in public but like, we don't actually have a place to do that."
     i "Especially a space that is safe and beautiful, right??"
     p "I don't know I mean that sounds kind of--{nw}"
+    play music badvibes
     show judys n kayden at furthestleft
     with moveinleft
     j "Bro who the fuck is that."
@@ -720,9 +725,9 @@ label inanna_n_javier_2:
     show parvez worried
     show javier worried
     with dissolve
-    "The judys hadn't seen them yet. Parvez watched them for a minute."
-    "They were all wearing the same outfit but in different colors, like a cursed magical girl team."
-    "The tallest one, Marianne, was talking to the others, and even though they were far away her voice echoed toward them along the concrete walls."
+    "The judys haven't seen them yet. Parvez watches them for a minute."
+    "They're all wearing the same outfit but in different colors, like a cursed magical girl team."
+    "The tallest one, Marianne, is talking to the others, and even though they are far away her voice echoes toward them along the concrete walls."
     "Marianne" "... certainly a safety hazard. We should let the counselor know immediately."
     "Marianne" "It's on county land as well, so I'm sure he'll be more than willing to donate it to the new police training and sex offender treatment facility."
     "Marianne turns to the new judy, who is dressed in pink."
@@ -767,6 +772,8 @@ label inanna_n_javier_2:
             i "He's right. We had to stand up to them sometime."
             j "But Inanna--{nw}"
             i "It's okay babe, we can do this."
+            hide javier
+            show javier worried at farright
             show judys n chud at farleft
             with move
             "The judys are right in front of them now."
@@ -788,13 +795,15 @@ label inanna_n_javier_2:
                 call battle_2_def from _call_battle_def_2
                 scene cardboard with dissolve
                 $ renpy.music.set_pause(True, channel='music')
-                play sound fightmusic loop
+                play audio battlestart
+                play audio battlestart
                 "Transsexual battle mode activate"
                 call battle_2_presetup from _call_battle_presetup_2
                 call battle_2 from _call_battle_2
             label battle_2_end:
                 stop sound
                 $ renpy.music.set_pause(False, channel='music')
+                play music planty
                 $ battle_2_win = True
                 "You won!!"
                 scene skatepark interior
@@ -886,3 +895,214 @@ label inanna_n_javier_2:
             $ inanna_n_javier_2_complete = True
             scene cardboard with fade
             call screen chapterselect
+
+label inanna_n_javier_3:
+    play music friendcore
+    scene kitchen with wipeleft
+    "Terry comes along to the skatepark the next time Parvez goes."
+    "It seems like after everything that's happened, they won't let Parvez out of their sight."
+    "Parvez can't really blame him."
+    if kayden_2_complete:
+        "Especially after what happened with Kayden and the chuds ..."
+        if chud_1_complete:
+            "... and the at other chud from the app ..."
+    elif chud_1_complete:
+        "Especially after what happened with the chud from the app ..."
+    "Parvez isn't exactly sure why he's still going out of the house."
+    "He's let himself become bedbound for months before over way less."
+    "But he feels invigorated ... like something has been growing inside him."
+    if terry_4_complete:
+        "... and not just his plant dick for the second time ..."
+    "He's been inspired by the experience of actually going out and meeting people,{w} of being part of a community and standing up for himself."
+    if kayden_2_complete or chud_1_complete:
+        "Even if the experience has sometimes been dangerous, and he's been seriously harmed as a result. It still feels worth it."
+    "Parvez realizes this is what really makes him feel like a man, more than any surgery or hormones or supernatural phallus could."
+    "Manhood to him is about being who he is and standing up for those he loves."
+    show terry worried with moveinright
+    t "Ready to go babe?"
+    show terry with dissolve
+    t "You look miles away!"
+    p "Sorry love I was just ..."
+    p "... Thinking about how good things have been lately."
+    show terry worried with dissolve
+    t "Huh?"
+    p "I mean, shit has been weird, and bad stuff has happened too but ..."
+    p "I'm proud of myself, y'know?"
+    show terry with dissolve
+    t "Oh baby ... I'm proud of you too."
+    show terry toppy:
+        yalign 0.0
+        zoom 2.0
+    with dissolve
+    show terry:
+        zoom 1.0
+    with dissolve
+    "Terry leans across the kitchen counter to give Parvez a kiss, before pulling back."
+    t "Now come on! We're going to be late!"
+    "Parvez rolls his eyes."
+    p "God forbid we keep Inanna waiting."
+    scene skatepark ramps
+    show inanna n javier at farright
+    with wiperight
+    show parvez n terry at midleft
+    with moveinleft
+    t "Sorry we're late!"
+    "They're actually five minutes early, but Inanna and Javier have clearly been there for some time already. Javier looks annoyed about it."
+    i "Oh, it's alright honey, it's not a big deal."
+    j "Only Inanna made us come here ridiculously early."
+    "Between Inanna and Terry there is an alarming amount of food. They seem to be kind of competing about it."
+    t "So I brought a chicken salad, and some sandwiches, and cheesecake."
+    j "Nice, we have mochi and inarizushi, and I brought green tea, and sesame cookies."
+    scene skatepark ramps
+    show parvez flip at furthestleft
+    show javier at farleft
+    show inanna at furthestright
+    show terry at farright
+    with blinds
+    "Parvez stands awkwardly to one side with the wagon full of plant starts Terry had given him as his responsibility."
+    "Javier sidles up to him."
+    j "Fae always does this, she thinks she's so humble and selfless but lowkey she loves to stunt on people."
+    p "Bro fuckin tell me about it."
+    j "Damn, you really got a lot of plants though."
+    p "Yeah dude, I'm excited. Do you really think we can make something of this place?"
+    j "Shit, man, with us on your side there's no way we won't succeed!"
+    j "Anyway, Inanna made sure we brought a bunch of compost too, come and see if this is the right kind ... oh, hey!"
+    show parvez happy at farleft
+    show javier at center
+    with move
+    show ahmed at furthestleft
+    with moveinleft
+    p "Oh shit, what's up dude!"
+    p "Javi, this is Ahmed, the mad plant scientist himself!"
+    a "H-hi ..."
+    show javier happy with dissolve
+    j "Hi cutie!"
+    "They all sit down to their massive feast and get through a surprising amount of it--mostly Ahmed and Javier."
+    show skatepark hill
+    show parvez:
+        xalign 1.25
+    show terry at farright
+    with moveinleft
+    show inanna toppy at farleft
+    show ahmed flip at furthestleft
+    with moveinright
+    "Afterwards Inanna starts directing them in planting the garden, with advice from Ahmed and Javier."
+    "Parvez finds that this arrangement means he does most of the digging, alongside Terry."
+    hide javier
+    show javier happy
+    j "Ugh, as if I would ruin my nails digging in the dirt. I'm just here to bring the aesthetic and the hype."
+    show ahmed flip speaking
+    "Meanwhile, Ahmed is busy inspecting each of Terry's starts."
+    a "Agh! This one hasn't had enough light ... just look at it! And this one ... ugh ... too much phosphorus ..."
+    "Despite the high ratio of supervisors to workers, they manage to get a large section of the abandoned playground area planted."
+    "They regroup for more tea and desserts."
+    show ahmed speaking with dissolve
+    t "Well, I'd say that's a good job well done."
+    a "Not yet! This is the most vulnerable point in a transplant's life cycle! Anything could happen now, there could be too much water, or too little, and we haven't even tested the soil for pH so who knows how they'll react to that--{nw}"
+    j "Fuck, look who's here again."
+    show chud flip at furthestleft
+    with moveinleft
+    hide parvez
+    hide terry
+    hide inanna
+    hide javier
+    show parvez n terry at midright
+    show inanna n javier at furthestright
+    show ahmed flip:
+        xalign 1.5
+    with move
+    "Xe raises xer voice to a shout."
+    j "Don't you fucks have anything better to do??"
+    "Chud" "Of course you freaks are here.{w} Don't any of you faggots have jobs?"
+    j "Fuck, I mean, do you?"
+    "The chud calls behind him."
+    "Chud" "Hey boss! The weirdos are here again!"
+    show chud:
+        xalign 0.15
+    show chud2:
+        xalign -0.5
+    show judys n kayden:
+        xalign -0.15
+    with moveinleft
+    "The judys follow him into the fenced off area, along with a second chud."
+    "Marianne" "What do we have here?"
+    "Marianne" "Did the insane asylum let you all out for some enrichment gardening?"
+    p "Hey, fuck you lady."
+    p "This place is ours. We showed you that once and we'll happily show you again."
+    if kayden_2_complete:
+        "Kaye" "I wouldn't be so confident about that, buddy."
+        "Chud" "Yeah, how's your dick growing back bitch?"
+        "Chud 2" "... damn bro, that's kinda gay."
+        "Chud" "What? How? Isn't? It's a girl, right??"
+        "Kaye" "That's definitely gay, man."
+        "Marianne" "God will you children just shut--{w}Ahem."
+    "Marianne" "What I meant to say is. This is city property. Or rather, it was."
+    "She produces a piece of paper from her clipboard."
+    "Marianne" "Counselor Wolf signed it over to us just yesterday."
+    if kayden_2_complete:
+        "She turns to speak to Sarah, as if that's the only person who is actually listening to her--it probably is."
+    "Marianne" "She and I see eye to eye on a number of matters.{w} Particularly about how to deal with wayward souls such as yourselves."
+    t "If there's anyone whose soul is missing it's clearly you."
+    p "Enough of this."
+    menu:
+        "Let's fight them.":
+            pass
+    a "W-wait! We can't do that, are you out of your--{nw}"
+    i "There's no choice. There never is."
+    a "I can't. I don't know how."
+    t "It's okay, we got this. You can join us next time."
+label inanna_n_javier_5_battle:
+    call battle_5_def from _call_battle_def_5
+    scene cardboard with dissolve
+    $ renpy.music.set_pause(True, channel='music')
+    play audio battlestart
+    play sound fightmusic loop
+    "Transsexual battle mode activate"
+    call battle_5_presetup from _call_battle_presetup_5
+    call battle_5 from _call_battle_5
+label battle_5_end:
+    stop sound
+    $ renpy.music.set_pause(False, channel='music')
+    play music planty
+    $ battle_2_win = True
+    "You won!!"
+    scene skatepark hill
+    show chud:
+        xalign 0.15
+    show chud2:
+        xalign -0.5
+    show judys n kayden:
+        xalign -0.15
+    show parvez n terry at midright
+    show inanna n javier at furthestright
+    show ahmed flip:
+        xalign 1.5
+    i "Now get the fuck out of here!"
+    i "And know once and for all that you aren't welcome."
+    "Marianne" "We'll be back, just you freaks wait."
+    "Marianne" "This land is legally ours now."
+    p "Yeah, whatever you say old hag."
+    hide judys
+    hide chud
+    hide chud2
+    with moveoutleft
+    "The judys and their chud friends limp out."
+    "Ahmed turns to them, incredulous."
+    show parvez n terry at furthestleft
+    show inanna n javier at midright
+    show ahmed flip speaking
+    with move
+    a "I can't believe you guys did that! That was amazing!"
+    j "We've done it before."
+    i "Honestly ... we didn't have the courage to stand up to a chud before just the two of us."
+    i "But last time when we were here with Parvez we were able to do it, and it showed us that we could."
+    i "Now they're not so scary any more."
+    t "From now on, we know that this is our space and we can defend it."
+    j "They'll definitely come back."
+    p "But no matter what, we know that we'll fight to keep a space for ourselves."
+    p "... Together."
+    j "Now let's eat some more of those desserts you mom friend gays brought."
+    p "I call dibs on the last mochi!!"
+    $ inanna_n_javier_3_complete = True
+    scene plant midway with Fade(0.75,1.0,0.5)
+    jump endcredits

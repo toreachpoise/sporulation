@@ -1,170 +1,100 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 301, in script call
-    call screen chapterselect
-  File "game/plant encounters.rpy", line 159, in script call
-    call screen chapterselect
-  File "game/terry scenes.rpy", line 72, in script call
-    call screen chapterselect
-  File "game/terry scenes.rpy", line 218, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 75, in script call
-    call screen chapterselect
-  File "game/inanna scenes.rpy", line 199, in script call
-    call battle from _call_battle
-  File "game/inanna1 battle.rpy", line 150, in script call
-    call player_turn from _call_player_turn
-  File "game/inanna scenes.rpy", line 377, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 556, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 101, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 794, in script call
-    call battle_2 from _call_battle_2
-  File "game/inanna n javier 2 battle.rpy", line 164, in script call
-    call player_turn_2 from _call_player_turn_2
-  File "game/inanna n javier scenes.rpy", line 859, in script call
-    call screen chapterselect
-  File "game/chud scenes.rpy", line 158, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 140, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 245, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 158, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 140, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 245, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 199, in script call
-    call screen chapterselect
-  File "game/kayden scenes.rpy", line 432, in script call
-    call battle_4 from _call_battle_4
-  File "game/kayden 2 battle.rpy", line 132, in script call
-    call monster_turn_4 from _call_monster_turn_4
-  File "game/kayden 2 battle.rpy", line 255, in script call
-    call player_dead_check_4 from _call_player_dead_check_11
-  File "game/kayden scenes.rpy", line 432, in script call
-    call battle_4 from _call_battle_4
-  File "game/kayden 2 battle.rpy", line 132, in script call
-    call monster_turn_4 from _call_monster_turn_4
-  File "game/kayden 2 battle.rpy", line 255, in script call
-    call player_dead_check_4 from _call_player_dead_check_11
-  File "game/kayden scenes.rpy", line 432, in script call
-    call battle_4 from _call_battle_4
-  File "game/kayden 2 battle.rpy", line 132, in script call
-    call monster_turn_4 from _call_monster_turn_4
-  File "game/kayden 2 battle.rpy", line 279, in script call
-    call player_dead_check_4 from _call_player_dead_check_13
-  File "game/kayden scenes.rpy", line 585, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 58, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 93, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 119, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 93, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 80, in script call
-    call screen chapterselect
-  File "game/terry scenes.rpy", line 670, in script call
-    call screen chapterselect
-  File "game/inanna scenes.rpy", line 815, in script
-    $ spanks_left = spanks_set - spank_count
-  File "game/inanna scenes.rpy", line 815, in <module>
-    $ spanks_left = spanks_set - spank_count
-NameError: name 'spanks_set' is not defined
+While processing text tag {a href="https://toreachpoise.itch.io"} in 'A weird hentai game about trans guys getting fucked by plants.\n\nMostly made by Aaron El Sabrout ({a href="https://toreachpoise.itch.io"}https://toreachpoise.itch.io{/a}).\n\nMusic by Cartoon Wetwork (https://on.soundcloud.com/cqTV7) and Nephenee Rose (https://x.com/nepheneer?lang=en).\n\nBattle sprites made by Galateas Grievance (https://www.tumblr.com/galateasgrievance).\n\nAdditional art for Solo 2 by Breezy (https://ilovemyzombiegf.itch.io/).\n\nBattle engine based on "RPG Battle Engine" posted to Lemmasoft forums by Angela Rose/demonangelz (https://lemmasoft.renai.us/forums/viewtopic.php?f=51&t=30095#p354087)\n\nSpiral animation stolen from @hypno_bot on mastodon (https://stefans-creative-bots.glitch.me/)\n\n\n'.:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+Exception: Unknown text tag 'a href="https://toreachpoise.itch.io"'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 301, in script call
-    call screen chapterselect
-  File "game/plant encounters.rpy", line 159, in script call
-    call screen chapterselect
-  File "game/terry scenes.rpy", line 72, in script call
-    call screen chapterselect
-  File "game/terry scenes.rpy", line 218, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 75, in script call
-    call screen chapterselect
-  File "game/inanna scenes.rpy", line 199, in script call
-    call battle from _call_battle
-  File "game/inanna1 battle.rpy", line 150, in script call
-    call player_turn from _call_player_turn
-  File "game/inanna scenes.rpy", line 377, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 556, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 101, in script call
-    call screen chapterselect
-  File "game/inanna n javier scenes.rpy", line 794, in script call
-    call battle_2 from _call_battle_2
-  File "game/inanna n javier 2 battle.rpy", line 164, in script call
-    call player_turn_2 from _call_player_turn_2
-  File "game/inanna n javier scenes.rpy", line 859, in script call
-    call screen chapterselect
-  File "game/chud scenes.rpy", line 158, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 140, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 245, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 158, in script call
-    call battle_3 from _call_battle_3
-  File "game/chud 1 battle.rpy", line 140, in script call
-    call monster_turn_3 from _call_monster_turn_3
-  File "game/chud 1 battle.rpy", line 245, in script call
-    call player_dead_check_3 from _call_player_dead_check_9
-  File "game/chud scenes.rpy", line 199, in script call
-    call screen chapterselect
-  File "game/kayden scenes.rpy", line 432, in script call
-    call battle_4 from _call_battle_4
-  File "game/kayden 2 battle.rpy", line 132, in script call
-    call monster_turn_4 from _call_monster_turn_4
-  File "game/kayden 2 battle.rpy", line 255, in script call
-    call player_dead_check_4 from _call_player_dead_check_11
-  File "game/kayden scenes.rpy", line 432, in script call
-    call battle_4 from _call_battle_4
-  File "game/kayden 2 battle.rpy", line 132, in script call
-    call monster_turn_4 from _call_monster_turn_4
-  File "game/kayden 2 battle.rpy", line 255, in script call
-    call player_dead_check_4 from _call_player_dead_check_11
-  File "game/kayden scenes.rpy", line 432, in script call
-    call battle_4 from _call_battle_4
-  File "game/kayden 2 battle.rpy", line 132, in script call
-    call monster_turn_4 from _call_monster_turn_4
-  File "game/kayden 2 battle.rpy", line 279, in script call
-    call player_dead_check_4 from _call_player_dead_check_13
-  File "game/kayden scenes.rpy", line 585, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 58, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 93, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 119, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 93, in script call
-    call screen chapterselect
-  File "game/chapterselect.rpy", line 80, in script call
-    call screen chapterselect
-  File "game/terry scenes.rpy", line 670, in script call
-    call screen chapterselect
-  File "game/inanna scenes.rpy", line 815, in script
-    $ spanks_left = spanks_set - spank_count
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/inanna scenes.rpy", line 815, in <module>
-    $ spanks_left = spanks_set - spank_count
-NameError: name 'spanks_set' is not defined
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2819, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 1353, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\transition.py", line 194, in render
+    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\transition.py", line 384, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1361, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1076, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1361, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1878, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1875, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\viewport.py", line 285, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1121, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1121, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\text\text.py", line 2276, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\text\text.py", line 640, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Users\Owner\Desktop\renpy-8.2.3-sdk\renpy\text\text.py", line 1394, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag 'a href="https://toreachpoise.itch.io"'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
-sporulation 0.8.1
-Sun Aug  4 11:48:12 2024
+sporulation 0.8.7
+Wed Aug  7 01:50:32 2024

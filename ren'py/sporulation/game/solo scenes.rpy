@@ -1,7 +1,7 @@
 # would like parvez sleepy expression
 
 label solo_1:
-    play music friendcore if_changed
+    play music friendcore if_changed volume 1.5
     #(unlocked by terry 1) ((unlike other ones this one is not self-removing if you don't fuck the stroker and can be tried again))
     if strokerattempt == 2:
         jump try_2
@@ -14,36 +14,36 @@ label solo_1:
     "It's still kind of weird to think about."
     "Starting testosterone last year had made him really horny,"
     "but it was nothing like the experience of having a hard, throbbing dick wake him up every day."
-    "He could feel his pulse in it, beating in time with his headache. He wet his dry lips."
-    "He was tired, he didn't even want to masturbate. It was fun but it felt like all he'd been doing lately."
-    "He went to the bathroom and tried to piss."
+    "He can feel his pulse in it, beating in time with his headache. He wets his dry lips."
+    "He's tired, he doesn't even want to masturbate. It's fun but it felt like all he'd been doing lately."
+    "He goes to the bathroom and tries to piss."
     menu:
         "of course, this makes you wonder how peeing even works with this dick"
         "I do want to know":
             $ wondered = True
-            "Parvez stood in front of the toilet and tried to pee, angling his dick down with his hand."
+            "Parvez stands in front of the toilet and tries to pee, angling his dick down with his hand."
             "He hasn't quite grasped the concept that being hard makes it difficult to urinate."
             "In fairness, nothing about his dick situation has made sense or been easy to grasp."
-            "He was usually able to pee out of it, which was strange, because he was only able to cum through it once a month."
-            "When he had taken a look at himself down there with a mirror, he had figured out that the plant was indeed growing out of his vagina, but there was a secondary tube connecting it to his urethra."
-            "He was grateful for this, because the sensation of having to sit down and pee on his own dick would have been, just, so gross."
+            "He is usually able to pee out of it, which is strange, because he's only able to cum through it once a month."
+            "When he had taken a look at himself down there with a mirror, he figured out that the plant is indeed growing out of his vagina, but there's a secondary tube connecting it to his urethra."
+            "He's grateful for this, because the sensation of having to sit down and pee on his own dick would have been, just, so gross."
             "Imagining it causes him to soften enough to be able to piss."
             "Even then, it's pretty gross to think of the plant, like, siphoning his piss so that he can let it out."
-            "Was there some kind of capillary action that drew it up through his cock? Is that why it was hard to pee while he was hard? Or was it just as hard for cis guys?"
+            "Is there some kind of capillary action that draws it up through his cock? Is that why it's hard to pee while he's hard? Or is it just as hard for cis guys?"
         "Actually, I'm good":
             pass
     "Parvez finds himself staring at a sex toy Terry had left in the bathtub."
     "It's a stroker, a clear fucktube with various nubby and ripply textures on the inside."
-    "Parvez had bought it for Terry a few years before. It seemed like the toy of theirs that got the most use ..."
-    "... alongside a butt plug that he had bought them as a joke that looked like a gnome."
-    "Terry always took care to clean the gnome plug and replace it in the sex toy drawer right away, but it was always clean of dust, unlike some of the other toys in there."
-    "On the other hand the stroker was frequently hanging out in the tub, recently used and ready to be used again."
-    "Parvez finished peeing and walked over to poke it."
+    "Parvez had bought it for Terry a few years before. It seems like the toy of theirs that got the most use ..."
+    "... alongside a butt plug that he had bought them as a joke that looks like a gnome."
+    "Terry always takes care to clean the gnome plug and replace it in the sex toy drawer right away, but it's always clean of dust, unlike some of the other toys in there."
+    "On the other hand the stroker is frequently hanging out in the tub, recently used and ready to be used again."
+    "Parvez finishes peeing and walks over to poke it."
     "It was squishy, soft."
-    "He put his finger to the entrance, and then pushed inside."
-    "The nubs moved around his finger, almost drawing him in."
-    "It made him wonder what it would feel like to have his dick in there."
-    "Was it weird to use Terry's toy?"
+    "He puts his finger to the entrance, and then pushes inside."
+    "The nubs move around his finger, almost drawing him in."
+    "It makes him wonder what it would feel like to have his dick in there."
+    "Is it weird to use Terry's toy?"
     p "I mean, I bought it ..."
     p "... and I  have used it on Terry before ..."
     p "... but it is their toy ........"
@@ -51,12 +51,12 @@ label solo_1:
         "I can't use my partner's toy":
             "It just wouldn't be right. It's theirs."
             "It would be too embarrassing for Parvez to tell them that he had used it."
-            "And besides, he had stuff to do."
-            "He needed to use this time to work on his projects instead of sitting around and jerking off all day."
-            "America's first great transsexual immigrant novelist wasn't going to get to the best seller lists by touching himself, after all."
+            "And besides, he has stuff to do."
+            "He needs to use this time to work on his projects instead of sitting around and jerking off all day."
+            "America's first great transsexual immigrant novelist isn't going to get to the best seller lists by touching himself, after all."
             if inanna_sent_me:
-                "And besides, he was still playing that game with Inanna ..."
-                "She would be proud of him for having self control ..."
+                "And besides, he he's still playing that game with Inanna ..."
+                "She will be proud of him for having self control ..."
                 $ inanna_sent_me = False
                 jump obedience_check_3
             else:
@@ -74,11 +74,11 @@ label try_2:
     "He's so wound up. Obsessed, even, by this toy."
     "He wants to know what it feels like, the insides of it squishing around him."
     "And he wants to see it. The way it looks smooshing around his cock, it pushing in there."
-    "Disgusting as it was to admit it, that was always something he kind of enjoyed in hentai. The weird x-ray cutaways they would show."
-    "Mostly he just liked seeing dicks, even censored ones."
-    "And now he couldn't stop thinking about seeing his dick squishing around that toy, like a weird jelly slug."
-    "He resolved to ask Terry about it the next day."
-    "Then he left the bed to jerk off on the couch, before returning to lay next to a soundly sleeping Terry."
+    "Disgusting as it is to admit it, that's always something he kind of enjoys in hentai. The weird x-ray cutaways they would show."
+    "Mostly he just likes seeing dicks, even censored ones."
+    "And now he can't stop thinking about seeing his dick squishing around that toy, like a weird jelly slug."
+    "He resolves to ask Terry about it the next day."
+    "Then he leaves the bed to jerk off on the couch, before returning to lay next to a soundly sleeping Terry."
     scene couch
     show parvez n terry
     with fade
@@ -92,9 +92,9 @@ label try_2:
     t "Parvez. Babe. Take it easy."
     "Their expression softens."
     t "You can ask me anything, ridiculous or otherwise."
-    "Terry was too sweet to Parvez, it kind of made him annoyed sometimes. He feels like he doesn't deserve it."
+    "Terry is too sweet to Parvez, it kind of made him annoyed sometimes. He feels like he doesn't deserve it."
     p "Uh, I just, uh."
-    "Parvez pauses. What's the best way to say this? After everything why was this what he was so embarrassed about??"
+    "Parvez pauses. What's the best way to say this? After everything why was this what he is so embarrassed about??"
     "Terry is still staring at him, waiting."
     p "Can I, uh, ... I wanna use your fleshlight. Can I use your fleshlight? Um. Please?"
     "Terry starts laughing and keeps laughing for a long time."
@@ -103,6 +103,7 @@ label try_2:
     t "Of course you can kiddo, you don't even have to ask. What's mine is yours."
     "Parvez scowls and tries to bat Terry's hand away but Terry grabs him and kisses him, which leads to a ticklefight."
 label use_stroker:
+    $ strokerused = True
     scene bed
     show parvez toppy at center:
         zoom 1.5
@@ -182,19 +183,19 @@ label solo_2:
     "Our human man, Tiresias, upon being abducted by the Limonians and experiencing this story broadcast directly into his mind, breaks down in tears."
     "The depth of the Limonians' yearning for connection to other species, and to raise young of their own, stuns him."
     "In the end before they even directly ask he volunteers to carry a baby for them."
-    # cg 6
+    scene cg S2A6 with dissolve
     "The aliens share their genetic material through their long fingers. Over a dozen of them take turns penetrating Tiresias, filling him with their seed."
     "When they are inside him the neural connection is even deeper, he can feel them feeling him, their wonder at his warm, moving body surrounding them."
     "The feeling of their fingers in his cunt, the feeling of his cunt around their fingers, the awe of their alien minds touching a being so earthly and pulsing, alive, overwhelmed his senses."
     "The aliens fucked him for what felt like days, until they were sure that he was successfully impregnated."
-    # cg 7
     "Then they left him alone in a room on their ship. He had everything he could want, replicated food, human television from every era, before and after his time, and yet he was alone."
     "The Limonians had injected him with hormones that would speed up the gestational process. After only a week he was showing the pregnancy, but he was desperately lonely."
     "Even though he couldn't see them alone in his room, he reached out through the neural connection to see if he could speak to someone."
+    scene cg S2A7 with dissolve
     "A voice returned to him, undescipherable."
     "Tiresias reached out again."
-    scene cg S2A8 with dissolve
     "A young alien came to see him, slimmer and smaller than the rest. Tiresias can't tell its gender, when he asks the Limonians don't understand what he's asking about. They all appear the same."
+    scene cg S2A8 with dissolve
     "He and the new alien become companions over the weeks when Tiresias' belly swells."
     "They become lovers, of a kind, touching each other's bodies and exploring the link that grows between them through their neural connection."
     "Tiresias has never experienced a being that can feel him, whose connection with him is so seamless and intimate, and he knows he will never experience it again."
@@ -217,10 +218,16 @@ label solo_2:
     "It twines its leaves around his dick, poking and exploring it, as if the plant knows that they are the same."
     "His dick, between its monthly emissions, is solid and feels swollen."
     "The plant twining around it is both of it and apart from it. It gets frustrated, jabbing at his cock like it's waiting for it to react."
-    scene cg S2B with dissolve
     "Then the plant seemingly loses interest and moves toward his ass."
+    scene cg S2B with dissolve
+    pause
+    "It plunges in, filling him over and over again."
+    "It probes deep inside him. He can feel it turning a corner at some point, wriggling far into his guts."
+    "He presses his hand against his lower belly, feeling it pulsing around in his stomach."
+    "It feels like it's looking for something inside him."
+    "He rides the waves of pleasure as it searches his intestines."
     "When it's done fucking him, the plant seemingly goes dormant."
-    "Parvez lays on his bedroom floor with a sense of emptiness where it had been filling him."
+    "Parvez lays on his bedroom floor with a sense of emptiness where it had been filling him, all the way up inside."
     "He sends the picture that he snapped while it was inside him to Ahmed."
     pdm "See? I told you I would think of you ;)"
     $ solo_2_complete = True

@@ -122,6 +122,94 @@ image judys n chud = "/character sprites/judys n chud.png"
 
 image bs = im.FactorScale("battle/battlescene.png", 1.5)
 
+## battle animations
+image inanna_sprite:
+    "battle/ina_0000.png"
+    pause 0.2
+    "battle/ina_0001.png"
+    pause 0.2
+    "battle/ina_0002.png"
+    pause 0.2
+    "battle/ina_0003.png"
+    pause 0.2
+    repeat
+image inanna_sprite_idle:
+    "battle/ina_0000_idle.png"
+    pause 0.2
+    "battle/ina_0001_idle.png"
+    pause 0.2
+    "battle/ina_0002_idle.png"
+    pause 0.2
+    "battle/ina_0003_idle.png"
+    pause 0.2
+    repeat
+image parvez_sprite:
+    "battle/parv_0000.png"
+    pause 0.3
+    "battle/parv_0001.png"
+    pause 0.3
+    repeat
+image parvez_sprite_idle:
+    "battle/parv_0000_idle.png"
+    pause 0.3
+    "battle/parv_0001_idle.png"
+    pause 0.3
+    repeat
+image chud_sprite:
+    "battle/chud_idle_0000.png"
+    pause 0.5
+    "battle/chud_idle_0001.png"
+    pause 0.5
+    repeat
+image chud2_sprite:
+    "battle/chud2_idle_0000.png"
+    pause 0.5
+    "battle/chud2_idle_0001.png"
+    pause 0.5
+    repeat
+image kaye_sprite:
+    "battle/dekayden_idle_0000.png"
+    pause 0.5
+    "battle/dekayden_idle_0001.png"
+    pause 0.5
+    repeat
+image marianne_sprite:
+    "battle/marianne_idle_0000.png"
+    pause 0.5
+    "battle/marianne_idle_0001.png"
+    pause 0.5
+    repeat
+image sarah_sprite:
+    "battle/sarah_idle_0000.png"
+    pause 0.5
+    "battle/sarah_idle_0001.png"
+    pause 0.5
+    repeat
+image javier_sprite:
+    "/battle/javier_0000.png"
+    pause 0.33
+    "/battle/javier_0001.png"
+    pause 0.33
+    repeat
+image javier_sprite_idle:
+    "/battle/javier_idle_0000.png"
+    pause 0.33
+    "/battle/javier_idle_0001.png"
+    pause 0.33
+    repeat
+image terry_sprite:
+    "/battle/terry_0000.png"
+    pause 0.26
+    "/battle/terry_0001.png"
+    pause 0.26
+    repeat
+image terry_sprite_idle:
+    "/battle/terry_idle_0000.png"
+    pause 0.26
+    "/battle/terry_idle_0001.png"
+    pause 0.26
+    repeat
+
 ## CGs
 # these will be artworks depicting certain scenes, we'll see how many of them get made lol
 
@@ -161,10 +249,9 @@ image cg S2A2 = "/cgs/S2A/2 abduction.png"
 image cg S2A3 = "/cgs/S2A/3 aliens.png"
 image cg S2A4 = "/cgs/S2A/4 space.png"
 image cg S2A5 = "/cgs/S2A/5 cry.png"
-# 6 forthcoming tentacles
-# 7 forthcoming preg
-image cg S2A8 = "/cgs/S2A/8 alien.png"
-# 9 ???
+image cg S2A6 = "/cgs/S2A/6 tentacles.png"
+image cg S2A7 = "/cgs/S2A/7 alien.png"
+image cg S2A8 = "/cgs/S2A/8 preg.png"
 image cg S2B = "/cgs/S2B.png"
 image cg T1A = "/cgs/T1A.png"
 image cg T1B = "/cgs/T1B.png"
@@ -223,10 +310,69 @@ define audio.maintheme = "/sounds/game theme draft.mp3" ## close, atmospheric, r
 define audio.forest = "/sounds/game draft again.mp3" ##creepy, eerie, kinda sanctified vibes, also rain/wet noises lol
 define audio.friendcore = "/sounds/Friendcore.wav" # fun n cute
 define audio.fightmusic = "/sounds/Sporulation Fight.wav" # action babeyy
-define audio.planty = "/sounds/planty ambient.mp3" ## upbeat, creepy but in a fun way
+define audio.planty = "/sounds/planty ambient.mp3" # upbeat, creepy but in a fun way
+define audio.badvibes = "/sounds/sporulation draft.mp3" # grimy, crackly, pushy beat
+define audio.cutesad = "/sounds/cute and sad.wav"
+define audio.floaty = "/sounds/game draft drumless.mp3" # string instruments, breathy, floaty
+
+#sfx
+define audio.fanfare = "/sounds/Fanfare2.mp3"
+define audio.battlestart = "/sounds/Start_Press.wav"
+define audio.defeated = "/sounds/Menu_Error_1.wav"
+define audio.heal = "/sounds/heal.wav"
+define audio.beam = "/sounds/beam.wav"
+define audio.dazzle = "/sounds/dazzle.wav"
+define audio.hit = "/sounds/Hit.wav"
+define audio.heal = "/sounds/heal.wav"
 
 
+## setting up variables
 
+default strokerattempt = 1
+default strokerused = False
+default met_kayden = False
+default tried_to_leave = False
+default plantasy = False
+default battle_1_win = False
+default battle_2_ran = False
+default battle_2_win = False
+default made_ahmed_smile = False
+default bullied_ahmed = False
+default didnt_fuck_kayden = False
+default kayden_2_badend = False
+default inanna_sent_me = False
+default javier_tells = False
+default had_threeway = False
+default panicked = False
+
+default plant_encounter_1_complete = False
+default plant_encounter_2_complete = False
+# plant encounter 3--extra skatepark scene
+
+default terry_1_complete = False
+default terry_2_complete = False
+default terry_3_complete = False
+default terry_4_complete = False
+
+default ahmed_1_complete = False
+default ahmed_2_complete = False
+
+default kayden_1_complete = False
+default kayden_2_complete = False
+
+default solo_1_complete = False
+default solo_2_complete = False
+
+default inanna_1_complete = False
+default inanna_2_complete = False
+
+default inanna_n_javier_1_complete = False
+default inanna_n_javier_2_complete = False
+default inanna_n_javier_3_complete = False
+
+default javier_1_complete = False
+
+default chud_1_complete = False
 
 ## LOADING/SPLASHSCREEN
 label splashscreen:
@@ -250,53 +396,29 @@ label splashscreen:
     return
 
 
-## GAME START / NAVIGATION MENU
+## GAME START
 
 label start:
-    $ strokerattempt = 1
-    $ strokerused = False
-    $ met_kayden = False
-    $ tried_to_leave = False
-    $ plantasy = False
-    $ battle_1_win = False
-    $ battle_2_ran = False
-    $ battle_2_win = False
-    $ made_ahmed_smile = False
-    $ bullied_ahmed = False
-    $ didnt_fuck_kayden = False
-    $ kayden_2_badend = False
-    $ inanna_sent_me = False
-    $ javier_tells = False
+    "This story contains numerous depictions of sex, kink, and sexual violence, as well as transphobia. It's recommended for adult audiences."
+    menu:
+        "This story contains numerous depictions of sex, kink, and sexual violence, as well as transphobia. It's recommended for adult audiences.{fast}.. Continue?"
+        "yes":
+            call screen chapterselect
+        "no":
+            $ renpy.quit()
 
-    $ plant_encounter_1_complete = False
-    $ plant_encounter_2_complete = False
-    # plant encounter 3--extra skatepark scene
-
-    $ terry_1_complete = False
-    $ terry_2_complete = False
-    $ terry_3_complete = False
-    $ terry_4_complete = False
-
-    $ ahmed_1_complete = False
-    $ ahmed_2_complete = False
-
-    $ kayden_1_complete = False
-    $ kayden_2_complete = False
-
-    $ solo_1_complete = False
-    $ solo_2_complete = False
-
-    $ inanna_1_complete = False
-    $ inanna_2_complete = False
-
-    $ inanna_n_javier_1_complete = False
-    $ inanna_n_javier_2_complete = False
-    # inanna n javier 3
-
-    $ javier_1_complete = False
-
-    $ chud_1_complete = False
-    # chud 2
-
-    call screen chapterselect
     return
+
+label endcredits:
+    play music maintheme
+    "Thank you for playing Sporulation!"
+    "We hope you enjoyed it half as much as we enjoyed making it."
+    "Sporulation was mostly made by Aaron El Sabrout. The music is by Nephenee Rose and Cartoon Wetwork, with SFX by Cartoon Wetwork. Battle sprite animations by Galateas Grievance. Solo 2 illustrations by Breezy."
+    "Additional credit information and links can be found in the about section."
+    menu:
+        "continue game":
+            call screen chapterselect
+        "start over":
+            $ renpy.full_restart(transition=fade)
+        "save and quit":
+            $ renpy.quit(save=True)

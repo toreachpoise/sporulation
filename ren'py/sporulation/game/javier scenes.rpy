@@ -1,5 +1,5 @@
 label javier_1:
-    play music friendcore if_changed
+    play music friendcore if_changed volume 1.5
     scene couch
     show parvez happy at midleft
     with fade
@@ -57,7 +57,7 @@ label javier_1:
     p "And the future?"
     j "The page of wands. You're like a knight for passion and energy and creativity!!"
     "Xe giggles and it makes Parvez laugh too."
-    "Nothing xe said really made sense to him, probably because of all the weed."
+    "Nothing xe said really makes sense to him, probably because of all the weed."
     show javier happy at furthestright
     with move
     "Javier suddenly gets up from the bed."
@@ -99,7 +99,7 @@ label javier_1:
     "Xe keeps stroking inside xemself, like xer coaxing something out."
     j "There they are!"
     "Sure enough, xer cock emerges slowly from inside xer pussy, first little, then getting bigger."
-    scene cg J1B
+    scene cg J1B with pushright
     pause
     "Javier's cock is thinner than Parvez's, long and bright green and a little pointy."
     "Xe grins at him brightly."

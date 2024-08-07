@@ -73,10 +73,6 @@ label battle_2_presetup:
     $ player2 = "Inanna"
     $ player3 = "Javier"
     #$ player4 = "Terry"
-    $ player1_image_selected = "battle/player1_selected.png" #the images
-    $ player1_image_default = "battle/player1_default.png"
-    $ player2_image_selected = "battle/player2_selected.png" #the images
-    $ player2_image_default = "battle/player2_default.png"
     $ player3_image_selected = "battle/player3_selected.png" #the images
     $ player3_image_default = "battle/player3_default.png"
     #$ player4_image_selected = "battle/player4_selected.png" #the images
@@ -108,10 +104,7 @@ label battle_2_presetup:
     $ sarah = "Sarah"
     $ chud = "Chud"
     $ kaye = "Kaye" #if you want only two monsters on the field, replace this with $ monster 3 = "none" and make $ chud_dead = True (see below)
-    $ marianne_image = "battle/sheep1.png"
-    $ sarah_image = "battle/sheep2.png"
-    $ kaye_image = "battle/sheep3.png"
-    $ chud_image = "battle/chest1.png"
+
     $ marianne_hp_max = 100
     $ sarah_hp_max = 100
     $ kaye_hp_max = 100
@@ -121,11 +114,11 @@ label battle_2_presetup:
     $ kaye_hp = kaye_hp_max
     $ chud_hp = chud_hp_max
     $ marianne_attack_min = 10
-    $ marianne_attack_max = 50
+    $ marianne_attack_max = 75
     $ sarah_attack_min = 15
-    $ sarah_attack_max = 25
+    $ sarah_attack_max = 45
     $ kaye_attack_min = 5
-    $ kaye_attack_max = 20
+    $ kaye_attack_max = 50
     $ chud_attack_min = 20
     $ chud_attack_max = 75
     # the number of monsters, if you use less monster then you would need to change this number too
@@ -160,12 +153,8 @@ label battle_2: # the battle screen uses this general set up
     with blinds
     jump battling_2
 label battling_2:
-    #queue audio fightmusic
     call player_turn_2 from _call_player_turn_2
     $ turn = 0 #this is so that player 1 is not 'selected', that wouldn't make sense when it's not their turn
-#    jump monster_dead_check
-#    if check_win == True:
-#        jump battle_win
     call monster_turn_2 from _call_monster_turn_2
     $ m_turn = 1
     $ turn = 1
@@ -176,6 +165,8 @@ label battling_2:
     jump battling_2
     
 label battle_2_win: #the aftermath message
+    stop sound
+    play audio fanfare
     "You've won the battle!"
     hide screen battle_2_overlay_players
     hide screen battle_2_overlay_monsters
@@ -223,7 +214,7 @@ label player_dealt_damage_2:
             $ damage = -1
             $ player1_defend = True
             if player1_mp < 95:
-                $ player1_mp += 5
+                $ player1_mp += 25
         
     elif player_turn == player2:
         if p_action == "attack":
@@ -236,7 +227,7 @@ label player_dealt_damage_2:
             $ damage = -1
             $ player2_defend = True
             if player2_mp < 95:
-                $ player2_mp += 5
+                $ player2_mp += 25
     elif player_turn == player3:
         if p_action == "attack":
             $ damage = player3_attack
@@ -248,11 +239,10 @@ label player_dealt_damage_2:
             $ damage = -1
             $ player3_defend = True
             if player3_mp < 95:
-                $ player3_mp += 5
+                $ player3_mp += 25
 #    elif player_turn == player4:
 #        if p_action == "attack":
 #            $ damage = player4_attack
-            #condition lol
 #            $ player4_mp += 10
 #        elif p_action == "skills":
 #            call player4_skills
@@ -260,7 +250,7 @@ label player_dealt_damage_2:
 #            $ damage = -1
 #            $ player4_defend = True
             # condition lol
-#            $ player4_mp += 5
+#            $ player4_mp += 25
     if damage < 0:
         return
     else:
@@ -269,6 +259,7 @@ label player_dealt_damage_2:
         if target == "marianne":
             if stun_dmg:
                 $ marianne_skipturn = True
+                $ marianne_hp = marianne_hp - damage
                 "[target] was stunned by Inanna's studied materialist application of theory and may not attack!"
                 $ stun_dmg = False
             else:
@@ -276,6 +267,7 @@ label player_dealt_damage_2:
         elif target == "sarah":
             if stun_dmg:
                 $ sarah_skipturn = True
+                $ sarah_hp = sarah_hp - damage
                 "[target] was stunned by Inanna's studied materialist application of theory and may not attack!"
                 $ stun_dmg = False
             else:
@@ -283,6 +275,7 @@ label player_dealt_damage_2:
         elif target == "kaye":
             if stun_dmg:
                 $ kaye_skipturn = True
+                $ kaye_hp = kaye_hp - damage
                 "[target] was stunned by Inanna's studied materialist application of theory and may not attack!"
                 $ stun_dmg = False
             else:
@@ -290,6 +283,7 @@ label player_dealt_damage_2:
         elif target == "chud":
             if stun_dmg:
                 $ chud_skipturn = True
+                $ chud_hp = chud_hp - damage
                 $ stun_dmg = False
                 "[target] was stunned by Inanna's studied materialist application of theory and may not attack!"
             else:
@@ -337,7 +331,7 @@ label player2_skills_2:
     call screen inanna_skills
     $ p_skill = _return
     if p_skill == "Rigorous Discourse":
-        $ damage = player2_attack * 1.5
+        $ damage = player2_attack * 0.75
         $ player2_mp -= 33
         $ stun_dmg = True
     elif p_skill == "Double Mommy Smack":
@@ -527,6 +521,7 @@ label monster_dead_check_2:
 label player_dead_check_2:
     if player1_hp <= 0 and player2_hp <= 0 and player3_hp <= 0: # or player3_hp <= 0 or player4_hp <= 0:
         stop sound
+        play audio defeated
         $ renpy.music.set_pause(False, channel='music')
         "You got bashed!"
         "The crew were barely able to escape to safety."
@@ -539,71 +534,71 @@ screen battle_2_overlay_players:
     add "battle/battlebox1.png" xalign .75 yalign .95
     #player 1 is assume to always exist
     if turn == 1:
-        add player1_image_selected xalign 0.25 yalign .93   # player icon in hp area
-        add player1_image_selected xalign 0.25 yalign 0.25       #player chara above 
+        add "parvez_icon" xalign 0.25 yalign .94   # player icon in hp area
+        add "parvez_sprite" xalign 0.25 yalign 0.25       #player chara above 
     else:
-        add player1_image_default xalign 0.25 yalign .93
-        add player1_image_default xalign 0.25 yalign 0.25
+        add "parvez_icon_idle" xalign 0.25 yalign .94
+        add "parvez_sprite_idle" xalign 0.25 yalign 0.25
     bar:
         xalign .25
-        yalign .84
+        yalign .90
         style "bar_hp"
         value player1_hp xmaximum 181
         range player1_hp_max
     bar:
         xalign .25
-        yalign .88
+        yalign .94
         style "bar_mp"
         value player1_mp xmaximum 181
         range player1_mp_max
-    text"[player1_hp]/[player1_hp_max]" xalign 0.25 yalign 0.844
-    text"[player1_mp]/[player1_mp_max]" xalign 0.25 yalign 0.884
+    text"[player1_hp]/[player1_hp_max]" xalign 0.25 yalign 0.904
+    text"[player1_mp]/[player1_mp_max]" xalign 0.25 yalign 0.944
     
     if player2 != "none":
         
         if turn == 2:
-            add player2_image_selected xalign 0.36 yalign .93     # player icon in hp area
-            add player2_image_selected xalign 0.25 yalign 0.66     # player chara above   
+            add "inanna_icon" xalign 0.36 yalign .94     # player icon in hp area
+            add "inanna_sprite" xalign 0.25 yalign 0.66     # player chara above   
         else:
-            add player2_image_default xalign 0.36 yalign .93
-            add player2_image_default xalign 0.25 yalign 0.66
+            add "inanna_icon_idle" xalign 0.36 yalign .94
+            add "inanna_sprite_idle" xalign 0.25 yalign 0.66
         bar:
             xalign .36
-            yalign .84
+            yalign .9
             style "bar_hp"
             value player2_hp xmaximum 181
             range player2_hp_max
         bar:
             xalign .36
-            yalign .88
+            yalign .94
             style "bar_mp"
             value player2_mp xmaximum 181
             range player2_mp_max
-        text"[player2_hp]/[player2_hp_max]" xalign 0.36 yalign 0.844
-        text"[player2_mp]/[player2_mp_max]" xalign 0.36 yalign 0.884   
+        text"[player2_hp]/[player2_hp_max]" xalign 0.36 yalign 0.904
+        text"[player2_mp]/[player2_mp_max]" xalign 0.36 yalign 0.944   
         
     if player3 != "none":
         
         if turn==3:
-            add player3_image_selected xalign 0.47 yalign .93
+            add "javier_icon" xalign 0.47 yalign .94
             add player3_image_selected xalign 0.15 yalign 0.45
         else:
-            add player3_image_default xalign 0.47 yalign .93
+            add "javier_icon_idle" xalign 0.47 yalign .94
             add player3_image_default xalign 0.15 yalign 0.45
         bar:
             xalign .47
-            yalign .84
+            yalign .9
             style "bar_hp"
             value player3_hp xmaximum 181
             range player3_hp_max
         bar:
             xalign .47
-            yalign .88
+            yalign .94
             style "bar_mp"
             value player3_mp xmaximum 181
             range player3_mp_max
-        text"[player3_hp]/[player3_hp_max]" xalign 0.47 yalign 0.844
-        text"[player3_mp]/[player3_mp_max]" xalign 0.47 yalign 0.884 
+        text"[player3_hp]/[player3_hp_max]" xalign 0.47 yalign 0.904
+        text"[player3_mp]/[player3_mp_max]" xalign 0.47 yalign 0.944 
 #        
 #    if player4 != "none":
 #        if turn == 4:
@@ -627,26 +622,26 @@ screen battle_2_overlay_players:
 
 screen battle_2_overlay_monsters:
     if marianne != "none":
-        add marianne_image xalign 0.66 yalign 0.3
+        add "marianne_sprite" xalign 0.66 yalign 0.2
         bar:
-            xalign .66
-            yalign .27
+            xalign .6
+            yalign .305
             style "bar_hp"
             value marianne_hp xmaximum 181
             range marianne_hp_max
-        text "[marianne_hp]/[marianne_hp_max]" xalign 0.66 yalign 0.2725
+        text "[marianne_hp]/[marianne_hp_max]" xalign 0.6 yalign 0.305
     if sarah != "none":
-        add sarah_image xalign 0.8 yalign 0.2
+        add "sarah_sprite" xalign 0.85 yalign 0.2
         bar:
             xalign .8
-            yalign .2
+            yalign .35
             style "bar_hp"
             value sarah_hp xmaximum 181
             range sarah_hp_max
-        text "[sarah_hp]/[sarah_hp_max]" xalign 0.8 yalign 0.2
+        text "[sarah_hp]/[sarah_hp_max]" xalign 0.8 yalign 0.35
 
     if kaye != "none":
-        add kaye_image xalign 0.8 yalign 0.7
+        add "kaye_sprite" xalign 0.85 yalign 0.7
         bar:
             xalign .8
             yalign .6
@@ -656,14 +651,14 @@ screen battle_2_overlay_monsters:
         text "[kaye_hp]/[kaye_hp_max]" xalign 0.8 yalign 0.6
     
     if chud != "none":
-        add chud_image xalign 0.66 yalign 0.6
+        add "chud_sprite" xalign 0.66 yalign 0.6
         bar:
-            xalign .66
-            yalign .5
+            xalign .6
+            yalign .55
             style "bar_hp"
             value chud_hp xmaximum 181
             range chud_hp_max
-        text "[chud_hp]/[chud_hp_max]" xalign 0.66 yalign 0.5
+        text "[chud_hp]/[chud_hp_max]" xalign 0.6 yalign 0.55
 
 
 screen battle_2_message:
@@ -700,13 +695,13 @@ screen player_actions_2: #returns for player action
 
 screen player_target_2: #returns monster player wants to attack
     if target == "all":
-        textbutton "All Enemies" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.45 yalign 0.48 action Return("all")
+        textbutton "All Enemies" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.48 yalign 0.48 action Return("all")
     else:
         if marianne != "none":
-            textbutton "[marianne]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.66 yalign 0.23 action Return("marianne") 
+            textbutton "[marianne]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.6 yalign 0.27 action Return("marianne") 
         if sarah != "none":
-            textbutton "[sarah]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.8 yalign 0.16 action Return("sarah") 
+            textbutton "[sarah]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.79 yalign 0.32 action Return("sarah") 
         if kaye != "none":
-            textbutton "[kaye]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.8 yalign 0.57 action Return("kaye") 
+            textbutton "[kaye]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.79 yalign 0.57 action Return("kaye") 
         if chud != "none":
-            textbutton "[chud]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.66 yalign 0.72 action Return("chud") 
+            textbutton "[chud]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.59 yalign 0.52 action Return("chud") 

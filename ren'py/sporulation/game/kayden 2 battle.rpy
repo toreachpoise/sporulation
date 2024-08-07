@@ -57,8 +57,8 @@ label battle_4_presetup:
     # right now, it is all in one set up but it can be seperated for more variety of monsters
     # your player names and the image being used for them, please take a look at how images are used in the battle folder so you understand the size of each image should be
     $ player1 = "Parvez" #names, set as none to not display image
-    $ player1_image_selected = "battle/player1_selected.png" #the images
-    $ player1_image_default = "battle/player1_default.png"
+    #$ player1_image_selected = "battle/player1_selected.png" #the images
+    #$ player1_image_default = "battle/player1_default.png"
     # number of players, and the default is turn based so player goes first then monster afterwards and repeat
     $ player_numbers = 1
     $ turn = 1 #turn starts with player 1
@@ -80,9 +80,9 @@ label battle_4_presetup:
     $ chud = "Chud 1"
     $ chud2 = "Chud 2"
     $ kaye = "Kaye" #if you want only two monsters on the field, replace this with $ monster 3 = "none" and make $ chud_dead = True (see below)
-    $ kaye_image = "battle/sheep3.png"
-    $ chud_image = "battle/chest1.png"
-    $ chud2_image = "battle/chest1.png"
+    #$ kaye_image = "battle/sheep3.png"
+    #$ chud_image = "battle/chest1.png"
+    #$ chud2_image = "battle/chest1.png"
     $ kaye_hp_max = 100
     $ chud_hp_max = 400
     $ chud2_hp_max = 400
@@ -117,8 +117,8 @@ label battle_4_presetup:
 #################################################################################################################
 label battle_4: # the battle screen uses this general set up
     show bs
-    show screen battle_4_overlay_players
     show screen battle_4_overlay_monsters
+    show screen battle_4_overlay_players
     show screen battle_4_message
     with blinds
     jump battling_4
@@ -321,6 +321,10 @@ label player_dead_check_4:
         menu:
             "try again":
                 "Maybe you'll have better luck next time ..."
+                scene cardboard
+                hide screen battle_4_message
+                hide screen battle_4_overlay_monsters
+                hide screen battle_4_overlay_players
                 jump kayden_2_battle
             "give up":
                 hide screen battle_4_overlay_players
@@ -330,45 +334,56 @@ label player_dead_check_4:
         #$ renpy.full_restart() # returns to main menu, game over 
     else:
         return
+
 screen battle_4_overlay_players:
     add "battle/battlebox2.png" xalign 0.375 yalign .95
     add "battle/battlebox1.png" xalign .75 yalign .95
     #player 1 is assume to always exist
     if turn == 1:
-        add player1_image_selected xalign 0.25 yalign .93   # player icon in hp area
-        add player1_image_selected xalign 0.25 yalign 0.5       #player chara above 
+        add "parvez_icon" xalign 0.25 yalign .94   # player icon in hp area
+        add "parvez_sprite" xalign 0.25 yalign 0.5       #player chara above 
     else:
-        add player1_image_default xalign 0.25 yalign .93
-        add player1_image_default xalign 0.25 yalign 0.5
+        add "parvez_icon_idle" xalign 0.25 yalign .94
+        add "parvez_sprite_idle" xalign 0.25 yalign 0.5
     bar:
         xalign .25
-        yalign .84
+        yalign .90
         style "bar_hp"
         value player1_hp xmaximum 181
         range player1_hp_max
     bar:
         xalign .25
-        yalign .88
+        yalign .94
         style "bar_mp"
         value player1_mp xmaximum 181
         range player1_mp_max
-    text"[player1_hp]/[player1_hp_max]" xalign 0.25 yalign 0.844
-    text"[player1_mp]/[player1_mp_max]" xalign 0.25 yalign 0.884
+    text"[player1_hp]/[player1_hp_max]" xalign 0.25 yalign 0.904
+    text"[player1_mp]/[player1_mp_max]" xalign 0.25 yalign 0.944
     
 
 screen battle_4_overlay_monsters:
     if kaye != "none":
-        add kaye_image xalign 0.66 yalign 0.5
+        add "kaye_sprite" xalign 0.66 yalign 0.5
         bar:
-            xalign .66
-            yalign .4
+            xalign .63
+            yalign .47
             style "bar_hp"
             value kaye_hp xmaximum 181
             range kaye_hp_max
-        text "[kaye_hp]/[kaye_hp_max]" xalign 0.66 yalign 0.4
+        text "[kaye_hp]/[kaye_hp_max]" xalign 0.63 yalign 0.47
+
+    if chud != "none":
+        add "chud_sprite" xalign 0.9 yalign 0.25
+        bar:
+            xalign .8
+            yalign .35
+            style "bar_hp"
+            value chud_hp xmaximum 181
+            range chud_hp_max
+        text "[chud_hp]/[chud_hp_max]" xalign 0.8 yalign 0.35
 
     if chud2 != "none":
-        add chud2_image xalign 0.8 yalign 0.7
+        add "chud2_sprite" xalign 0.9 yalign 0.7
         bar:
             xalign .8
             yalign .6
@@ -376,16 +391,7 @@ screen battle_4_overlay_monsters:
             value chud2_hp xmaximum 181
             range chud2_hp_max
         text "[chud2_hp]/[chud2_hp_max]" xalign 0.8 yalign 0.6
-    
-    if chud != "none":
-        add chud_image xalign 0.8 yalign 0.25
-        bar:
-            xalign .8
-            yalign .225
-            style "bar_hp"
-            value chud_hp xmaximum 181
-            range chud_hp_max
-        text "[chud_hp]/[chud_hp_max]" xalign 0.8 yalign 0.225
+
 
 
 screen battle_4_message:
@@ -417,8 +423,8 @@ screen player_target_4: #returns monster player wants to attack
         textbutton "All Enemies" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.45 yalign 0.48 action Return("all")
     else:
         if kaye != "none":
-            textbutton "[kaye]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.66 yalign 0.36 action Return("kaye") 
+            textbutton "[kaye]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.63 yalign 0.44 action Return("kaye") 
         if chud != "none":
-            textbutton "[chud]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.8 yalign 0.18 action Return("chud") 
+            textbutton "[chud]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.79 yalign 0.315 action Return("chud") 
         if chud2 != "none":
-            textbutton "[chud2]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.8 yalign 0.57 action Return("chud2") 
+            textbutton "[chud2]" style "battlebutton" text_style "battlebutton_text" background "battle/transparent.png" xalign 0.79 yalign 0.57 action Return("chud2") 

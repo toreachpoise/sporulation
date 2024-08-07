@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/inanna scenes.rpy", line 894: choice menuitem expects a non-empty block.
-    "let's keep going":
-                       ^
+File "game/inanna n javier 3 battle.rpy", line 432: reached end of line when expecting ':'.
+    elif p_skill == "Protective Instinct"
+                                         ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sun Aug  4 09:47:22 2024
+Wed Aug  7 00:40:16 2024
