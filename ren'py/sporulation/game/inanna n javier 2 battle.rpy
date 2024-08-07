@@ -73,8 +73,8 @@ label battle_2_presetup:
     $ player2 = "Inanna"
     $ player3 = "Javier"
     #$ player4 = "Terry"
-    $ player3_image_selected = "battle/player3_selected.png" #the images
-    $ player3_image_default = "battle/player3_default.png"
+    #$ player3_image_selected = "battle/player3_selected.png" #the images
+    #$ player3_image_default = "battle/player3_default.png"
     #$ player4_image_selected = "battle/player4_selected.png" #the images
     #$ player4_image_default = "battle/player4_default.png"
     # number of players, and the default is turn based so player goes first then monster afterwards and repeat
@@ -581,10 +581,10 @@ screen battle_2_overlay_players:
         
         if turn==3:
             add "javier_icon" xalign 0.47 yalign .94
-            add player3_image_selected xalign 0.15 yalign 0.45
+            add "javier_sprite" xalign 0.15 yalign 0.5
         else:
             add "javier_icon_idle" xalign 0.47 yalign .94
-            add player3_image_default xalign 0.15 yalign 0.45
+            add "javier_sprite_idle" xalign 0.15 yalign 0.5
         bar:
             xalign .47
             yalign .9

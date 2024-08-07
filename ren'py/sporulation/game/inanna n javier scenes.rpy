@@ -796,7 +796,7 @@ label inanna_n_javier_2:
                 scene cardboard with dissolve
                 $ renpy.music.set_pause(True, channel='music')
                 play audio battlestart
-                play audio battlestart
+                play sound fightmusic loop
                 "Transsexual battle mode activate"
                 call battle_2_presetup from _call_battle_presetup_2
                 call battle_2 from _call_battle_2
@@ -1051,7 +1051,7 @@ label inanna_n_javier_3:
     i "There's no choice. There never is."
     a "I can't. I don't know how."
     t "It's okay, we got this. You can join us next time."
-label inanna_n_javier_5_battle:
+label inanna_n_javier_3_battle:
     call battle_5_def from _call_battle_def_5
     scene cardboard with dissolve
     $ renpy.music.set_pause(True, channel='music')
@@ -1064,7 +1064,7 @@ label battle_5_end:
     stop sound
     $ renpy.music.set_pause(False, channel='music')
     play music planty
-    $ battle_2_win = True
+    $ battle_5_win = True
     "You won!!"
     scene skatepark hill
     show chud:
